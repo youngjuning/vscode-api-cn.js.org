@@ -1,7 +1,8 @@
 {
   "license": "MIT",
   "scripts": {
-    "build": "typedoc"
+    "build": "typedoc",
+    "watch": "yarn build --watch"
   },
   "devDependencies": {
     "typedoc": "^0.21.5",
