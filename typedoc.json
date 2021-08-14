@@ -1,5 +1,5 @@
 {
-  "name": "Vscode Extension Api",
+  "name": "VS Code API",
   "readme": "./README.md",
   "gitRemote": "origin",
   "gitRevision": "branch",

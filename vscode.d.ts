@@ -3,8 +3,6 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-declare module vscode {
-
 	/**
 	 * The version of the editor.
 	 */
@@ -14312,7 +14310,6 @@ declare module vscode {
 		 */
 		constructor(message: string | MarkdownString);
 	}
-}
 
 /**
  * Thenable is a common denominator between ES6 promises, Q, jquery.Deferred, WinJS.Promise,
