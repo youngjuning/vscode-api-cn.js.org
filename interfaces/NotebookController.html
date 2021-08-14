@@ -1,0 +1,526 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>NotebookController | VS Code API</title>
+	<meta name="description" content="Documentation for VS Code API">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">VS Code API</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">VS Code API</a>
+				</li>
+				<li>
+					<a href="NotebookController.html">NotebookController</a>
+				</li>
+			</ul>
+			<h1>Interface NotebookController</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>A notebook controller represents an entity that can execute notebook cells. This is often referred to as a kernel.</p>
+					</div>
+					<p>There can be multiple controllers and the editor will let users choose which controller to use for a certain notebook. The
+						<a href="NotebookController.html#notebookType"><code>notebookType</code></a>-property defines for what kind of notebooks a controller is for and
+						the <a href="NotebookController.html#updateNotebookAffinity"><code>updateNotebookAffinity</code></a>-function allows controllers to set a preference
+						for specific notebook documents. When a controller has been selected its
+					<a href="NotebookController.html#onDidChangeSelectedNotebooks">onDidChangeSelectedNotebooks</a>-event fires.</p>
+					<p>When a cell is being run the editor will invoke the <a href="NotebookController.html#executeHandler"><code>executeHandler</code></a> and a controller
+						is expected to create and finalize a <a href="NotebookCellExecution.html">notebook cell execution</a>. However, controllers are also free
+					to create executions by themselves.</p>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">NotebookController</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="NotebookController.html#id" class="tsd-kind-icon">id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="NotebookController.html#notebookType" class="tsd-kind-icon">notebook<wbr>Type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="NotebookController.html#supportedLanguages" class="tsd-kind-icon">supported<wbr>Languages</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="NotebookController.html#label" class="tsd-kind-icon">label</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="NotebookController.html#description" class="tsd-kind-icon">description</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="NotebookController.html#detail" class="tsd-kind-icon">detail</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="NotebookController.html#supportsExecutionOrder" class="tsd-kind-icon">supports<wbr>Execution<wbr>Order</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="NotebookController.html#onDidChangeSelectedNotebooks" class="tsd-kind-icon">on<wbr>Did<wbr>Change<wbr>Selected<wbr>Notebooks</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="NotebookController.html#createNotebookCellExecution" class="tsd-kind-icon">create<wbr>Notebook<wbr>Cell<wbr>Execution</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="NotebookController.html#executeHandler" class="tsd-kind-icon">execute<wbr>Handler</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="NotebookController.html#interruptHandler" class="tsd-kind-icon">interrupt<wbr>Handler</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="NotebookController.html#updateNotebookAffinity" class="tsd-kind-icon">update<wbr>Notebook<wbr>Affinity</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="NotebookController.html#dispose" class="tsd-kind-icon">dispose</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="id" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> id</h3>
+					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L12020">vscode.d.ts:12020</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The identifier of this notebook controller.</p>
+						</div>
+						<p><em>Note</em> that controllers are remembered by their identifier and that extensions should use
+						stable identifiers across sessions.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="notebookType" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> notebook<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">notebook<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L12025">vscode.d.ts:12025</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The notebook type this controller is for.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="supportedLanguages" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> supported<wbr>Languages</h3>
+					<div class="tsd-signature tsd-kind-icon">supported<wbr>Languages<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L12042">vscode.d.ts:12042</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An array of language identifiers that are supported by this
+								controller. Any language identifier from <a href="../modules/languages.html#getLanguages"><code>getLanguages</code></a>
+							is possible. When falsy all languages are supported.</p>
+						</div>
+						<p>Samples:</p>
+						<pre><code class="language-js"><span style="color: #008000">// support JavaScript and TypeScript</span>
+<span style="color: #001080">myController</span><span style="color: #000000">.</span><span style="color: #001080">supportedLanguages</span><span style="color: #000000"> = [</span><span style="color: #A31515">&#039;javascript&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;typescript&#039;</span><span style="color: #000000">]</span>
+
+<span style="color: #008000">// support all languages</span>
+<span style="color: #001080">myController</span><span style="color: #000000">.</span><span style="color: #001080">supportedLanguages</span><span style="color: #000000"> = </span><span style="color: #0000FF">undefined</span><span style="color: #000000">; </span><span style="color: #008000">// falsy</span>
+<span style="color: #001080">myController</span><span style="color: #000000">.</span><span style="color: #001080">supportedLanguages</span><span style="color: #000000"> = []; </span><span style="color: #008000">// falsy</span>
+</code></pre>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="label" class="tsd-anchor"></a>
+					<h3>label</h3>
+					<div class="tsd-signature tsd-kind-icon">label<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L12047">vscode.d.ts:12047</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The human-readable label of this notebook controller.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="description" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> description</h3>
+					<div class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L12052">vscode.d.ts:12052</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The human-readable description which is rendered less prominent.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="detail" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> detail</h3>
+					<div class="tsd-signature tsd-kind-icon">detail<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L12057">vscode.d.ts:12057</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The human-readable detail which is rendered less prominent.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="supportsExecutionOrder" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> supports<wbr>Execution<wbr>Order</h3>
+					<div class="tsd-signature tsd-kind-icon">supports<wbr>Execution<wbr>Order<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L12063">vscode.d.ts:12063</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Whether this controller supports execution order so that the
+							editor can render placeholders for them.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="onDidChangeSelectedNotebooks" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> on<wbr>Did<wbr>Change<wbr>Selected<wbr>Notebooks</h3>
+					<div class="tsd-signature tsd-kind-icon">on<wbr>Did<wbr>Change<wbr>Selected<wbr>Notebooks<span class="tsd-signature-symbol">:</span> <a href="Event.html" class="tsd-signature-type" data-tsd-kind="Interface">Event</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>notebook<span class="tsd-signature-symbol">: </span><a href="NotebookDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookDocument</a><span class="tsd-signature-symbol">; </span>selected<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L12110">vscode.d.ts:12110</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An event that fires whenever a controller has been selected or un-selected for a notebook document.</p>
+						</div>
+						<p>There can be multiple controllers for a notebook and in that case a controllers needs to be <em>selected</em>. This is a user gesture
+							and happens either explicitly or implicitly when interacting with a notebook for which a controller was <em>suggested</em>. When possible,
+						the editor <em>suggests</em> a controller that is most likely to be <em>selected</em>.</p>
+						<p><em>Note</em> that controller selection is persisted (by the controllers <a href="NotebookController.html#id">id</a>) and restored as soon as a
+						controller is re-created or as a notebook is <a href="../modules/workspace.html#onDidOpenNotebookDocument">opened</a>.</p>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="createNotebookCellExecution" class="tsd-anchor"></a>
+					<h3>create<wbr>Notebook<wbr>Cell<wbr>Execution</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Notebook<wbr>Cell<wbr>Execution<span class="tsd-signature-symbol">(</span>cell<span class="tsd-signature-symbol">: </span><a href="NotebookCell.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookCell</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="NotebookCellExecution.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookCellExecution</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L12078">vscode.d.ts:12078</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a cell execution task.</p>
+								</div>
+								<p><em>Note</em> that there can only be one execution per cell at a time and that an error is thrown if
+								a cell execution is created while another is still active.</p>
+								<p>This should be used in response to the <a href="NotebookController.html#executeHandler">execution handler</a>
+									being called or when cell execution has been started else, e.g when a cell was already
+								executing or when cell execution was triggered from another source.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>cell: <a href="NotebookCell.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookCell</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The notebook cell for which to create the execution.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="NotebookCellExecution.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookCellExecution</a></h4>
+							<p>A notebook cell execution.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="executeHandler" class="tsd-anchor"></a>
+					<h3>execute<wbr>Handler</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">execute<wbr>Handler<span class="tsd-signature-symbol">(</span>cells<span class="tsd-signature-symbol">: </span><a href="NotebookCell.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookCell</a><span class="tsd-signature-symbol">[]</span>, notebook<span class="tsd-signature-symbol">: </span><a href="NotebookDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookDocument</a>, controller<span class="tsd-signature-symbol">: </span><a href="NotebookController.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookController</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><a href="Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L12084">vscode.d.ts:12084</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The execute handler is invoked when the run gestures in the UI are selected, e.g Run Cell, Run All,
+									Run Selection etc. The execute handler is responsible for creating and managing <a href="NotebookCellExecution.html">execution</a>-objects.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>cells: <a href="NotebookCell.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookCell</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+								<li>
+									<h5>notebook: <a href="NotebookDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookDocument</a></h5>
+								</li>
+								<li>
+									<h5>controller: <a href="NotebookController.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookController</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><a href="Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="interruptHandler" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> interrupt<wbr>Handler</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">interrupt<wbr>Handler<span class="tsd-signature-symbol">(</span>notebook<span class="tsd-signature-symbol">: </span><a href="NotebookDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookDocument</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><a href="Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L12098">vscode.d.ts:12098</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Optional interrupt handler.</p>
+								</div>
+								<p>By default cell execution is canceled via <a href="NotebookCellExecution.html#token">tokens</a>. Cancellation
+									tokens require that a controller can keep track of its execution so that it can cancel a specific execution at a later
+									point. Not all scenarios allow for that, eg. REPL-style controllers often work by interrupting whatever is currently
+									running. For those cases the interrupt handler exists - it can be thought of as the equivalent of <code>SIGINT</code>
+								or <code>Control+C</code> in terminals.</p>
+								<p><em>Note</em> that supporting <a href="NotebookCellExecution.html#token">cancellation tokens</a> is preferred and that interrupt handlers should
+								only be used when tokens cannot be supported.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>notebook: <a href="NotebookDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookDocument</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><a href="Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="updateNotebookAffinity" class="tsd-anchor"></a>
+					<h3>update<wbr>Notebook<wbr>Affinity</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">update<wbr>Notebook<wbr>Affinity<span class="tsd-signature-symbol">(</span>notebook<span class="tsd-signature-symbol">: </span><a href="NotebookDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookDocument</a>, affinity<span class="tsd-signature-symbol">: </span><a href="../enums/NotebookControllerAffinity.html" class="tsd-signature-type" data-tsd-kind="Enumeration">NotebookControllerAffinity</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L12119">vscode.d.ts:12119</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>A controller can set affinities for specific notebook documents. This allows a controller
+									to be presented more prominent for some notebooks.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>notebook: <a href="NotebookDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookDocument</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The notebook for which a priority is set.</p>
+									</div>
+								</li>
+								<li>
+									<h5>affinity: <a href="../enums/NotebookControllerAffinity.html" class="tsd-signature-type" data-tsd-kind="Enumeration">NotebookControllerAffinity</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A controller affinity</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="dispose" class="tsd-anchor"></a>
+					<h3>dispose</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">dispose<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L12124">vscode.d.ts:12124</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Dispose and free associated resources.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Exports</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface">
+						<a href="NotebookController.html" class="tsd-kind-icon">Notebook<wbr>Controller</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="NotebookController.html#id" class="tsd-kind-icon">id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="NotebookController.html#notebookType" class="tsd-kind-icon">notebook<wbr>Type</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="NotebookController.html#supportedLanguages" class="tsd-kind-icon">supported<wbr>Languages</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="NotebookController.html#label" class="tsd-kind-icon">label</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="NotebookController.html#description" class="tsd-kind-icon">description</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="NotebookController.html#detail" class="tsd-kind-icon">detail</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="NotebookController.html#supportsExecutionOrder" class="tsd-kind-icon">supports<wbr>Execution<wbr>Order</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="NotebookController.html#createNotebookCellExecution" class="tsd-kind-icon">create<wbr>Notebook<wbr>Cell<wbr>Execution</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="NotebookController.html#executeHandler" class="tsd-kind-icon">execute<wbr>Handler</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="NotebookController.html#interruptHandler" class="tsd-kind-icon">interrupt<wbr>Handler</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="NotebookController.html#onDidChangeSelectedNotebooks" class="tsd-kind-icon">on<wbr>Did<wbr>Change<wbr>Selected<wbr>Notebooks</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="NotebookController.html#updateNotebookAffinity" class="tsd-kind-icon">update<wbr>Notebook<wbr>Affinity</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="NotebookController.html#dispose" class="tsd-kind-icon">dispose</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

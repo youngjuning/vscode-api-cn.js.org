@@ -1,0 +1,262 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>RenameProvider | VS Code API</title>
+	<meta name="description" content="Documentation for VS Code API">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">VS Code API</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">VS Code API</a>
+				</li>
+				<li>
+					<a href="RenameProvider.html">RenameProvider</a>
+				</li>
+			</ul>
+			<h1>Interface RenameProvider</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The rename provider interface defines the contract between extensions and
+						the <a href="https://code.visualstudio.com/docs/editor/editingevolved#_rename-symbol">rename</a>-feature.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">RenameProvider</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="RenameProvider.html#provideRenameEdits" class="tsd-kind-icon">provide<wbr>Rename<wbr>Edits</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="RenameProvider.html#prepareRename" class="tsd-kind-icon">prepare<wbr>Rename</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="provideRenameEdits" class="tsd-anchor"></a>
+					<h3>provide<wbr>Rename<wbr>Edits</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">provide<wbr>Rename<wbr>Edits<span class="tsd-signature-symbol">(</span>document<span class="tsd-signature-symbol">: </span><a href="TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a>, position<span class="tsd-signature-symbol">: </span><a href="../classes/Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a>, newName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, token<span class="tsd-signature-symbol">: </span><a href="CancellationToken.html" class="tsd-signature-type" data-tsd-kind="Interface">CancellationToken</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules.html#ProviderResult" class="tsd-signature-type" data-tsd-kind="Type alias">ProviderResult</a><span class="tsd-signature-symbol">&lt;</span><a href="../classes/WorkspaceEdit.html" class="tsd-signature-type" data-tsd-kind="Class">WorkspaceEdit</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L3459">vscode.d.ts:3459</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Provide an edit that describes changes that have to be made to one
+									or many resources to rename a symbol to a different name.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>document: <a href="TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The document in which the command was invoked.</p>
+									</div>
+								</li>
+								<li>
+									<h5>position: <a href="../classes/Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The position at which the command was invoked.</p>
+									</div>
+								</li>
+								<li>
+									<h5>newName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The new name of the symbol. If the given name is not valid, the provider must return a rejected promise.</p>
+									</div>
+								</li>
+								<li>
+									<h5>token: <a href="CancellationToken.html" class="tsd-signature-type" data-tsd-kind="Interface">CancellationToken</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A cancellation token.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../modules.html#ProviderResult" class="tsd-signature-type" data-tsd-kind="Type alias">ProviderResult</a><span class="tsd-signature-symbol">&lt;</span><a href="../classes/WorkspaceEdit.html" class="tsd-signature-type" data-tsd-kind="Class">WorkspaceEdit</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>A workspace edit or a thenable that resolves to such. The lack of a result can be
+							signaled by returning <code>undefined</code> or <code>null</code>.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="prepareRename" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> prepare<wbr>Rename</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">prepare<wbr>Rename<span class="tsd-signature-symbol">(</span>document<span class="tsd-signature-symbol">: </span><a href="TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a>, position<span class="tsd-signature-symbol">: </span><a href="../classes/Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a>, token<span class="tsd-signature-symbol">: </span><a href="CancellationToken.html" class="tsd-signature-type" data-tsd-kind="Interface">CancellationToken</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules.html#ProviderResult" class="tsd-signature-type" data-tsd-kind="Type alias">ProviderResult</a><span class="tsd-signature-symbol">&lt;</span><a href="../classes/Range.html" class="tsd-signature-type" data-tsd-kind="Class">Range</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span>range<span class="tsd-signature-symbol">: </span><a href="../classes/Range.html" class="tsd-signature-type" data-tsd-kind="Class">Range</a><span class="tsd-signature-symbol">; </span>placeholder<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L3474">vscode.d.ts:3474</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Optional function for resolving and validating a position <em>before</em> running rename. The result can
+										be a range or a range and a placeholder text. The placeholder text should be the identifier of the symbol
+									which is being renamed - when omitted the text in the returned range is used.</p>
+								</div>
+								<p>*Note: * This function should throw an error or return a rejected thenable when the provided location
+								doesn&#39;t allow for a rename.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>document: <a href="TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The document in which rename will be invoked.</p>
+									</div>
+								</li>
+								<li>
+									<h5>position: <a href="../classes/Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The position at which rename will be invoked.</p>
+									</div>
+								</li>
+								<li>
+									<h5>token: <a href="CancellationToken.html" class="tsd-signature-type" data-tsd-kind="Interface">CancellationToken</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A cancellation token.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../modules.html#ProviderResult" class="tsd-signature-type" data-tsd-kind="Type alias">ProviderResult</a><span class="tsd-signature-symbol">&lt;</span><a href="../classes/Range.html" class="tsd-signature-type" data-tsd-kind="Class">Range</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span>range<span class="tsd-signature-symbol">: </span><a href="../classes/Range.html" class="tsd-signature-type" data-tsd-kind="Class">Range</a><span class="tsd-signature-symbol">; </span>placeholder<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>The range or range and placeholder text of the identifier that is to be renamed. The lack of a result can signaled by returning <code>undefined</code> or <code>null</code>.</p>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Exports</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface">
+						<a href="RenameProvider.html" class="tsd-kind-icon">Rename<wbr>Provider</a>
+						<ul>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="RenameProvider.html#provideRenameEdits" class="tsd-kind-icon">provide<wbr>Rename<wbr>Edits</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="RenameProvider.html#prepareRename" class="tsd-kind-icon">prepare<wbr>Rename</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

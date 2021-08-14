@@ -1,0 +1,1811 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>languages | VS Code API</title>
+	<meta name="description" content="Documentation for VS Code API">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">VS Code API</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">VS Code API</a>
+				</li>
+				<li>
+					<a href="languages.html">languages</a>
+				</li>
+			</ul>
+			<h1>Namespace languages</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Namespace for participating in language-specific editor <a href="https://code.visualstudio.com/docs/editor/editingevolved">features</a>,
+						like IntelliSense, code actions, diagnostics etc.</p>
+					</div>
+					<p>Many programming languages exist and there is huge variety in syntaxes, semantics, and paradigms. Despite that, features
+						like automatic word-completion, code navigation, or code checking have become popular across different tools for different
+					programming languages.</p>
+					<p>The editor provides an API that makes it simple to provide such common features by having all UI and actions already in place and
+						by allowing you to participate by providing data only. For instance, to contribute a hover all you have to do is provide a function
+						that can be called with a <a href="../interfaces/TextDocument.html">TextDocument</a> and a <a href="../classes/Position.html">Position</a> returning hover info. The rest, like tracking the
+					mouse, positioning the hover, keeping the hover stable etc. is taken care of by the editor.</p>
+					<pre><code class="language-javascript"><span style="color: #001080">languages</span><span style="color: #000000">.</span><span style="color: #795E26">registerHoverProvider</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;javascript&#039;</span><span style="color: #000000">, {</span>
+<span style="color: #000000">    </span><span style="color: #795E26">provideHover</span><span style="color: #000000">(</span><span style="color: #001080">document</span><span style="color: #000000">, </span><span style="color: #001080">position</span><span style="color: #000000">, </span><span style="color: #001080">token</span><span style="color: #000000">) {</span>
+<span style="color: #000000">        </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Hover</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;I am a hover!&#039;</span><span style="color: #000000">);</span>
+<span style="color: #000000">    }</span>
+<span style="color: #000000">});</span>
+</code></pre>
+					<p>Registration is done using a <a href="../modules.html#DocumentSelector">document selector</a> which is either a language id, like <code>javascript</code> or
+						a more complex <a href="../interfaces/DocumentFilter.html">filter</a> like <code>{ language: &#39;typescript&#39;, scheme: &#39;file&#39; }</code>. Matching a document against such
+						a selector will result in a <a href="languages.html#match">score</a> that is used to determine if and how a provider shall be used. When
+						scores are equal the provider that came last wins. For features that allow full arity, like <a href="languages.html#registerHoverProvider">hover</a>,
+						the score is only checked to be <code>&gt;0</code>, for other features, like <a href="languages.html#registerCompletionItemProvider">IntelliSense</a> the
+					score is used for determining the order in which providers are asked to participate.</p>
+				</div>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#getLanguages" class="tsd-kind-icon">get<wbr>Languages</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#setTextDocumentLanguage" class="tsd-kind-icon">set<wbr>Text<wbr>Document<wbr>Language</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#match" class="tsd-kind-icon">match</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#onDidChangeDiagnostics" class="tsd-kind-icon">on<wbr>Did<wbr>Change<wbr>Diagnostics</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#getDiagnostics" class="tsd-kind-icon">get<wbr>Diagnostics</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#createDiagnosticCollection" class="tsd-kind-icon">create<wbr>Diagnostic<wbr>Collection</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#registerCompletionItemProvider" class="tsd-kind-icon">register<wbr>Completion<wbr>Item<wbr>Provider</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#registerCodeActionsProvider" class="tsd-kind-icon">register<wbr>Code<wbr>Actions<wbr>Provider</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#registerCodeLensProvider" class="tsd-kind-icon">register<wbr>Code<wbr>Lens<wbr>Provider</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#registerDefinitionProvider" class="tsd-kind-icon">register<wbr>Definition<wbr>Provider</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#registerImplementationProvider" class="tsd-kind-icon">register<wbr>Implementation<wbr>Provider</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#registerTypeDefinitionProvider" class="tsd-kind-icon">register<wbr>Type<wbr>Definition<wbr>Provider</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#registerDeclarationProvider" class="tsd-kind-icon">register<wbr>Declaration<wbr>Provider</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#registerHoverProvider" class="tsd-kind-icon">register<wbr>Hover<wbr>Provider</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#registerEvaluatableExpressionProvider" class="tsd-kind-icon">register<wbr>Evaluatable<wbr>Expression<wbr>Provider</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#registerInlineValuesProvider" class="tsd-kind-icon">register<wbr>Inline<wbr>Values<wbr>Provider</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#registerDocumentHighlightProvider" class="tsd-kind-icon">register<wbr>Document<wbr>Highlight<wbr>Provider</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#registerDocumentSymbolProvider" class="tsd-kind-icon">register<wbr>Document<wbr>Symbol<wbr>Provider</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#registerWorkspaceSymbolProvider" class="tsd-kind-icon">register<wbr>Workspace<wbr>Symbol<wbr>Provider</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#registerReferenceProvider" class="tsd-kind-icon">register<wbr>Reference<wbr>Provider</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#registerRenameProvider" class="tsd-kind-icon">register<wbr>Rename<wbr>Provider</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#registerDocumentSemanticTokensProvider" class="tsd-kind-icon">register<wbr>Document<wbr>Semantic<wbr>Tokens<wbr>Provider</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#registerDocumentRangeSemanticTokensProvider" class="tsd-kind-icon">register<wbr>Document<wbr>Range<wbr>Semantic<wbr>Tokens<wbr>Provider</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#registerDocumentFormattingEditProvider" class="tsd-kind-icon">register<wbr>Document<wbr>Formatting<wbr>Edit<wbr>Provider</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#registerDocumentRangeFormattingEditProvider" class="tsd-kind-icon">register<wbr>Document<wbr>Range<wbr>Formatting<wbr>Edit<wbr>Provider</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#registerOnTypeFormattingEditProvider" class="tsd-kind-icon">register<wbr>OnType<wbr>Formatting<wbr>Edit<wbr>Provider</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#registerSignatureHelpProvider" class="tsd-kind-icon">register<wbr>Signature<wbr>Help<wbr>Provider</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#registerDocumentLinkProvider" class="tsd-kind-icon">register<wbr>Document<wbr>Link<wbr>Provider</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#registerColorProvider" class="tsd-kind-icon">register<wbr>Color<wbr>Provider</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#registerFoldingRangeProvider" class="tsd-kind-icon">register<wbr>Folding<wbr>Range<wbr>Provider</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#registerSelectionRangeProvider" class="tsd-kind-icon">register<wbr>Selection<wbr>Range<wbr>Provider</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#registerCallHierarchyProvider" class="tsd-kind-icon">register<wbr>Call<wbr>Hierarchy<wbr>Provider</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#registerLinkedEditingRangeProvider" class="tsd-kind-icon">register<wbr>Linked<wbr>Editing<wbr>Range<wbr>Provider</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="languages.html#setLanguageConfiguration" class="tsd-kind-icon">set<wbr>Language<wbr>Configuration</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="getLanguages" class="tsd-anchor"></a>
+					<h3>get<wbr>Languages</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Languages<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11032">vscode.d.ts:11032</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Return the identifiers of all known languages.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>Promise resolving to an array of identifier strings.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="setTextDocumentLanguage" class="tsd-anchor"></a>
+					<h3>set<wbr>Text<wbr>Document<wbr>Language</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Text<wbr>Document<wbr>Language<span class="tsd-signature-symbol">(</span>document<span class="tsd-signature-symbol">: </span><a href="../interfaces/TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a>, languageId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11045">vscode.d.ts:11045</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Set (and change) the <a href="../interfaces/TextDocument.html#languageId">language</a> that is associated
+									with the given document.</p>
+								</div>
+								<p><em>Note</em> that calling this function will trigger the <a href="workspace.html#onDidCloseTextDocument"><code>onDidCloseTextDocument</code></a> event
+								followed by the <a href="workspace.html#onDidOpenTextDocument"><code>onDidOpenTextDocument</code></a> event.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>document: <a href="../interfaces/TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The document which language is to be changed</p>
+									</div>
+								</li>
+								<li>
+									<h5>languageId: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The new language identifier.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>A thenable that resolves with the updated document.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="match" class="tsd-anchor"></a>
+					<h3>match</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">match<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, document<span class="tsd-signature-symbol">: </span><a href="../interfaces/TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11084">vscode.d.ts:11084</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Compute the match between a document <a href="../modules.html#DocumentSelector">selector</a> and a document. Values
+									greater than zero mean the selector matches the document.</p>
+								</div>
+								<p>A match is computed according to these rules:</p>
+								<ol>
+									<li>When <a href="../modules.html#DocumentSelector"><code>DocumentSelector</code></a> is an array, compute the match for each contained <code>DocumentFilter</code> or language identifier and take the maximum value.</li>
+									<li>A string will be desugared to become the <code>language</code>-part of a <a href="../interfaces/DocumentFilter.html"><code>DocumentFilter</code></a>, so <code>&quot;fooLang&quot;</code> is like <code>{ language: &quot;fooLang&quot; }</code>.</li>
+									<li>A <a href="../interfaces/DocumentFilter.html"><code>DocumentFilter</code></a> will be matched against the document by comparing its parts with the document. The following rules apply:</li>
+									<li>When the <code>DocumentFilter</code> is empty (<code>{}</code>) the result is <code>0</code></li>
+									<li>When <code>scheme</code>, <code>language</code>, or <code>pattern</code> are defined but one doesn’t match, the result is <code>0</code></li>
+									<li>Matching against <code>*</code> gives a score of <code>5</code>, matching via equality or via a glob-pattern gives a score of <code>10</code></li>
+									<li>The result is the maximum value of each match</li>
+								</ol>
+								<p>Samples:</p>
+								<pre><code class="language-js"><span style="color: #008000">// default document from disk (file-scheme)</span>
+<span style="color: #001080">doc</span><span style="color: #000000">.</span><span style="color: #001080">uri</span><span style="color: #000000">; </span><span style="color: #008000">//&#039;file:///my/file.js&#039;</span>
+<span style="color: #001080">doc</span><span style="color: #000000">.</span><span style="color: #001080">languageId</span><span style="color: #000000">; </span><span style="color: #008000">// &#039;javascript&#039;</span>
+<span style="color: #795E26">match</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;javascript&#039;</span><span style="color: #000000">, </span><span style="color: #001080">doc</span><span style="color: #000000">); </span><span style="color: #008000">// 10;</span>
+<span style="color: #795E26">match</span><span style="color: #000000">({</span><span style="color: #001080">language:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;javascript&#039;</span><span style="color: #000000">}, </span><span style="color: #001080">doc</span><span style="color: #000000">); </span><span style="color: #008000">// 10;</span>
+<span style="color: #795E26">match</span><span style="color: #000000">({</span><span style="color: #001080">language:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;javascript&#039;</span><span style="color: #000000">, </span><span style="color: #001080">scheme:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;file&#039;</span><span style="color: #000000">}, </span><span style="color: #001080">doc</span><span style="color: #000000">); </span><span style="color: #008000">// 10;</span>
+<span style="color: #795E26">match</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;*&#039;</span><span style="color: #000000">, </span><span style="color: #001080">doc</span><span style="color: #000000">); </span><span style="color: #008000">// 5</span>
+<span style="color: #795E26">match</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;fooLang&#039;</span><span style="color: #000000">, </span><span style="color: #001080">doc</span><span style="color: #000000">); </span><span style="color: #008000">// 0</span>
+<span style="color: #795E26">match</span><span style="color: #000000">([</span><span style="color: #A31515">&#039;fooLang&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;*&#039;</span><span style="color: #000000">], </span><span style="color: #001080">doc</span><span style="color: #000000">); </span><span style="color: #008000">// 5</span>
+
+<span style="color: #008000">// virtual document, e.g. from git-index</span>
+<span style="color: #001080">doc</span><span style="color: #000000">.</span><span style="color: #001080">uri</span><span style="color: #000000">; </span><span style="color: #008000">// &#039;git:/my/file.js&#039;</span>
+<span style="color: #001080">doc</span><span style="color: #000000">.</span><span style="color: #001080">languageId</span><span style="color: #000000">; </span><span style="color: #008000">// &#039;javascript&#039;</span>
+<span style="color: #795E26">match</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;javascript&#039;</span><span style="color: #000000">, </span><span style="color: #001080">doc</span><span style="color: #000000">); </span><span style="color: #008000">// 10;</span>
+<span style="color: #795E26">match</span><span style="color: #000000">({</span><span style="color: #001080">language:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;javascript&#039;</span><span style="color: #000000">, </span><span style="color: #001080">scheme:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;git&#039;</span><span style="color: #000000">}, </span><span style="color: #001080">doc</span><span style="color: #000000">); </span><span style="color: #008000">// 10;</span>
+<span style="color: #795E26">match</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;*&#039;</span><span style="color: #000000">, </span><span style="color: #001080">doc</span><span style="color: #000000">); </span><span style="color: #008000">// 5</span>
+</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A document selector.</p>
+									</div>
+								</li>
+								<li>
+									<h5>document: <a href="../interfaces/TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A text document.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>A number <code>&gt;0</code> when the selector matches and <code>0</code> when the selector does not match.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="onDidChangeDiagnostics" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> on<wbr>Did<wbr>Change<wbr>Diagnostics</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Did<wbr>Change<wbr>Diagnostics<span class="tsd-signature-symbol">(</span>listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/DiagnosticChangeEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">DiagnosticChangeEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span>, thisArgs<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, disposables<span class="tsd-signature-symbol">?: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11090">vscode.d.ts:11090</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>An <a href="../interfaces/Event.html">Event</a> which fires when the global set of diagnostics changes. This is
+									newly added and removed diagnostics.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>listener: <span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/DiagnosticChangeEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">DiagnosticChangeEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/DiagnosticChangeEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">DiagnosticChangeEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>e: <a href="../interfaces/DiagnosticChangeEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">DiagnosticChangeEvent</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> thisArgs: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> disposables: <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="getDiagnostics" class="tsd-anchor"></a>
+					<h3>get<wbr>Diagnostics</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Diagnostics<span class="tsd-signature-symbol">(</span>resource<span class="tsd-signature-symbol">: </span><a href="../classes/Uri.html" class="tsd-signature-type" data-tsd-kind="Class">Uri</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Diagnostic.html" class="tsd-signature-type" data-tsd-kind="Class">Diagnostic</a><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Diagnostics<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><a href="../classes/Uri.html" class="tsd-signature-type" data-tsd-kind="Class">Uri</a><span class="tsd-signature-symbol">, </span><a href="../classes/Diagnostic.html" class="tsd-signature-type" data-tsd-kind="Class">Diagnostic</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11098">vscode.d.ts:11098</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get all diagnostics for a given resource.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>resource: <a href="../classes/Uri.html" class="tsd-signature-type" data-tsd-kind="Class">Uri</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A resource</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/Diagnostic.html" class="tsd-signature-type" data-tsd-kind="Class">Diagnostic</a><span class="tsd-signature-symbol">[]</span></h4>
+							<p>An array of <a href="../classes/Diagnostic.html">diagnostics</a> objects or an empty array.</p>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11105">vscode.d.ts:11105</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get all diagnostics.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">[</span><a href="../classes/Uri.html" class="tsd-signature-type" data-tsd-kind="Class">Uri</a><span class="tsd-signature-symbol">, </span><a href="../classes/Diagnostic.html" class="tsd-signature-type" data-tsd-kind="Class">Diagnostic</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">[]</span></h4>
+							<p>An array of uri-diagnostics tuples or an empty array.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="createDiagnosticCollection" class="tsd-anchor"></a>
+					<h3>create<wbr>Diagnostic<wbr>Collection</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Diagnostic<wbr>Collection<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/DiagnosticCollection.html" class="tsd-signature-type" data-tsd-kind="Interface">DiagnosticCollection</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11113">vscode.d.ts:11113</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a diagnostics collection.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> name: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The <a href="../interfaces/DiagnosticCollection.html#name">name</a> of the collection.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/DiagnosticCollection.html" class="tsd-signature-type" data-tsd-kind="Interface">DiagnosticCollection</a></h4>
+							<p>A new diagnostic collection.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerCompletionItemProvider" class="tsd-anchor"></a>
+					<h3>register<wbr>Completion<wbr>Item<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Completion<wbr>Item<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/CompletionItemProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">CompletionItemProvider</a>, <span class="tsd-signature-symbol">...</span>triggerCharacters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11134">vscode.d.ts:11134</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register a completion provider.</p>
+								</div>
+								<p>Multiple providers can be registered for a language. In that case providers are sorted
+									by their <a href="languages.html#match">score</a> and groups of equal score are sequentially asked for
+									completion items. The process stops when one or many providers of a group return a
+									result. A failing provider (rejected promise or exception) will not fail the whole
+								operation.</p>
+								<p>A completion item provider can be associated with a set of <code>triggerCharacters</code>. When trigger
+									characters are being typed, completions are requested but only from providers that registered
+									the typed character. Because of that trigger characters should be different than <a href="../interfaces/LanguageConfiguration.html#wordPattern">word characters</a>,
+								a common trigger character is <code>.</code> to trigger member completions.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A selector that defines the documents this provider is applicable to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>provider: <a href="../interfaces/CompletionItemProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">CompletionItemProvider</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A completion provider.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>triggerCharacters: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Trigger completion when the user types one of the characters.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/Disposable.html">Disposable</a> that unregisters this provider when being disposed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerCodeActionsProvider" class="tsd-anchor"></a>
+					<h3>register<wbr>Code<wbr>Actions<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Code<wbr>Actions<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/CodeActionProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">CodeActionProvider</a>, metadata<span class="tsd-signature-symbol">?: </span><a href="../interfaces/CodeActionProviderMetadata.html" class="tsd-signature-type" data-tsd-kind="Interface">CodeActionProviderMetadata</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11148">vscode.d.ts:11148</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register a code action provider.</p>
+								</div>
+								<p>Multiple providers can be registered for a language. In that case providers are asked in
+									parallel and the results are merged. A failing provider (rejected promise or exception) will
+								not cause a failure of the whole operation.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A selector that defines the documents this provider is applicable to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>provider: <a href="../interfaces/CodeActionProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">CodeActionProvider</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A code action provider.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> metadata: <a href="../interfaces/CodeActionProviderMetadata.html" class="tsd-signature-type" data-tsd-kind="Interface">CodeActionProviderMetadata</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Metadata about the kind of code actions the provider provides.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/Disposable.html">Disposable</a> that unregisters this provider when being disposed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerCodeLensProvider" class="tsd-anchor"></a>
+					<h3>register<wbr>Code<wbr>Lens<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Code<wbr>Lens<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/CodeLensProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">CodeLensProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11161">vscode.d.ts:11161</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register a code lens provider.</p>
+								</div>
+								<p>Multiple providers can be registered for a language. In that case providers are asked in
+									parallel and the results are merged. A failing provider (rejected promise or exception) will
+								not cause a failure of the whole operation.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A selector that defines the documents this provider is applicable to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>provider: <a href="../interfaces/CodeLensProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">CodeLensProvider</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A code lens provider.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/Disposable.html">Disposable</a> that unregisters this provider when being disposed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerDefinitionProvider" class="tsd-anchor"></a>
+					<h3>register<wbr>Definition<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Definition<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/DefinitionProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DefinitionProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11174">vscode.d.ts:11174</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register a definition provider.</p>
+								</div>
+								<p>Multiple providers can be registered for a language. In that case providers are asked in
+									parallel and the results are merged. A failing provider (rejected promise or exception) will
+								not cause a failure of the whole operation.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A selector that defines the documents this provider is applicable to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>provider: <a href="../interfaces/DefinitionProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DefinitionProvider</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A definition provider.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/Disposable.html">Disposable</a> that unregisters this provider when being disposed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerImplementationProvider" class="tsd-anchor"></a>
+					<h3>register<wbr>Implementation<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Implementation<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/ImplementationProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">ImplementationProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11187">vscode.d.ts:11187</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register an implementation provider.</p>
+								</div>
+								<p>Multiple providers can be registered for a language. In that case providers are asked in
+									parallel and the results are merged. A failing provider (rejected promise or exception) will
+								not cause a failure of the whole operation.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A selector that defines the documents this provider is applicable to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>provider: <a href="../interfaces/ImplementationProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">ImplementationProvider</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>An implementation provider.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/Disposable.html">Disposable</a> that unregisters this provider when being disposed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerTypeDefinitionProvider" class="tsd-anchor"></a>
+					<h3>register<wbr>Type<wbr>Definition<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Type<wbr>Definition<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/TypeDefinitionProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">TypeDefinitionProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11200">vscode.d.ts:11200</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register a type definition provider.</p>
+								</div>
+								<p>Multiple providers can be registered for a language. In that case providers are asked in
+									parallel and the results are merged. A failing provider (rejected promise or exception) will
+								not cause a failure of the whole operation.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A selector that defines the documents this provider is applicable to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>provider: <a href="../interfaces/TypeDefinitionProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">TypeDefinitionProvider</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A type definition provider.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/Disposable.html">Disposable</a> that unregisters this provider when being disposed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerDeclarationProvider" class="tsd-anchor"></a>
+					<h3>register<wbr>Declaration<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Declaration<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/DeclarationProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DeclarationProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11213">vscode.d.ts:11213</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register a declaration provider.</p>
+								</div>
+								<p>Multiple providers can be registered for a language. In that case providers are asked in
+									parallel and the results are merged. A failing provider (rejected promise or exception) will
+								not cause a failure of the whole operation.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A selector that defines the documents this provider is applicable to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>provider: <a href="../interfaces/DeclarationProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DeclarationProvider</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A declaration provider.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/Disposable.html">Disposable</a> that unregisters this provider when being disposed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerHoverProvider" class="tsd-anchor"></a>
+					<h3>register<wbr>Hover<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Hover<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/HoverProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">HoverProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11226">vscode.d.ts:11226</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register a hover provider.</p>
+								</div>
+								<p>Multiple providers can be registered for a language. In that case providers are asked in
+									parallel and the results are merged. A failing provider (rejected promise or exception) will
+								not cause a failure of the whole operation.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A selector that defines the documents this provider is applicable to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>provider: <a href="../interfaces/HoverProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">HoverProvider</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A hover provider.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/Disposable.html">Disposable</a> that unregisters this provider when being disposed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerEvaluatableExpressionProvider" class="tsd-anchor"></a>
+					<h3>register<wbr>Evaluatable<wbr>Expression<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Evaluatable<wbr>Expression<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/EvaluatableExpressionProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">EvaluatableExpressionProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11238">vscode.d.ts:11238</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register a provider that locates evaluatable expressions in text documents.
+									The editor will evaluate the expression in the active debug session and will show the result in the debug hover.</p>
+								</div>
+								<p>If multiple providers are registered for a language an arbitrary provider will be used.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A selector that defines the documents this provider is applicable to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>provider: <a href="../interfaces/EvaluatableExpressionProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">EvaluatableExpressionProvider</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>An evaluatable expression provider.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/Disposable.html">Disposable</a> that unregisters this provider when being disposed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerInlineValuesProvider" class="tsd-anchor"></a>
+					<h3>register<wbr>Inline<wbr>Values<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Inline<wbr>Values<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/InlineValuesProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">InlineValuesProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11253">vscode.d.ts:11253</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register a provider that returns data for the debugger&#39;s &#39;inline value&#39; feature.
+										Whenever the generic debugger has stopped in a source file, providers registered for the language of the file
+									are called to return textual data that will be shown in the editor at the end of lines.</p>
+								</div>
+								<p>Multiple providers can be registered for a language. In that case providers are asked in
+									parallel and the results are merged. A failing provider (rejected promise or exception) will
+								not cause a failure of the whole operation.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A selector that defines the documents this provider is applicable to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>provider: <a href="../interfaces/InlineValuesProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">InlineValuesProvider</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>An inline values provider.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/Disposable.html">Disposable</a> that unregisters this provider when being disposed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerDocumentHighlightProvider" class="tsd-anchor"></a>
+					<h3>register<wbr>Document<wbr>Highlight<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Document<wbr>Highlight<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/DocumentHighlightProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentHighlightProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11266">vscode.d.ts:11266</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register a document highlight provider.</p>
+								</div>
+								<p>Multiple providers can be registered for a language. In that case providers are sorted
+									by their <a href="languages.html#match">score</a> and groups sequentially asked for document highlights.
+								The process stops when a provider returns a <code>non-falsy</code> or <code>non-failure</code> result.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A selector that defines the documents this provider is applicable to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>provider: <a href="../interfaces/DocumentHighlightProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentHighlightProvider</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A document highlight provider.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/Disposable.html">Disposable</a> that unregisters this provider when being disposed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerDocumentSymbolProvider" class="tsd-anchor"></a>
+					<h3>register<wbr>Document<wbr>Symbol<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Document<wbr>Symbol<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/DocumentSymbolProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentSymbolProvider</a>, metaData<span class="tsd-signature-symbol">?: </span><a href="../interfaces/DocumentSymbolProviderMetadata.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentSymbolProviderMetadata</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11280">vscode.d.ts:11280</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register a document symbol provider.</p>
+								</div>
+								<p>Multiple providers can be registered for a language. In that case providers are asked in
+									parallel and the results are merged. A failing provider (rejected promise or exception) will
+								not cause a failure of the whole operation.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A selector that defines the documents this provider is applicable to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>provider: <a href="../interfaces/DocumentSymbolProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentSymbolProvider</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A document symbol provider.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> metaData: <a href="../interfaces/DocumentSymbolProviderMetadata.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentSymbolProviderMetadata</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>metadata about the provider</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/Disposable.html">Disposable</a> that unregisters this provider when being disposed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerWorkspaceSymbolProvider" class="tsd-anchor"></a>
+					<h3>register<wbr>Workspace<wbr>Symbol<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Workspace<wbr>Symbol<wbr>Provider<span class="tsd-signature-symbol">(</span>provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/WorkspaceSymbolProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">WorkspaceSymbolProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11292">vscode.d.ts:11292</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register a workspace symbol provider.</p>
+								</div>
+								<p>Multiple providers can be registered. In that case providers are asked in parallel and
+									the results are merged. A failing provider (rejected promise or exception) will not cause
+								a failure of the whole operation.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>provider: <a href="../interfaces/WorkspaceSymbolProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">WorkspaceSymbolProvider</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A workspace symbol provider.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/Disposable.html">Disposable</a> that unregisters this provider when being disposed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerReferenceProvider" class="tsd-anchor"></a>
+					<h3>register<wbr>Reference<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Reference<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/ReferenceProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">ReferenceProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11305">vscode.d.ts:11305</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register a reference provider.</p>
+								</div>
+								<p>Multiple providers can be registered for a language. In that case providers are asked in
+									parallel and the results are merged. A failing provider (rejected promise or exception) will
+								not cause a failure of the whole operation.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A selector that defines the documents this provider is applicable to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>provider: <a href="../interfaces/ReferenceProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">ReferenceProvider</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A reference provider.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/Disposable.html">Disposable</a> that unregisters this provider when being disposed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerRenameProvider" class="tsd-anchor"></a>
+					<h3>register<wbr>Rename<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Rename<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/RenameProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">RenameProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11318">vscode.d.ts:11318</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register a rename provider.</p>
+								</div>
+								<p>Multiple providers can be registered for a language. In that case providers are sorted
+									by their <a href="languages.html#match">score</a> and asked in sequence. The first provider producing a result
+								defines the result of the whole operation.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A selector that defines the documents this provider is applicable to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>provider: <a href="../interfaces/RenameProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">RenameProvider</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A rename provider.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/Disposable.html">Disposable</a> that unregisters this provider when being disposed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerDocumentSemanticTokensProvider" class="tsd-anchor"></a>
+					<h3>register<wbr>Document<wbr>Semantic<wbr>Tokens<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Document<wbr>Semantic<wbr>Tokens<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/DocumentSemanticTokensProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentSemanticTokensProvider</a>, legend<span class="tsd-signature-symbol">: </span><a href="../classes/SemanticTokensLegend.html" class="tsd-signature-type" data-tsd-kind="Class">SemanticTokensLegend</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11331">vscode.d.ts:11331</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register a semantic tokens provider for a whole document.</p>
+								</div>
+								<p>Multiple providers can be registered for a language. In that case providers are sorted
+									by their <a href="languages.html#match">score</a> and the best-matching provider is used. Failure
+								of the selected provider will cause a failure of the whole operation.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A selector that defines the documents this provider is applicable to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>provider: <a href="../interfaces/DocumentSemanticTokensProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentSemanticTokensProvider</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A document semantic tokens provider.</p>
+									</div>
+								</li>
+								<li>
+									<h5>legend: <a href="../classes/SemanticTokensLegend.html" class="tsd-signature-type" data-tsd-kind="Class">SemanticTokensLegend</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/Disposable.html">Disposable</a> that unregisters this provider when being disposed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerDocumentRangeSemanticTokensProvider" class="tsd-anchor"></a>
+					<h3>register<wbr>Document<wbr>Range<wbr>Semantic<wbr>Tokens<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Document<wbr>Range<wbr>Semantic<wbr>Tokens<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/DocumentRangeSemanticTokensProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentRangeSemanticTokensProvider</a>, legend<span class="tsd-signature-symbol">: </span><a href="../classes/SemanticTokensLegend.html" class="tsd-signature-type" data-tsd-kind="Class">SemanticTokensLegend</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11350">vscode.d.ts:11350</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register a semantic tokens provider for a document range.</p>
+								</div>
+								<p><em>Note:</em> If a document has both a <code>DocumentSemanticTokensProvider</code> and a <code>DocumentRangeSemanticTokensProvider</code>,
+									the range provider will be invoked only initially, for the time in which the full document provider takes
+									to resolve the first request. Once the full document provider resolves the first request, the semantic tokens
+									provided via the range provider will be discarded and from that point forward, only the document provider
+								will be used.</p>
+								<p>Multiple providers can be registered for a language. In that case providers are sorted
+									by their <a href="languages.html#match">score</a> and the best-matching provider is used. Failure
+								of the selected provider will cause a failure of the whole operation.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A selector that defines the documents this provider is applicable to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>provider: <a href="../interfaces/DocumentRangeSemanticTokensProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentRangeSemanticTokensProvider</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A document range semantic tokens provider.</p>
+									</div>
+								</li>
+								<li>
+									<h5>legend: <a href="../classes/SemanticTokensLegend.html" class="tsd-signature-type" data-tsd-kind="Class">SemanticTokensLegend</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/Disposable.html">Disposable</a> that unregisters this provider when being disposed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerDocumentFormattingEditProvider" class="tsd-anchor"></a>
+					<h3>register<wbr>Document<wbr>Formatting<wbr>Edit<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Document<wbr>Formatting<wbr>Edit<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/DocumentFormattingEditProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentFormattingEditProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11363">vscode.d.ts:11363</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register a formatting provider for a document.</p>
+								</div>
+								<p>Multiple providers can be registered for a language. In that case providers are sorted
+									by their <a href="languages.html#match">score</a> and the best-matching provider is used. Failure
+								of the selected provider will cause a failure of the whole operation.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A selector that defines the documents this provider is applicable to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>provider: <a href="../interfaces/DocumentFormattingEditProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentFormattingEditProvider</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A document formatting edit provider.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/Disposable.html">Disposable</a> that unregisters this provider when being disposed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerDocumentRangeFormattingEditProvider" class="tsd-anchor"></a>
+					<h3>register<wbr>Document<wbr>Range<wbr>Formatting<wbr>Edit<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Document<wbr>Range<wbr>Formatting<wbr>Edit<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/DocumentRangeFormattingEditProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentRangeFormattingEditProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11380">vscode.d.ts:11380</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register a formatting provider for a document range.</p>
+								</div>
+								<p><em>Note:</em> A document range provider is also a <a href="../interfaces/DocumentFormattingEditProvider.html">document formatter</a>
+									which means there is no need to <a href="languages.html#registerDocumentFormattingEditProvider">register</a> a document
+								formatter when also registering a range provider.</p>
+								<p>Multiple providers can be registered for a language. In that case providers are sorted
+									by their <a href="languages.html#match">score</a> and the best-matching provider is used. Failure
+								of the selected provider will cause a failure of the whole operation.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A selector that defines the documents this provider is applicable to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>provider: <a href="../interfaces/DocumentRangeFormattingEditProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentRangeFormattingEditProvider</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A document range formatting edit provider.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/Disposable.html">Disposable</a> that unregisters this provider when being disposed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerOnTypeFormattingEditProvider" class="tsd-anchor"></a>
+					<h3>register<wbr>OnType<wbr>Formatting<wbr>Edit<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>OnType<wbr>Formatting<wbr>Edit<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/OnTypeFormattingEditProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">OnTypeFormattingEditProvider</a>, firstTriggerCharacter<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>moreTriggerCharacter<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11395">vscode.d.ts:11395</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register a formatting provider that works on type. The provider is active when the user enables the setting <code>editor.formatOnType</code>.</p>
+								</div>
+								<p>Multiple providers can be registered for a language. In that case providers are sorted
+									by their <a href="languages.html#match">score</a> and the best-matching provider is used. Failure
+								of the selected provider will cause a failure of the whole operation.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A selector that defines the documents this provider is applicable to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>provider: <a href="../interfaces/OnTypeFormattingEditProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">OnTypeFormattingEditProvider</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>An on type formatting edit provider.</p>
+									</div>
+								</li>
+								<li>
+									<h5>firstTriggerCharacter: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A character on which formatting should be triggered, like <code>}</code>.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>moreTriggerCharacter: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>More trigger characters.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/Disposable.html">Disposable</a> that unregisters this provider when being disposed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerSignatureHelpProvider" class="tsd-anchor"></a>
+					<h3>register<wbr>Signature<wbr>Help<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Signature<wbr>Help<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/SignatureHelpProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">SignatureHelpProvider</a>, <span class="tsd-signature-symbol">...</span>triggerCharacters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Signature<wbr>Help<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/SignatureHelpProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">SignatureHelpProvider</a>, metadata<span class="tsd-signature-symbol">: </span><a href="../interfaces/SignatureHelpProviderMetadata.html" class="tsd-signature-type" data-tsd-kind="Interface">SignatureHelpProviderMetadata</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11410">vscode.d.ts:11410</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register a signature help provider.</p>
+								</div>
+								<p>Multiple providers can be registered for a language. In that case providers are sorted
+									by their <a href="languages.html#match">score</a> and called sequentially until a provider returns a
+								valid result.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A selector that defines the documents this provider is applicable to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>provider: <a href="../interfaces/SignatureHelpProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">SignatureHelpProvider</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A signature help provider.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>triggerCharacters: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Trigger signature help when the user types one of the characters, like <code>,</code> or <code>(</code>.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/Disposable.html">Disposable</a> that unregisters this provider when being disposed.</p>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11411">vscode.d.ts:11411</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+								</li>
+								<li>
+									<h5>provider: <a href="../interfaces/SignatureHelpProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">SignatureHelpProvider</a></h5>
+								</li>
+								<li>
+									<h5>metadata: <a href="../interfaces/SignatureHelpProviderMetadata.html" class="tsd-signature-type" data-tsd-kind="Interface">SignatureHelpProviderMetadata</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerDocumentLinkProvider" class="tsd-anchor"></a>
+					<h3>register<wbr>Document<wbr>Link<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Document<wbr>Link<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/DocumentLinkProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentLinkProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11424">vscode.d.ts:11424</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register a document link provider.</p>
+								</div>
+								<p>Multiple providers can be registered for a language. In that case providers are asked in
+									parallel and the results are merged. A failing provider (rejected promise or exception) will
+								not cause a failure of the whole operation.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A selector that defines the documents this provider is applicable to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>provider: <a href="../interfaces/DocumentLinkProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentLinkProvider</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A document link provider.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/Disposable.html">Disposable</a> that unregisters this provider when being disposed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerColorProvider" class="tsd-anchor"></a>
+					<h3>register<wbr>Color<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Color<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/DocumentColorProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentColorProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11437">vscode.d.ts:11437</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register a color provider.</p>
+								</div>
+								<p>Multiple providers can be registered for a language. In that case providers are asked in
+									parallel and the results are merged. A failing provider (rejected promise or exception) will
+								not cause a failure of the whole operation.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A selector that defines the documents this provider is applicable to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>provider: <a href="../interfaces/DocumentColorProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentColorProvider</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A color provider.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/Disposable.html">Disposable</a> that unregisters this provider when being disposed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerFoldingRangeProvider" class="tsd-anchor"></a>
+					<h3>register<wbr>Folding<wbr>Range<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Folding<wbr>Range<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/FoldingRangeProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">FoldingRangeProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11454">vscode.d.ts:11454</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register a folding range provider.</p>
+								</div>
+								<p>Multiple providers can be registered for a language. In that case providers are asked in
+									parallel and the results are merged.
+									If multiple folding ranges start at the same position, only the range of the first registered provider is used.
+								If a folding range overlaps with an other range that has a smaller position, it is also ignored.</p>
+								<p>A failing provider (rejected promise or exception) will
+								not cause a failure of the whole operation.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A selector that defines the documents this provider is applicable to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>provider: <a href="../interfaces/FoldingRangeProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">FoldingRangeProvider</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A folding range provider.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/Disposable.html">Disposable</a> that unregisters this provider when being disposed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerSelectionRangeProvider" class="tsd-anchor"></a>
+					<h3>register<wbr>Selection<wbr>Range<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Selection<wbr>Range<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/SelectionRangeProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">SelectionRangeProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11467">vscode.d.ts:11467</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register a selection range provider.</p>
+								</div>
+								<p>Multiple providers can be registered for a language. In that case providers are asked in
+									parallel and the results are merged. A failing provider (rejected promise or exception) will
+								not cause a failure of the whole operation.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A selector that defines the documents this provider is applicable to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>provider: <a href="../interfaces/SelectionRangeProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">SelectionRangeProvider</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A selection range provider.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/Disposable.html">Disposable</a> that unregisters this provider when being disposed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerCallHierarchyProvider" class="tsd-anchor"></a>
+					<h3>register<wbr>Call<wbr>Hierarchy<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Call<wbr>Hierarchy<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/CallHierarchyProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">CallHierarchyProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11476">vscode.d.ts:11476</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register a call hierarchy provider.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A selector that defines the documents this provider is applicable to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>provider: <a href="../interfaces/CallHierarchyProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">CallHierarchyProvider</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A call hierarchy provider.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/Disposable.html">Disposable</a> that unregisters this provider when being disposed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerLinkedEditingRangeProvider" class="tsd-anchor"></a>
+					<h3>register<wbr>Linked<wbr>Editing<wbr>Range<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Linked<wbr>Editing<wbr>Range<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/LinkedEditingRangeProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">LinkedEditingRangeProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11489">vscode.d.ts:11489</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register a linked editing range provider.</p>
+								</div>
+								<p>Multiple providers can be registered for a language. In that case providers are sorted
+									by their <a href="languages.html#match">score</a> and the best-matching provider that has a result is used. Failure
+								of the selected provider will cause a failure of the whole operation.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A selector that defines the documents this provider is applicable to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>provider: <a href="../interfaces/LinkedEditingRangeProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">LinkedEditingRangeProvider</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A linked editing range provider.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/Disposable.html">Disposable</a> that unregisters this provider when being disposed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="setLanguageConfiguration" class="tsd-anchor"></a>
+					<h3>set<wbr>Language<wbr>Configuration</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Language<wbr>Configuration<span class="tsd-signature-symbol">(</span>language<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, configuration<span class="tsd-signature-symbol">: </span><a href="../interfaces/LanguageConfiguration.html" class="tsd-signature-type" data-tsd-kind="Interface">LanguageConfiguration</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api/blob/branch/vscode.d.ts#L11498">vscode.d.ts:11498</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Set a <a href="../interfaces/LanguageConfiguration.html">language configuration</a> for a language.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>language: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A language identifier like <code>typescript</code>.</p>
+									</div>
+								</li>
+								<li>
+									<h5>configuration: <a href="../interfaces/LanguageConfiguration.html" class="tsd-signature-type" data-tsd-kind="Interface">LanguageConfiguration</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Language configuration.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/Disposable.html">Disposable</a> that unsets this configuration.</p>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Exports</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="authentication.html">authentication</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="commands.html">commands</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="comments.html">comments</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="debug.html">debug</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="env.html">env</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="extensions.html">extensions</a>
+					</li>
+					<li class="current tsd-kind-namespace">
+						<a href="languages.html">languages</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="notebooks.html">notebooks</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="scm.html">scm</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="tasks.html">tasks</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="tests.html">tests</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="window.html">window</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="workspace.html">workspace</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#getLanguages" class="tsd-kind-icon">get<wbr>Languages</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#setTextDocumentLanguage" class="tsd-kind-icon">set<wbr>Text<wbr>Document<wbr>Language</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#match" class="tsd-kind-icon">match</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#onDidChangeDiagnostics" class="tsd-kind-icon">on<wbr>Did<wbr>Change<wbr>Diagnostics</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#getDiagnostics" class="tsd-kind-icon">get<wbr>Diagnostics</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#createDiagnosticCollection" class="tsd-kind-icon">create<wbr>Diagnostic<wbr>Collection</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#registerCompletionItemProvider" class="tsd-kind-icon">register<wbr>Completion<wbr>Item<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#registerCodeActionsProvider" class="tsd-kind-icon">register<wbr>Code<wbr>Actions<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#registerCodeLensProvider" class="tsd-kind-icon">register<wbr>Code<wbr>Lens<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#registerDefinitionProvider" class="tsd-kind-icon">register<wbr>Definition<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#registerImplementationProvider" class="tsd-kind-icon">register<wbr>Implementation<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#registerTypeDefinitionProvider" class="tsd-kind-icon">register<wbr>Type<wbr>Definition<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#registerDeclarationProvider" class="tsd-kind-icon">register<wbr>Declaration<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#registerHoverProvider" class="tsd-kind-icon">register<wbr>Hover<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#registerEvaluatableExpressionProvider" class="tsd-kind-icon">register<wbr>Evaluatable<wbr>Expression<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#registerInlineValuesProvider" class="tsd-kind-icon">register<wbr>Inline<wbr>Values<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#registerDocumentHighlightProvider" class="tsd-kind-icon">register<wbr>Document<wbr>Highlight<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#registerDocumentSymbolProvider" class="tsd-kind-icon">register<wbr>Document<wbr>Symbol<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#registerWorkspaceSymbolProvider" class="tsd-kind-icon">register<wbr>Workspace<wbr>Symbol<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#registerReferenceProvider" class="tsd-kind-icon">register<wbr>Reference<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#registerRenameProvider" class="tsd-kind-icon">register<wbr>Rename<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#registerDocumentSemanticTokensProvider" class="tsd-kind-icon">register<wbr>Document<wbr>Semantic<wbr>Tokens<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#registerDocumentRangeSemanticTokensProvider" class="tsd-kind-icon">register<wbr>Document<wbr>Range<wbr>Semantic<wbr>Tokens<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#registerDocumentFormattingEditProvider" class="tsd-kind-icon">register<wbr>Document<wbr>Formatting<wbr>Edit<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#registerDocumentRangeFormattingEditProvider" class="tsd-kind-icon">register<wbr>Document<wbr>Range<wbr>Formatting<wbr>Edit<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#registerOnTypeFormattingEditProvider" class="tsd-kind-icon">register<wbr>OnType<wbr>Formatting<wbr>Edit<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#registerSignatureHelpProvider" class="tsd-kind-icon">register<wbr>Signature<wbr>Help<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#registerDocumentLinkProvider" class="tsd-kind-icon">register<wbr>Document<wbr>Link<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#registerColorProvider" class="tsd-kind-icon">register<wbr>Color<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#registerFoldingRangeProvider" class="tsd-kind-icon">register<wbr>Folding<wbr>Range<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#registerSelectionRangeProvider" class="tsd-kind-icon">register<wbr>Selection<wbr>Range<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#registerCallHierarchyProvider" class="tsd-kind-icon">register<wbr>Call<wbr>Hierarchy<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#registerLinkedEditingRangeProvider" class="tsd-kind-icon">register<wbr>Linked<wbr>Editing<wbr>Range<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="languages.html#setLanguageConfiguration" class="tsd-kind-icon">set<wbr>Language<wbr>Configuration</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
