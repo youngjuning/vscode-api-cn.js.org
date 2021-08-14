@@ -8,7 +8,9 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-      - run: npx typedoc
+      - uses: c-hive/gha-yarn-cache@v2
+      - run: yarn install
+      - run: yarn build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
