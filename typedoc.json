@@ -2,7 +2,7 @@
   "name": "VS Code API",
   "readme": "./README.md",
   "gitRemote": "origin",
-  "gitRevision": "branch",
+  "gitRevision": "main",
   "sort": ["source-order"],
   "entryPoints": ["./vscode.d.ts"],
   "out": "docs"
