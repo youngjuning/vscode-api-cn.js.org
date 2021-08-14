@@ -1,0 +1,9 @@
+{
+  "name": "Vscode Extension Api",
+  "readme": "./README.md",
+  "gitRemote": "origin",
+  "gitRevision": "branch",
+  "sort": ["source-order"],
+  "entryPoints": ["./vscode.d.ts"],
+  "out": "docs"
+}
