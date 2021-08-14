@@ -1,0 +1,523 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TestController | Vscode Extension Api</title>
+	<meta name="description" content="Documentation for Vscode Extension Api">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">Vscode Extension Api</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">Vscode Extension Api</a>
+				</li>
+				<li>
+					<a href="../modules/vscode.html">vscode</a>
+				</li>
+				<li>
+					<a href="vscode.TestController.html">TestController</a>
+				</li>
+			</ul>
+			<h1>Interface TestController</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Entry point to discover and execute tests. It contains <a href="vscode.TestController.html#items">TestController.items</a> which
+							are used to populate the editor UI, and is associated with
+							<a href="vscode.TestController.html#createRunProfile">run profiles</a> to allow
+						for tests to be executed.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">TestController</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.TestController.html#id" class="tsd-kind-icon">id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.TestController.html#label" class="tsd-kind-icon">label</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.TestController.html#items" class="tsd-kind-icon">items</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="vscode.TestController.html#createRunProfile" class="tsd-kind-icon">create<wbr>Run<wbr>Profile</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="vscode.TestController.html#resolveHandler" class="tsd-kind-icon">resolve<wbr>Handler</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="vscode.TestController.html#createTestRun" class="tsd-kind-icon">create<wbr>Test<wbr>Run</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="vscode.TestController.html#createTestItem" class="tsd-kind-icon">create<wbr>Test<wbr>Item</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="vscode.TestController.html#dispose" class="tsd-kind-icon">dispose</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="id" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> id</h3>
+					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-extension-api/blob/branch/vscode.d.ts#L13929">vscode.d.ts:13929</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The id of the controller passed in <a href="../modules/vscode.tests.html#createTestController">vscode.tests.createTestController</a>.
+							This must be globally unique.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="label" class="tsd-anchor"></a>
+					<h3>label</h3>
+					<div class="tsd-signature tsd-kind-icon">label<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-extension-api/blob/branch/vscode.d.ts#L13934">vscode.d.ts:13934</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Human-readable label for the test controller.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="items" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> items</h3>
+					<div class="tsd-signature tsd-kind-icon">items<span class="tsd-signature-symbol">:</span> <a href="vscode.TestItemCollection.html" class="tsd-signature-type" data-tsd-kind="Interface">TestItemCollection</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-extension-api/blob/branch/vscode.d.ts#L13948">vscode.d.ts:13948</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A collection of &quot;top-level&quot; <a href="vscode.TestItem.html">TestItem</a> instances, which can in
+								turn have their own <a href="vscode.TestItem.html#children">children</a> to form the
+							&quot;test tree.&quot;</p>
+						</div>
+						<p>The extension controls when to add tests. For example, extensions should
+							add tests for a file when <a href="../modules/vscode.workspace.html#onDidOpenTextDocument">vscode.workspace.onDidOpenTextDocument</a>
+						fires in order for decorations for tests within a file to be visible.</p>
+						<p>However, the editor may sometimes explicitly request children using the
+						<a href="vscode.TestController.html#resolveHandler">resolveHandler</a> See the documentation on that method for more details.</p>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="createRunProfile" class="tsd-anchor"></a>
+					<h3>create<wbr>Run<wbr>Profile</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Run<wbr>Profile<span class="tsd-signature-symbol">(</span>label<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, kind<span class="tsd-signature-symbol">: </span><a href="../enums/vscode.TestRunProfileKind.html" class="tsd-signature-type" data-tsd-kind="Enumeration">TestRunProfileKind</a>, runHandler<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><a href="../classes/vscode.TestRunRequest.html" class="tsd-signature-type" data-tsd-kind="Class">TestRunRequest</a>, token<span class="tsd-signature-symbol">: </span><a href="vscode.CancellationToken.html" class="tsd-signature-type" data-tsd-kind="Interface">CancellationToken</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><a href="Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span>, isDefault<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="vscode.TestRunProfile.html" class="tsd-signature-type" data-tsd-kind="Interface">TestRunProfile</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-extension-api/blob/branch/vscode.d.ts#L13960">vscode.d.ts:13960</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a profile used for running tests. Extensions must create
+									at least one profile in order for tests to be run.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>label: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A human-readable label for this profile.</p>
+									</div>
+								</li>
+								<li>
+									<h5>kind: <a href="../enums/vscode.TestRunProfileKind.html" class="tsd-signature-type" data-tsd-kind="Enumeration">TestRunProfileKind</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Configures what kind of execution this profile manages.</p>
+									</div>
+								</li>
+								<li>
+									<h5>runHandler: <span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><a href="../classes/vscode.TestRunRequest.html" class="tsd-signature-type" data-tsd-kind="Class">TestRunRequest</a>, token<span class="tsd-signature-symbol">: </span><a href="vscode.CancellationToken.html" class="tsd-signature-type" data-tsd-kind="Interface">CancellationToken</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><a href="Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Function called to start a test run.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><a href="../classes/vscode.TestRunRequest.html" class="tsd-signature-type" data-tsd-kind="Class">TestRunRequest</a>, token<span class="tsd-signature-symbol">: </span><a href="vscode.CancellationToken.html" class="tsd-signature-type" data-tsd-kind="Interface">CancellationToken</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><a href="Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>request: <a href="../classes/vscode.TestRunRequest.html" class="tsd-signature-type" data-tsd-kind="Class">TestRunRequest</a></h5>
+														</li>
+														<li>
+															<h5>token: <a href="vscode.CancellationToken.html" class="tsd-signature-type" data-tsd-kind="Interface">CancellationToken</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><a href="Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> isDefault: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Whether this is the default action for its kind.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="vscode.TestRunProfile.html" class="tsd-signature-type" data-tsd-kind="Interface">TestRunProfile</a></h4>
+							<p>An instance of a <a href="vscode.TestRunProfile.html">TestRunProfile</a>, which is automatically
+							associated with this controller.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="resolveHandler" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> resolve<wbr>Handler</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">resolve<wbr>Handler<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="vscode.TestItem.html" class="tsd-signature-type" data-tsd-kind="Interface">TestItem</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><a href="Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-extension-api/blob/branch/vscode.d.ts#L13980">vscode.d.ts:13980</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>A function provided by the extension that the editor may call to request
+										children of a test item, if the <a href="vscode.TestItem.html#canResolveChildren">TestItem.canResolveChildren</a> is
+										<code>true</code>. When called, the item should discover children and call
+									{@link vscode.tests.createTestItem} as children are discovered.</p>
+								</div>
+								<p>Generally the extension manages the lifecycle of test items, but under
+									certain conditions the editor may request the children of a specific
+									item to be loaded. For example, if the user requests to re-run tests
+									after reloading the editor, the editor may need to call this method
+								to resolve the previously-run tests.</p>
+								<p>The item in the explorer will automatically be marked as &quot;busy&quot; until
+								the function returns or the returned thenable resolves.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>item: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="vscode.TestItem.html" class="tsd-signature-type" data-tsd-kind="Interface">TestItem</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>An unresolved test item for which children are being
+										requested, or <code>undefined</code> to resolve the controller&#39;s initial <a href="vscode.TestController.html#items">items</a>.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><a href="Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="createTestRun" class="tsd-anchor"></a>
+					<h3>create<wbr>Test<wbr>Run</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Test<wbr>Run<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><a href="../classes/vscode.TestRunRequest.html" class="tsd-signature-type" data-tsd-kind="Class">TestRunRequest</a>, name<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, persist<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="vscode.TestRun.html" class="tsd-signature-type" data-tsd-kind="Interface">TestRun</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-extension-api/blob/branch/vscode.d.ts#L14003">vscode.d.ts:14003</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a <a href="vscode.TestRun.html">TestRun</a>. This should be called by the
+										<a href="vscode.TestRunProfile.html">TestRunProfile</a> when a request is made to execute tests, and may
+										also be called if a test run is detected externally. Once created, tests
+									that are included in the request will be moved into the queued state.</p>
+								</div>
+								<p>All runs created using the same <code>request</code> instance will be grouped
+									together. This is useful if, for example, a single suite of tests is
+								run on multiple platforms.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>request: <a href="../classes/vscode.TestRunRequest.html" class="tsd-signature-type" data-tsd-kind="Class">TestRunRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Test run request. Only tests inside the <code>include</code> may be
+										modified, and tests in its <code>exclude</code> are ignored.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> name: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The human-readable name of the run. This can be used to
+											disambiguate multiple sets of results in a test run. It is useful if
+										tests are run across multiple platforms, for example.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> persist: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Whether the results created by the run should be
+											persisted in the editor. This may be false if the results are coming from
+										a file already saved externally, such as a coverage information file.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="vscode.TestRun.html" class="tsd-signature-type" data-tsd-kind="Interface">TestRun</a></h4>
+							<p>An instance of the <a href="vscode.TestRun.html">TestRun</a>. It will be considered &quot;running&quot;
+							from the moment this method is invoked until <a href="vscode.TestRun.html#end">TestRun.end</a> is called.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="createTestItem" class="tsd-anchor"></a>
+					<h3>create<wbr>Test<wbr>Item</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Test<wbr>Item<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, label<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, uri<span class="tsd-signature-symbol">?: </span><a href="../classes/vscode.Uri.html" class="tsd-signature-type" data-tsd-kind="Class">Uri</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="vscode.TestItem.html" class="tsd-signature-type" data-tsd-kind="Interface">TestItem</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-extension-api/blob/branch/vscode.d.ts#L14015">vscode.d.ts:14015</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a new managed <a href="vscode.TestItem.html">TestItem</a> instance. It can be added into
+										the <a href="vscode.TestItem.html#children">TestItem.children</a> of an existing item, or into the
+									<a href="vscode.TestController.html#items">TestController.items</a>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>id: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Identifier for the TestItem. The test item&#39;s ID must be unique
+										in the <a href="vscode.TestItemCollection.html">TestItemCollection</a> it&#39;s added to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>label: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Human-readable label of the test item.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> uri: <a href="../classes/vscode.Uri.html" class="tsd-signature-type" data-tsd-kind="Class">Uri</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>URI this TestItem is associated with. May be a file or directory.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="vscode.TestItem.html" class="tsd-signature-type" data-tsd-kind="Interface">TestItem</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="dispose" class="tsd-anchor"></a>
+					<h3>dispose</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">dispose<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-extension-api/blob/branch/vscode.d.ts#L14021">vscode.d.ts:14021</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Unregisters the test controller, disposing of its associated tests
+									and unpersisted results.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Exports</a>
+					</li>
+					<li class="current tsd-kind-namespace">
+						<a href="../modules/vscode.html">vscode</a>
+						<ul>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.authentication.html">authentication</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.commands.html">commands</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.comments.html">comments</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.debug.html">debug</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.env.html">env</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.extensions.html">extensions</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.languages.html">languages</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.notebooks.html">notebooks</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.scm.html">scm</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.tasks.html">tasks</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.tests.html">tests</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.window.html">window</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.workspace.html">workspace</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="vscode.TestController.html" class="tsd-kind-icon">Test<wbr>Controller</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.TestController.html#id" class="tsd-kind-icon">id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.TestController.html#label" class="tsd-kind-icon">label</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.TestController.html#items" class="tsd-kind-icon">items</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="vscode.TestController.html#createRunProfile" class="tsd-kind-icon">create<wbr>Run<wbr>Profile</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="vscode.TestController.html#resolveHandler" class="tsd-kind-icon">resolve<wbr>Handler</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="vscode.TestController.html#createTestRun" class="tsd-kind-icon">create<wbr>Test<wbr>Run</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="vscode.TestController.html#createTestItem" class="tsd-kind-icon">create<wbr>Test<wbr>Item</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="vscode.TestController.html#dispose" class="tsd-kind-icon">dispose</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

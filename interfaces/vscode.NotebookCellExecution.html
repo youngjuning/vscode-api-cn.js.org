@@ -1,0 +1,545 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>NotebookCellExecution | Vscode Extension Api</title>
+	<meta name="description" content="Documentation for Vscode Extension Api">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">Vscode Extension Api</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">Vscode Extension Api</a>
+				</li>
+				<li>
+					<a href="../modules/vscode.html">vscode</a>
+				</li>
+				<li>
+					<a href="vscode.NotebookCellExecution.html">NotebookCellExecution</a>
+				</li>
+			</ul>
+			<h1>Interface NotebookCellExecution</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>A NotebookCellExecution is how <a href="vscode.NotebookController.html">notebook controller</a> modify a notebook cell as
+						it is executing.</p>
+					</div>
+					<p>When a cell execution object is created, the cell enters the {@linkcode NotebookCellExecutionState.Pending Pending} state.
+						When <a href="vscode.NotebookCellExecution.html#start"><code>start(...)</code></a> is called on the execution task, it enters the {@linkcode NotebookCellExecutionState.Executing Executing} state. When
+					<a href="vscode.NotebookCellExecution.html#end"><code>end(...)</code></a> is called, it enters the {@linkcode NotebookCellExecutionState.Idle Idle} state.</p>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">NotebookCellExecution</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.NotebookCellExecution.html#cell" class="tsd-kind-icon">cell</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.NotebookCellExecution.html#token" class="tsd-kind-icon">token</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.NotebookCellExecution.html#executionOrder" class="tsd-kind-icon">execution<wbr>Order</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="vscode.NotebookCellExecution.html#start" class="tsd-kind-icon">start</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="vscode.NotebookCellExecution.html#end" class="tsd-kind-icon">end</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="vscode.NotebookCellExecution.html#clearOutput" class="tsd-kind-icon">clear<wbr>Output</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="vscode.NotebookCellExecution.html#replaceOutput" class="tsd-kind-icon">replace<wbr>Output</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="vscode.NotebookCellExecution.html#appendOutput" class="tsd-kind-icon">append<wbr>Output</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="vscode.NotebookCellExecution.html#replaceOutputItems" class="tsd-kind-icon">replace<wbr>Output<wbr>Items</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="vscode.NotebookCellExecution.html#appendOutputItems" class="tsd-kind-icon">append<wbr>Output<wbr>Items</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="cell" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> cell</h3>
+					<div class="tsd-signature tsd-kind-icon">cell<span class="tsd-signature-symbol">:</span> <a href="vscode.NotebookCell.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookCell</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-extension-api/blob/branch/vscode.d.ts#L12142">vscode.d.ts:12142</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The <a href="vscode.NotebookCell.html">cell</a> for which this execution has been created.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="token" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> token</h3>
+					<div class="tsd-signature tsd-kind-icon">token<span class="tsd-signature-symbol">:</span> <a href="vscode.CancellationToken.html" class="tsd-signature-type" data-tsd-kind="Interface">CancellationToken</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-extension-api/blob/branch/vscode.d.ts#L12151">vscode.d.ts:12151</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A cancellation token which will be triggered when the cell execution is canceled
+							from the UI.</p>
+						</div>
+						<p><em>Note</em> that the cancellation token will not be triggered when the <a href="vscode.NotebookController.html">controller</a>
+						that created this execution uses an <a href="vscode.NotebookController.html#interruptHandler">interrupt-handler</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="executionOrder" class="tsd-anchor"></a>
+					<h3>execution<wbr>Order</h3>
+					<div class="tsd-signature tsd-kind-icon">execution<wbr>Order<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-extension-api/blob/branch/vscode.d.ts#L12156">vscode.d.ts:12156</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Set and unset the order of this cell execution.</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="start" class="tsd-anchor"></a>
+					<h3>start</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">start<span class="tsd-signature-symbol">(</span>startTime<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-extension-api/blob/branch/vscode.d.ts#L12164">vscode.d.ts:12164</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Signal that the execution has begun.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> startTime: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The time that execution began, in milliseconds in the Unix epoch. Used to drive the clock
+										that shows for how long a cell has been running. If not given, the clock won&#39;t be shown.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="end" class="tsd-anchor"></a>
+					<h3>end</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">end<span class="tsd-signature-symbol">(</span>success<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span>, endTime<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-extension-api/blob/branch/vscode.d.ts#L12174">vscode.d.ts:12174</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Signal that execution has ended.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>success: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>If true, a green check is shown on the cell status bar.
+											If false, a red X is shown.
+										If undefined, no check or X icon is shown.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> endTime: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The time that execution finished, in milliseconds in the Unix epoch.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="clearOutput" class="tsd-anchor"></a>
+					<h3>clear<wbr>Output</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">clear<wbr>Output<span class="tsd-signature-symbol">(</span>cell<span class="tsd-signature-symbol">?: </span><a href="vscode.NotebookCell.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookCell</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-extension-api/blob/branch/vscode.d.ts#L12183">vscode.d.ts:12183</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Clears the output of the cell that is executing or of another cell that is affected by this execution.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> cell: <a href="vscode.NotebookCell.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookCell</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Cell for which output is cleared. Defaults to the <a href="vscode.NotebookCellExecution.html#cell">cell</a> of
+										this execution.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>A thenable that resolves when the operation finished.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="replaceOutput" class="tsd-anchor"></a>
+					<h3>replace<wbr>Output</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">replace<wbr>Output<span class="tsd-signature-symbol">(</span>out<span class="tsd-signature-symbol">: </span><a href="../classes/vscode.NotebookCellOutput.html" class="tsd-signature-type" data-tsd-kind="Class">NotebookCellOutput</a><span class="tsd-signature-symbol"> | </span><a href="../classes/vscode.NotebookCellOutput.html" class="tsd-signature-type" data-tsd-kind="Class">NotebookCellOutput</a><span class="tsd-signature-symbol">[]</span>, cell<span class="tsd-signature-symbol">?: </span><a href="vscode.NotebookCell.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookCell</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-extension-api/blob/branch/vscode.d.ts#L12193">vscode.d.ts:12193</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Replace the output of the cell that is executing or of another cell that is affected by this execution.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>out: <a href="../classes/vscode.NotebookCellOutput.html" class="tsd-signature-type" data-tsd-kind="Class">NotebookCellOutput</a><span class="tsd-signature-symbol"> | </span><a href="../classes/vscode.NotebookCellOutput.html" class="tsd-signature-type" data-tsd-kind="Class">NotebookCellOutput</a><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Output that replaces the current output.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> cell: <a href="vscode.NotebookCell.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookCell</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Cell for which output is cleared. Defaults to the <a href="vscode.NotebookCellExecution.html#cell">cell</a> of
+										this execution.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>A thenable that resolves when the operation finished.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="appendOutput" class="tsd-anchor"></a>
+					<h3>append<wbr>Output</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">append<wbr>Output<span class="tsd-signature-symbol">(</span>out<span class="tsd-signature-symbol">: </span><a href="../classes/vscode.NotebookCellOutput.html" class="tsd-signature-type" data-tsd-kind="Class">NotebookCellOutput</a><span class="tsd-signature-symbol"> | </span><a href="../classes/vscode.NotebookCellOutput.html" class="tsd-signature-type" data-tsd-kind="Class">NotebookCellOutput</a><span class="tsd-signature-symbol">[]</span>, cell<span class="tsd-signature-symbol">?: </span><a href="vscode.NotebookCell.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookCell</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-extension-api/blob/branch/vscode.d.ts#L12203">vscode.d.ts:12203</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Append to the output of the cell that is executing or to another cell that is affected by this execution.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>out: <a href="../classes/vscode.NotebookCellOutput.html" class="tsd-signature-type" data-tsd-kind="Class">NotebookCellOutput</a><span class="tsd-signature-symbol"> | </span><a href="../classes/vscode.NotebookCellOutput.html" class="tsd-signature-type" data-tsd-kind="Class">NotebookCellOutput</a><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Output that is appended to the current output.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> cell: <a href="vscode.NotebookCell.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookCell</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Cell for which output is cleared. Defaults to the <a href="vscode.NotebookCellExecution.html#cell">cell</a> of
+										this execution.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>A thenable that resolves when the operation finished.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="replaceOutputItems" class="tsd-anchor"></a>
+					<h3>replace<wbr>Output<wbr>Items</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">replace<wbr>Output<wbr>Items<span class="tsd-signature-symbol">(</span>items<span class="tsd-signature-symbol">: </span><a href="../classes/vscode.NotebookCellOutputItem.html" class="tsd-signature-type" data-tsd-kind="Class">NotebookCellOutputItem</a><span class="tsd-signature-symbol"> | </span><a href="../classes/vscode.NotebookCellOutputItem.html" class="tsd-signature-type" data-tsd-kind="Class">NotebookCellOutputItem</a><span class="tsd-signature-symbol">[]</span>, output<span class="tsd-signature-symbol">: </span><a href="../classes/vscode.NotebookCellOutput.html" class="tsd-signature-type" data-tsd-kind="Class">NotebookCellOutput</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-extension-api/blob/branch/vscode.d.ts#L12212">vscode.d.ts:12212</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Replace all output items of existing cell output.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>items: <a href="../classes/vscode.NotebookCellOutputItem.html" class="tsd-signature-type" data-tsd-kind="Class">NotebookCellOutputItem</a><span class="tsd-signature-symbol"> | </span><a href="../classes/vscode.NotebookCellOutputItem.html" class="tsd-signature-type" data-tsd-kind="Class">NotebookCellOutputItem</a><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Output items that replace the items of existing output.</p>
+									</div>
+								</li>
+								<li>
+									<h5>output: <a href="../classes/vscode.NotebookCellOutput.html" class="tsd-signature-type" data-tsd-kind="Class">NotebookCellOutput</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Output object that already exists.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>A thenable that resolves when the operation finished.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="appendOutputItems" class="tsd-anchor"></a>
+					<h3>append<wbr>Output<wbr>Items</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">append<wbr>Output<wbr>Items<span class="tsd-signature-symbol">(</span>items<span class="tsd-signature-symbol">: </span><a href="../classes/vscode.NotebookCellOutputItem.html" class="tsd-signature-type" data-tsd-kind="Class">NotebookCellOutputItem</a><span class="tsd-signature-symbol"> | </span><a href="../classes/vscode.NotebookCellOutputItem.html" class="tsd-signature-type" data-tsd-kind="Class">NotebookCellOutputItem</a><span class="tsd-signature-symbol">[]</span>, output<span class="tsd-signature-symbol">: </span><a href="../classes/vscode.NotebookCellOutput.html" class="tsd-signature-type" data-tsd-kind="Class">NotebookCellOutput</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-extension-api/blob/branch/vscode.d.ts#L12221">vscode.d.ts:12221</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Append output items to existing cell output.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>items: <a href="../classes/vscode.NotebookCellOutputItem.html" class="tsd-signature-type" data-tsd-kind="Class">NotebookCellOutputItem</a><span class="tsd-signature-symbol"> | </span><a href="../classes/vscode.NotebookCellOutputItem.html" class="tsd-signature-type" data-tsd-kind="Class">NotebookCellOutputItem</a><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Output items that are append to existing output.</p>
+									</div>
+								</li>
+								<li>
+									<h5>output: <a href="../classes/vscode.NotebookCellOutput.html" class="tsd-signature-type" data-tsd-kind="Class">NotebookCellOutput</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Output object that already exists.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>A thenable that resolves when the operation finished.</p>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Exports</a>
+					</li>
+					<li class="current tsd-kind-namespace">
+						<a href="../modules/vscode.html">vscode</a>
+						<ul>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.authentication.html">authentication</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.commands.html">commands</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.comments.html">comments</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.debug.html">debug</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.env.html">env</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.extensions.html">extensions</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.languages.html">languages</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.notebooks.html">notebooks</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.scm.html">scm</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.tasks.html">tasks</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.tests.html">tests</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.window.html">window</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.workspace.html">workspace</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="vscode.NotebookCellExecution.html" class="tsd-kind-icon">Notebook<wbr>Cell<wbr>Execution</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.NotebookCellExecution.html#cell" class="tsd-kind-icon">cell</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.NotebookCellExecution.html#token" class="tsd-kind-icon">token</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.NotebookCellExecution.html#executionOrder" class="tsd-kind-icon">execution<wbr>Order</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="vscode.NotebookCellExecution.html#start" class="tsd-kind-icon">start</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="vscode.NotebookCellExecution.html#end" class="tsd-kind-icon">end</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="vscode.NotebookCellExecution.html#clearOutput" class="tsd-kind-icon">clear<wbr>Output</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="vscode.NotebookCellExecution.html#replaceOutput" class="tsd-kind-icon">replace<wbr>Output</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="vscode.NotebookCellExecution.html#appendOutput" class="tsd-kind-icon">append<wbr>Output</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="vscode.NotebookCellExecution.html#replaceOutputItems" class="tsd-kind-icon">replace<wbr>Output<wbr>Items</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="vscode.NotebookCellExecution.html#appendOutputItems" class="tsd-kind-icon">append<wbr>Output<wbr>Items</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
