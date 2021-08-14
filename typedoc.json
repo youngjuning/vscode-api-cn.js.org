@@ -2,6 +2,9 @@
   "name": "VS Code API",
   "readme": "./README.md",
   "sort": ["source-order"],
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "excludeInternal": true,
   "entryPoints": ["./vscode.d.ts"],
   "out": "docs"
 }
