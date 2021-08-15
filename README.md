@@ -14,7 +14,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/youngjuning"><img src="https://avatars.githubusercontent.com/u/13204332?v=4?s=100" width="100px;" alt=""/><br /><sub><b>youngjuning</b></sub></a><br /><a href="https://github.com/youngjuning/vscode-api-cn/commits?author=youngjuning" title="Code">💻</a> <a href="#infra-youngjuning" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-youngjuning" title="Maintenance">🚧</a> <a href="#translation-youngjuning" title="Translation">🌍</a> <a href="https://github.com/youngjuning/vscode-api-cn/commits?author=youngjuning" title="Documentation">📖</a> <a href="#ideas-youngjuning" title="Ideas, Planning, & Feedback">🤔</a> <a href="#design-youngjuning" title="Design">🎨</a></td>
+    <td align="center"><a href="https://github.com/youngjuning"><img src="https://avatars.githubusercontent.com/u/13204332?v=4?s=100" width="100px;" alt=""/><br /><sub><b>youngjuning</b></sub></a><br /><a href="https://github.com/youngjuning/vscode-api-cn/commits?author=youngjuning" title="Code">💻</a> <a href="#infra-youngjuning" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-youngjuning" title="Maintenance">🚧</a> <a href="#translation-youngjuning" title="Translation">🌍</a> <a href="https://github.com/youngjuning/vscode-api-cn/commits?author=youngjuning" title="Documentation">📖</a> <a href="#ideas-youngjuning" title="Ideas, Planning, & Feedback">🤔</a> <a href="#design-youngjuning" title="Design">🎨</a> <a href="#translation-youngjuning" title="Translation">🌍</a></td>
   </tr>
 </table>
 
