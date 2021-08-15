@@ -1,6 +1,6 @@
 {
-  "name": "VS Code API",
-  "readme": "./README.md",
+  "name": "VS Code API 简体中文版",
+  "readme": "none",
   "sort": ["source-order"],
   "excludePrivate": true,
   "excludeProtected": true,
