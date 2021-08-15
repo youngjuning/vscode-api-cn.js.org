@@ -1,11 +1,10 @@
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *  Licensed under the MIT License. See LICENCE in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
 /**
- * The version of the editor.
- * @description.zh-CN 编辑器版本
+ * Visual Studio Code 的版本
  */
 export const version: string;
 
