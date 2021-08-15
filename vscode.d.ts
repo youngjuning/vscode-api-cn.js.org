@@ -5,6 +5,7 @@
 
 /**
  * The version of the editor.
+ * @description.zh-CN 编辑器版本
  */
 export const version: string;
 
