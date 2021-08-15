@@ -1,10 +1,10 @@
 {
-  "name": "VS Code API 简体中文版",
+  "name": "VS Code API 中文文档",
+  "entryPoints": ["./vscode.d.ts"],
+  "out": "docs",
   "readme": "none",
   "sort": ["source-order"],
   "excludePrivate": true,
   "excludeProtected": true,
-  "excludeInternal": true,
-  "entryPoints": ["./vscode.d.ts"],
-  "out": "docs"
+  "excludeInternal": true
 }
