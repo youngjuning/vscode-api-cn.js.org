@@ -17,6 +17,13 @@
       "profile": "https://youngjuning.js.org",
       "contributions": [
         "code"
+        "infra", 
+        "maintenance",
+        "translation",
+        "doc", 
+        "ideas",
+        "design",
+        "code"
       ]
     }
   ],
