@@ -1,7 +1,10 @@
-VS Code API is a set of JavaScript APIs that you can invoke in your Visual Studio Code extension. This site lists all VS Code APIs available to extension authors.
+# VS Code API 中文文档
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
+
+VS Code API is a set of JavaScript APIs that you can invoke in your Visual Studio Code extension. This site lists all VS Code APIs available to extension authors.
 
 This listing is compiled from the [vscode.d.ts](https://github.com/youngjuning/vscode-api/blob/main/vscode.d.ts) file from the VS Code repository.
 
