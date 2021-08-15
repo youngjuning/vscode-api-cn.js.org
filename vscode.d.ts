@@ -4,7 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 
 /**
- * 编辑器的版本
+ * 编辑器的版本。
  */
 export const version: string;
 
@@ -8162,6 +8162,7 @@ export enum UIKind {
 
 /**
  * Namespace describing the environment the editor runs in.
+ * 描述编辑器运行环境的命名空间。
  */
 export namespace env {
 
