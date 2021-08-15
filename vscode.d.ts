@@ -8440,9 +8440,7 @@ export interface UriHandler {
 }
 
 /**
- * Namespace for dealing with the current window of the editor. That is visible
- * and active editors, as well as, UI elements to show messages, selections, and
- * asking for user input.
+ * 用于处理编辑器当前窗口的命名空间。就是可见和活动的编辑器，以及显示信息、选择和要求用户输入的 UI 元素。
  */
 export namespace window {
 
