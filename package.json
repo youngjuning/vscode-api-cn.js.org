@@ -1,5 +1,5 @@
 {
-  "name": "vscode-api",
+  "name": "vscode-api-cn",
   "description": "VS Code API 是一系列你可以在 Visual Studio Code 扩展中调用的 JavaScript API。这个站点列出了所有扩展作者可以使用的 VS Code API。",
   "license": "MIT",
   "scripts": {
