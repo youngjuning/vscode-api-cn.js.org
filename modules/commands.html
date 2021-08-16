@@ -90,30 +90,31 @@
 		<div class="col-8 col-content">
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Namespace for dealing with commands. In short, a command is a function with a
-						unique identifier. The function is sometimes also called <em>command handler</em>.</p>
-					</div>
-					<p>Commands can be added to the editor using the <a href="commands.html#registerCommand">registerCommand</a>
-						and <a href="commands.html#registerTextEditorCommand">registerTextEditorCommand</a> functions. Commands
-					can be executed <a href="commands.html#executeCommand">manually</a> or from a UI gesture. Those are:</p>
-					<ul>
-						<li>palette - Use the <code>commands</code>-section in <code>package.json</code> to make a command show in
-						the <a href="https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette">command palette</a>.</li>
-						<li>keybinding - Use the <code>keybindings</code>-section in <code>package.json</code> to enable
-							<a href="https://code.visualstudio.com/docs/getstarted/keybindings#_customizing-shortcuts">keybindings</a>
-						for your extension.</li>
-					</ul>
-					<p>Commands from other extensions and from the editor itself are accessible to an extension. However,
-					when invoking an editor command not all argument types are supported.</p>
-					<p>This is a sample that registers a command handler and adds an entry for that command to the palette. First
-					register a command handler with the identifier <code>extension.sayHello</code>.</p>
-					<pre><code class="language-javascript"><span style="color: #001080">commands</span><span style="color: #000000">.</span><span style="color: #795E26">registerCommand</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;extension.sayHello&#039;</span><span style="color: #000000">, () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+					<dl class="tsd-comment-tags">
+						<dt>maintainer</dt>
+						<dd><p><a href="https://github.com/Imchenlong" class="external">@Imchenlong</a>
+								Namespace for dealing with commands. In short, a command is a function with a
+							unique identifier. The function is sometimes also called <em>command handler</em>.</p>
+							<p>Commands can be added to the editor using the <a href="commands.html#registerCommand">registerCommand</a>
+								and <a href="commands.html#registerTextEditorCommand">registerTextEditorCommand</a> functions. Commands
+							can be executed <a href="commands.html#executeCommand">manually</a> or from a UI gesture. Those are:</p>
+							<ul>
+								<li>palette - Use the <code>commands</code>-section in <code>package.json</code> to make a command show in
+								the <a href="https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette">command palette</a>.</li>
+								<li>keybinding - Use the <code>keybindings</code>-section in <code>package.json</code> to enable
+									<a href="https://code.visualstudio.com/docs/getstarted/keybindings#_customizing-shortcuts">keybindings</a>
+								for your extension.</li>
+							</ul>
+							<p>Commands from other extensions and from the editor itself are accessible to an extension. However,
+							when invoking an editor command not all argument types are supported.</p>
+							<p>This is a sample that registers a command handler and adds an entry for that command to the palette. First
+							register a command handler with the identifier <code>extension.sayHello</code>.</p>
+							<pre><code class="language-javascript"><span style="color: #001080">commands</span><span style="color: #000000">.</span><span style="color: #795E26">registerCommand</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;extension.sayHello&#039;</span><span style="color: #000000">, () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
 <span style="color: #000000">    </span><span style="color: #001080">window</span><span style="color: #000000">.</span><span style="color: #795E26">showInformationMessage</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;Hello World!&#039;</span><span style="color: #000000">);</span>
 <span style="color: #000000">});</span>
 </code></pre>
-					<p>Second, bind the command identifier to a title under which it will show in the palette (<code>package.json</code>).</p>
-					<pre><code class="language-json"><span style="color: #000000">{</span>
+							<p>Second, bind the command identifier to a title under which it will show in the palette (<code>package.json</code>).</p>
+							<pre><code class="language-json"><span style="color: #000000">{</span>
 <span style="color: #000000">    </span><span style="color: #0451A5">&quot;contributes&quot;</span><span style="color: #000000">: {</span>
 <span style="color: #000000">        </span><span style="color: #0451A5">&quot;commands&quot;</span><span style="color: #000000">: [{</span>
 <span style="color: #000000">            </span><span style="color: #0451A5">&quot;command&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;extension.sayHello&quot;</span><span style="color: #000000">,</span>
@@ -122,9 +123,6 @@
 <span style="color: #000000">    }</span>
 <span style="color: #000000">}</span>
 </code></pre>
-					<dl class="tsd-comment-tags">
-						<dt>maintainer</dt>
-						<dd><p><a href="https://github.com/Imchenlong" class="external">@Imchenlong</a></p>
 						</dd>
 					</dl>
 				</div>
@@ -157,7 +155,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/a11109f/vscode.d.ts#L8373">vscode.d.ts:8373</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/f119788/vscode.d.ts#L8373">vscode.d.ts:8373</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -222,7 +220,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/a11109f/vscode.d.ts#L8390">vscode.d.ts:8390</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/f119788/vscode.d.ts#L8390">vscode.d.ts:8390</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -296,7 +294,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/a11109f/vscode.d.ts#L8406">vscode.d.ts:8406</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/f119788/vscode.d.ts#L8406">vscode.d.ts:8406</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -348,7 +346,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/a11109f/vscode.d.ts#L8415">vscode.d.ts:8415</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/f119788/vscode.d.ts#L8415">vscode.d.ts:8415</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
