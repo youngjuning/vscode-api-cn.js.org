@@ -8,23 +8,51 @@ VS Code API 是一系列你可以在 Visual Studio Code 扩展中调用的 JavaS
 
 API 列表使用 Typedoc 从 [vscode.d.ts](https://github.com/youngjuning/vscode-api/blob/main/vscode.d.ts) 文件编译而来，如果 [vscode.d.ts 源文件](https://github.com/microsoft/vscode/blob/main/src/vs/vscode.d.ts) 有更新，我们会及时同步，当前对应 commit 为 [2974a01](https://github.com/microsoft/vscode/commit/2974a014fd33f4a109aad6ed0f3e46fe93bfc794#diff-f127724f8c5dbf0c8371ad0a100f8a9bc0a398b6b8ec29aa6cd7f265bd01a096)。
 
-## 开发
+## 贡献指南
 
-### 安装依赖
+**1、安装依赖**
 
 ```sh
 $ yarn install
 ```
 
-### 调试
+**2、开启调试**
 
 ```sh
 $ yarn dev
 ```
 
-## Contributors ✨
+**3、开启服务**
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+```sh
+$ yarn start
+```
+
+**4、参与翻译**
+
+外部译者对 vscode.d.ts 文件的注释进行翻译，然后提交 PR 即可。申请成为内部译者需要负责某一具体模块，感兴趣请添加管理员微信（`yang_jun_ning`）。
+
+## 负责人
+
+翻译负责人是按照 vscode api 的命名空间认领的，如果有兴趣认领请添加管理员微信（`yang_jun_ning`）申请成为内部译者。
+
+- [ ] authentication
+- [x] commands          @Imchenlong
+- [ ] comments
+- [ ] debug
+- [x] evn               @Saber2pr
+- [ ] extensions
+- [ ] languages
+- [ ] notebooks
+- [ ] scm
+- [ ] tasks
+- [x] tests             @pan463859
+- [x] window            @youngjuning
+- [x] workspace         @gepingli
+
+## 贡献者 ✨
+
+感谢这些优秀的人 ([emoji key](https://allcontributors.org/docs/en/emoji-key))：
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -44,4 +72,4 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+本项目遵循 [all-contributors](https://github.com/all-contributors/all-contributors) 规范。欢迎任何形式的贡献!

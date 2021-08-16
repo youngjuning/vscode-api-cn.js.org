@@ -8441,6 +8441,7 @@ export interface UriHandler {
 
 /**
  * 用于处理编辑器当前窗口的命名空间。就是可见和活动的编辑器，以及显示信息、选择和要求用户输入的 UI 元素。
+ * @maintainer youngjuning
  */
 export namespace window {
 

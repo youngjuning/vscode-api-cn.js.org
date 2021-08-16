@@ -3,7 +3,7 @@
   "entryPoints": ["./vscode.d.ts"],
   "theme": "./theme",
   "out": "docs",
-  "readme": "none",
+  "readme": "./README.md",
   "sort": ["source-order"],
   "excludePrivate": true,
   "excludeProtected": true,
