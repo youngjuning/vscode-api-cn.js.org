@@ -17,11 +17,9 @@ API 列表使用 Typedoc 从 [vscode.d.ts](https://github.com/youngjuning/vscode
 
 ### 本地预览
 
-1、**安装依赖**：`yarn install`
-
-2、**开启调试**：`yarn dev`
-
-3、**开启服务**：`yarn start`
+1. **安装依赖**：`yarn install`
+2. **开启调试**：`yarn dev`
+3. **开启服务**：`yarn start`
 
 ## 负责人
 
