@@ -16,9 +16,26 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/13204332?v=4",
       "profile": "https://github.com/youngjuning",
       "contributions": [
-        "code", "infra", "maintenance", "translation", "doc", "ideas", "design", "translation"
+        "code",
+        "infra",
+        "maintenance",
+        "translation",
+        "doc",
+        "ideas",
+        "design",
+        "translation"
+      ]
+    },
+    {
+      "login": "gepingli",
+      "name": "gepingli",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29964332?v=4",
+      "profile": "https://github.com/gepingli",
+      "contributions": [
+        "translation"
       ]
     }
   ],
-  "contributorsPerLine": 7
+  "contributorsPerLine": 7,
+  "skipCi": true
 }
