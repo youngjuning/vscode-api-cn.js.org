@@ -8319,30 +8319,26 @@ export namespace env {
 }
 
 /**
- * Namespace for dealing with commands. In short, a command is a function with a
- * unique identifier. The function is sometimes also called _command handler_.
+ * 该命名空间用于处理commands（命令）。 简而言之，commands是具有唯一标识符的函数，有时也称为命令处理程序。
  *
- * Commands can be added to the editor using the {@link commands.registerCommand registerCommand}
- * and {@link commands.registerTextEditorCommand registerTextEditorCommand} functions. Commands
- * can be executed {@link commands.executeCommand manually} or from a UI gesture. Those are:
+ * 可以通过使用{@link commands.registerCommand registerCommand}
+ * 和 {@link commands.registerTextEditorCommand registerTextEditorCommand}等函数将命令添加到编辑器。
+ * 命令可以手动执行，也可以从视图操作。它们是：
+ * `
+ * * 主面板（palette）- 使用 package.json 中的 commands-section 使命令显示在 [命令主面板](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette).
+ * * 自定义快捷键（keybindings） - 使用 package.json 中的 keybindings-section 为您的扩展启用
+ * [自定义快捷键（keybindings）](https://code.visualstudio.com/docs/getstarted/keybindings#_customizing-shortcuts)
  *
- * * palette - Use the `commands`-section in `package.json` to make a command show in
- * the [command palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette).
- * * keybinding - Use the `keybindings`-section in `package.json` to enable
- * [keybindings](https://code.visualstudio.com/docs/getstarted/keybindings#_customizing-shortcuts)
- * for your extension.
+ * 一个扩展可以访问来自其他扩展和编辑器本身的命令。 但是，在调用编辑器命令时，并非所有参数类型都受支持。
  *
- * Commands from other extensions and from the editor itself are accessible to an extension. However,
- * when invoking an editor command not all argument types are supported.
- *
- * This is a sample that registers a command handler and adds an entry for that command to the palette. First
- * register a command handler with the identifier `extension.sayHello`.
+ * 这是一个注册命令处理程序并将该命令的条目添加到命令主面板的🌰子。 首先使用标识符注册一个命令处理程序 `extension.sayHello`.
+ * 
  * ```javascript
  * commands.registerCommand('extension.sayHello', () => {
  * 	window.showInformationMessage('Hello World!');
  * });
  * ```
- * Second, bind the command identifier to a title under which it will show in the palette (`package.json`).
+ * 其次，将命令标识符绑定到一个标题下，它将在命令主面板中显示 (`package.json`).
  * ```json
  * {
  * 	"contributes": {
