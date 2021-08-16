@@ -52,7 +52,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../index.html">VS Code API 中文文档</a>
+					<a href="../modules.html">VS Code API 中文文档</a>
 				</li>
 				<li>
 					<a href="CompletionItemProvider.html">CompletionItemProvider</a>
@@ -116,13 +116,13 @@
 					<a name="provideCompletionItems" class="tsd-anchor"></a>
 					<h3>provide<wbr>Completion<wbr>Items</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">provide<wbr>Completion<wbr>Items<span class="tsd-signature-symbol">(</span>document<span class="tsd-signature-symbol">: </span><a href="TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a>, position<span class="tsd-signature-symbol">: </span><a href="../classes/Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a>, token<span class="tsd-signature-symbol">: </span><a href="CancellationToken.html" class="tsd-signature-type" data-tsd-kind="Interface">CancellationToken</a>, context<span class="tsd-signature-symbol">: </span><a href="CompletionContext.html" class="tsd-signature-type" data-tsd-kind="Interface">CompletionContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../index.html#ProviderResult" class="tsd-signature-type" data-tsd-kind="Type alias">ProviderResult</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><a href="../classes/CompletionList.html" class="tsd-signature-type" data-tsd-kind="Class">CompletionList</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">provide<wbr>Completion<wbr>Items<span class="tsd-signature-symbol">(</span>document<span class="tsd-signature-symbol">: </span><a href="TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a>, position<span class="tsd-signature-symbol">: </span><a href="../classes/Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a>, token<span class="tsd-signature-symbol">: </span><a href="CancellationToken.html" class="tsd-signature-type" data-tsd-kind="Interface">CancellationToken</a>, context<span class="tsd-signature-symbol">: </span><a href="CompletionContext.html" class="tsd-signature-type" data-tsd-kind="Interface">CompletionContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules.html#ProviderResult" class="tsd-signature-type" data-tsd-kind="Type alias">ProviderResult</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><a href="../classes/CompletionList.html" class="tsd-signature-type" data-tsd-kind="Class">CompletionList</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L4284">vscode.d.ts:4284</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L4284">vscode.d.ts:4284</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -157,7 +157,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../index.html#ProviderResult" class="tsd-signature-type" data-tsd-kind="Type alias">ProviderResult</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><a href="../classes/CompletionList.html" class="tsd-signature-type" data-tsd-kind="Class">CompletionList</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../modules.html#ProviderResult" class="tsd-signature-type" data-tsd-kind="Type alias">ProviderResult</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><a href="../classes/CompletionList.html" class="tsd-signature-type" data-tsd-kind="Class">CompletionList</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
 							<p>An array of completions, a <a href="../classes/CompletionList.html">completion list</a>, or a thenable that resolves to either.
 							The lack of a result can be signaled by returning <code>undefined</code>, <code>null</code>, or an empty array.</p>
 						</li>
@@ -167,13 +167,13 @@
 					<a name="resolveCompletionItem" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> resolve<wbr>Completion<wbr>Item</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">resolve<wbr>Completion<wbr>Item<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, token<span class="tsd-signature-symbol">: </span><a href="CancellationToken.html" class="tsd-signature-type" data-tsd-kind="Interface">CancellationToken</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../index.html#ProviderResult" class="tsd-signature-type" data-tsd-kind="Type alias">ProviderResult</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">resolve<wbr>Completion<wbr>Item<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, token<span class="tsd-signature-symbol">: </span><a href="CancellationToken.html" class="tsd-signature-type" data-tsd-kind="Interface">CancellationToken</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules.html#ProviderResult" class="tsd-signature-type" data-tsd-kind="Type alias">ProviderResult</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L4305">vscode.d.ts:4305</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L4305">vscode.d.ts:4305</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -204,7 +204,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../index.html#ProviderResult" class="tsd-signature-type" data-tsd-kind="Type alias">ProviderResult</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../modules.html#ProviderResult" class="tsd-signature-type" data-tsd-kind="Type alias">ProviderResult</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
 							<p>The resolved completion item or a thenable that resolves to of such. It is OK to return the given
 							<code>item</code>. When no result is returned, the given <code>item</code> will be used.</p>
 						</li>
@@ -216,7 +216,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class=" ">
-						<a href="../index.html">Exports</a>
+						<a href="../modules.html">Exports</a>
 					</li>
 				</ul>
 			</nav>

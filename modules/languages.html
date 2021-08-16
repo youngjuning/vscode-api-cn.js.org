@@ -52,7 +52,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../index.html">VS Code API 中文文档</a>
+					<a href="../modules.html">VS Code API 中文文档</a>
 				</li>
 				<li>
 					<a href="languages.html">languages</a>
@@ -84,7 +84,7 @@
 <span style="color: #000000">    }</span>
 <span style="color: #000000">});</span>
 </code></pre>
-					<p>Registration is done using a <a href="../index.html#DocumentSelector">document selector</a> which is either a language id, like <code>javascript</code> or
+					<p>Registration is done using a <a href="../modules.html#DocumentSelector">document selector</a> which is either a language id, like <code>javascript</code> or
 						a more complex <a href="../interfaces/DocumentFilter.html">filter</a> like <code>{ language: &#39;typescript&#39;, scheme: &#39;file&#39; }</code>. Matching a document against such
 						a selector will result in a <a href="languages.html#match">score</a> that is used to determine if and how a provider shall be used. When
 						scores are equal the provider that came last wins. For features that allow full arity, like <a href="languages.html#registerHoverProvider">hover</a>,
@@ -150,7 +150,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11028">vscode.d.ts:11028</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11029">vscode.d.ts:11029</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -173,7 +173,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11041">vscode.d.ts:11041</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11042">vscode.d.ts:11042</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -208,23 +208,23 @@
 					<a name="match" class="tsd-anchor"></a>
 					<h3>match</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">match<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, document<span class="tsd-signature-symbol">: </span><a href="../interfaces/TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">match<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, document<span class="tsd-signature-symbol">: </span><a href="../interfaces/TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11080">vscode.d.ts:11080</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11081">vscode.d.ts:11081</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Compute the match between a document <a href="../index.html#DocumentSelector">selector</a> and a document. Values
+									<p>Compute the match between a document <a href="../modules.html#DocumentSelector">selector</a> and a document. Values
 									greater than zero mean the selector matches the document.</p>
 								</div>
 								<p>A match is computed according to these rules:</p>
 								<ol>
-									<li>When <a href="../index.html#DocumentSelector"><code>DocumentSelector</code></a> is an array, compute the match for each contained <code>DocumentFilter</code> or language identifier and take the maximum value.</li>
+									<li>When <a href="../modules.html#DocumentSelector"><code>DocumentSelector</code></a> is an array, compute the match for each contained <code>DocumentFilter</code> or language identifier and take the maximum value.</li>
 									<li>A string will be desugared to become the <code>language</code>-part of a <a href="../interfaces/DocumentFilter.html"><code>DocumentFilter</code></a>, so <code>&quot;fooLang&quot;</code> is like <code>{ language: &quot;fooLang&quot; }</code>.</li>
 									<li>A <a href="../interfaces/DocumentFilter.html"><code>DocumentFilter</code></a> will be matched against the document by comparing its parts with the document. The following rules apply:</li>
 									<li>When the <code>DocumentFilter</code> is empty (<code>{}</code>) the result is <code>0</code></li>
@@ -254,7 +254,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>selector: <a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A document selector.</p>
 									</div>
@@ -281,7 +281,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11086">vscode.d.ts:11086</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11087">vscode.d.ts:11087</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -335,7 +335,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11094">vscode.d.ts:11094</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11095">vscode.d.ts:11095</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -358,7 +358,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11101">vscode.d.ts:11101</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11102">vscode.d.ts:11102</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -381,7 +381,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11109">vscode.d.ts:11109</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11110">vscode.d.ts:11110</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -407,13 +407,13 @@
 					<a name="registerCompletionItemProvider" class="tsd-anchor"></a>
 					<h3>register<wbr>Completion<wbr>Item<wbr>Provider</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">register<wbr>Completion<wbr>Item<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/CompletionItemProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">CompletionItemProvider</a>, <span class="tsd-signature-symbol">...</span>triggerCharacters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Completion<wbr>Item<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/CompletionItemProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">CompletionItemProvider</a>, <span class="tsd-signature-symbol">...</span>triggerCharacters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11130">vscode.d.ts:11130</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11131">vscode.d.ts:11131</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -433,7 +433,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>selector: <a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A selector that defines the documents this provider is applicable to.</p>
 									</div>
@@ -460,13 +460,13 @@
 					<a name="registerCodeActionsProvider" class="tsd-anchor"></a>
 					<h3>register<wbr>Code<wbr>Actions<wbr>Provider</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">register<wbr>Code<wbr>Actions<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/CodeActionProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">CodeActionProvider</a>, metadata<span class="tsd-signature-symbol">?: </span><a href="../interfaces/CodeActionProviderMetadata.html" class="tsd-signature-type" data-tsd-kind="Interface">CodeActionProviderMetadata</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Code<wbr>Actions<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/CodeActionProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">CodeActionProvider</a>, metadata<span class="tsd-signature-symbol">?: </span><a href="../interfaces/CodeActionProviderMetadata.html" class="tsd-signature-type" data-tsd-kind="Interface">CodeActionProviderMetadata</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11144">vscode.d.ts:11144</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11145">vscode.d.ts:11145</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -480,7 +480,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>selector: <a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A selector that defines the documents this provider is applicable to.</p>
 									</div>
@@ -507,13 +507,13 @@
 					<a name="registerCodeLensProvider" class="tsd-anchor"></a>
 					<h3>register<wbr>Code<wbr>Lens<wbr>Provider</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">register<wbr>Code<wbr>Lens<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/CodeLensProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">CodeLensProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Code<wbr>Lens<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/CodeLensProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">CodeLensProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11157">vscode.d.ts:11157</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11158">vscode.d.ts:11158</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -527,7 +527,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>selector: <a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A selector that defines the documents this provider is applicable to.</p>
 									</div>
@@ -548,13 +548,13 @@
 					<a name="registerDefinitionProvider" class="tsd-anchor"></a>
 					<h3>register<wbr>Definition<wbr>Provider</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">register<wbr>Definition<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/DefinitionProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DefinitionProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Definition<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/DefinitionProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DefinitionProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11170">vscode.d.ts:11170</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11171">vscode.d.ts:11171</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -568,7 +568,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>selector: <a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A selector that defines the documents this provider is applicable to.</p>
 									</div>
@@ -589,13 +589,13 @@
 					<a name="registerImplementationProvider" class="tsd-anchor"></a>
 					<h3>register<wbr>Implementation<wbr>Provider</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">register<wbr>Implementation<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/ImplementationProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">ImplementationProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Implementation<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/ImplementationProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">ImplementationProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11183">vscode.d.ts:11183</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11184">vscode.d.ts:11184</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -609,7 +609,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>selector: <a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A selector that defines the documents this provider is applicable to.</p>
 									</div>
@@ -630,13 +630,13 @@
 					<a name="registerTypeDefinitionProvider" class="tsd-anchor"></a>
 					<h3>register<wbr>Type<wbr>Definition<wbr>Provider</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">register<wbr>Type<wbr>Definition<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/TypeDefinitionProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">TypeDefinitionProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Type<wbr>Definition<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/TypeDefinitionProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">TypeDefinitionProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11196">vscode.d.ts:11196</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11197">vscode.d.ts:11197</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -650,7 +650,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>selector: <a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A selector that defines the documents this provider is applicable to.</p>
 									</div>
@@ -671,13 +671,13 @@
 					<a name="registerDeclarationProvider" class="tsd-anchor"></a>
 					<h3>register<wbr>Declaration<wbr>Provider</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">register<wbr>Declaration<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/DeclarationProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DeclarationProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Declaration<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/DeclarationProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DeclarationProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11209">vscode.d.ts:11209</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11210">vscode.d.ts:11210</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -691,7 +691,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>selector: <a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A selector that defines the documents this provider is applicable to.</p>
 									</div>
@@ -712,13 +712,13 @@
 					<a name="registerHoverProvider" class="tsd-anchor"></a>
 					<h3>register<wbr>Hover<wbr>Provider</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">register<wbr>Hover<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/HoverProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">HoverProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Hover<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/HoverProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">HoverProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11222">vscode.d.ts:11222</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11223">vscode.d.ts:11223</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -732,7 +732,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>selector: <a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A selector that defines the documents this provider is applicable to.</p>
 									</div>
@@ -753,13 +753,13 @@
 					<a name="registerEvaluatableExpressionProvider" class="tsd-anchor"></a>
 					<h3>register<wbr>Evaluatable<wbr>Expression<wbr>Provider</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">register<wbr>Evaluatable<wbr>Expression<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/EvaluatableExpressionProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">EvaluatableExpressionProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Evaluatable<wbr>Expression<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/EvaluatableExpressionProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">EvaluatableExpressionProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11234">vscode.d.ts:11234</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11235">vscode.d.ts:11235</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -772,7 +772,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>selector: <a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A selector that defines the documents this provider is applicable to.</p>
 									</div>
@@ -793,13 +793,13 @@
 					<a name="registerInlineValuesProvider" class="tsd-anchor"></a>
 					<h3>register<wbr>Inline<wbr>Values<wbr>Provider</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">register<wbr>Inline<wbr>Values<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/InlineValuesProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">InlineValuesProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Inline<wbr>Values<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/InlineValuesProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">InlineValuesProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11249">vscode.d.ts:11249</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11250">vscode.d.ts:11250</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -815,7 +815,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>selector: <a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A selector that defines the documents this provider is applicable to.</p>
 									</div>
@@ -836,13 +836,13 @@
 					<a name="registerDocumentHighlightProvider" class="tsd-anchor"></a>
 					<h3>register<wbr>Document<wbr>Highlight<wbr>Provider</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">register<wbr>Document<wbr>Highlight<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/DocumentHighlightProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentHighlightProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Document<wbr>Highlight<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/DocumentHighlightProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentHighlightProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11262">vscode.d.ts:11262</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11263">vscode.d.ts:11263</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -856,7 +856,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>selector: <a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A selector that defines the documents this provider is applicable to.</p>
 									</div>
@@ -877,13 +877,13 @@
 					<a name="registerDocumentSymbolProvider" class="tsd-anchor"></a>
 					<h3>register<wbr>Document<wbr>Symbol<wbr>Provider</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">register<wbr>Document<wbr>Symbol<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/DocumentSymbolProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentSymbolProvider</a>, metaData<span class="tsd-signature-symbol">?: </span><a href="../interfaces/DocumentSymbolProviderMetadata.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentSymbolProviderMetadata</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Document<wbr>Symbol<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/DocumentSymbolProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentSymbolProvider</a>, metaData<span class="tsd-signature-symbol">?: </span><a href="../interfaces/DocumentSymbolProviderMetadata.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentSymbolProviderMetadata</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11276">vscode.d.ts:11276</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11277">vscode.d.ts:11277</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -897,7 +897,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>selector: <a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A selector that defines the documents this provider is applicable to.</p>
 									</div>
@@ -930,7 +930,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11288">vscode.d.ts:11288</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11289">vscode.d.ts:11289</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -959,13 +959,13 @@
 					<a name="registerReferenceProvider" class="tsd-anchor"></a>
 					<h3>register<wbr>Reference<wbr>Provider</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">register<wbr>Reference<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/ReferenceProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">ReferenceProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Reference<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/ReferenceProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">ReferenceProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11301">vscode.d.ts:11301</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11302">vscode.d.ts:11302</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -979,7 +979,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>selector: <a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A selector that defines the documents this provider is applicable to.</p>
 									</div>
@@ -1000,13 +1000,13 @@
 					<a name="registerRenameProvider" class="tsd-anchor"></a>
 					<h3>register<wbr>Rename<wbr>Provider</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">register<wbr>Rename<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/RenameProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">RenameProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Rename<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/RenameProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">RenameProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11314">vscode.d.ts:11314</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11315">vscode.d.ts:11315</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1020,7 +1020,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>selector: <a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A selector that defines the documents this provider is applicable to.</p>
 									</div>
@@ -1041,13 +1041,13 @@
 					<a name="registerDocumentSemanticTokensProvider" class="tsd-anchor"></a>
 					<h3>register<wbr>Document<wbr>Semantic<wbr>Tokens<wbr>Provider</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">register<wbr>Document<wbr>Semantic<wbr>Tokens<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/DocumentSemanticTokensProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentSemanticTokensProvider</a>, legend<span class="tsd-signature-symbol">: </span><a href="../classes/SemanticTokensLegend.html" class="tsd-signature-type" data-tsd-kind="Class">SemanticTokensLegend</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Document<wbr>Semantic<wbr>Tokens<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/DocumentSemanticTokensProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentSemanticTokensProvider</a>, legend<span class="tsd-signature-symbol">: </span><a href="../classes/SemanticTokensLegend.html" class="tsd-signature-type" data-tsd-kind="Class">SemanticTokensLegend</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11327">vscode.d.ts:11327</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11328">vscode.d.ts:11328</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1061,7 +1061,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>selector: <a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A selector that defines the documents this provider is applicable to.</p>
 									</div>
@@ -1085,13 +1085,13 @@
 					<a name="registerDocumentRangeSemanticTokensProvider" class="tsd-anchor"></a>
 					<h3>register<wbr>Document<wbr>Range<wbr>Semantic<wbr>Tokens<wbr>Provider</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">register<wbr>Document<wbr>Range<wbr>Semantic<wbr>Tokens<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/DocumentRangeSemanticTokensProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentRangeSemanticTokensProvider</a>, legend<span class="tsd-signature-symbol">: </span><a href="../classes/SemanticTokensLegend.html" class="tsd-signature-type" data-tsd-kind="Class">SemanticTokensLegend</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Document<wbr>Range<wbr>Semantic<wbr>Tokens<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/DocumentRangeSemanticTokensProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentRangeSemanticTokensProvider</a>, legend<span class="tsd-signature-symbol">: </span><a href="../classes/SemanticTokensLegend.html" class="tsd-signature-type" data-tsd-kind="Class">SemanticTokensLegend</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11346">vscode.d.ts:11346</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11347">vscode.d.ts:11347</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1110,7 +1110,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>selector: <a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A selector that defines the documents this provider is applicable to.</p>
 									</div>
@@ -1134,13 +1134,13 @@
 					<a name="registerDocumentFormattingEditProvider" class="tsd-anchor"></a>
 					<h3>register<wbr>Document<wbr>Formatting<wbr>Edit<wbr>Provider</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">register<wbr>Document<wbr>Formatting<wbr>Edit<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/DocumentFormattingEditProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentFormattingEditProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Document<wbr>Formatting<wbr>Edit<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/DocumentFormattingEditProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentFormattingEditProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11359">vscode.d.ts:11359</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11360">vscode.d.ts:11360</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1154,7 +1154,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>selector: <a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A selector that defines the documents this provider is applicable to.</p>
 									</div>
@@ -1175,13 +1175,13 @@
 					<a name="registerDocumentRangeFormattingEditProvider" class="tsd-anchor"></a>
 					<h3>register<wbr>Document<wbr>Range<wbr>Formatting<wbr>Edit<wbr>Provider</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">register<wbr>Document<wbr>Range<wbr>Formatting<wbr>Edit<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/DocumentRangeFormattingEditProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentRangeFormattingEditProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Document<wbr>Range<wbr>Formatting<wbr>Edit<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/DocumentRangeFormattingEditProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentRangeFormattingEditProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11376">vscode.d.ts:11376</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11377">vscode.d.ts:11377</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1198,7 +1198,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>selector: <a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A selector that defines the documents this provider is applicable to.</p>
 									</div>
@@ -1219,13 +1219,13 @@
 					<a name="registerOnTypeFormattingEditProvider" class="tsd-anchor"></a>
 					<h3>register<wbr>OnType<wbr>Formatting<wbr>Edit<wbr>Provider</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">register<wbr>OnType<wbr>Formatting<wbr>Edit<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/OnTypeFormattingEditProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">OnTypeFormattingEditProvider</a>, firstTriggerCharacter<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>moreTriggerCharacter<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>OnType<wbr>Formatting<wbr>Edit<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/OnTypeFormattingEditProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">OnTypeFormattingEditProvider</a>, firstTriggerCharacter<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>moreTriggerCharacter<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11391">vscode.d.ts:11391</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11392">vscode.d.ts:11392</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1239,7 +1239,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>selector: <a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A selector that defines the documents this provider is applicable to.</p>
 									</div>
@@ -1272,14 +1272,14 @@
 					<a name="registerSignatureHelpProvider" class="tsd-anchor"></a>
 					<h3>register<wbr>Signature<wbr>Help<wbr>Provider</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">register<wbr>Signature<wbr>Help<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/SignatureHelpProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">SignatureHelpProvider</a>, <span class="tsd-signature-symbol">...</span>triggerCharacters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
-						<li class="tsd-signature tsd-kind-icon">register<wbr>Signature<wbr>Help<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/SignatureHelpProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">SignatureHelpProvider</a>, metadata<span class="tsd-signature-symbol">: </span><a href="../interfaces/SignatureHelpProviderMetadata.html" class="tsd-signature-type" data-tsd-kind="Interface">SignatureHelpProviderMetadata</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Signature<wbr>Help<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/SignatureHelpProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">SignatureHelpProvider</a>, <span class="tsd-signature-symbol">...</span>triggerCharacters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Signature<wbr>Help<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/SignatureHelpProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">SignatureHelpProvider</a>, metadata<span class="tsd-signature-symbol">: </span><a href="../interfaces/SignatureHelpProviderMetadata.html" class="tsd-signature-type" data-tsd-kind="Interface">SignatureHelpProviderMetadata</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11406">vscode.d.ts:11406</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11407">vscode.d.ts:11407</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1293,7 +1293,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>selector: <a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A selector that defines the documents this provider is applicable to.</p>
 									</div>
@@ -1317,13 +1317,13 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11407">vscode.d.ts:11407</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11408">vscode.d.ts:11408</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>selector: <a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
 								</li>
 								<li>
 									<h5>provider: <a href="../interfaces/SignatureHelpProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">SignatureHelpProvider</a></h5>
@@ -1340,13 +1340,13 @@
 					<a name="registerDocumentLinkProvider" class="tsd-anchor"></a>
 					<h3>register<wbr>Document<wbr>Link<wbr>Provider</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">register<wbr>Document<wbr>Link<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/DocumentLinkProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentLinkProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Document<wbr>Link<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/DocumentLinkProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentLinkProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11420">vscode.d.ts:11420</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11421">vscode.d.ts:11421</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1360,7 +1360,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>selector: <a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A selector that defines the documents this provider is applicable to.</p>
 									</div>
@@ -1381,13 +1381,13 @@
 					<a name="registerColorProvider" class="tsd-anchor"></a>
 					<h3>register<wbr>Color<wbr>Provider</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">register<wbr>Color<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/DocumentColorProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentColorProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Color<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/DocumentColorProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">DocumentColorProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11433">vscode.d.ts:11433</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11434">vscode.d.ts:11434</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1401,7 +1401,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>selector: <a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A selector that defines the documents this provider is applicable to.</p>
 									</div>
@@ -1422,13 +1422,13 @@
 					<a name="registerFoldingRangeProvider" class="tsd-anchor"></a>
 					<h3>register<wbr>Folding<wbr>Range<wbr>Provider</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">register<wbr>Folding<wbr>Range<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/FoldingRangeProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">FoldingRangeProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Folding<wbr>Range<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/FoldingRangeProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">FoldingRangeProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11450">vscode.d.ts:11450</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11451">vscode.d.ts:11451</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1445,7 +1445,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>selector: <a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A selector that defines the documents this provider is applicable to.</p>
 									</div>
@@ -1466,13 +1466,13 @@
 					<a name="registerSelectionRangeProvider" class="tsd-anchor"></a>
 					<h3>register<wbr>Selection<wbr>Range<wbr>Provider</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">register<wbr>Selection<wbr>Range<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/SelectionRangeProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">SelectionRangeProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Selection<wbr>Range<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/SelectionRangeProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">SelectionRangeProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11463">vscode.d.ts:11463</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11464">vscode.d.ts:11464</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1486,7 +1486,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>selector: <a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A selector that defines the documents this provider is applicable to.</p>
 									</div>
@@ -1507,13 +1507,13 @@
 					<a name="registerCallHierarchyProvider" class="tsd-anchor"></a>
 					<h3>register<wbr>Call<wbr>Hierarchy<wbr>Provider</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">register<wbr>Call<wbr>Hierarchy<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/CallHierarchyProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">CallHierarchyProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Call<wbr>Hierarchy<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/CallHierarchyProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">CallHierarchyProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11472">vscode.d.ts:11472</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11473">vscode.d.ts:11473</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1524,7 +1524,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>selector: <a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A selector that defines the documents this provider is applicable to.</p>
 									</div>
@@ -1545,13 +1545,13 @@
 					<a name="registerLinkedEditingRangeProvider" class="tsd-anchor"></a>
 					<h3>register<wbr>Linked<wbr>Editing<wbr>Range<wbr>Provider</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">register<wbr>Linked<wbr>Editing<wbr>Range<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/LinkedEditingRangeProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">LinkedEditingRangeProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Linked<wbr>Editing<wbr>Range<wbr>Provider<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/LinkedEditingRangeProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">LinkedEditingRangeProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11485">vscode.d.ts:11485</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11486">vscode.d.ts:11486</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1565,7 +1565,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>selector: <a href="../index.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
+									<h5>selector: <a href="../modules.html#DocumentSelector" class="tsd-signature-type" data-tsd-kind="Type alias">DocumentSelector</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A selector that defines the documents this provider is applicable to.</p>
 									</div>
@@ -1592,7 +1592,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L11494">vscode.d.ts:11494</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L11495">vscode.d.ts:11495</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1626,7 +1626,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class=" ">
-						<a href="../index.html">Exports</a>
+						<a href="../modules.html">Exports</a>
 					</li>
 					<li class=" tsd-kind-namespace">
 						<a href="authentication.html">authentication</a>

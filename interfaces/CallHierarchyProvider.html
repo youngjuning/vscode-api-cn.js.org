@@ -52,7 +52,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../index.html">VS Code API 中文文档</a>
+					<a href="../modules.html">VS Code API 中文文档</a>
 				</li>
 				<li>
 					<a href="CallHierarchyProvider.html">CallHierarchyProvider</a>
@@ -103,13 +103,13 @@
 					<a name="prepareCallHierarchy" class="tsd-anchor"></a>
 					<h3>prepare<wbr>Call<wbr>Hierarchy</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">prepare<wbr>Call<wbr>Hierarchy<span class="tsd-signature-symbol">(</span>document<span class="tsd-signature-symbol">: </span><a href="TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a>, position<span class="tsd-signature-symbol">: </span><a href="../classes/Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a>, token<span class="tsd-signature-symbol">: </span><a href="CancellationToken.html" class="tsd-signature-type" data-tsd-kind="Interface">CancellationToken</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../index.html#ProviderResult" class="tsd-signature-type" data-tsd-kind="Type alias">ProviderResult</a><span class="tsd-signature-symbol">&lt;</span><a href="../classes/CallHierarchyItem.html" class="tsd-signature-type" data-tsd-kind="Class">CallHierarchyItem</a><span class="tsd-signature-symbol"> | </span><a href="../classes/CallHierarchyItem.html" class="tsd-signature-type" data-tsd-kind="Class">CallHierarchyItem</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">prepare<wbr>Call<wbr>Hierarchy<span class="tsd-signature-symbol">(</span>document<span class="tsd-signature-symbol">: </span><a href="TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a>, position<span class="tsd-signature-symbol">: </span><a href="../classes/Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a>, token<span class="tsd-signature-symbol">: </span><a href="CancellationToken.html" class="tsd-signature-type" data-tsd-kind="Interface">CancellationToken</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules.html#ProviderResult" class="tsd-signature-type" data-tsd-kind="Type alias">ProviderResult</a><span class="tsd-signature-symbol">&lt;</span><a href="../classes/CallHierarchyItem.html" class="tsd-signature-type" data-tsd-kind="Class">CallHierarchyItem</a><span class="tsd-signature-symbol"> | </span><a href="../classes/CallHierarchyItem.html" class="tsd-signature-type" data-tsd-kind="Class">CallHierarchyItem</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L4741">vscode.d.ts:4741</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L4741">vscode.d.ts:4741</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -140,7 +140,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../index.html#ProviderResult" class="tsd-signature-type" data-tsd-kind="Type alias">ProviderResult</a><span class="tsd-signature-symbol">&lt;</span><a href="../classes/CallHierarchyItem.html" class="tsd-signature-type" data-tsd-kind="Class">CallHierarchyItem</a><span class="tsd-signature-symbol"> | </span><a href="../classes/CallHierarchyItem.html" class="tsd-signature-type" data-tsd-kind="Class">CallHierarchyItem</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../modules.html#ProviderResult" class="tsd-signature-type" data-tsd-kind="Type alias">ProviderResult</a><span class="tsd-signature-symbol">&lt;</span><a href="../classes/CallHierarchyItem.html" class="tsd-signature-type" data-tsd-kind="Class">CallHierarchyItem</a><span class="tsd-signature-symbol"> | </span><a href="../classes/CallHierarchyItem.html" class="tsd-signature-type" data-tsd-kind="Class">CallHierarchyItem</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
 							<p>A call hierarchy item or a thenable that resolves to such. The lack of a result can be
 							signaled by returning <code>undefined</code> or <code>null</code>.</p>
 						</li>
@@ -150,13 +150,13 @@
 					<a name="provideCallHierarchyIncomingCalls" class="tsd-anchor"></a>
 					<h3>provide<wbr>Call<wbr>Hierarchy<wbr>Incoming<wbr>Calls</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">provide<wbr>Call<wbr>Hierarchy<wbr>Incoming<wbr>Calls<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="../classes/CallHierarchyItem.html" class="tsd-signature-type" data-tsd-kind="Class">CallHierarchyItem</a>, token<span class="tsd-signature-symbol">: </span><a href="CancellationToken.html" class="tsd-signature-type" data-tsd-kind="Interface">CancellationToken</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../index.html#ProviderResult" class="tsd-signature-type" data-tsd-kind="Type alias">ProviderResult</a><span class="tsd-signature-symbol">&lt;</span><a href="../classes/CallHierarchyIncomingCall.html" class="tsd-signature-type" data-tsd-kind="Class">CallHierarchyIncomingCall</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">provide<wbr>Call<wbr>Hierarchy<wbr>Incoming<wbr>Calls<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="../classes/CallHierarchyItem.html" class="tsd-signature-type" data-tsd-kind="Class">CallHierarchyItem</a>, token<span class="tsd-signature-symbol">: </span><a href="CancellationToken.html" class="tsd-signature-type" data-tsd-kind="Interface">CancellationToken</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules.html#ProviderResult" class="tsd-signature-type" data-tsd-kind="Type alias">ProviderResult</a><span class="tsd-signature-symbol">&lt;</span><a href="../classes/CallHierarchyIncomingCall.html" class="tsd-signature-type" data-tsd-kind="Class">CallHierarchyIncomingCall</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L4753">vscode.d.ts:4753</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L4753">vscode.d.ts:4753</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -181,7 +181,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../index.html#ProviderResult" class="tsd-signature-type" data-tsd-kind="Type alias">ProviderResult</a><span class="tsd-signature-symbol">&lt;</span><a href="../classes/CallHierarchyIncomingCall.html" class="tsd-signature-type" data-tsd-kind="Class">CallHierarchyIncomingCall</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../modules.html#ProviderResult" class="tsd-signature-type" data-tsd-kind="Type alias">ProviderResult</a><span class="tsd-signature-symbol">&lt;</span><a href="../classes/CallHierarchyIncomingCall.html" class="tsd-signature-type" data-tsd-kind="Class">CallHierarchyIncomingCall</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
 							<p>A set of incoming calls or a thenable that resolves to such. The lack of a result can be
 							signaled by returning <code>undefined</code> or <code>null</code>.</p>
 						</li>
@@ -191,13 +191,13 @@
 					<a name="provideCallHierarchyOutgoingCalls" class="tsd-anchor"></a>
 					<h3>provide<wbr>Call<wbr>Hierarchy<wbr>Outgoing<wbr>Calls</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">provide<wbr>Call<wbr>Hierarchy<wbr>Outgoing<wbr>Calls<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="../classes/CallHierarchyItem.html" class="tsd-signature-type" data-tsd-kind="Class">CallHierarchyItem</a>, token<span class="tsd-signature-symbol">: </span><a href="CancellationToken.html" class="tsd-signature-type" data-tsd-kind="Interface">CancellationToken</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../index.html#ProviderResult" class="tsd-signature-type" data-tsd-kind="Type alias">ProviderResult</a><span class="tsd-signature-symbol">&lt;</span><a href="../classes/CallHierarchyOutgoingCall.html" class="tsd-signature-type" data-tsd-kind="Class">CallHierarchyOutgoingCall</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">provide<wbr>Call<wbr>Hierarchy<wbr>Outgoing<wbr>Calls<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="../classes/CallHierarchyItem.html" class="tsd-signature-type" data-tsd-kind="Class">CallHierarchyItem</a>, token<span class="tsd-signature-symbol">: </span><a href="CancellationToken.html" class="tsd-signature-type" data-tsd-kind="Interface">CancellationToken</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules.html#ProviderResult" class="tsd-signature-type" data-tsd-kind="Type alias">ProviderResult</a><span class="tsd-signature-symbol">&lt;</span><a href="../classes/CallHierarchyOutgoingCall.html" class="tsd-signature-type" data-tsd-kind="Class">CallHierarchyOutgoingCall</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/603a62d/vscode.d.ts#L4765">vscode.d.ts:4765</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/39c3361/vscode.d.ts#L4765">vscode.d.ts:4765</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -222,7 +222,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../index.html#ProviderResult" class="tsd-signature-type" data-tsd-kind="Type alias">ProviderResult</a><span class="tsd-signature-symbol">&lt;</span><a href="../classes/CallHierarchyOutgoingCall.html" class="tsd-signature-type" data-tsd-kind="Class">CallHierarchyOutgoingCall</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../modules.html#ProviderResult" class="tsd-signature-type" data-tsd-kind="Type alias">ProviderResult</a><span class="tsd-signature-symbol">&lt;</span><a href="../classes/CallHierarchyOutgoingCall.html" class="tsd-signature-type" data-tsd-kind="Class">CallHierarchyOutgoingCall</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
 							<p>A set of outgoing calls or a thenable that resolves to such. The lack of a result can be
 							signaled by returning <code>undefined</code> or <code>null</code>.</p>
 						</li>
@@ -234,7 +234,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class=" ">
-						<a href="../index.html">Exports</a>
+						<a href="../modules.html">Exports</a>
 					</li>
 				</ul>
 			</nav>
