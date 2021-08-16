@@ -8162,6 +8162,7 @@ export enum UIKind {
 
 /**
  * 描述编辑器运行环境的命名空间。
+ * @maintainer {@link https://github.com/Saber2pr @Saber2pr}
  */
 export namespace env {
 
@@ -8353,6 +8354,7 @@ export namespace env {
  * 	}
  * }
  * ```
+ * @maintainer {@link https://github.com/Imchenlong @Imchenlong}
  */
 export namespace commands {
 
@@ -8441,7 +8443,7 @@ export interface UriHandler {
 
 /**
  * 用于处理编辑器当前窗口的命名空间。就是可见和活动的编辑器，以及显示信息、选择和要求用户输入的 UI 元素。
- * @maintainer youngjuning
+ * @maintainer {@link https://github.com/youngjuning @youngjuning}
  */
 export namespace window {
 
@@ -10465,6 +10467,7 @@ export interface WorkspaceFolder {
  * The workspace offers support for {@link workspace.createFileSystemWatcher listening} to fs
  * events and for {@link workspace.findFiles finding} files. Both perform well and run _outside_
  * the editor-process so that they should be always used instead of nodejs-equivalents.
+ * @maintainer {@link https://github.com/gepingli @gepingli}
  */
 export namespace workspace {
 
@@ -13831,6 +13834,7 @@ export namespace authentication {
  * {@link TestController} instances, then adding {@link TestItem TestItems}.
  * Controllers may also describe how to run tests by creating one or more
  * {@link TestRunProfile} instances.
+ * @maintainer {@link https://github.com/pan463859 @pan463859}
  */
 export namespace tests {
 	/**
