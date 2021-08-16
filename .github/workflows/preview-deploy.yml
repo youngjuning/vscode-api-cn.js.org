@@ -32,7 +32,7 @@ jobs:
       - name: upload surge service
         id: deploy
         run: |
-          export DEPLOY_DOMAIN=https://vant-react-native-preview-pr-${{ steps.pr.outputs.id }}.surge.sh
+          export DEPLOY_DOMAIN=https://vscode-api-cn-preview-pr-${{ steps.pr.outputs.id }}.surge.sh
           npx surge --project ./docs --domain $DEPLOY_DOMAIN --token ${{ secrets.SURGE_TOKEN }}
       - name: update status comment
         uses: actions-cool/maintain-one-comment@v1.1.0
