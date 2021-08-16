@@ -10,27 +10,16 @@ API 列表使用 Typedoc 从 [vscode.d.ts](https://github.com/youngjuning/vscode
 
 ## 贡献指南
 
-**1、安装依赖**
+### 成为译者
 
-```sh
-$ yarn install
-```
+- **外部译者**：对 *vscode.d.ts* 文件的注释进行翻译，然后提交 PR 即可。
+- **内部译者**：需要负责某一具体模块，如果感兴趣可以添加管理员微信（`yang_jun_ning`）申请。
 
-**2、开启调试**
+### 本地预览
 
-```sh
-$ yarn dev
-```
-
-**3、开启服务**
-
-```sh
-$ yarn start
-```
-
-**4、参与翻译**
-
-外部译者对 vscode.d.ts 文件的注释进行翻译，然后提交 PR 即可。申请成为内部译者需要负责某一具体模块，感兴趣请添加管理员微信（`yang_jun_ning`）。
+1、**安装依赖**：`yarn install`
+2、**开启调试**：`yarn dev`
+3、**开启服务**：`yarn start`
 
 ## 负责人
 
