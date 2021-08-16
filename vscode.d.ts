@@ -4,7 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 
 /**
- * 编辑器的版本。
+ * Visual Studio Code 的版本。
  */
 export const version: string;
 
@@ -8440,21 +8440,17 @@ export interface UriHandler {
 }
 
 /**
- * Namespace for dealing with the current window of the editor. That is visible
- * and active editors, as well as, UI elements to show messages, selections, and
- * asking for user input.
+ * 用于处理编辑器当前窗口的命名空间。就是可见和活动的编辑器，以及显示信息、选择和要求用户输入的 UI 元素。
  */
 export namespace window {
 
 	/**
-	 * The currently active editor or `undefined`. The active editor is the one
-	 * that currently has focus or, when none has focus, the one that has changed
-	 * input most recently.
+	 * 当前活动的编辑器或 `undefined`。活动的编辑器是当前聚焦的编辑器，或者当没有聚焦时，是最近改变输入的编辑器。
 	 */
 	export let activeTextEditor: TextEditor | undefined;
 
 	/**
-	 * The currently visible editors or an empty array.
+	 * 当前可见的编辑器或者一个空数组。
 	 */
 	export let visibleTextEditors: TextEditor[];
 
