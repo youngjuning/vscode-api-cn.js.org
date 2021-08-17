@@ -8442,7 +8442,7 @@ export interface UriHandler {
 }
 
 /**
- * 用于处理编辑器当前窗口的命名空间。就是可见和活动的编辑器，以及显示信息、选择和要求用户输入的 UI 元素。
+ * 用于处理编辑器当前窗口（window）的命名空间。就是可见和活动的编辑器，以及显示信息、选择和要求用户输入的 UI 元素。
  * @maintainer {@link https://github.com/youngjuning @youngjuning}
  */
 export namespace window {
@@ -8458,9 +8458,8 @@ export namespace window {
 	export let visibleTextEditors: TextEditor[];
 
 	/**
-	 * An {@link Event} which fires when the {@link window.activeTextEditor active editor}
-	 * has changed. *Note* that the event also fires when the active editor changes
-	 * to `undefined`.
+	 * 当 {@link window.activeTextEditor 活动编辑器} 发生变化时，一个 {@link Event} 会被触发。
+	 * *注意*，当活动编辑器改变时，该事件也会发生。变成 `undefined` 时，事件也会触发。
 	 */
 	export const onDidChangeActiveTextEditor: Event<TextEditor | undefined>;
 
