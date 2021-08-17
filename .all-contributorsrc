@@ -77,6 +77,7 @@
       "contributions": [
         "translation"
       ]
+<<<<<<< HEAD
     },
     {
       "login": "sherry-zxy",
@@ -116,6 +117,8 @@
       "contributions": [
         "translation"
       ]
+=======
+>>>>>>> 81b4e085 (docs: add Tecvan-fe as a contributor for translation (#15))
     }
   ],
   "contributorsPerLine": 6,
