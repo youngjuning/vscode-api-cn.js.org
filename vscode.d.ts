@@ -8166,131 +8166,118 @@ export enum UIKind {
 export namespace env {
 
 	/**
-	 * The application name of the editor, like 'VS Code'.
+	 * 编辑器的应用程序名，比如“VS Code”。
 	 */
 	export const appName: string;
 
 	/**
-	 * The application root folder from which the editor is running.
+	 * 编辑器从其中运行的应用程序根文件夹。
 	 *
-	 * *Note* that the value is the empty string when running in an
-	 * environment that has no representation of an application root folder.
+	 * *Note* 当在没有应用程序根文件夹表示的环境中运行时，该值为空字符串。
+	 * 
 	 */
 	export const appRoot: string;
 
 	/**
-	 * The custom uri scheme the editor registers to in the operating system.
+	 * 编辑器在操作系统中注册的自定义uri模式。
 	 */
 	export const uriScheme: string;
 
 	/**
-	 * Represents the preferred user-language, like `de-CH`, `fr`, or `en-US`.
+	 * 表示首选用户语言，比如 `de-CH`, `fr`, or `en-US`.
 	 */
 	export const language: string;
 
 	/**
-	 * The system clipboard.
+	 * 系统剪贴板。
 	 */
 	export const clipboard: Clipboard;
 
 	/**
-	 * A unique identifier for the computer.
+	 * 计算机的唯一标识符。
 	 */
 	export const machineId: string;
 
 	/**
-	 * A unique identifier for the current session.
-	 * Changes each time the editor is started.
+	 * 当前会话的唯一标识符。
+	 * 每次启动编辑器时都会更改。
 	 */
 	export const sessionId: string;
 
 	/**
-	 * Indicates that this is a fresh install of the application.
-	 * `true` if within the first day of installation otherwise `false`.
+	 * 表示这是应用程序的更新安装。
+	 * 如果在安装的第一天为 ' true '，否则' false '。
 	 */
 	export const isNewAppInstall: boolean;
 
 	/**
-	 * Indicates whether the users has telemetry enabled.
-	 * Can be observed to determine if the extension should send telemetry.
+	 * 指示用户是否启用了遥测功能。
+	 * 可以观察，以确定是否应该发送遥测。
 	 */
 	export const isTelemetryEnabled: boolean;
 
 	/**
-	 * An {@link Event} which fires when the user enabled or disables telemetry.
-	 * `true` if the user has enabled telemetry or `false` if the user has disabled telemetry.
+	 * 当用户启用或禁用遥测时触发的{@link事件}。
+	 * “true”表示用户启用了遥测技术，“false”表示用户禁用了遥测技术。
 	 */
 	export const onDidChangeTelemetryEnabled: Event<boolean>;
 
 	/**
-	 * The name of a remote. Defined by extensions, popular samples are `wsl` for the Windows
-	 * Subsystem for Linux or `ssh-remote` for remotes using a secure shell.
-	 *
-	 * *Note* that the value is `undefined` when there is no remote extension host but that the
-	 * value is defined in all extension hosts (local and remote) in case a remote extension host
-	 * exists. Use {@link Extension.extensionKind} to know if
-	 * a specific extension runs remote or not.
+	 * 远程服务器的名称. 由扩展定义, 最常见的例子是Windows的' wsl '
+	 * 子系统用于Linux或' ssh-remote '用于使用安全shell的远程服务器。
+	 * 
+	 * *注意*，当没有远程扩展主机时，该值为' undefined '，但如果存在远程扩展主机，则该值在所有扩展主机(本地和远程)中定义。参考{@link Extension.extensionKind}以了解特定的扩展是否远程运行。
 	 */
 	export const remoteName: string | undefined;
 
 	/**
-	 * The detected default shell for the extension host, this is overridden by the
-	 * `terminal.integrated.shell` setting for the extension host's platform. Note that in
-	 * environments that do not support a shell the value is the empty string.
+	 * 为扩展主机检测到的默认shell，它被扩展主机平台的' terminal.integrated.shell '设置覆盖。注意，在不支持shell的环境中，值是空字符串。
 	 */
 	export const shell: string;
 
 	/**
-	 * The UI kind property indicates from which UI extensions
-	 * are accessed from. For example, extensions could be accessed
-	 * from a desktop application or a web browser.
+	 * UI类型属性指示从哪个UI扩展访问。例如，扩展可以从桌面应用程序或web浏览器访问。
 	 */
 	export const uiKind: UIKind;
 
 	/**
-	 * Opens a link externally using the default application. Depending on the
-	 * used scheme this can be:
+	 * 使用默认应用在外部打开链接. 根据不同的协议使用对应的应用:
+	 * 
 	 * * a browser (`http:`, `https:`)
 	 * * a mail client (`mailto:`)
 	 * * VSCode itself (`vscode:` from `vscode.env.uriScheme`)
 	 *
-	 * *Note* that {@linkcode window.showTextDocument showTextDocument} is the right
-	 * way to open a text document inside the editor, not this function.
+	 * *注意* 想要在编辑器中打开路径url请使用 {@linkcode window.showTextDocument showTextDocument} 而不是这个函数
+	 * 
 	 *
-	 * @param target The uri that should be opened.
-	 * @returns A promise indicating if open was successful.
+	 * @param target 要打开的uri.
+	 * @returns 成功执行的Promise.
 	 */
 	export function openExternal(target: Uri): Thenable<boolean>;
 
 	/**
-	 * Resolves a uri to a form that is accessible externally.
+	 * 将uri解析为外部可访问的表单。
 	 *
 	 * #### `http:` or `https:` scheme
 	 *
-	 * Resolves an *external* uri, such as a `http:` or `https:` link, from where the extension is running to a
-	 * uri to the same resource on the client machine.
+	 * 解析一个*外部* uri，比如一个' http: '或' https: '链接，从扩展运行到客户端机器上相同资源的uri。
 	 *
-	 * This is a no-op if the extension is running on the client machine.
+	 * 如果扩展在客户端机器上运行，则此操作为no-op。
 	 *
-	 * If the extension is running remotely, this function automatically establishes a port forwarding tunnel
-	 * from the local machine to `target` on the remote and returns a local uri to the tunnel. The lifetime of
-	 * the port forwarding tunnel is managed by the editor and the tunnel can be closed by the user.
+	 * 如果扩展正在远程运行，这个函数会自动建立一个端口转发隧道，从本地机器到远程的“目标”，并返回一个本地uri到隧道。
+	 * 端口转发隧道的生存期由编辑器管理，用户可以自行关闭隧道。
 	 *
-	 * *Note* that uris passed through `openExternal` are automatically resolved and you should not call `asExternalUri` on them.
+	 * *注意* Uri通过' openExternal '被自动解析，你不应该在他们上调用' as External Uri '。
 	 *
 	 * #### `vscode.env.uriScheme`
 	 *
-	 * Creates a uri that - if opened in a browser (e.g. via `openExternal`) - will result in a registered {@link UriHandler}
-	 * to trigger.
+	 * 创建一个uri，如果在浏览器中打开(例如通过' open External ')，将导致一个注册的{@link UriHandler}触发。
 	 *
-	 * Extensions should not make any assumptions about the resulting uri and should not alter it in any way.
-	 * Rather, extensions can e.g. use this uri in an authentication flow, by adding the uri as callback query
-	 * argument to the server to authenticate to.
+	 * 扩展不应该对结果uri做任何假设，也不应该以任何方式改变它。相反，扩展可以通过将uri作为回调查询参数添加到要进行身份验证的服务器，从而在身份验证流中使用该uri。
 	 *
-	 * *Note* that if the server decides to add additional query parameters to the uri (e.g. a token or secret), it
-	 * will appear in the uri that is passed to the {@link UriHandler}.
+	 * *注意*如果服务器决定添加额外的查询参数的uri(例如一个令牌或秘密)，它将出现在uri传递给{@link UriHandler}。
 	 *
-	 * **Example** of an authentication flow:
+	 * **认证流程示例**:
 	 * ```typescript
 	 * vscode.window.registerUriHandler({
 	 *   handleUri(uri: vscode.Uri): vscode.ProviderResult<void> {
@@ -8304,16 +8291,13 @@ export namespace env {
 	 * await vscode.env.openExternal(callableUri);
 	 * ```
 	 *
-	 * *Note* that extensions should not cache the result of `asExternalUri` as the resolved uri may become invalid due to
-	 * a system or user action — for example, in remote cases, a user may close a port forwarding tunnel that was opened by
-	 * `asExternalUri`.
+	 * *注意*扩展不应该缓存' asExternalUri '的结果，因为解析的Uri可能会由于系统或用户的操作无效-例如，在远程情况下，用户可能关闭由' asExternalUri '打开的端口转发隧道。
 	 *
-	 * #### Any other scheme
+	 * #### 其他计划
 	 *
-	 * Any other scheme will be handled as if the provided URI is a workspace URI. In that case, the method will return
-	 * a URI which, when handled, will make the editor open the workspace.
+	 * 任何其他方案都将被处理，就像提供的URI是工作空间URI一样。在这种情况下，该方法将返回一个URI，当处理该URI时，将使编辑器打开工作区。
 	 *
-	 * @return A uri that can be used on the client machine.
+	 * @return 可以在客户端机器上使用的uri。
 	 */
 	export function asExternalUri(target: Uri): Thenable<Uri>;
 }
