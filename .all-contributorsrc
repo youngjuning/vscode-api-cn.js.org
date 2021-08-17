@@ -65,6 +65,15 @@
         "ideas",
         "code"
       ]
+    },
+    {
+      "login": "Tecvan-fe",
+      "name": "tecvan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/84165678?v=4",
+      "profile": "https://www.zhihu.com/people/tec-van",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
