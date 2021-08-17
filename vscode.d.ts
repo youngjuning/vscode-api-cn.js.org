@@ -13830,15 +13830,15 @@ export namespace authentication {
 }
 
 /**
- * 用于测试功能的命名空间。通过注册 {@link TestController} 实例, 然后添加 {@link TestItem TestItems} 来发布测试。
+ * 用于测试功能的命名空间。通过注册 {@link TestController} 实例, 然后添加 {@link TestItem TestItems} 来发布 Tests。
  * Controllers 也可以通过添加一个或者多个 {@link TestRunProfile} 实例来描述如何运行测试。
  * @maintainer {@link https://github.com/pan463859 @pan463859}
  */
 export namespace tests {
 	/**
-	 * 创建一个新的 controller.
+	 * 创建一个新的 test controller.
 	 *
-	 * @param id controller的标识符, 必须全局唯一。
+	 * @param id controller 的标识符, 必须全局唯一。
 	 * @param label controller的易于理解的标签。
 	 * @returns {@link TestController}实例。
 	*/
