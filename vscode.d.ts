@@ -11021,6 +11021,7 @@ export interface ConfigurationChangeEvent {
  * scores are equal the provider that came last wins. For features that allow full arity, like {@link languages.registerHoverProvider hover},
  * the score is only checked to be `>0`, for other features, like {@link languages.registerCompletionItemProvider IntelliSense} the
  * score is used for determining the order in which providers are asked to participate.
+ * @maintainer {@link https://github.com/Tecvan-fe @Tecvan-fe}
  */
 export namespace languages {
 

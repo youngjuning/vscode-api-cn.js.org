@@ -74,8 +74,17 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "sherry-zxy",
+      "name": "Xiyuan Zheng",
+      "avatar_url": "https://avatars.githubusercontent.com/u/36014195?v=4",
+      "profile": "https://github.com/sherry-zxy",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
-  "contributorsPerLine": 7,
+  "contributorsPerLine": 6,
   "skipCi": true
 }
