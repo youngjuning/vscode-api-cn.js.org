@@ -29,7 +29,7 @@ API 列表使用 Typedoc 从 [vscode.d.ts](https://github.com/youngjuning/vscode
 - [ ] debug
 - [x] evn               @Saber2pr
 - [ ] extensions
-- [ ] languages
+- [ ] languages         @Tecvan-fe
 - [ ] notebooks
 - [ ] scm
 - [ ] tasks
