@@ -4,7 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 
 /**
- * 编辑器的版本。
+ * Visual Studio Code 的版本。
  */
 export const version: string;
 
@@ -8162,6 +8162,7 @@ export enum UIKind {
 
 /**
  * 描述编辑器运行环境的命名空间。
+ * @maintainer {@link https://github.com/Saber2pr @Saber2pr}
  */
 export namespace env {
 
@@ -8353,6 +8354,7 @@ export namespace env {
  * 	}
  * }
  * ```
+ * @maintainer {@link https://github.com/Imchenlong @Imchenlong}
  */
 export namespace commands {
 
@@ -8440,21 +8442,18 @@ export interface UriHandler {
 }
 
 /**
- * Namespace for dealing with the current window of the editor. That is visible
- * and active editors, as well as, UI elements to show messages, selections, and
- * asking for user input.
+ * 用于处理编辑器当前窗口的命名空间。就是可见和活动的编辑器，以及显示信息、选择和要求用户输入的 UI 元素。
+ * @maintainer {@link https://github.com/youngjuning @youngjuning}
  */
 export namespace window {
 
 	/**
-	 * The currently active editor or `undefined`. The active editor is the one
-	 * that currently has focus or, when none has focus, the one that has changed
-	 * input most recently.
+	 * 当前活动的编辑器或 `undefined`。活动的编辑器是当前聚焦的编辑器，或者当没有聚焦时，是最近改变输入的编辑器。
 	 */
 	export let activeTextEditor: TextEditor | undefined;
 
 	/**
-	 * The currently visible editors or an empty array.
+	 * 当前可见的编辑器或者一个空数组。
 	 */
 	export let visibleTextEditors: TextEditor[];
 
@@ -10468,6 +10467,7 @@ export interface WorkspaceFolder {
  * The workspace offers support for {@link workspace.createFileSystemWatcher listening} to fs
  * events and for {@link workspace.findFiles finding} files. Both perform well and run _outside_
  * the editor-process so that they should be always used instead of nodejs-equivalents.
+ * @maintainer {@link https://github.com/gepingli @gepingli}
  */
 export namespace workspace {
 
@@ -13830,9 +13830,9 @@ export namespace authentication {
 }
 
 /**
- * 用于测试功能的命名空间。 通过注册  
- * {@link TestController} 实例, 然后添加 {@link TestItem TestItems}来发布测试。
- * Controllers 也可以通过添加一个或者多个{@link TestRunProfile} 实例来描述如何运行测试。
+ * 用于测试功能的命名空间。通过注册 {@link TestController} 实例, 然后添加 {@link TestItem TestItems} 来发布测试。
+ * Controllers 也可以通过添加一个或者多个 {@link TestRunProfile} 实例来描述如何运行测试。
+ * @maintainer {@link https://github.com/pan463859 @pan463859}
  */
 export namespace tests {
 	/**

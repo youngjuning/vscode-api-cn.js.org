@@ -16,9 +16,57 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/13204332?v=4",
       "profile": "https://github.com/youngjuning",
       "contributions": [
-        "code", "infra", "maintenance", "translation", "doc", "ideas", "design", "translation"
+        "code",
+        "maintenance",
+        "translation",
+        "doc",
+        "ideas"
+      ]
+    },
+    {
+      "login": "gepingli",
+      "name": "gepingli",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29964332?v=4",
+      "profile": "https://github.com/gepingli",
+      "contributions": [
+        "translation",
+        "ideas"
+      ]
+    },
+    {
+      "login": "Saber2pr",
+      "name": "Konpaku Youmu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40260564?v=4",
+      "profile": "http://saber2pr.top",
+      "contributions": [
+        "translation",
+        "ideas"
+      ]
+    },
+    {
+      "login": "Imchenlong",
+      "name": "Lance Chen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13520451?v=4",
+      "profile": "https://github.com/Imchenlong",
+      "contributions": [
+        "translation",
+        "maintenance",
+        "code"
+      ]
+    },
+    {
+      "login": "pan463859",
+      "name": "潘小安",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32640880?v=4",
+      "profile": "https://github.com/pan463859",
+      "contributions": [
+        "translation",
+        "maintenance",
+        "ideas",
+        "code"
       ]
     }
   ],
-  "contributorsPerLine": 7
+  "contributorsPerLine": 7,
+  "skipCi": true
 }

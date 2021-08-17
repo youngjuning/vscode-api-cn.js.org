@@ -5,7 +5,7 @@
   "scripts": {
     "prebuild": "rimraf docs/",
     "build": "typedoc",
-    "dev": "rimraf doc & yarn build --watch & npx serve docs/",
+    "dev": "yarn build --watch",
     "start": "serve docs/"
   },
   "devDependencies": {
