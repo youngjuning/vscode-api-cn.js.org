@@ -12309,6 +12309,7 @@ export interface NotebookCellStatusBarItemProvider {
  * 1. {@link NotebookSerializer} enable the editor to open, show, and save notebooks
  * 2. {@link NotebookController} own the execution of notebooks, e.g they create output from code cells.
  * 3. NotebookRenderer present notebook output in the editor. They run in a separate context.
+ * @maintainer {@link https://github.com/sherry-zxy @sherry-zxy}
  */
 export namespace notebooks {
 
@@ -12577,6 +12578,10 @@ export interface SourceControl {
 	dispose(): void;
 }
 
+/**
+ * 用于处理源码版本管理（Source Control Management）的命名空间
+ * @maintainer {@link https://github.com/sherry-zxy @sherry-zxy}
+ */
 export namespace scm {
 
 	/**
@@ -13587,6 +13592,10 @@ export interface CommentController {
 	dispose(): void;
 }
 
+/**
+ * 用于处理注释的命名空间
+ * @maintainer {@link https://github.com/youngjuning @youngjuning}
+ */
 namespace comments {
 	/**
 	 * Creates a new {@link CommentController comment controller} instance.

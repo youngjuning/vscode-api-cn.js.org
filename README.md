@@ -25,13 +25,13 @@ API 列表使用 Typedoc 从 [vscode.d.ts](https://github.com/youngjuning/vscode
 
 - [ ] authentication
 - [x] commands          @Imchenlong
-- [ ] comments
+- [x] comments          @youngjuning
 - [ ] debug
 - [x] evn               @Saber2pr
 - [ ] extensions
 - [x] languages         @Tecvan-fe
-- [ ] notebooks
-- [ ] scm
+- [x] notebooks         @sherry-zxy
+- [x] scm               @sherry-zxy
 - [ ] tasks
 - [x] tests             @pan463859
 - [x] window            @youngjuning
