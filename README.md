@@ -40,7 +40,7 @@ API 列表使用 Typedoc 从 [vscode.d.ts](https://github.com/youngjuning/vscode
 - [x] languages         @Tecvan-fe
 - [x] notebooks         @sherry-zxy
 - [x] scm               @sherry-zxy
-- [ ] tasks
+- [x] tasks             @liuqh0609
 - [x] tests             @pan463859
 - [x] window            @youngjuning
 - [x] workspace         @gepingli

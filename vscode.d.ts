@@ -6925,6 +6925,7 @@ export interface TaskFilter {
 
 /**
  * Namespace for tasks functionality.
+ * @maintainer {@link https://github.com/liuqh0609 @liuqh0609}
  */
 export namespace tasks {
 
