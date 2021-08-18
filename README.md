@@ -25,6 +25,7 @@ API 列表使用 Typedoc 从 [vscode.d.ts](https://github.com/youngjuning/vscode
 - namespace：命名空间
 - active editor：活动编辑器
 - active terminal：活动命令行
+- Namespace for dealing with xxx：用于处理 xxx 的命名空间
 
 ## 负责人
 
