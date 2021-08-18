@@ -19,6 +19,13 @@ API 列表使用 Typedoc 从 [vscode.d.ts](https://github.com/youngjuning/vscode
 2. **开启调试**：`yarn dev`
 3. **开启服务**：`yarn start`
 
+## 专业术语
+
+- extension：扩展
+- namespace：命名空间
+- active editor：活动编辑器
+- active terminal：活动命令行
+
 ## 负责人
 
 翻译负责人是按照 vscode api 的命名空间认领的，如果有兴趣认领请添加管理员微信（`yang_jun_ning`）申请成为内部译者。
@@ -28,7 +35,7 @@ API 列表使用 Typedoc 从 [vscode.d.ts](https://github.com/youngjuning/vscode
 - [x] comments          @youngjuning
 - [ ] debug
 - [x] evn               @Saber2pr
-- [ ] extensions
+- [x] extensions        @pan463859
 - [x] languages         @Tecvan-fe
 - [x] notebooks         @sherry-zxy
 - [x] scm               @sherry-zxy

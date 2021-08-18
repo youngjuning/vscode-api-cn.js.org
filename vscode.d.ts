@@ -13284,6 +13284,7 @@ export namespace debug {
  *
  * console.log(importedApi.mul(42, 1));
  * ```
+ * @maintainer {@link https://github.com/pan463859 @pan463859}
  */
 export namespace extensions {
 
