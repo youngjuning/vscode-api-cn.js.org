@@ -31,7 +31,7 @@ API 列表使用 Typedoc 从 [vscode.d.ts](https://github.com/youngjuning/vscode
 
 翻译负责人是按照 vscode api 的命名空间认领的，如果有兴趣认领请添加管理员微信（`yang_jun_ning`）申请成为内部译者。
 
-- [ ] authentication
+- [x] authentication    @cxk0831
 - [x] commands          @Imchenlong
 - [x] comments          @youngjuning
 - [ ] debug

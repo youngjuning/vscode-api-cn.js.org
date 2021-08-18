@@ -13787,6 +13787,7 @@ export interface AuthenticationProvider {
 
 /**
  * Namespace for authentication.
+ * @maintainer {@link https://github.com/cxk0831 @cxk0831}
  */
 export namespace authentication {
 	/**
