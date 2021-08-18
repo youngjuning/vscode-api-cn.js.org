@@ -1,5 +1,5 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 VS Code API 是一系列你可以在 Visual Studio Code 扩展中调用的 JavaScript API。这个站点列出了扩展开发者可以使用的所有 VS Code API。原网站没有中文翻译且不方便阅读，所以有了该网站。

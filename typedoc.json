@@ -4,8 +4,5 @@
   "theme": "./theme",
   "out": "docs",
   "readme": "./README.md",
-  "sort": ["source-order"],
-  "excludePrivate": true,
-  "excludeProtected": true,
-  "excludeInternal": true
+  "sort": ["source-order"]
 }
