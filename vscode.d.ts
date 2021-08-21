@@ -13839,8 +13839,8 @@ export namespace tests {
 	 * 创建一个新的 test controller.
 	 *
 	 * @param id controller 的标识符, 必须全局唯一。
-	 * @param label controller的易于理解的标签。
-	 * @returns {@link TestController}实例。
+	 * @param label controller 的易于理解的标签。
+	 * @returns {@link TestController} 实例。
 	*/
 	export function createTestController(id: string, label: string): TestController;
 }
