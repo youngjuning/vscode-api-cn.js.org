@@ -8353,58 +8353,48 @@ export namespace env {
 export namespace commands {
 
 	/**
-	 * Registers a command that can be invoked via a keyboard shortcut,
-	 * a menu item, an action, or directly.
+	 * 注册可通过键盘快捷键、菜单项、操作或直接调用的命令。
 	 *
-	 * Registering a command with an existing command identifier twice
-	 * will cause an error.
+	 * 使用现有命令标识符注册命令两次将导致错误。
 	 *
-	 * @param command A unique identifier for the command.
-	 * @param callback A command handler function.
-	 * @param thisArg The `this` context used when invoking the handler function.
-	 * @return Disposable which unregisters this command on disposal.
+	 * @param command 命令的唯一标识符。
+	 * @param callback 命令处理函数。
+	 * @param thisArg 调用处理程序函数时使用的 `this` 上下文。
+	 * @return Disposable 在处置时取消注册此命令。
 	 */
 	export function registerCommand(command: string, callback: (...args: any[]) => any, thisArg?: any): Disposable;
 
 	/**
-	 * Registers a text editor command that can be invoked via a keyboard shortcut,
-	 * a menu item, an action, or directly.
+	 * 注册可通过键盘快捷键、菜单项、操作或直接调用的文本编辑器命令。
+	 * 
+	 * 文本编辑器命令与普通命令{@link commands.registerCommand commands} 不同，因为它们仅在调用命令时有活动编辑器时才执行。 
+	 * 此外，编辑器命令的命令处理程序可以访问活动编辑器和编辑构建器{@link TextEditorEdit edit}。 请注意，编辑构建器仅在回调执行时有效。
 	 *
-	 * Text editor commands are different from ordinary {@link commands.registerCommand commands} as
-	 * they only execute when there is an active editor when the command is called. Also, the
-	 * command handler of an editor command has access to the active editor and to an
-	 * {@link TextEditorEdit edit}-builder. Note that the edit-builder is only valid while the
-	 * callback executes.
-	 *
-	 * @param command A unique identifier for the command.
-	 * @param callback A command handler function with access to an {@link TextEditor editor} and an {@link TextEditorEdit edit}.
-	 * @param thisArg The `this` context used when invoking the handler function.
-	 * @return Disposable which unregisters this command on disposal.
+	 * @param command 命令的唯一标识符。
+	 * @param callback 可以访问编辑器{@link TextEditor editor}和编辑的命令处理函数{@link TextEditorEdit edit}。
+	 * @param thisArg 调用处理程序函数时使用的 `this` 上下文。
+	 * @return Disposable 在处置时取消注册此命令。
 	 */
 	export function registerTextEditorCommand(command: string, callback: (textEditor: TextEditor, edit: TextEditorEdit, ...args: any[]) => void, thisArg?: any): Disposable;
 
 	/**
-	 * Executes the command denoted by the given command identifier.
+	 * 执行由给定命令标识符表示的命令。
 	 *
-	 * * *Note 1:* When executing an editor command not all types are allowed to
-	 * be passed as arguments. Allowed are the primitive types `string`, `boolean`,
-	 * `number`, `undefined`, and `null`, as well as {@linkcode Position}, {@linkcode Range}, {@linkcode Uri} and {@linkcode Location}.
-	 * * *Note 2:* There are no restrictions when executing commands that have been contributed
-	 * by extensions.
+	 * * *注 1:* 执行编辑器命令时，并非所有类型都允许作为参数传递。允许基本数据类型：`string`, `boolean`,
+	 * `number`, `undefined`,  `null`, 还有 {@linkcode Position}, {@linkcode Range}, {@linkcode Uri} 和 {@linkcode Location}.
+	 * * *注 2:* 执行由扩展贡献的命令时没有限制。
 	 *
-	 * @param command Identifier of the command to execute.
-	 * @param rest Parameters passed to the command function.
-	 * @return A thenable that resolves to the returned value of the given command. `undefined` when
-	 * the command handler function doesn't return anything.
+	 * @param command 要执行的命令的标识符。
+	 * @param rest 传递给命令函数的参数。
+	 * @return 解析为给定命令的返回值的 `thenable`。 `undefined` 当命令处理函数不返回任何东西时。
 	 */
 	export function executeCommand<T>(command: string, ...rest: any[]): Thenable<T | undefined>;
 
 	/**
-	 * Retrieve the list of all available commands. Commands starting with an underscore are
-	 * treated as internal commands.
+	 * 检索所有可用命令的列表。 以下划线开头的命令被视为内部命令。
 	 *
-	 * @param filterInternal Set `true` to not see internal commands (starting with an underscore)
-	 * @return Thenable that resolves to a list of command ids.
+	 * @param filterInternal 设置 `true` 以看不到内部命令（以下划线开头）。
+	 * @return Thenable 解析为命令 ID 列表。
 	 */
 	export function getCommands(filterInternal?: boolean): Thenable<string[]>;
 }
