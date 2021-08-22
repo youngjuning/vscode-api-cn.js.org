@@ -12585,19 +12585,22 @@ export interface SourceControl {
 export namespace scm {
 
 	/**
-	 * The {@link SourceControlInputBox input box} for the last source control
-	 * created by the extension.
-	 *
-	 * @deprecated Use SourceControl.inputBox instead
+	 * 这个 {@link SourceControlInputBox input box} {源代码控制输入框} 用于上一个源代码控制是由扩展创建的
+	 * 
+	 * @deprecated (已被弃用)  改用 SourceControl.inputBox 
 	 */
 	export const inputBox: SourceControlInputBox;
 
 	/**
-	 * Creates a new {@link SourceControl source control} instance.
+	 * 创建一个新的 {@link SourceControl source control} {源代码控制} 实例
 	 *
+	 * (参数 id) 给源代码控制设置一个的id. 取个短一点的名字 例如: 'git'
 	 * @param id An `id` for the source control. Something short, e.g.: `git`.
+	 * (参数 label) 给源代码控制设置一个人类能读懂的字符串作为标签 例如:'Git'
 	 * @param label A human-readable string for the source control. E.g.: `Git`.
+	 * (选择性参数 rootUri) 设置一个源代码控制的根路径的Uri 例如: 'Uri.parse(workspaceRoot)'
 	 * @param rootUri An optional Uri of the root of the source control. E.g.: `Uri.parse(workspaceRoot)`.
+	 * (返回参) 一个{@link SourceControl source control} 的实例
 	 * @return An instance of {@link SourceControl source control}.
 	 */
 	export function createSourceControl(id: string, label: string, rootUri?: Uri): SourceControl;
