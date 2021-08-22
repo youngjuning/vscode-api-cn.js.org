@@ -6930,61 +6930,61 @@ export interface TaskFilter {
 export namespace tasks {
 
 	/**
-	 * Register a task provider.
+	 * 注册任务提供者。
 	 *
-	 * @param type The task kind type this provider is registered for.
-	 * @param provider A task provider.
-	 * @return A {@link Disposable} that unregisters this provider when being disposed.
+	 * @param type 该提供者注册的任务类型。
+	 * @param provider 任务提供者。
+	 * @return {@link Disposable}（释放器对象），当调用释放器对象的 `dispose` 方法时，该注册者会被移除。
 	 */
 	export function registerTaskProvider(type: string, provider: TaskProvider): Disposable;
 
 	/**
-	 * Fetches all tasks available in the systems. This includes tasks
-	 * from `tasks.json` files as well as tasks from task providers
-	 * contributed through extensions.
+	 * 获取系统中所有可用的任务。包括 `tasks.json` 文件中的任务，
+	 * 以及通过扩展贡献出的任务提供者的任务。
 	 *
-	 * @param filter Optional filter to select tasks of a certain type or version.
+	 * @param filter 可选的过滤器，以选择某一类型或版本的任务。
 	 */
 	export function fetchTasks(filter?: TaskFilter): Thenable<Task[]>;
 
 	/**
-	 * Executes a task that is managed by the editor. The returned
-	 * task execution can be used to terminate the task.
+	 * 执行一个由开发者管理的任务。该方法的返回值可以用来终止该任务。
 	 *
-	 * @throws When running a ShellExecution or a ProcessExecution
-	 * task in an environment where a new process cannot be started.
-	 * In such an environment, only CustomExecution tasks can be run.
+	 * @throws 当环境中已经运行了 {@link ShellExecution} 或 {@link ProcessExecution} 
+ 	 * 任务，这时是不能启动新进程的。
+	 * 在这样的环境中，只有 {@link CustomExecution} 任务可以被运行。
 	 *
-	 * @param task the task to execute
+	 * @param task 需要被执行的任务。
 	 */
 	export function executeTask(task: Task): Thenable<TaskExecution>;
 
 	/**
-	 * The currently active task executions or an empty array.
+	 * 当前正在执行的任务或一个空数组。
 	 */
 	export const taskExecutions: readonly TaskExecution[];
 
 	/**
-	 * Fires when a task starts.
+	 * 当任务启动时会触发该方法。
 	 */
 	export const onDidStartTask: Event<TaskStartEvent>;
 
 	/**
-	 * Fires when a task ends.
+	 * 当任务结束时会触发该方法。
 	 */
 	export const onDidEndTask: Event<TaskEndEvent>;
 
 	/**
-	 * Fires when the underlying process has been started.
-	 * This event will not fire for tasks that don't
-	 * execute an underlying process.
+	 * 当底层进程被启动时触发该事件。
+	 * 
+	 * 如果一个任务不是在底层进程中执行的话，
+	 * 当前事件不会对其产生作用。
 	 */
 	export const onDidStartTaskProcess: Event<TaskProcessStartEvent>;
 
 	/**
-	 * Fires when the underlying process has ended.
-	 * This event will not fire for tasks that don't
-	 * execute an underlying process.
+	 * 当底层进程被启动时触发该事件。
+	 * 
+	 * 如果一个任务不是在底层进程中执行的话，
+	 * 当前事件不会对其产生作用。
 	 */
 	export const onDidEndTaskProcess: Event<TaskProcessEndEvent>;
 }
