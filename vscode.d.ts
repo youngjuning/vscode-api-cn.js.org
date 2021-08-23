@@ -13248,9 +13248,9 @@ export namespace debug {
 }
 
 /**
- * 用于处理已安装扩展的命名空间。扩展由一个 {@link Extension} 可以映射扩展的接口表示。
+ * 用于处理已安装扩展的命名空间。扩展由一个可以映射它们的接口 {@link Extension} 表示。
  *
- * 通过在 `activate` 方法中返回他们API的公有接口给其他扩展，拓展开发者可以给其他扩展提供API
+ * 通过在 activate 方法中返回它们的公共 API 给其他扩展，扩展开发者可以给其他扩展提供 API。
  *
  * ```javascript
  * export function activate(context: vscode.ExtensionContext) {
