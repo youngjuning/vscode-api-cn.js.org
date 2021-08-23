@@ -13842,19 +13842,17 @@ export namespace authentication {
 }
 
 /**
- * Namespace for testing functionality. Tests are published by registering
- * {@link TestController} instances, then adding {@link TestItem TestItems}.
- * Controllers may also describe how to run tests by creating one or more
- * {@link TestRunProfile} instances.
+ * 用于测试功能的命名空间。通过注册 {@link TestController} 实例, 然后添加 {@link TestItem TestItems} 来发布 Tests。
+ * Controllers 也可以通过添加一个或者多个 {@link TestRunProfile} 实例来描述如何运行测试。
  * @maintainer {@link https://github.com/pan463859 @pan463859}
  */
 export namespace tests {
 	/**
-	 * Creates a new test controller.
+	 * 创建一个新的 test controller.
 	 *
-	 * @param id Identifier for the controller, must be globally unique.
-	 * @param label A human-readable label for the controller.
-	 * @returns An instance of the {@link TestController}.
+	 * @param id controller 的标识符, 必须全局唯一。
+	 * @param label controller 的易于理解的标签。
+	 * @returns {@link TestController} 实例。
 	*/
 	export function createTestController(id: string, label: string): TestController;
 }
