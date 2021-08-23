@@ -1,6 +1,6 @@
 {
   "projectName": "vscode-api-cn",
-  "projectOwner": "youngjuning",
+  "projectOwner": "vscode-cn",
   "repoType": "github",
   "repoHost": "https://github.com",
   "files": [
@@ -100,6 +100,15 @@
       "name": "竹雨",
       "avatar_url": "https://avatars.githubusercontent.com/u/34495411?v=4",
       "profile": "https://github.com/cxk0831",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "yangyang0825",
+      "name": "yangyang0825",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59153341?v=4",
+      "profile": "https://github.com/yangyang0825",
       "contributions": [
         "translation"
       ]
