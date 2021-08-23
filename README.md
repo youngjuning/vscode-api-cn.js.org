@@ -33,7 +33,7 @@ API 列表使用 Typedoc 从 [vscode.d.ts](https://github.com/youngjuning/vscode
 
 - [x] authentication    @cxk0831
 - [x] commands          @Imchenlong
-- [x] comments          @youngjuning
+- [x] comments          @yangyang0825
 - [ ] debug
 - [x] evn               @Saber2pr
 - [x] extensions        @pan463859

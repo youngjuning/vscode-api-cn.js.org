@@ -13595,7 +13595,7 @@ export interface CommentController {
 
 /**
  * 用于处理注释的命名空间
- * @maintainer {@link https://github.com/youngjuning @youngjuning}
+ * @maintainer {@link https://github.com/yangyang0825 @yangyang0825}
  */
 namespace comments {
 	/**
