@@ -13254,11 +13254,9 @@ export namespace debug {
 }
 
 /**
- * Namespace for dealing with installed extensions. Extensions are represented
- * by an {@link Extension}-interface which enables reflection on them.
+ * 用于处理已安装扩展的命名空间。扩展由一个可以映射它们的接口 {@link Extension} 表示。
  *
- * Extension writers can provide APIs to other extensions by returning their API public
- * surface from the `activate`-call.
+ * 通过在 activate 方法中返回它们的公共 API 给其他扩展，扩展开发者可以给其他扩展提供 API。
  *
  * ```javascript
  * export function activate(context: vscode.ExtensionContext) {
@@ -13274,9 +13272,9 @@ export namespace debug {
  * 	return api;
  * }
  * ```
- * When depending on the API of another extension add an `extensionDependencies`-entry
- * to `package.json`, and use the {@link extensions.getExtension getExtension}-function
- * and the {@link Extension.exports exports}-property, like below:
+ * 当依赖于另一个扩展的 `API` 时，将 `依赖的扩展` 添加到
+ * `package.json`，然后使用 {@link extensions.getExtension getExtension} 方法
+ * 和 {@link Extension.exports exports} 来获取，如下：
  *
  * ```javascript
  * let mathExt = extensions.getExtension('genius.math');
