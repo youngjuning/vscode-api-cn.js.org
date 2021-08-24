@@ -27,24 +27,6 @@ API 列表使用 Typedoc 从 [vscode.d.ts](https://github.com/youngjuning/vscode
 - active terminal：活动命令行
 - Namespace for dealing with xxx：用于处理 xxx 的命名空间
 
-## 负责人
-
-翻译负责人是按照 vscode api 的命名空间认领的，如果有兴趣认领请添加管理员微信（`yang_jun_ning`）申请成为内部译者。
-
-- [x] authentication    @cxk0831
-- [x] commands          @Imchenlong
-- [x] comments          @yangyang825
-- [x] debug             @youngjuning
-- [x] evn               @Saber2pr
-- [x] extensions        @pan463859
-- [x] languages         @Tecvan-fe
-- [x] notebooks         @sherry-zxy
-- [x] scm               @sherry-zxy
-- [x] tasks             @liuqh0609
-- [x] tests             @pan463859
-- [x] window            @youngjuning
-- [x] workspace         @gepingli
-
 ## 贡献者 ✨
 
 感谢这些优秀的人 ([emoji key](https://allcontributors.org/docs/en/emoji-key))：
