@@ -13266,9 +13266,9 @@ export namespace debug {
  * 	return api;
  * }
  * ```
- * 当依赖于另一个扩展的 `API` 时,将 `依赖的扩展` 添加到
- * `package.json`,然后使用 {@link extensions.getExtension getExtension}方法
- * 和  {@link Extension.exports exports} 来获取,如下:
+ * 当依赖于另一个扩展的 `API` 时，将 `依赖的扩展` 添加到
+ * `package.json`，然后使用 {@link extensions.getExtension getExtension} 方法
+ * 和 {@link Extension.exports exports} 来获取，如下：
  *
  * ```javascript
  * let mathExt = extensions.getExtension('genius.math');
