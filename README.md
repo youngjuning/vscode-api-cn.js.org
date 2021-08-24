@@ -33,7 +33,7 @@ API 列表使用 Typedoc 从 [vscode.d.ts](https://github.com/youngjuning/vscode
 
 - [x] authentication    @cxk0831
 - [x] commands          @Imchenlong
-- [x] comments          @yangyang0825
+- [x] comments          @yangyang825
 - [x] debug             @youngjuning
 - [x] evn               @Saber2pr
 - [x] extensions        @pan463859
@@ -65,7 +65,7 @@ API 列表使用 Typedoc 从 [vscode.d.ts](https://github.com/youngjuning/vscode
     <td align="center"><a href="https://github.com/sherry-zxy"><img src="https://avatars.githubusercontent.com/u/36014195?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Xiyuan Zheng</b></sub></a><br /><a href="#translation-sherry-zxy" title="Translation">🌍</a></td>
     <td align="center"><a href="https://juejin.cn/user/3993025017037309/posts"><img src="https://avatars.githubusercontent.com/u/43341115?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Liuqh233</b></sub></a><br /><a href="#translation-liuqh0609" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/cxk0831"><img src="https://avatars.githubusercontent.com/u/34495411?v=4?s=100" width="100px;" alt=""/><br /><sub><b>竹雨</b></sub></a><br /><a href="#translation-cxk0831" title="Translation">🌍</a></td>
-    <td align="center"><a href="https://github.com/yangyang0825"><img src="https://avatars.githubusercontent.com/u/59153341?v=4?s=100" width="100px;" alt=""/><br /><sub><b>yangyang0825</b></sub></a><br /><a href="#translation-yangyang0825" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://github.com/yangyang825"><img src="https://avatars.githubusercontent.com/u/84166052?v=4?s=100" width="100px;" alt=""/><br /><sub><b>yangyang825</b></sub></a><br /><a href="#translation-yangyang825" title="Translation">🌍</a></td>
   </tr>
 </table>
 
