@@ -95,11 +95,9 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Namespace for dealing with installed extensions. Extensions are represented
-						by an <a href="../interfaces/Extension.html">Extension</a>-interface which enables reflection on them.</p>
+						<p>用于处理已安装扩展的命名空间。扩展由一个可以映射它们的接口 <a href="../interfaces/Extension.html">Extension</a> 表示。</p>
 					</div>
-					<p>Extension writers can provide APIs to other extensions by returning their API public
-					surface from the <code>activate</code>-call.</p>
+					<p>通过在 activate 方法中返回它们的公共 API 给其他扩展，扩展开发者可以给其他扩展提供 API。</p>
 					<pre><code class="language-javascript"><span style="color: #AF00DB">export</span><span style="color: #000000"> </span><span style="color: #0000FF">function</span><span style="color: #000000"> </span><span style="color: #795E26">activate</span><span style="color: #000000">(</span><span style="color: #001080">context</span><span style="color: #000000">: </span><span style="color: #267F99">vscode</span><span style="color: #000000">.</span><span style="color: #267F99">ExtensionContext</span><span style="color: #000000">) {</span>
 <span style="color: #000000">    </span><span style="color: #0000FF">let</span><span style="color: #000000"> </span><span style="color: #001080">api</span><span style="color: #000000"> = {</span>
 <span style="color: #000000">        </span><span style="color: #795E26">sum</span><span style="color: #000000">(</span><span style="color: #001080">a</span><span style="color: #000000">, </span><span style="color: #001080">b</span><span style="color: #000000">) {</span>
@@ -113,9 +111,9 @@
 <span style="color: #000000">    </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #001080">api</span><span style="color: #000000">;</span>
 <span style="color: #000000">}</span>
 </code></pre>
-					<p>When depending on the API of another extension add an <code>extensionDependencies</code>-entry
-						to <code>package.json</code>, and use the <a href="extensions.html#getExtension">getExtension</a>-function
-					and the <a href="../interfaces/Extension.html#exports">exports</a>-property, like below:</p>
+					<p>当依赖于另一个扩展的 <code>API</code> 时，将 <code>依赖的扩展</code> 添加到
+						<code>package.json</code>，然后使用 <a href="extensions.html#getExtension">getExtension</a> 方法
+					和 <a href="../interfaces/Extension.html#exports">exports</a> 来获取，如下：</p>
 					<pre><code class="language-javascript"><span style="color: #0000FF">let</span><span style="color: #000000"> </span><span style="color: #001080">mathExt</span><span style="color: #000000"> = </span><span style="color: #001080">extensions</span><span style="color: #000000">.</span><span style="color: #795E26">getExtension</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;genius.math&#039;</span><span style="color: #000000">);</span>
 <span style="color: #0000FF">let</span><span style="color: #000000"> </span><span style="color: #001080">importedApi</span><span style="color: #000000"> = </span><span style="color: #001080">mathExt</span><span style="color: #000000">.</span><span style="color: #001080">exports</span><span style="color: #000000">;</span>
 
@@ -161,7 +159,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/5495837/vscode.d.ts#L13297">vscode.d.ts:13297</a></li>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/f404b40/vscode.d.ts#L13295">vscode.d.ts:13295</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -184,7 +182,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/5495837/vscode.d.ts#L13305">vscode.d.ts:13305</a></li>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/f404b40/vscode.d.ts#L13303">vscode.d.ts:13303</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -222,7 +220,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/5495837/vscode.d.ts#L13316">vscode.d.ts:13316</a></li>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/f404b40/vscode.d.ts#L13314">vscode.d.ts:13314</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -274,7 +272,7 @@
 					<div class="tsd-signature tsd-kind-icon">all<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">readonly </span><a href="../interfaces/Extension.html" class="tsd-signature-type" data-tsd-kind="Interface">Extension</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/5495837/vscode.d.ts#L13310">vscode.d.ts:13310</a></li>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/f404b40/vscode.d.ts#L13308">vscode.d.ts:13308</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
