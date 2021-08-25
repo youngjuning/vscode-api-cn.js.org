@@ -12587,7 +12587,7 @@ export namespace scm {
 	/**
 	 * 由扩展创建的用于上一个源代码管理程序的 {@link SourceControlInputBox input box}。
 	 *
-	 * @deprecated 改用 SourceControl.inputBox
+	 * @deprecated 改用 {@link SourceControl.inputBox}
 	 */
 	export const inputBox: SourceControlInputBox;
 
