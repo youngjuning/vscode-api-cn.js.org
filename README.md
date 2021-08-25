@@ -19,14 +19,6 @@ API 列表使用 Typedoc 从 [vscode.d.ts](https://github.com/youngjuning/vscode
 2. **开启调试**：`yarn dev`
 3. **开启服务**：`yarn start`
 
-## 专业术语
-
-- extension：扩展
-- namespace：命名空间
-- active editor：活动编辑器
-- active terminal：活动命令行
-- Namespace for dealing with xxx：用于处理 xxx 的命名空间
-
 ## 贡献者 ✨
 
 感谢这些优秀的人 ([emoji key](https://allcontributors.org/docs/en/emoji-key))：

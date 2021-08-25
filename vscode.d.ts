@@ -13789,30 +13789,30 @@ export interface AuthenticationProvider {
  */
 export namespace authentication {
 	/**
-	 * 得到一个与所需范围相匹配，且已认证的 session。
-	 * 如果插件开发者提供的 providerId 没有注册，或者用户不同意与此插件共享身份认证信息，则调用失败。
-	 * 如果有多个具有相同作用域的 session，则会向用户提供选择入口，让用户选择他们想要使用的账号。
+	 * 获取符合所需范围的认证会话。
+	 * 如果一个具有 providerId 的认证提供者没有注册，或者用户不同意与扩展共享认证信息，则拒绝。
+	 * 如果有多个具有相同作用域的会话，将向用户显示一个快速选择，以选择他们想使用的账户。
 	 *
-	 * 目前，只有两个已认证身份，它们是由实现 Github 认证插件和 Microsoft 认证插件的开发者贡献的：providerId 是 'github' 和 'microsoft'
-	 * @param providerId 要使用的开发者 id
+	 * 目前，只有两个认证提供者是由编辑器的内置扩展贡献的，它们实现了 GitHub 和微软的认证：
+	 * 它们的供应商 ID 是 "github" 和 "microsoft"。
+	 * @param providerId 认证供应商的 id
 	 * @param scopes 代表所请求权限的范围列表。它们由 providerId 决定
-	 * @param options 需要使用 {@link GetSessionOptions}
-	 * @returns 返回 thenable，解析为已认证身份的 session
+	 * @param options {@link GetSessionOptions}
+	 * @returns 一个可以解析到认证会话的 thenable
 	 */
 	export function getSession(providerId: string, scopes: readonly string[], options: AuthenticationGetSessionOptions & { createIfNone: true }): Thenable<AuthenticationSession>;
 
-	/**
-	 * Get an authentication session matching the desired scopes. Rejects if a provider with providerId is not
-	 * registered, or if the user does not consent to sharing authentication information with
-	 * the extension. If there are multiple sessions with the same scopes, the user will be shown a
-	 * quickpick to select which account they would like to use.
+/**
+	 * 获取符合所需范围的认证会话。
+	 * 如果一个具有 providerId 的认证提供者没有注册，或者用户不同意与扩展共享认证信息，则拒绝。
+	 * 如果有多个具有相同作用域的会话，将向用户显示一个快速选择，以选择他们想使用的账户。
 	 *
-	 * Currently, there are only two authentication providers that are contributed from built in extensions
-	 * to the editor that implement GitHub and Microsoft authentication: their providerId's are 'github' and 'microsoft'.
-	 * @param providerId The id of the provider to use
-	 * @param scopes A list of scopes representing the permissions requested. These are dependent on the authentication provider
-	 * @param options The {@link GetSessionOptions} to use
-	 * @returns A thenable that resolves to an authentication session if available, or undefined if there are no sessions
+	 * 目前，只有两个认证提供者是由编辑器的内置扩展贡献的，它们实现了 GitHub 和微软的认证：
+	 * 它们的供应商 ID 是 "github" 和 "microsoft"。
+	 * @param providerId 认证供应商的 id
+	 * @param scopes 代表所请求权限的范围列表。它们由 providerId 决定
+	 * @param options {@link GetSessionOptions}
+	 * @returns 一个可以解析到认证会话的 thenable，如果没有会话的话是 `undefined`。
 	 */
 	export function getSession(providerId: string, scopes: readonly string[], options?: AuthenticationGetSessionOptions): Thenable<AuthenticationSession | undefined>;
 
