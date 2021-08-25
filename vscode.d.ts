@@ -13784,22 +13784,20 @@ export interface AuthenticationProvider {
 
 
 /**
- * Namespace for authentication.
+ * 用于校验身份的命名空间
  * @maintainer {@link https://github.com/cxk0831 @cxk0831}
  */
 export namespace authentication {
 	/**
-	 * Get an authentication session matching the desired scopes. Rejects if a provider with providerId is not
-	 * registered, or if the user does not consent to sharing authentication information with
-	 * the extension. If there are multiple sessions with the same scopes, the user will be shown a
-	 * quickpick to select which account they would like to use.
+	 * 得到一个与所需范围相匹配，且已认证的 session。
+	 * 如果插件开发者提供的 providerId 没有注册，或者用户不同意与此插件共享身份认证信息，则调用失败。
+	 * 如果有多个具有相同作用域的 session，则会向用户提供选择入口，让用户选择他们想要使用的账号。
 	 *
-	 * Currently, there are only two authentication providers that are contributed from built in extensions
-	 * to the editor that implement GitHub and Microsoft authentication: their providerId's are 'github' and 'microsoft'.
-	 * @param providerId The id of the provider to use
-	 * @param scopes A list of scopes representing the permissions requested. These are dependent on the authentication provider
-	 * @param options The {@link GetSessionOptions} to use
-	 * @returns A thenable that resolves to an authentication session
+	 * 目前，只有两个已认证身份，它们是由实现 Github 认证插件和 Microsoft 认证插件的开发者贡献的：providerId 是 'github' 和 'microsoft'
+	 * @param providerId 要使用的开发者 id
+	 * @param scopes 代表所请求权限的范围列表。它们由 providerId 决定
+	 * @param options 需要使用 {@link GetSessionOptions}
+	 * @returns 返回 thenable，解析为已认证身份的 session
 	 */
 	export function getSession(providerId: string, scopes: readonly string[], options: AuthenticationGetSessionOptions & { createIfNone: true }): Thenable<AuthenticationSession>;
 
