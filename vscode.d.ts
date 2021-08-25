@@ -12597,7 +12597,7 @@ export namespace scm {
 	 * @param id 源代码管理程序的 `id`。它通常很简短，比如：`git`
 	 * @param label 源代码管理程序的标签（可读的字符串），比如：`Git`
 	 * @param rootUri 源代码管理程序根路径的 Uri（可选），比如：`Uri.parse(workspaceRoot)`。
-	 * @return {@link SourceControl source control} 的实例
+	 * @return 一个 {@link SourceControl source control} 的实例
 	 */
 	export function createSourceControl(id: string, label: string, rootUri?: Uri): SourceControl;
 }
