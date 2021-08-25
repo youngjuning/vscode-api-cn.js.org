@@ -6942,14 +6942,14 @@ export namespace tasks {
 	 * 获取系统中所有可用的任务。包括 `tasks.json` 文件中的任务，
 	 * 以及通过扩展贡献出的任务提供者的任务。
 	 *
-	 * @param filter 可选的过滤器，以选择某一类型或版本的任务。
+	 * @param filter 可选的过滤器，用以选择某一类型或版本的任务。
 	 */
 	export function fetchTasks(filter?: TaskFilter): Thenable<Task[]>;
 
 	/**
 	 * 执行一个由开发者管理的任务。该方法的返回值可以用来终止该任务。
 	 *
-	 * @throws 当环境中已经运行了 {@link ShellExecution} 或 {@link ProcessExecution} 
+	 * @throws 当环境中已经运行了 {@link ShellExecution} 或 {@link ProcessExecution}
  	 * 任务，这时是不能启动新进程的。
 	 * 在这样的环境中，只有 {@link CustomExecution} 任务可以被运行。
 	 *
@@ -6974,7 +6974,7 @@ export namespace tasks {
 
 	/**
 	 * 当底层进程被启动时触发该事件。
-	 * 
+	 *
 	 * 如果一个任务不是在底层进程中执行的话，
 	 * 当前事件不会对其产生作用。
 	 */
@@ -6982,7 +6982,7 @@ export namespace tasks {
 
 	/**
 	 * 当底层进程被启动时触发该事件。
-	 * 
+	 *
 	 * 如果一个任务不是在底层进程中执行的话，
 	 * 当前事件不会对其产生作用。
 	 */
