@@ -13789,8 +13789,8 @@ export interface AuthenticationProvider {
  */
 export namespace authentication {
 	/**
-	 * 得到一个与所需范围相匹配，且已认证的 session；
-	 * 如果插件开发者提供的 providerId 没有注册，或者用户不同意与此插件共享身份认证信息，则调用失败；
+	 * 得到一个与所需范围相匹配，且已认证的 session。
+	 * 如果插件开发者提供的 providerId 没有注册，或者用户不同意与此插件共享身份认证信息，则调用失败。
 	 * 如果有多个具有相同作用域的 session，则会向用户提供选择入口，让用户选择他们想要使用的账号。
 	 *
 	 * 目前，只有两个已认证身份，它们是由实现 Github 认证插件和 Microsoft 认证插件的开发者贡献的：providerId 是 'github' 和 'microsoft'
