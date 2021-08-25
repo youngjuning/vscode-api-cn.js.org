@@ -132,23 +132,24 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/00bd040/vscode.d.ts#L13802">vscode.d.ts:13802</a></li>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/1b73a55/vscode.d.ts#L13803">vscode.d.ts:13803</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>得到一个与所需范围相匹配，且已认证的 session。
-										如果插件开发者提供的 providerId 没有注册，或者用户不同意与此插件共享身份认证信息，则调用失败。
-									如果有多个具有相同作用域的 session，则会向用户提供选择入口，让用户选择他们想要使用的账号。</p>
+									<p>获取符合所需范围的认证会话。
+										如果一个具有 providerId 的认证提供者没有注册，或者用户不同意与扩展共享认证信息，则拒绝。
+									如果有多个具有相同作用域的会话，将向用户显示一个快速选择，以选择他们想使用的账户。</p>
 								</div>
-								<p>目前，只有两个已认证身份，它们是由实现 Github 认证插件和 Microsoft 认证插件的开发者贡献的：providerId 是 &#39;github&#39; 和 &#39;microsoft&#39;</p>
+								<p>目前，只有两个认证提供者是由编辑器的内置扩展贡献的，它们实现了 GitHub 和微软的认证：
+								它们的供应商 ID 是 &quot;github&quot; 和 &quot;microsoft&quot;。</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>providerId: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>要使用的开发者 id</p>
+										<p>认证供应商的 id</p>
 									</div>
 								</li>
 								<li>
@@ -160,52 +161,51 @@
 								<li>
 									<h5>options: <a href="../interfaces/AuthenticationGetSessionOptions.html" class="tsd-signature-type" data-tsd-kind="Interface">AuthenticationGetSessionOptions</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>createIfNone<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> }</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>需要使用 {@link GetSessionOptions}</p>
+										<p>{@link GetSessionOptions}</p>
 									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/AuthenticationSession.html" class="tsd-signature-type" data-tsd-kind="Interface">AuthenticationSession</a><span class="tsd-signature-symbol">&gt;</span></h4>
-							<p>返回 thenable，解析为已认证身份的 session</p>
+							<p>一个可以解析到认证会话的 thenable</p>
 						</li>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/00bd040/vscode.d.ts#L13817">vscode.d.ts:13817</a></li>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/1b73a55/vscode.d.ts#L13817">vscode.d.ts:13817</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Get an authentication session matching the desired scopes. Rejects if a provider with providerId is not
-										registered, or if the user does not consent to sharing authentication information with
-										the extension. If there are multiple sessions with the same scopes, the user will be shown a
-									quickpick to select which account they would like to use.</p>
+									<p>获取符合所需范围的认证会话。
+										如果一个具有 providerId 的认证提供者没有注册，或者用户不同意与扩展共享认证信息，则拒绝。
+									如果有多个具有相同作用域的会话，将向用户显示一个快速选择，以选择他们想使用的账户。</p>
 								</div>
-								<p>Currently, there are only two authentication providers that are contributed from built in extensions
-								to the editor that implement GitHub and Microsoft authentication: their providerId&#39;s are &#39;github&#39; and &#39;microsoft&#39;.</p>
+								<p>目前，只有两个认证提供者是由编辑器的内置扩展贡献的，它们实现了 GitHub 和微软的认证：
+								它们的供应商 ID 是 &quot;github&quot; 和 &quot;microsoft&quot;。</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>providerId: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The id of the provider to use</p>
+										<p>认证供应商的 id</p>
 									</div>
 								</li>
 								<li>
 									<h5>scopes: <span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>A list of scopes representing the permissions requested. These are dependent on the authentication provider</p>
+										<p>代表所请求权限的范围列表。它们由 providerId 决定</p>
 									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/AuthenticationGetSessionOptions.html" class="tsd-signature-type" data-tsd-kind="Interface">AuthenticationGetSessionOptions</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The {@link GetSessionOptions} to use</p>
+										<p>{@link GetSessionOptions}</p>
 									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/AuthenticationSession.html" class="tsd-signature-type" data-tsd-kind="Interface">AuthenticationSession</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></h4>
-							<p>A thenable that resolves to an authentication session if available, or undefined if there are no sessions</p>
+							<p>一个可以解析到认证会话的 thenable，如果没有会话的话是 <code>undefined</code>。</p>
 						</li>
 					</ul>
 				</section>
@@ -219,7 +219,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/00bd040/vscode.d.ts#L13823">vscode.d.ts:13823</a></li>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/1b73a55/vscode.d.ts#L13823">vscode.d.ts:13823</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -272,7 +272,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/00bd040/vscode.d.ts#L13837">vscode.d.ts:13837</a></li>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/1b73a55/vscode.d.ts#L13837">vscode.d.ts:13837</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
