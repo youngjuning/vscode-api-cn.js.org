@@ -3,13 +3,12 @@
   "description": "VS Code API 是一系列你可以在 Visual Studio Code 扩展中调用的 JavaScript API。这个站点列出了所有扩展作者可以使用的 VS Code API。",
   "license": "MIT",
   "scripts": {
-    "prebuild": "rimraf docs/",
     "build": "typedoc",
-    "dev": "yarn build --watch",
+    "dev": "onchange -i 'vscode.d.ts' 'typedoc.json' 'README.md' 'theme/**/*' -- yarn build",
     "start": "serve docs/"
   },
   "devDependencies": {
-    "rimraf": "^3.0.2",
+    "onchange": "^7.1.0",
     "serve": "^12.0.0",
     "typedoc": "^0.21.5",
     "typescript": "^4.3.5"
