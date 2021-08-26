@@ -13796,7 +13796,7 @@ export namespace authentication {
 	 * 它们的供应商 ID 是 "github" 和 "microsoft"。
 	 * @param providerId 认证供应商的 id
 	 * @param scopes 代表所请求权限的范围列表。它们由 providerId 决定
-	 * @param options {@link GetSessionOptions}
+	 * @param options {@link AuthenticationGetSessionOptions}
 	 * @returns 一个可以解析到认证会话的 thenable
 	 */
 	export function getSession(providerId: string, scopes: readonly string[], options: AuthenticationGetSessionOptions & { createIfNone: true }): Thenable<AuthenticationSession>;
@@ -13810,7 +13810,7 @@ export namespace authentication {
 	 * 它们的供应商 ID 是 "github" 和 "microsoft"。
 	 * @param providerId 认证供应商的 id
 	 * @param scopes 代表所请求权限的范围列表。它们由 providerId 决定
-	 * @param options {@link GetSessionOptions}
+	 * @param options {@link AuthenticationGetSessionOptions}
 	 * @returns 一个可以解析到认证会话的 thenable，如果没有会话的话是 `undefined`。
 	 */
 	export function getSession(providerId: string, scopes: readonly string[], options?: AuthenticationGetSessionOptions): Thenable<AuthenticationSession | undefined>;
