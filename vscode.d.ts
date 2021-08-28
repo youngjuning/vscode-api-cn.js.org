@@ -6934,7 +6934,7 @@ export namespace tasks {
 	 *
 	 * @param type 该提供者注册的任务类型。
 	 * @param provider 任务提供者。
-	 * @return {@link Disposable}（释放器对象），当调用释放器对象的 `dispose` 方法时，该注册者会被移除。
+	 * @return 一个 {@link Disposable} 的实例，当被调用时，将取消对这个提供者的注册。
 	 */
 	export function registerTaskProvider(type: string, provider: TaskProvider): Disposable;
 
@@ -6947,7 +6947,7 @@ export namespace tasks {
 	export function fetchTasks(filter?: TaskFilter): Thenable<Task[]>;
 
 	/**
-	 * 执行一个由开发者管理的任务。该方法的返回值可以用来终止该任务。
+	 * 执行一个由编辑器管理的任务。返回的任务执行结果可以用来终止该任务。
 	 *
 	 * @throws 当环境中已经运行了 {@link ShellExecution} 或 {@link ProcessExecution} 
  	 * 任务，这时是不能启动新进程的。
@@ -6975,16 +6975,16 @@ export namespace tasks {
 	/**
 	 * 当底层进程被启动时触发该事件。
 	 * 
-	 * 如果一个任务不是在底层进程中执行的话，
-	 * 当前事件不会对其产生作用。
+	 * 如果一个任务不执行底层进程中的话，
+	 * 该事件不会触发。
 	 */
 	export const onDidStartTaskProcess: Event<TaskProcessStartEvent>;
 
 	/**
-	 * 当底层进程被启动时触发该事件。
+	 * 当底层进程结束时触发该事件。
 	 * 
-	 * 如果一个任务不是在底层进程中执行的话，
-	 * 当前事件不会对其产生作用。
+	 * 如果一个任务不执行底层进程的话，
+	 * 该事件不会触发。
 	 */
 	export const onDidEndTaskProcess: Event<TaskProcessEndEvent>;
 }
