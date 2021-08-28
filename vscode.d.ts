@@ -6974,15 +6974,15 @@ export namespace tasks {
 
 	/**
 	 * 当底层进程被启动时触发该事件。
-	 * 
-	 * 如果一个任务不执行底层进程中的话，
+	 *
+	 * 如果一个任务不执行底层进程的话，
 	 * 该事件不会触发。
 	 */
 	export const onDidStartTaskProcess: Event<TaskProcessStartEvent>;
 
 	/**
 	 * 当底层进程结束时触发该事件。
-	 * 
+	 *
 	 * 如果一个任务不执行底层进程的话，
 	 * 该事件不会触发。
 	 */
