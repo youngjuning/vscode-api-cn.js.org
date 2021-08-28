@@ -13790,49 +13790,45 @@ export interface AuthenticationProvider {
 export namespace authentication {
 	/**
 	 * 得到一个与所需范围相匹配，且已认证的 session。
-	 * 如果插件开发者提供的 providerId 没有注册，或者用户不同意与此插件共享身份认证信息，则调用失败。
+	 * 如果提供者提供的 providerId 没有注册，或者用户不同意与此插件共享身份认证信息，则调用失败。
 	 * 如果有多个具有相同作用域的 session，则会向用户提供选择入口，让用户选择他们想要使用的账号。
 	 *
-	 * 目前，只有两个已认证身份，它们是由实现 Github 认证插件和 Microsoft 认证插件的开发者贡献的：providerId 是 'github' 和 'microsoft'
-	 * @param providerId 要使用的开发者 id
+	 * 目前，只有两个已认证身份的 providerId，它们分别是 Github 认证和 Microsoft 认证：providerId 是 'github' 和 'microsoft'
+	 * @param providerId 要使用提供者的 id
 	 * @param scopes 代表所请求权限的范围列表。它们由 providerId 决定
 	 * @param options 需要使用 {@link GetSessionOptions}
-	 * @returns 返回 thenable，解析为已认证身份的 session
+	 * @returns 返回 thenable，解析为身份认证的 session
 	 */
 	export function getSession(providerId: string, scopes: readonly string[], options: AuthenticationGetSessionOptions & { createIfNone: true }): Thenable<AuthenticationSession>;
 
 	/**
-	 * Get an authentication session matching the desired scopes. Rejects if a provider with providerId is not
-	 * registered, or if the user does not consent to sharing authentication information with
-	 * the extension. If there are multiple sessions with the same scopes, the user will be shown a
-	 * quickpick to select which account they would like to use.
+	 * 得到一个与所需范围相匹配，且已认证的 session。
+	 * 如果提供者提供的 providerId 没有注册，或者用户不同意与此插件共享身份认证信息，则调用失败。
+	 * 如果有多个具有相同作用域的 session，则会向用户提供选择入口，让用户选择他们想要使用的账号。
 	 *
-	 * Currently, there are only two authentication providers that are contributed from built in extensions
-	 * to the editor that implement GitHub and Microsoft authentication: their providerId's are 'github' and 'microsoft'.
-	 * @param providerId The id of the provider to use
-	 * @param scopes A list of scopes representing the permissions requested. These are dependent on the authentication provider
-	 * @param options The {@link GetSessionOptions} to use
-	 * @returns A thenable that resolves to an authentication session if available, or undefined if there are no sessions
+	 * 目前，只有两个已认证身份的 providerId，它们分别是 Github 认证和 Microsoft 认证：providerId 是 'github' 和 'microsoft'
+	 * @param providerId 要使用提供者的 id
+	 * @param scopes 代表所请求权限的范围列表。它们由 providerId 决定
+	 * @param options 需要使用 {@link GetSessionOptions}
+	 * @returns 返回 thenable，如果身份认证的 session 可用，则为身份认证的 session，否则为 undefined
 	 */
 	export function getSession(providerId: string, scopes: readonly string[], options?: AuthenticationGetSessionOptions): Thenable<AuthenticationSession | undefined>;
 
 	/**
-	 * An {@link Event} which fires when the authentication sessions of an authentication provider have
-	 * been added, removed, or changed.
+	 * 当已认证身份的提供者的 session 被添加、删除、或者改变，将触发事件 {@link Event}
 	 */
 	export const onDidChangeSessions: Event<AuthenticationSessionsChangeEvent>;
 
 	/**
-	 * Register an authentication provider.
+	 * 注册成为一个已认证身份的提供者
 	 *
-	 * There can only be one provider per id and an error is being thrown when an id
-	 * has already been used by another provider. Ids are case-sensitive.
+	 * 每个id只能有一个提供者，当一个id已经被另一个提供者使用时，就会抛出错误。Ids是区分大小写的。
 	 *
-	 * @param id The unique identifier of the provider.
-	 * @param label The human-readable name of the provider.
-	 * @param provider The authentication provider provider.
-	 * @params options Additional options for the provider.
-	 * @return A {@link Disposable} that unregisters this provider when being disposed.
+	 * @param id 提供者的唯一 id
+	 * @param label 提供者的可读名称
+	 * @param provider 已认证身份的提供者
+	 * @params options 为提供者提供其他选项
+	 * @return 当一个 {@link Disposable} 被释放时，注销该提供商
 	 */
 	export function registerAuthenticationProvider(id: string, label: string, provider: AuthenticationProvider, options?: AuthenticationProviderOptions): Disposable;
 }
