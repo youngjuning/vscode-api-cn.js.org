@@ -6930,61 +6930,61 @@ export interface TaskFilter {
 export namespace tasks {
 
 	/**
-	 * Register a task provider.
+	 * 注册任务提供者。
 	 *
-	 * @param type The task kind type this provider is registered for.
-	 * @param provider A task provider.
-	 * @return A {@link Disposable} that unregisters this provider when being disposed.
+	 * @param type 该提供者注册的任务类型。
+	 * @param provider 任务提供者。
+	 * @return 一个 {@link Disposable} 的实例，当被调用时，将取消对这个提供者的注册。
 	 */
 	export function registerTaskProvider(type: string, provider: TaskProvider): Disposable;
 
 	/**
-	 * Fetches all tasks available in the systems. This includes tasks
-	 * from `tasks.json` files as well as tasks from task providers
-	 * contributed through extensions.
+	 * 获取系统中所有可用的任务。包括 `tasks.json` 文件中的任务，
+	 * 以及通过扩展贡献出的任务提供者的任务。
 	 *
-	 * @param filter Optional filter to select tasks of a certain type or version.
+	 * @param filter 可选的过滤器，用以选择某一类型或版本的任务。
 	 */
 	export function fetchTasks(filter?: TaskFilter): Thenable<Task[]>;
 
 	/**
-	 * Executes a task that is managed by the editor. The returned
-	 * task execution can be used to terminate the task.
+	 * 执行一个由编辑器管理的任务。返回的任务执行结果可以用来终止该任务。
 	 *
-	 * @throws When running a ShellExecution or a ProcessExecution
-	 * task in an environment where a new process cannot be started.
-	 * In such an environment, only CustomExecution tasks can be run.
+	 * @throws 当环境中已经运行了 {@link ShellExecution} 或 {@link ProcessExecution}
+ 	 * 任务，这时是不能启动新进程的。
+	 * 在这样的环境中，只有 {@link CustomExecution} 任务可以被运行。
 	 *
-	 * @param task the task to execute
+	 * @param task 需要被执行的任务。
 	 */
 	export function executeTask(task: Task): Thenable<TaskExecution>;
 
 	/**
-	 * The currently active task executions or an empty array.
+	 * 当前正在执行的任务或一个空数组。
 	 */
 	export const taskExecutions: readonly TaskExecution[];
 
 	/**
-	 * Fires when a task starts.
+	 * 当任务启动时会触发该方法。
 	 */
 	export const onDidStartTask: Event<TaskStartEvent>;
 
 	/**
-	 * Fires when a task ends.
+	 * 当任务结束时会触发该方法。
 	 */
 	export const onDidEndTask: Event<TaskEndEvent>;
 
 	/**
-	 * Fires when the underlying process has been started.
-	 * This event will not fire for tasks that don't
-	 * execute an underlying process.
+	 * 当底层进程被启动时触发该事件。
+	 *
+	 * 如果一个任务不执行底层进程的话，
+	 * 该事件不会触发。
 	 */
 	export const onDidStartTaskProcess: Event<TaskProcessStartEvent>;
 
 	/**
-	 * Fires when the underlying process has ended.
-	 * This event will not fire for tasks that don't
-	 * execute an underlying process.
+	 * 当底层进程结束时触发该事件。
+	 *
+	 * 如果一个任务不执行底层进程的话，
+	 * 该事件不会触发。
 	 */
 	export const onDidEndTaskProcess: Event<TaskProcessEndEvent>;
 }
@@ -12585,20 +12585,19 @@ export interface SourceControl {
 export namespace scm {
 
 	/**
-	 * The {@link SourceControlInputBox input box} for the last source control
-	 * created by the extension.
+	 * 由扩展创建的用于上一个源代码管理程序的 {@link SourceControlInputBox input box}。
 	 *
-	 * @deprecated Use SourceControl.inputBox instead
+	 * @deprecated 改用 {@link SourceControl.inputBox}
 	 */
 	export const inputBox: SourceControlInputBox;
 
 	/**
-	 * Creates a new {@link SourceControl source control} instance.
+	 * 创建一个新的 {@link SourceControl source control} 实例
 	 *
-	 * @param id An `id` for the source control. Something short, e.g.: `git`.
-	 * @param label A human-readable string for the source control. E.g.: `Git`.
-	 * @param rootUri An optional Uri of the root of the source control. E.g.: `Uri.parse(workspaceRoot)`.
-	 * @return An instance of {@link SourceControl source control}.
+	 * @param id 源代码管理程序的 `id`。它通常很简短，比如：`git`
+	 * @param label 源代码管理程序的标签（可读的字符串），比如：`Git`
+	 * @param rootUri 源代码管理程序根路径的 Uri（可选），比如：`Uri.parse(workspaceRoot)`。
+	 * @return 一个 {@link SourceControl source control} 的实例
 	 */
 	export function createSourceControl(id: string, label: string, rootUri?: Uri): SourceControl;
 }
@@ -13789,28 +13788,30 @@ export interface AuthenticationProvider {
  */
 export namespace authentication {
 	/**
-	 * 得到一个与所需范围相匹配，且已认证的 session。
-	 * 如果提供者提供的 providerId 没有注册，或者用户不同意与此插件共享身份认证信息，则调用失败。
-	 * 如果有多个具有相同作用域的 session，则会向用户提供选择入口，让用户选择他们想要使用的账号。
+	 * 获取符合所需范围的认证会话。
+	 * 如果一个具有 providerId 的认证提供者没有注册，或者用户不同意与扩展共享认证信息，则拒绝。
+	 * 如果有多个具有相同作用域的会话，将向用户显示一个快速选择，以选择他们想使用的账户。
 	 *
-	 * 目前，只有两个已认证身份的 providerId，它们分别是 Github 认证和 Microsoft 认证：providerId 是 'github' 和 'microsoft'
-	 * @param providerId 要使用提供者的 id
+	 * 目前，只有两个认证提供者是由编辑器的内置扩展贡献的，它们实现了 GitHub 和微软的认证：
+	 * 它们的供应商 ID 是 "github" 和 "microsoft"。
+	 * @param providerId 认证供应商的 id
 	 * @param scopes 代表所请求权限的范围列表。它们由 providerId 决定
-	 * @param options 需要使用 {@link GetSessionOptions}
-	 * @returns 返回 thenable，解析为身份认证的 session
+	 * @param options {@link AuthenticationGetSessionOptions}
+	 * @returns 一个可以解析到认证会话的 thenable
 	 */
 	export function getSession(providerId: string, scopes: readonly string[], options: AuthenticationGetSessionOptions & { createIfNone: true }): Thenable<AuthenticationSession>;
 
-	/**
-	 * 得到一个与所需范围相匹配，且已认证的 session。
-	 * 如果提供者提供的 providerId 没有注册，或者用户不同意与此插件共享身份认证信息，则调用失败。
-	 * 如果有多个具有相同作用域的 session，则会向用户提供选择入口，让用户选择他们想要使用的账号。
+/**
+	 * 获取符合所需范围的认证会话。
+	 * 如果一个具有 providerId 的认证提供者没有注册，或者用户不同意与扩展共享认证信息，则拒绝。
+	 * 如果有多个具有相同作用域的会话，将向用户显示一个快速选择，以选择他们想使用的账户。
 	 *
-	 * 目前，只有两个已认证身份的 providerId，它们分别是 Github 认证和 Microsoft 认证：providerId 是 'github' 和 'microsoft'
-	 * @param providerId 要使用提供者的 id
+	 * 目前，只有两个认证提供者是由编辑器的内置扩展贡献的，它们实现了 GitHub 和微软的认证：
+	 * 它们的供应商 ID 是 "github" 和 "microsoft"。
+	 * @param providerId 认证供应商的 id
 	 * @param scopes 代表所请求权限的范围列表。它们由 providerId 决定
-	 * @param options 需要使用 {@link GetSessionOptions}
-	 * @returns 返回 thenable，如果身份认证的 session 可用，则为身份认证的 session，否则为 undefined
+	 * @param options {@link AuthenticationGetSessionOptions}
+	 * @returns 一个可以解析到认证会话的 thenable，如果没有会话的话是 `undefined`。
 	 */
 	export function getSession(providerId: string, scopes: readonly string[], options?: AuthenticationGetSessionOptions): Thenable<AuthenticationSession | undefined>;
 

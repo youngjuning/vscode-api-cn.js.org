@@ -8,6 +8,9 @@ API 列表使用 Typedoc 从 [vscode.d.ts](https://github.com/youngjuning/vscode
 
 ## 贡献指南
 
+- [专业术语](https://github.com/vscode-cn/vscode-api-cn/issues/27)
+- [翻译认领及进度](https://github.com/vscode-cn/vscode-api-cn/issues/25)
+
 ### 成为译者
 
 - **外部译者**：对 *vscode.d.ts* 文件的注释进行翻译，然后提交 PR 即可。
@@ -18,14 +21,6 @@ API 列表使用 Typedoc 从 [vscode.d.ts](https://github.com/youngjuning/vscode
 1. **安装依赖**：`yarn install`
 2. **开启调试**：`yarn dev`
 3. **开启服务**：`yarn start`
-
-## 专业术语
-
-- extension：扩展
-- namespace：命名空间
-- active editor：活动编辑器
-- active terminal：活动命令行
-- Namespace for dealing with xxx：用于处理 xxx 的命名空间
 
 ## 贡献者 ✨
 
@@ -44,9 +39,9 @@ API 列表使用 Typedoc 从 [vscode.d.ts](https://github.com/youngjuning/vscode
     <td align="center"><a href="https://www.zhihu.com/people/tec-van"><img src="https://avatars.githubusercontent.com/u/84165678?v=4?s=100" width="100px;" alt=""/><br /><sub><b>tecvan</b></sub></a><br /><a href="#translation-Tecvan-fe" title="Translation">🌍</a></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://github.com/sherry-zxy"><img src="https://avatars.githubusercontent.com/u/36014195?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Xiyuan Zheng</b></sub></a><br /><a href="#translation-sherry-zxy" title="Translation">🌍</a></td>
-    <td align="center"><a href="https://juejin.cn/user/3993025017037309/posts"><img src="https://avatars.githubusercontent.com/u/43341115?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Liuqh233</b></sub></a><br /><a href="#translation-liuqh0609" title="Translation">🌍</a></td>
-    <td align="center"><a href="https://github.com/cxk0831"><img src="https://avatars.githubusercontent.com/u/34495411?v=4?s=100" width="100px;" alt=""/><br /><sub><b>竹雨</b></sub></a><br /><a href="#translation-cxk0831" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://github.com/sherry-zxy"><img src="https://avatars.githubusercontent.com/u/36014195?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Xiyuan Zheng</b></sub></a><br /><a href="#translation-sherry-zxy" title="Translation">🌍</a> <a href="https://github.com/vscode-cn/vscode-api-cn/commits?author=sherry-zxy" title="Code">💻</a></td>
+    <td align="center"><a href="https://juejin.cn/user/3993025017037309/posts"><img src="https://avatars.githubusercontent.com/u/43341115?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Liuqh233</b></sub></a><br /><a href="#translation-liuqh0609" title="Translation">🌍</a> <a href="https://github.com/vscode-cn/vscode-api-cn/commits?author=liuqh0609" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/cxk0831"><img src="https://avatars.githubusercontent.com/u/34495411?v=4?s=100" width="100px;" alt=""/><br /><sub><b>竹雨</b></sub></a><br /><a href="#translation-cxk0831" title="Translation">🌍</a> <a href="https://github.com/vscode-cn/vscode-api-cn/commits?author=cxk0831" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/yangyang825"><img src="https://avatars.githubusercontent.com/u/84166052?v=4?s=100" width="100px;" alt=""/><br /><sub><b>yangyang825</b></sub></a><br /><a href="#translation-yangyang825" title="Translation">🌍</a></td>
   </tr>
 </table>
