@@ -6974,30 +6974,17 @@ export namespace tasks {
 
 	/**
 	 * 当底层进程被启动时触发该事件。
-<<<<<<< HEAD
 	 * 
 	 * 如果一个任务不执行底层进程中的话，
 	 * 该事件不会触发。
-=======
-	 *
-	 * 如果一个任务不是在底层进程中执行的话，
-	 * 当前事件不会对其产生作用。
->>>>>>> 6d9b34db2e0b3c66f4ec21dfde1338b2a90ce037
 	 */
 	export const onDidStartTaskProcess: Event<TaskProcessStartEvent>;
 
 	/**
-<<<<<<< HEAD
 	 * 当底层进程结束时触发该事件。
 	 * 
 	 * 如果一个任务不执行底层进程的话，
 	 * 该事件不会触发。
-=======
-	 * 当底层进程被启动时触发该事件。
-	 *
-	 * 如果一个任务不是在底层进程中执行的话，
-	 * 当前事件不会对其产生作用。
->>>>>>> 6d9b34db2e0b3c66f4ec21dfde1338b2a90ce037
 	 */
 	export const onDidEndTaskProcess: Event<TaskProcessEndEvent>;
 }
