@@ -141,12 +141,12 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/784f749/vscode.d.ts#L6939">vscode.d.ts:6939</a></li>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/29a9fb5/vscode.d.ts#L6939">vscode.d.ts:6939</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Register a task provider.</p>
+									<p>注册任务提供者。</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -154,18 +154,18 @@
 								<li>
 									<h5>type: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The task kind type this provider is registered for.</p>
+										<p>该提供者注册的任务类型。</p>
 									</div>
 								</li>
 								<li>
 									<h5>provider: <a href="../interfaces/TaskProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">TaskProvider</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>A task provider.</p>
+										<p>任务提供者。</p>
 									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="../classes/Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
-							<p>A <a href="../classes/Disposable.html">Disposable</a> that unregisters this provider when being disposed.</p>
+							<p>一个 <a href="../classes/Disposable.html">Disposable</a> 的实例，当被调用时，将取消对这个提供者的注册。</p>
 						</li>
 					</ul>
 				</section>
@@ -179,14 +179,13 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/784f749/vscode.d.ts#L6948">vscode.d.ts:6948</a></li>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/29a9fb5/vscode.d.ts#L6947">vscode.d.ts:6947</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Fetches all tasks available in the systems. This includes tasks
-										from <code>tasks.json</code> files as well as tasks from task providers
-									contributed through extensions.</p>
+									<p>获取系统中所有可用的任务。包括 <code>tasks.json</code> 文件中的任务，
+									以及通过扩展贡献出的任务提供者的任务。</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -194,7 +193,7 @@
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> filter: <a href="../interfaces/TaskFilter.html" class="tsd-signature-type" data-tsd-kind="Interface">TaskFilter</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Optional filter to select tasks of a certain type or version.</p>
+										<p>可选的过滤器，用以选择某一类型或版本的任务。</p>
 									</div>
 								</li>
 							</ul>
@@ -212,19 +211,18 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/784f749/vscode.d.ts#L6960">vscode.d.ts:6960</a></li>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/29a9fb5/vscode.d.ts#L6958">vscode.d.ts:6958</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Executes a task that is managed by the editor. The returned
-									task execution can be used to terminate the task.</p>
+									<p>执行一个由编辑器管理的任务。返回的任务执行结果可以用来终止该任务。</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>throws</dt>
-									<dd><p>When running a ShellExecution or a ProcessExecution
-											task in an environment where a new process cannot be started.
-										In such an environment, only CustomExecution tasks can be run.</p>
+									<dd><p>当环境中已经运行了 <a href="../classes/ShellExecution.html">ShellExecution</a> 或 <a href="../classes/ProcessExecution.html">ProcessExecution</a>
+											任务，这时是不能启动新进程的。
+										在这样的环境中，只有 <a href="../classes/CustomExecution.html">CustomExecution</a> 任务可以被运行。</p>
 									</dd>
 								</dl>
 							</div>
@@ -233,7 +231,7 @@
 								<li>
 									<h5>task: <a href="../classes/Task.html" class="tsd-signature-type" data-tsd-kind="Class">Task</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>the task to execute</p>
+										<p>需要被执行的任务。</p>
 									</div>
 								</li>
 							</ul>
@@ -251,12 +249,12 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/784f749/vscode.d.ts#L6970">vscode.d.ts:6970</a></li>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/29a9fb5/vscode.d.ts#L6968">vscode.d.ts:6968</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Fires when a task starts.</p>
+									<p>当任务启动时会触发该方法。</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -303,12 +301,12 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/784f749/vscode.d.ts#L6975">vscode.d.ts:6975</a></li>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/29a9fb5/vscode.d.ts#L6973">vscode.d.ts:6973</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Fires when a task ends.</p>
+									<p>当任务结束时会触发该方法。</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -355,15 +353,15 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/784f749/vscode.d.ts#L6982">vscode.d.ts:6982</a></li>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/29a9fb5/vscode.d.ts#L6981">vscode.d.ts:6981</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Fires when the underlying process has been started.
-										This event will not fire for tasks that don&#39;t
-									execute an underlying process.</p>
+									<p>当底层进程被启动时触发该事件。</p>
 								</div>
+								<p>如果一个任务不执行底层进程的话，
+								该事件不会触发。</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -409,15 +407,15 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/784f749/vscode.d.ts#L6989">vscode.d.ts:6989</a></li>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/29a9fb5/vscode.d.ts#L6989">vscode.d.ts:6989</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Fires when the underlying process has ended.
-										This event will not fire for tasks that don&#39;t
-									execute an underlying process.</p>
+									<p>当底层进程结束时触发该事件。</p>
 								</div>
+								<p>如果一个任务不执行底层进程的话，
+								该事件不会触发。</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -462,12 +460,12 @@
 					<div class="tsd-signature tsd-kind-icon">task<wbr>Executions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">readonly </span><a href="../interfaces/TaskExecution.html" class="tsd-signature-type" data-tsd-kind="Interface">TaskExecution</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/784f749/vscode.d.ts#L6965">vscode.d.ts:6965</a></li>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/29a9fb5/vscode.d.ts#L6963">vscode.d.ts:6963</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The currently active task executions or an empty array.</p>
+							<p>当前正在执行的任务或一个空数组。</p>
 						</div>
 					</div>
 				</section>
