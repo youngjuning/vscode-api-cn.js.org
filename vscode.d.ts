@@ -10453,49 +10453,37 @@ export interface WorkspaceFolder {
 }
 
 /**
- * Namespace for dealing with the current workspace. A workspace is the collection of one
- * or more folders that are opened in an editor window (instance).
+ * 用于处理当前工作区的命名空间。工作区是一个或者多个在编辑器窗口（实例）打开的文件目录的集合。
  *
- * It is also possible to open an editor without a workspace. For example, when you open a
- * new editor window by selecting a file from your platform's File menu, you will not be
- * inside a workspace. In this mode, some of the editor's capabilities are reduced but you can
- * still open text files and edit them.
+ * 也有可能在没有工作区的情况下打开一个编辑器。例如, 当你从你的平台的“文件”菜单中选择一个文件来打开新的编辑器窗口时，你将不会处于工作区中。在这种模式下，编辑器的部分功能会被削弱，但是你仍然可以打开文本文件并编辑它们。
  *
- * Refer to https://code.visualstudio.com/docs/editor/workspaces for more information on
- * the concept of workspaces.
+ * 关于工作空间概念的更多信息请参考：https://code.visualstudio.com/docs/editor/workspaces
  *
- * The workspace offers support for {@link workspace.createFileSystemWatcher listening} to fs
- * events and for {@link workspace.findFiles finding} files. Both perform well and run _outside_
- * the editor-process so that they should be always used instead of nodejs-equivalents.
+ * workspace 提供了{@link workspace.createFileSystemWatcher 监听} fs
+ * 事件以及{@link workspace.findFiles 查找}文件的能力。这两项能力都有良好的表现并运行在编辑器进程之外，以致于它们总是被用来代替 nodejs-equivalents。
  * @maintainer {@link https://github.com/gepingli @gepingli}
  */
 export namespace workspace {
 
 	/**
-	 * A {@link FileSystem file system} instance that allows to interact with local and remote
-	 * files, e.g. `vscode.workspace.fs.readDirectory(someUri)` allows to retrieve all entries
-	 * of a directory or `vscode.workspace.fs.stat(anotherUri)` returns the meta data for a
-	 * file.
+	 * 一个允许与本地或者远程文件交互的{@link FileSystem 文件系统}实例，例如 `vscode.workspace.fs.readDirectory(someUri)`
+	 * 可以检索一个目录的所有条目，以及 `vscode.workspace.fs.stat(anotherUri)` 可以返回一个文件的元信息。
 	 */
 	export const fs: FileSystem;
 
 	/**
-	 * The uri of the first entry of {@linkcode workspace.workspaceFolders workspaceFolders}
-	 * as `string`. `undefined` if there is no first entry.
+	 * 以`字符串`的形式返回 {@linkcode workspace.workspaceFolders workspaceFolders} 中第一个条目的 uri （统一资源标志符），如果没有则返回 `undefined`。
 	 *
-	 * Refer to https://code.visualstudio.com/docs/editor/workspaces for more information
-	 * on workspaces.
+	 * 关于工作空间概念的更多信息请参考：https://code.visualstudio.com/docs/editor/workspaces
 	 *
-	 * @deprecated Use {@linkcode workspace.workspaceFolders workspaceFolders} instead.
+	 * @deprecated 使用 {@linkcode workspace.workspaceFolders workspaceFolders} 替代。
 	 */
 	export const rootPath: string | undefined;
 
 	/**
-	 * List of workspace folders (0-N) that are open in the editor. `undefined` when no workspace
-	 * has been opened.
+	 * 返回编辑器中打开的工作区文件夹列表(零到多个)。当没有打开工作区时返回 `undefined`。
 	 *
-	 * Refer to https://code.visualstudio.com/docs/editor/workspaces for more information
-	 * on workspaces.
+	 * 关于工作空间概念的更多信息请参考：https://code.visualstudio.com/docs/editor/workspaces
 	 */
 	export const workspaceFolders: readonly WorkspaceFolder[] | undefined;
 
