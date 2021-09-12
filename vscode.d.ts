@@ -6930,17 +6930,17 @@ export interface TaskFilter {
 export namespace tasks {
 
 	/**
-	 * 注册任务提供者。
+	 * 注册任务 provider。
 	 *
-	 * @param type 该提供者注册的任务类型。
-	 * @param provider 任务提供者。
-	 * @return 一个 {@link Disposable} 的实例，当被调用时，将取消对这个提供者的注册。
+	 * @param type 该 provider 注册的任务类型。
+	 * @param provider 任务 provider。
+	 * @return 一个 {@link Disposable} 的实例，当被调用时，将取消对这个 provider 的注册。
 	 */
 	export function registerTaskProvider(type: string, provider: TaskProvider): Disposable;
 
 	/**
 	 * 获取系统中所有可用的任务。包括 `tasks.json` 文件中的任务，
-	 * 以及通过扩展贡献出的任务提供者的任务。
+	 * 以及通过扩展贡献出的任务 provider 的任务。
 	 *
 	 * @param filter 可选的过滤器，用以选择某一类型或版本的任务。
 	 */
@@ -13789,10 +13789,10 @@ export interface AuthenticationProvider {
 export namespace authentication {
 	/**
 	 * 获取符合所需范围的认证会话。
-	 * 如果一个具有 providerId 的认证提供者没有注册，或者用户不同意与扩展共享认证信息，则拒绝。
+	 * 如果一个具有 providerId 的认证 provider 没有注册，或者用户不同意与扩展共享认证信息，则拒绝。
 	 * 如果有多个具有相同作用域的会话，将向用户显示一个快速选择，以选择他们想使用的账户。
 	 *
-	 * 目前，只有两个认证提供者是由编辑器的内置扩展贡献的，它们实现了 GitHub 和微软的认证：
+	 * 目前，只有两个认证 provider 是由编辑器的内置扩展贡献的，它们实现了 GitHub 和微软的认证：
 	 * 它们的供应商 ID 是 "github" 和 "microsoft"。
 	 * @param providerId 认证供应商的 id
 	 * @param scopes 代表所请求权限的范围列表。它们由 providerId 决定
@@ -13803,10 +13803,10 @@ export namespace authentication {
 
 /**
 	 * 获取符合所需范围的认证会话。
-	 * 如果一个具有 providerId 的认证提供者没有注册，或者用户不同意与扩展共享认证信息，则拒绝。
+	 * 如果一个具有 providerId 的认证 provider 没有注册，或者用户不同意与扩展共享认证信息，则拒绝。
 	 * 如果有多个具有相同作用域的会话，将向用户显示一个快速选择，以选择他们想使用的账户。
 	 *
-	 * 目前，只有两个认证提供者是由编辑器的内置扩展贡献的，它们实现了 GitHub 和微软的认证：
+	 * 目前，只有两个认证 provider 是由编辑器的内置扩展贡献的，它们实现了 GitHub 和微软的认证：
 	 * 它们的供应商 ID 是 "github" 和 "microsoft"。
 	 * @param providerId 认证供应商的 id
 	 * @param scopes 代表所请求权限的范围列表。它们由 providerId 决定
