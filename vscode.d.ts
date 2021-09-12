@@ -9036,18 +9036,16 @@ export namespace window {
 	}): Disposable;
 
 	/**
-	 * Register a provider for custom editors for the `viewType` contributed by the `customEditors` extension point.
+	 * 为 `customEditors` 扩展功能点贡献的 `viewType` 注册一个自定义编辑器的 Provider。
 	 *
-	 * When a custom editor is opened, an `onCustomEditor:viewType` activation event is fired. Your extension
-	 * must register a {@linkcode CustomTextEditorProvider}, {@linkcode CustomReadonlyEditorProvider},
-	 * {@linkcode CustomEditorProvider}for `viewType` as part of activation.
+	 * 当打开一个自定义编辑器被时，会触发一个 `onCustomEditor:viewType` 活动事件。
+	 * 你的扩展必须为 `viewType` 注册一个 {@linkcode CustomTextEditorProvider}、{@linkcode CustomReadonlyEditorProvider} 或 {@linkcode CustomEditorProvider} 作为激活的一部分。
 	 *
-	 * @param viewType Unique identifier for the custom editor provider. This should match the `viewType` from the
-	 *   `customEditors` contribution point.
-	 * @param provider Provider that resolves custom editors.
-	 * @param options Options for the provider.
+	 * @param viewType 自定义编辑器 provider 的唯一标识符。这应该与 `contribution.customEditors` 配置的 `viewType` 匹配。
+	 * @param provider 解析自定义编辑器的 Provider。
+	 * @param options 的配置选项。
 	 *
-	 * @return Disposable that unregisters the provider.
+	 * @return 一次性的，取消注册的 provider
 	 */
 	export function registerCustomEditorProvider(viewType: string, provider: CustomTextEditorProvider | CustomReadonlyEditorProvider | CustomEditorProvider, options?: {
 		/**
