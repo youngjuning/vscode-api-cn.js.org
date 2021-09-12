@@ -8021,15 +8021,14 @@ export interface CustomReadonlyEditorProvider<T extends CustomDocument = CustomD
 }
 
 /**
- * Provider for editable custom editors that use a custom document model.
+ * 使用自定义文档模型的可编辑自定义编辑器的 provider。
  *
- * Custom editors use {@linkcode CustomDocument} as their document model instead of a {@linkcode TextDocument}.
- * This gives extensions full control over actions such as edit, save, and backup.
+ * 自定义编辑器使用 {@linkcode CustomDocument}，而不是 {@linkcode TextDocument}。这使得扩展程序可以完全控制编辑、保存和备份等操作。
  *
- * You should use this type of custom editor when dealing with binary files or more complex scenarios. For simple
- * text based documents, use {@linkcode CustomTextEditorProvider} instead.
+ * 当处理二进制文件或者更复杂的场景时，你应该使用这个类型的自定义编辑器。简单的基于文本的文档请使用 {@linkcode CustomTextEditorProvider}。
  *
- * @param T Type of the custom document returned by this provider.
+ * @param T 这个 provider 返回的自定义文档的类型。
+ * @maintainer {@link https://github.com/youngjuning @youngjuning}
  */
 export interface CustomEditorProvider<T extends CustomDocument = CustomDocument> extends CustomReadonlyEditorProvider<T> {
 	/**
