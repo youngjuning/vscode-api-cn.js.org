@@ -7811,11 +7811,10 @@ export interface WebviewViewProvider {
 }
 
 /**
- * Provider for text based custom editors.
- *
- * Text based custom editors use a {@linkcode TextDocument} as their data model. This considerably simplifies
- * implementing a custom editor as it allows the editor to handle many common operations such as
- * undo and backup. The provider is responsible for synchronizing text changes between the webview and the `TextDocument`.
+ * 基于文本的自定义编辑器 provider。
+ * 基于文本的自定义编辑器使用 {@linkcode TextDocument} 作为其数据模型。
+ * 因为它允许编辑器处理许多常见的操作，如撤销和备份。
+ * provider 负责在 webview 和 TextDocument 之间同步文本变化。
  */
 export interface CustomTextEditorProvider {
 
