@@ -7969,14 +7969,14 @@ interface CustomDocumentOpenContext {
 }
 
 /**
- * Provider for readonly custom editors that use a custom document model.
+ * 使用自定义文档模型的只读自定义编辑器 Provider。
  *
- * Custom editors use {@linkcode CustomDocument} as their document model instead of a {@linkcode TextDocument}.
+ * 自定义只读编辑器使用 {@linkcode CustomDocument} 而不是 {@linkcode TextDocument}。
  *
- * You should use this type of custom editor when dealing with binary files or more complex scenarios. For simple
- * text based documents, use {@linkcode CustomTextEditorProvider} instead.
+ * 当处理二进制文件或者更复杂的场景时，你应该使用这个类型的自定义编辑器。简单的基于文本的文档请使用 {@linkcode CustomDocument} 代替。
  *
- * @param T Type of the custom document returned by this provider.
+ * @param T 这个 provider 返回的自定义文档的类型。
+ * @maintainer {@link https://github.com/youngjuning @youngjuning}
  */
 export interface CustomReadonlyEditorProvider<T extends CustomDocument = CustomDocument> {
 
@@ -9045,6 +9045,8 @@ export namespace window {
 	 * @param options 的配置选项。
 	 *
 	 * @return 一次性的，取消注册的 provider
+	 *
+	 * @maintainer {@link https://github.com/youngjuning @youngjuning}
 	 */
 	export function registerCustomEditorProvider(viewType: string, provider: CustomTextEditorProvider | CustomReadonlyEditorProvider | CustomEditorProvider, options?: {
 		/**
