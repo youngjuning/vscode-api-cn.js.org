@@ -7815,6 +7815,8 @@ export interface WebviewViewProvider {
  * 基于文本的自定义编辑器使用 {@linkcode TextDocument} 作为其数据模型。
  * 因为它允许编辑器处理许多常见的操作，如撤销和备份。
  * provider 负责在 webview 和 TextDocument 之间同步文本变化。
+ *
+ * @maintainer {@link https://github.com/youngjuning @youngjuning}
  */
 export interface CustomTextEditorProvider {
 
@@ -9046,7 +9048,6 @@ export namespace window {
 	 *
 	 * @return 一次性的，取消注册的 provider
 	 *
-	 * @maintainer {@link https://github.com/youngjuning @youngjuning}
 	 */
 	export function registerCustomEditorProvider(viewType: string, provider: CustomTextEditorProvider | CustomReadonlyEditorProvider | CustomEditorProvider, options?: {
 		/**
