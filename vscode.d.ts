@@ -9046,7 +9046,6 @@ export namespace window {
 	 * @param options 的配置选项。
 	 *
 	 * @return 一次性的，取消注册的 provider
-	 *
 	 */
 	export function registerCustomEditorProvider(viewType: string, provider: CustomTextEditorProvider | CustomReadonlyEditorProvider | CustomEditorProvider, options?: {
 		/**
