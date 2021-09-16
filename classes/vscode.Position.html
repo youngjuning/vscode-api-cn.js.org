@@ -1,0 +1,690 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Position | VS Code API 中文文档</title>
+	<meta name="description" content="Documentation for VS Code API 中文文档">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="https://code.visualstudio.com/favicon.ico" sizes="128x128">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+	<style>
+        a[title="站长统计"] {
+            display: none;
+        }
+        .github-corner svg {
+            z-index: 1;
+        }
+        .github-corner:hover .octo-arm {
+            animation:octocat-wave 560ms ease-in-out
+        }
+        @keyframes octocat-wave {
+            0%,100%{transform:rotate(0)}
+            20%,60%{transform:rotate(-25deg)}
+            40%,80%{transform:rotate(10deg)}
+        }
+        @media (max-width:500px) {
+            .github-corner:hover
+            .octo-arm{animation:none}
+            .github-corner .octo-arm{
+                animation:octocat-wave 560ms ease-in-out
+            }
+        }
+        .container-main {
+            padding-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">VS Code API 中文文档</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">VS Code API 中文文档</a>
+				</li>
+				<li>
+					<a href="../modules/vscode.html">vscode</a>
+				</li>
+				<li>
+					<a href="vscode.Position.html">Position</a>
+				</li>
+			</ul>
+			<h1>Class Position</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Represents a line and character position, such as
+						the position of the cursor.</p>
+					</div>
+					<p>Position objects are <strong>immutable</strong>. Use the <a href="vscode.Position.html#with">with</a> or
+						<a href="vscode.Position.html#translate">translate</a> methods to derive new positions
+					from an existing position.</p>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>层级</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">Position</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>索引</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors（1）</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="vscode.Position.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Properties（2）</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="vscode.Position.html#line" class="tsd-kind-icon">line</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="vscode.Position.html#character" class="tsd-kind-icon">character</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods（8）</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="vscode.Position.html#isBefore" class="tsd-kind-icon">is<wbr>Before</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="vscode.Position.html#isBeforeOrEqual" class="tsd-kind-icon">is<wbr>Before<wbr>OrEqual</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="vscode.Position.html#isAfter" class="tsd-kind-icon">is<wbr>After</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="vscode.Position.html#isAfterOrEqual" class="tsd-kind-icon">is<wbr>After<wbr>OrEqual</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="vscode.Position.html#isEqual" class="tsd-kind-icon">is<wbr>Equal</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="vscode.Position.html#compareTo" class="tsd-kind-icon">compare<wbr>To</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="vscode.Position.html#translate" class="tsd-kind-icon">translate</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="vscode.Position.html#with" class="tsd-kind-icon">with</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors（1）</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Position<span class="tsd-signature-symbol">(</span>line<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, character<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L267">vscode.d.ts:267</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>line: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A zero-based line value.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>character: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A zero-based character value.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties（2）</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="line" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> line</h3>
+					<div class="tsd-signature tsd-kind-icon">line<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L256">vscode.d.ts:256</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The zero-based line value.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="character" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> character</h3>
+					<div class="tsd-signature tsd-kind-icon">character<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L261">vscode.d.ts:261</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The zero-based character value.</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods（8）</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="isBefore" class="tsd-anchor"></a>
+					<h3>is<wbr>Before</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Before<span class="tsd-signature-symbol">(</span>other<span class="tsd-signature-symbol">: </span><a href="vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L276">vscode.d.ts:276</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Check if this position is before <code>other</code>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>other: <a href="vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A position.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p><code>true</code> if position is on a smaller line
+							or on the same line on a smaller character.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="isBeforeOrEqual" class="tsd-anchor"></a>
+					<h3>is<wbr>Before<wbr>OrEqual</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Before<wbr>OrEqual<span class="tsd-signature-symbol">(</span>other<span class="tsd-signature-symbol">: </span><a href="vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L285">vscode.d.ts:285</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Check if this position is before or equal to <code>other</code>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>other: <a href="vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A position.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p><code>true</code> if position is on a smaller line
+							or on the same line on a smaller or equal character.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="isAfter" class="tsd-anchor"></a>
+					<h3>is<wbr>After</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>After<span class="tsd-signature-symbol">(</span>other<span class="tsd-signature-symbol">: </span><a href="vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L294">vscode.d.ts:294</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Check if this position is after <code>other</code>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>other: <a href="vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A position.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p><code>true</code> if position is on a greater line
+							or on the same line on a greater character.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="isAfterOrEqual" class="tsd-anchor"></a>
+					<h3>is<wbr>After<wbr>OrEqual</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>After<wbr>OrEqual<span class="tsd-signature-symbol">(</span>other<span class="tsd-signature-symbol">: </span><a href="vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L303">vscode.d.ts:303</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Check if this position is after or equal to <code>other</code>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>other: <a href="vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A position.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p><code>true</code> if position is on a greater line
+							or on the same line on a greater or equal character.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="isEqual" class="tsd-anchor"></a>
+					<h3>is<wbr>Equal</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Equal<span class="tsd-signature-symbol">(</span>other<span class="tsd-signature-symbol">: </span><a href="vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L312">vscode.d.ts:312</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Check if this position is equal to <code>other</code>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>other: <a href="vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A position.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p><code>true</code> if the line and character of the given position are equal to
+							the line and character of this position.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="compareTo" class="tsd-anchor"></a>
+					<h3>compare<wbr>To</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">compare<wbr>To<span class="tsd-signature-symbol">(</span>other<span class="tsd-signature-symbol">: </span><a href="vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L322">vscode.d.ts:322</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Compare this to <code>other</code>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>other: <a href="vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A position.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>A number smaller than zero if this position is before the given position,
+								a number greater than zero if this position is after the given position, or zero when
+							this and the given position are equal.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="translate" class="tsd-anchor"></a>
+					<h3>translate</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">translate<span class="tsd-signature-symbol">(</span>lineDelta<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, characterDelta<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></li>
+						<li class="tsd-signature tsd-kind-icon">translate<span class="tsd-signature-symbol">(</span>change<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>lineDelta<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>characterDelta<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L332">vscode.d.ts:332</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a new position relative to this position.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> lineDelta: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Delta value for the line value, default is <code>0</code>.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> characterDelta: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Delta value for the character value, default is <code>0</code>.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></h4>
+							<p>A position which line and character is the sum of the current line and
+							character and the corresponding deltas.</p>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L341">vscode.d.ts:341</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Derived a new position relative to this position.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>change: <span class="tsd-signature-symbol">{ </span>lineDelta<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>characterDelta<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>An object that describes a delta to this position.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> line<wbr>Delta<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> character<wbr>Delta<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span></h5>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></h4>
+							<p>A position that reflects the given delta. Will return <code>this</code> position if the change
+							is not changing anything.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="with" class="tsd-anchor"></a>
+					<h3>with</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">with<span class="tsd-signature-symbol">(</span>line<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, character<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></li>
+						<li class="tsd-signature tsd-kind-icon">with<span class="tsd-signature-symbol">(</span>change<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>line<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>character<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L350">vscode.d.ts:350</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a new position derived from this position.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> line: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Value that should be used as line value, default is the <a href="vscode.Position.html#line">existing value</a></p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> character: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Value that should be used as character value, default is the <a href="vscode.Position.html#character">existing value</a></p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></h4>
+							<p>A position where line and character are replaced by the given values.</p>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L359">vscode.d.ts:359</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Derived a new position from this position.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>change: <span class="tsd-signature-symbol">{ </span>line<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>character<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>An object that describes a change to this position.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> line<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> character<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span></h5>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></h4>
+							<p>A position that reflects the given change. Will return <code>this</code> position if the change
+							is not changing anything.</p>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Exports</a>
+					</li>
+					<li class="current tsd-kind-namespace">
+						<a href="../modules/vscode.html">vscode</a>
+						<ul>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.authentication.html">authentication</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.commands.html">commands</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.comments.html">comments</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.debug.html">debug</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.env.html">env</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.extensions.html">extensions</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.languages.html">languages</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.notebooks.html">notebooks</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.scm.html">scm</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.tasks.html">tasks</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.tests.html">tests</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.window.html">window</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.workspace.html">workspace</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class tsd-parent-kind-namespace">
+						<a href="vscode.Position.html" class="tsd-kind-icon">Position</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="vscode.Position.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="vscode.Position.html#line" class="tsd-kind-icon">line</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="vscode.Position.html#character" class="tsd-kind-icon">character</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="vscode.Position.html#isBefore" class="tsd-kind-icon">is<wbr>Before</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="vscode.Position.html#isBeforeOrEqual" class="tsd-kind-icon">is<wbr>Before<wbr>OrEqual</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="vscode.Position.html#isAfter" class="tsd-kind-icon">is<wbr>After</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="vscode.Position.html#isAfterOrEqual" class="tsd-kind-icon">is<wbr>After<wbr>OrEqual</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="vscode.Position.html#isEqual" class="tsd-kind-icon">is<wbr>Equal</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="vscode.Position.html#compareTo" class="tsd-kind-icon">compare<wbr>To</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="vscode.Position.html#translate" class="tsd-kind-icon">translate</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="vscode.Position.html#with" class="tsd-kind-icon">with</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>图例</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p><a href="https://liiked.github.io/VS-Code-Extension-Doc-ZH/" target="_blank">VS Code 插件开发中文文档</a> | <a href="https://jeasonstudio.gitbooks.io/vscode-cn-doc/content/" target="_blank">VS Code 中文文档</a> | <a href="https://code.visualstudio.com/docs" target="_blank">VS Code 官网文档</a> | <a href="https://marketplace.visualstudio.com/" target="_blank">VS Code 扩展市场</a></p>
+	<p>Generated by <a href="https://typedoc.org/" target="_blank">TypeDoc</a> | <a href="https://www.cnzz.com/stat/website.php?web_id=1280241129" target="_blank" title="VS Code 官网文档站长统计">站长统计</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1280241129'%3E%3C/span%3E%3Cscript src='https://s9.cnzz.com/z_stat.php%3Fid%3D1280241129' type='text/javascript'%3E%3C/script%3E"));</script>
+<a href="https://github.com/youngjuning/vscode-api-cn" target="_blank" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: fixed; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+</body>
+</html>

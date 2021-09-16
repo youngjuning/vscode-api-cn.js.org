@@ -1,0 +1,747 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TextDocument | VS Code API 中文文档</title>
+	<meta name="description" content="Documentation for VS Code API 中文文档">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="https://code.visualstudio.com/favicon.ico" sizes="128x128">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+	<style>
+        a[title="站长统计"] {
+            display: none;
+        }
+        .github-corner svg {
+            z-index: 1;
+        }
+        .github-corner:hover .octo-arm {
+            animation:octocat-wave 560ms ease-in-out
+        }
+        @keyframes octocat-wave {
+            0%,100%{transform:rotate(0)}
+            20%,60%{transform:rotate(-25deg)}
+            40%,80%{transform:rotate(10deg)}
+        }
+        @media (max-width:500px) {
+            .github-corner:hover
+            .octo-arm{animation:none}
+            .github-corner .octo-arm{
+                animation:octocat-wave 560ms ease-in-out
+            }
+        }
+        .container-main {
+            padding-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">VS Code API 中文文档</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">VS Code API 中文文档</a>
+				</li>
+				<li>
+					<a href="../modules/vscode.html">vscode</a>
+				</li>
+				<li>
+					<a href="vscode.TextDocument.html">TextDocument</a>
+				</li>
+			</ul>
+			<h1>Interface TextDocument</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Represents a text document, such as a source file. Text documents have
+						<a href="vscode.TextLine.html">lines</a> and knowledge about an underlying resource like a file.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>层级</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">TextDocument</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>索引</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Properties（9）</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.TextDocument.html#uri" class="tsd-kind-icon">uri</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.TextDocument.html#fileName" class="tsd-kind-icon">file<wbr>Name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.TextDocument.html#isUntitled" class="tsd-kind-icon">is<wbr>Untitled</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.TextDocument.html#languageId" class="tsd-kind-icon">language<wbr>Id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.TextDocument.html#version" class="tsd-kind-icon">version</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.TextDocument.html#isDirty" class="tsd-kind-icon">is<wbr>Dirty</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.TextDocument.html#isClosed" class="tsd-kind-icon">is<wbr>Closed</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.TextDocument.html#eol" class="tsd-kind-icon">eol</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.TextDocument.html#lineCount" class="tsd-kind-icon">line<wbr>Count</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods（8）</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="vscode.TextDocument.html#save" class="tsd-kind-icon">save</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="vscode.TextDocument.html#lineAt" class="tsd-kind-icon">line<wbr>At</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="vscode.TextDocument.html#offsetAt" class="tsd-kind-icon">offset<wbr>At</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="vscode.TextDocument.html#positionAt" class="tsd-kind-icon">position<wbr>At</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="vscode.TextDocument.html#getText" class="tsd-kind-icon">get<wbr>Text</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="vscode.TextDocument.html#getWordRangeAtPosition" class="tsd-kind-icon">get<wbr>Word<wbr>Range<wbr>AtPosition</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="vscode.TextDocument.html#validateRange" class="tsd-kind-icon">validate<wbr>Range</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="vscode.TextDocument.html#validatePosition" class="tsd-kind-icon">validate<wbr>Position</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties（9）</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="uri" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> uri</h3>
+					<div class="tsd-signature tsd-kind-icon">uri<span class="tsd-signature-symbol">:</span> <a href="../classes/vscode.Uri.html" class="tsd-signature-type" data-tsd-kind="Class">Uri</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L98">vscode.d.ts:98</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The associated uri for this document.</p>
+						</div>
+						<p><em>Note</em> that most documents use the <code>file</code>-scheme, which means they are files on disk. However, <strong>not</strong> all documents are
+						saved on disk and therefore the <code>scheme</code> must be checked before trying to access the underlying file or siblings on disk.</p>
+						<dl class="tsd-comment-tags">
+							<dt>see</dt>
+							<dd><p><a href="vscode.FileSystemProvider.html">FileSystemProvider</a></p>
+							</dd>
+							<dt>see</dt>
+							<dd><p><a href="vscode.TextDocumentContentProvider.html">TextDocumentContentProvider</a></p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="fileName" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> file<wbr>Name</h3>
+					<div class="tsd-signature tsd-kind-icon">file<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L104">vscode.d.ts:104</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The file system path of the associated resource. Shorthand
+							notation for <a href="vscode.TextDocument.html#uri">TextDocument.uri.fsPath</a>. Independent of the uri scheme.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="isUntitled" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> is<wbr>Untitled</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Untitled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L111">vscode.d.ts:111</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Is this document representing an untitled file which has never been saved yet. <em>Note</em> that
+								this does not mean the document will be saved to disk, use <a href="../classes/vscode.Uri.html#scheme"><code>Uri.scheme</code></a>
+							to figure out where a document will be <a href="vscode.FileSystemProvider.html">saved</a>, e.g. <code>file</code>, <code>ftp</code> etc.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="languageId" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> language<wbr>Id</h3>
+					<div class="tsd-signature tsd-kind-icon">language<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L116">vscode.d.ts:116</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The identifier of the language associated with this document.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="version" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> version</h3>
+					<div class="tsd-signature tsd-kind-icon">version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L122">vscode.d.ts:122</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The version number of this document (it will strictly increase after each
+							change, including undo/redo).</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="isDirty" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> is<wbr>Dirty</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Dirty<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L127">vscode.d.ts:127</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p><code>true</code> if there are unpersisted changes.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="isClosed" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> is<wbr>Closed</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Closed<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L133">vscode.d.ts:133</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p><code>true</code> if the document has been closed. A closed document isn&#39;t synchronized anymore
+							and won&#39;t be re-used when the same resource is opened again.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="eol" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> eol</h3>
+					<div class="tsd-signature tsd-kind-icon">eol<span class="tsd-signature-symbol">:</span> <a href="../enums/vscode.EndOfLine.html" class="tsd-signature-type" data-tsd-kind="Enumeration">EndOfLine</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L148">vscode.d.ts:148</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The <a href="../enums/vscode.EndOfLine.html">end of line</a> sequence that is predominately
+							used in this document.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="lineCount" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> line<wbr>Count</h3>
+					<div class="tsd-signature tsd-kind-icon">line<wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L153">vscode.d.ts:153</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The number of lines in this document.</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods（8）</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="save" class="tsd-anchor"></a>
+					<h3>save</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">save<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L142">vscode.d.ts:142</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Save the underlying file.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>A promise that will resolve to true when the file
+								has been saved. If the file was not dirty or the save failed,
+							will return false.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="lineAt" class="tsd-anchor"></a>
+					<h3>line<wbr>At</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">line<wbr>At<span class="tsd-signature-symbol">(</span>line<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="vscode.TextLine.html" class="tsd-signature-type" data-tsd-kind="Interface">TextLine</a></li>
+						<li class="tsd-signature tsd-kind-icon">line<wbr>At<span class="tsd-signature-symbol">(</span>position<span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="vscode.TextLine.html" class="tsd-signature-type" data-tsd-kind="Interface">TextLine</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L163">vscode.d.ts:163</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a text line denoted by the line number. Note
+										that the returned object is <em>not</em> live and changes to the
+									document are not reflected.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>line: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A line number in [0, lineCount).</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="vscode.TextLine.html" class="tsd-signature-type" data-tsd-kind="Interface">TextLine</a></h4>
+							<p>A <a href="vscode.TextLine.html">line</a>.</p>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L177">vscode.d.ts:177</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a text line denoted by the position. Note
+										that the returned object is <em>not</em> live and changes to the
+									document are not reflected.</p>
+								</div>
+								<p>The position will be <a href="vscode.TextDocument.html#validatePosition">adjusted</a>.</p>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p><a href="vscode.TextDocument.html#lineAt">TextDocument.lineAt</a></p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>position: <a href="../classes/vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A position.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="vscode.TextLine.html" class="tsd-signature-type" data-tsd-kind="Interface">TextLine</a></h4>
+							<p>A <a href="vscode.TextLine.html">line</a>.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="offsetAt" class="tsd-anchor"></a>
+					<h3>offset<wbr>At</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">offset<wbr>At<span class="tsd-signature-symbol">(</span>position<span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L187">vscode.d.ts:187</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Converts the position to a zero-based offset.</p>
+								</div>
+								<p>The position will be <a href="vscode.TextDocument.html#validatePosition">adjusted</a>.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>position: <a href="../classes/vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A position.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>A valid zero-based offset.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="positionAt" class="tsd-anchor"></a>
+					<h3>position<wbr>At</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">position<wbr>At<span class="tsd-signature-symbol">(</span>offset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L195">vscode.d.ts:195</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Converts a zero-based offset to a position.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>offset: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A zero-based offset.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></h4>
+							<p>A valid <a href="../classes/vscode.Position.html">Position</a>.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="getText" class="tsd-anchor"></a>
+					<h3>get<wbr>Text</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Text<span class="tsd-signature-symbol">(</span>range<span class="tsd-signature-symbol">?: </span><a href="../classes/vscode.Range.html" class="tsd-signature-type" data-tsd-kind="Class">Range</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L204">vscode.d.ts:204</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the text of this document. A substring can be retrieved by providing
+									a range. The range will be <a href="vscode.TextDocument.html#validateRange">adjusted</a>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> range: <a href="../classes/vscode.Range.html" class="tsd-signature-type" data-tsd-kind="Class">Range</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Include only the text included by the range.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<p>The text inside the provided range or the entire text.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="getWordRangeAtPosition" class="tsd-anchor"></a>
+					<h3>get<wbr>Word<wbr>Range<wbr>AtPosition</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Word<wbr>Range<wbr>AtPosition<span class="tsd-signature-symbol">(</span>position<span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a>, regex<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../classes/vscode.Range.html" class="tsd-signature-type" data-tsd-kind="Class">Range</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L224">vscode.d.ts:224</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get a word-range at the given position. By default words are defined by
+										common separators, like space, -, _, etc. In addition, per language custom
+										[word definitions} can be defined. It
+									is also possible to provide a custom regular expression.</p>
+								</div>
+								<ul>
+									<li><em>Note 1:</em> A custom regular expression must not match the empty string and
+									if it does, it will be ignored.</li>
+									<li><em>Note 2:</em> A custom regular expression will fail to match multiline strings
+										and in the name of speed regular expressions should not match words with
+									spaces. Use <a href="vscode.TextLine.html#text"><code>TextLine.text</code></a> for more complex, non-wordy, scenarios.</li>
+								</ul>
+								<p>The position will be <a href="vscode.TextDocument.html#validatePosition">adjusted</a>.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>position: <a href="../classes/vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A position.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> regex: <span class="tsd-signature-type">RegExp</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional regular expression that describes what a word is.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../classes/vscode.Range.html" class="tsd-signature-type" data-tsd-kind="Class">Range</a></h4>
+							<p>A range spanning a word, or <code>undefined</code>.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="validateRange" class="tsd-anchor"></a>
+					<h3>validate<wbr>Range</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">validate<wbr>Range<span class="tsd-signature-symbol">(</span>range<span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Range.html" class="tsd-signature-type" data-tsd-kind="Class">Range</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Range.html" class="tsd-signature-type" data-tsd-kind="Class">Range</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L232">vscode.d.ts:232</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Ensure a range is completely contained in this document.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>range: <a href="../classes/vscode.Range.html" class="tsd-signature-type" data-tsd-kind="Class">Range</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A range.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/vscode.Range.html" class="tsd-signature-type" data-tsd-kind="Class">Range</a></h4>
+							<p>The given range or a new, adjusted range.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="validatePosition" class="tsd-anchor"></a>
+					<h3>validate<wbr>Position</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">validate<wbr>Position<span class="tsd-signature-symbol">(</span>position<span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L240">vscode.d.ts:240</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Ensure a position is contained in the range of this document.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>position: <a href="../classes/vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A position.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></h4>
+							<p>The given position or a new, adjusted position.</p>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Exports</a>
+					</li>
+					<li class="current tsd-kind-namespace">
+						<a href="../modules/vscode.html">vscode</a>
+						<ul>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.authentication.html">authentication</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.commands.html">commands</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.comments.html">comments</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.debug.html">debug</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.env.html">env</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.extensions.html">extensions</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.languages.html">languages</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.notebooks.html">notebooks</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.scm.html">scm</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.tasks.html">tasks</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.tests.html">tests</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.window.html">window</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.workspace.html">workspace</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="vscode.TextDocument.html" class="tsd-kind-icon">Text<wbr>Document</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.TextDocument.html#uri" class="tsd-kind-icon">uri</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.TextDocument.html#fileName" class="tsd-kind-icon">file<wbr>Name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.TextDocument.html#isUntitled" class="tsd-kind-icon">is<wbr>Untitled</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.TextDocument.html#languageId" class="tsd-kind-icon">language<wbr>Id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.TextDocument.html#version" class="tsd-kind-icon">version</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.TextDocument.html#isDirty" class="tsd-kind-icon">is<wbr>Dirty</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.TextDocument.html#isClosed" class="tsd-kind-icon">is<wbr>Closed</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="vscode.TextDocument.html#save" class="tsd-kind-icon">save</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.TextDocument.html#eol" class="tsd-kind-icon">eol</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.TextDocument.html#lineCount" class="tsd-kind-icon">line<wbr>Count</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="vscode.TextDocument.html#lineAt" class="tsd-kind-icon">line<wbr>At</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="vscode.TextDocument.html#offsetAt" class="tsd-kind-icon">offset<wbr>At</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="vscode.TextDocument.html#positionAt" class="tsd-kind-icon">position<wbr>At</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="vscode.TextDocument.html#getText" class="tsd-kind-icon">get<wbr>Text</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="vscode.TextDocument.html#getWordRangeAtPosition" class="tsd-kind-icon">get<wbr>Word<wbr>Range<wbr>AtPosition</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="vscode.TextDocument.html#validateRange" class="tsd-kind-icon">validate<wbr>Range</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="vscode.TextDocument.html#validatePosition" class="tsd-kind-icon">validate<wbr>Position</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>图例</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p><a href="https://liiked.github.io/VS-Code-Extension-Doc-ZH/" target="_blank">VS Code 插件开发中文文档</a> | <a href="https://jeasonstudio.gitbooks.io/vscode-cn-doc/content/" target="_blank">VS Code 中文文档</a> | <a href="https://code.visualstudio.com/docs" target="_blank">VS Code 官网文档</a> | <a href="https://marketplace.visualstudio.com/" target="_blank">VS Code 扩展市场</a></p>
+	<p>Generated by <a href="https://typedoc.org/" target="_blank">TypeDoc</a> | <a href="https://www.cnzz.com/stat/website.php?web_id=1280241129" target="_blank" title="VS Code 官网文档站长统计">站长统计</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1280241129'%3E%3C/span%3E%3Cscript src='https://s9.cnzz.com/z_stat.php%3Fid%3D1280241129' type='text/javascript'%3E%3C/script%3E"));</script>
+<a href="https://github.com/youngjuning/vscode-api-cn" target="_blank" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: fixed; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+</body>
+</html>

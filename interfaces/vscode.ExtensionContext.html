@@ -1,0 +1,611 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ExtensionContext | VS Code API 中文文档</title>
+	<meta name="description" content="Documentation for VS Code API 中文文档">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="https://code.visualstudio.com/favicon.ico" sizes="128x128">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+	<style>
+        a[title="站长统计"] {
+            display: none;
+        }
+        .github-corner svg {
+            z-index: 1;
+        }
+        .github-corner:hover .octo-arm {
+            animation:octocat-wave 560ms ease-in-out
+        }
+        @keyframes octocat-wave {
+            0%,100%{transform:rotate(0)}
+            20%,60%{transform:rotate(-25deg)}
+            40%,80%{transform:rotate(10deg)}
+        }
+        @media (max-width:500px) {
+            .github-corner:hover
+            .octo-arm{animation:none}
+            .github-corner .octo-arm{
+                animation:octocat-wave 560ms ease-in-out
+            }
+        }
+        .container-main {
+            padding-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">VS Code API 中文文档</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">VS Code API 中文文档</a>
+				</li>
+				<li>
+					<a href="../modules/vscode.html">vscode</a>
+				</li>
+				<li>
+					<a href="vscode.ExtensionContext.html">ExtensionContext</a>
+				</li>
+			</ul>
+			<h1>Interface ExtensionContext</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>An extension context is a collection of utilities private to an
+						extension.</p>
+					</div>
+					<p>An instance of an <code>ExtensionContext</code> is provided as the first
+					parameter to the <code>activate</code>-call of an extension.</p>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>层级</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">ExtensionContext</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>索引</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Properties（15）</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.ExtensionContext.html#subscriptions" class="tsd-kind-icon">subscriptions</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.ExtensionContext.html#workspaceState" class="tsd-kind-icon">workspace<wbr>State</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.ExtensionContext.html#globalState" class="tsd-kind-icon">global<wbr>State</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.ExtensionContext.html#secrets" class="tsd-kind-icon">secrets</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.ExtensionContext.html#extensionUri" class="tsd-kind-icon">extension<wbr>Uri</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.ExtensionContext.html#extensionPath" class="tsd-kind-icon">extension<wbr>Path</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.ExtensionContext.html#environmentVariableCollection" class="tsd-kind-icon">environment<wbr>Variable<wbr>Collection</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.ExtensionContext.html#storageUri" class="tsd-kind-icon">storage<wbr>Uri</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.ExtensionContext.html#storagePath" class="tsd-kind-icon">storage<wbr>Path</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.ExtensionContext.html#globalStorageUri" class="tsd-kind-icon">global<wbr>Storage<wbr>Uri</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.ExtensionContext.html#globalStoragePath" class="tsd-kind-icon">global<wbr>Storage<wbr>Path</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.ExtensionContext.html#logUri" class="tsd-kind-icon">log<wbr>Uri</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.ExtensionContext.html#logPath" class="tsd-kind-icon">log<wbr>Path</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.ExtensionContext.html#extensionMode" class="tsd-kind-icon">extension<wbr>Mode</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.ExtensionContext.html#extension" class="tsd-kind-icon">extension</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods（1）</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="vscode.ExtensionContext.html#asAbsolutePath" class="tsd-kind-icon">as<wbr>Absolute<wbr>Path</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties（15）</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="subscriptions" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> subscriptions</h3>
+					<div class="tsd-signature tsd-kind-icon">subscriptions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>dispose<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L6068">vscode.d.ts:6068</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An array to which disposables can be added. When this
+							extension is deactivated the disposables will be disposed.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="workspaceState" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> workspace<wbr>State</h3>
+					<div class="tsd-signature tsd-kind-icon">workspace<wbr>State<span class="tsd-signature-symbol">:</span> <a href="vscode.Memento.html" class="tsd-signature-type" data-tsd-kind="Interface">Memento</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L6074">vscode.d.ts:6074</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A memento object that stores state in the context
+							of the currently opened <a href="../modules/vscode.workspace.html#workspaceFolders">workspace</a>.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="globalState" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> global<wbr>State</h3>
+					<div class="tsd-signature tsd-kind-icon">global<wbr>State<span class="tsd-signature-symbol">:</span> <a href="vscode.Memento.html" class="tsd-signature-type" data-tsd-kind="Interface">Memento</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>setKeysForSync<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L6080">vscode.d.ts:6080</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A memento object that stores state independent
+							of the current opened <a href="../modules/vscode.workspace.html#workspaceFolders">workspace</a>.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="secrets" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> secrets</h3>
+					<div class="tsd-signature tsd-kind-icon">secrets<span class="tsd-signature-symbol">:</span> <a href="vscode.SecretStorage.html" class="tsd-signature-type" data-tsd-kind="Interface">SecretStorage</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L6101">vscode.d.ts:6101</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A storage utility for secrets. Secrets are persisted across reloads and are independent of the
+							current opened <a href="../modules/vscode.workspace.html#workspaceFolders">workspace</a>.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="extensionUri" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> extension<wbr>Uri</h3>
+					<div class="tsd-signature tsd-kind-icon">extension<wbr>Uri<span class="tsd-signature-symbol">:</span> <a href="../classes/vscode.Uri.html" class="tsd-signature-type" data-tsd-kind="Class">Uri</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L6106">vscode.d.ts:6106</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The uri of the directory containing the extension.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="extensionPath" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> extension<wbr>Path</h3>
+					<div class="tsd-signature tsd-kind-icon">extension<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L6112">vscode.d.ts:6112</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The absolute file path of the directory containing the extension. Shorthand
+							notation for <a href="vscode.TextDocument.html#uri">ExtensionContext.extensionUri.fsPath</a> (independent of the uri scheme).</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="environmentVariableCollection" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> environment<wbr>Variable<wbr>Collection</h3>
+					<div class="tsd-signature tsd-kind-icon">environment<wbr>Variable<wbr>Collection<span class="tsd-signature-symbol">:</span> <a href="vscode.EnvironmentVariableCollection.html" class="tsd-signature-type" data-tsd-kind="Interface">EnvironmentVariableCollection</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L6118">vscode.d.ts:6118</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Gets the extension&#39;s environment variable collection for this workspace, enabling changes
+							to be applied to terminal environment variables.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="storageUri" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> storage<wbr>Uri</h3>
+					<div class="tsd-signature tsd-kind-icon">storage<wbr>Uri<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../classes/vscode.Uri.html" class="tsd-signature-type" data-tsd-kind="Class">Uri</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L6143">vscode.d.ts:6143</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The uri of a workspace specific directory in which the extension
+								can store private state. The directory might not exist and creation is
+								up to the extension. However, the parent directory is guaranteed to be existent.
+							The value is <code>undefined</code> when no workspace nor folder has been opened.</p>
+						</div>
+						<p>Use <a href="vscode.ExtensionContext.html#workspaceState"><code>workspaceState</code></a> or
+						<a href="vscode.ExtensionContext.html#globalState"><code>globalState</code></a> to store key value data.</p>
+						<dl class="tsd-comment-tags">
+							<dt>see</dt>
+							<dd><p><a href="vscode.FileSystem.html"><code>workspace.fs</code></a> for how to read and write files and folders from
+								an uri.</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="storagePath" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> storage<wbr>Path</h3>
+					<div class="tsd-signature tsd-kind-icon">storage<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L6155">vscode.d.ts:6155</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An absolute file path of a workspace specific directory in which the extension
+								can store private state. The directory might not exist on disk and creation is
+							up to the extension. However, the parent directory is guaranteed to be existent.</p>
+						</div>
+						<p>Use <a href="vscode.ExtensionContext.html#workspaceState"><code>workspaceState</code></a> or
+						<a href="vscode.ExtensionContext.html#globalState"><code>globalState</code></a> to store key value data.</p>
+						<dl class="tsd-comment-tags">
+							<dt>deprecated</dt>
+							<dd><p>Use <a href="vscode.ExtensionContext.html#storageUri">storageUri</a> instead.</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="globalStorageUri" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> global<wbr>Storage<wbr>Uri</h3>
+					<div class="tsd-signature tsd-kind-icon">global<wbr>Storage<wbr>Uri<span class="tsd-signature-symbol">:</span> <a href="../classes/vscode.Uri.html" class="tsd-signature-type" data-tsd-kind="Class">Uri</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L6167">vscode.d.ts:6167</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The uri of a directory in which the extension can store global state.
+								The directory might not exist on disk and creation is
+							up to the extension. However, the parent directory is guaranteed to be existent.</p>
+						</div>
+						<p>Use <a href="vscode.ExtensionContext.html#globalState"><code>globalState</code></a> to store key value data.</p>
+						<dl class="tsd-comment-tags">
+							<dt>see</dt>
+							<dd><p><a href="vscode.FileSystem.html"><code>workspace.fs</code></a> for how to read and write files and folders from
+								an uri.</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="globalStoragePath" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> global<wbr>Storage<wbr>Path</h3>
+					<div class="tsd-signature tsd-kind-icon">global<wbr>Storage<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L6178">vscode.d.ts:6178</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An absolute file path in which the extension can store global state.
+								The directory might not exist on disk and creation is
+							up to the extension. However, the parent directory is guaranteed to be existent.</p>
+						</div>
+						<p>Use <a href="vscode.ExtensionContext.html#globalState"><code>globalState</code></a> to store key value data.</p>
+						<dl class="tsd-comment-tags">
+							<dt>deprecated</dt>
+							<dd><p>Use <a href="vscode.ExtensionContext.html#globalStorageUri">globalStorageUri</a> instead.</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="logUri" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> log<wbr>Uri</h3>
+					<div class="tsd-signature tsd-kind-icon">log<wbr>Uri<span class="tsd-signature-symbol">:</span> <a href="../classes/vscode.Uri.html" class="tsd-signature-type" data-tsd-kind="Class">Uri</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L6188">vscode.d.ts:6188</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The uri of a directory in which the extension can create log files.
+								The directory might not exist on disk and creation is up to the extension. However,
+							the parent directory is guaranteed to be existent.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>see</dt>
+							<dd><p><a href="vscode.FileSystem.html"><code>workspace.fs</code></a> for how to read and write files and folders from
+								an uri.</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="logPath" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> log<wbr>Path</h3>
+					<div class="tsd-signature tsd-kind-icon">log<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L6197">vscode.d.ts:6197</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An absolute file path of a directory in which the extension can create log files.
+								The directory might not exist on disk and creation is up to the extension. However,
+							the parent directory is guaranteed to be existent.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>deprecated</dt>
+							<dd><p>Use <a href="vscode.ExtensionContext.html#logUri">logUri</a> instead.</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="extensionMode" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> extension<wbr>Mode</h3>
+					<div class="tsd-signature tsd-kind-icon">extension<wbr>Mode<span class="tsd-signature-symbol">:</span> <a href="../enums/vscode.ExtensionMode.html" class="tsd-signature-type" data-tsd-kind="Enumeration">ExtensionMode</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L6204">vscode.d.ts:6204</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The mode the extension is running in. This is specific to the current
+								extension. One extension may be in <code>ExtensionMode.Development</code> while
+							other extensions in the host run in <code>ExtensionMode.Release</code>.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="extension" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> extension</h3>
+					<div class="tsd-signature tsd-kind-icon">extension<span class="tsd-signature-symbol">:</span> <a href="vscode.Extension.html" class="tsd-signature-type" data-tsd-kind="Interface">Extension</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L6209">vscode.d.ts:6209</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The current <code>Extension</code> instance.</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods（1）</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="asAbsolutePath" class="tsd-anchor"></a>
+					<h3>as<wbr>Absolute<wbr>Path</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">as<wbr>Absolute<wbr>Path<span class="tsd-signature-symbol">(</span>relativePath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L6129">vscode.d.ts:6129</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the absolute path of a resource contained in the extension.</p>
+								</div>
+								<p><em>Note</em> that an absolute uri can be constructed via <a href="../classes/vscode.Uri.html#joinPath"><code>Uri.joinPath</code></a> and
+								<a href="vscode.ExtensionContext.html#extensionUri"><code>extensionUri</code></a>, e.g. <code>vscode.Uri.joinPath(context.extensionUri, relativePath);</code></p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>relativePath: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A relative path to a resource contained in the extension.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<p>The absolute path of the resource.</p>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Exports</a>
+					</li>
+					<li class="current tsd-kind-namespace">
+						<a href="../modules/vscode.html">vscode</a>
+						<ul>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.authentication.html">authentication</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.commands.html">commands</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.comments.html">comments</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.debug.html">debug</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.env.html">env</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.extensions.html">extensions</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.languages.html">languages</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.notebooks.html">notebooks</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.scm.html">scm</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.tasks.html">tasks</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.tests.html">tests</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.window.html">window</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.workspace.html">workspace</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="vscode.ExtensionContext.html" class="tsd-kind-icon">Extension<wbr>Context</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.ExtensionContext.html#subscriptions" class="tsd-kind-icon">subscriptions</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.ExtensionContext.html#workspaceState" class="tsd-kind-icon">workspace<wbr>State</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.ExtensionContext.html#globalState" class="tsd-kind-icon">global<wbr>State</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.ExtensionContext.html#secrets" class="tsd-kind-icon">secrets</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.ExtensionContext.html#extensionUri" class="tsd-kind-icon">extension<wbr>Uri</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.ExtensionContext.html#extensionPath" class="tsd-kind-icon">extension<wbr>Path</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.ExtensionContext.html#environmentVariableCollection" class="tsd-kind-icon">environment<wbr>Variable<wbr>Collection</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="vscode.ExtensionContext.html#asAbsolutePath" class="tsd-kind-icon">as<wbr>Absolute<wbr>Path</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.ExtensionContext.html#storageUri" class="tsd-kind-icon">storage<wbr>Uri</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.ExtensionContext.html#storagePath" class="tsd-kind-icon">storage<wbr>Path</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.ExtensionContext.html#globalStorageUri" class="tsd-kind-icon">global<wbr>Storage<wbr>Uri</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.ExtensionContext.html#globalStoragePath" class="tsd-kind-icon">global<wbr>Storage<wbr>Path</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.ExtensionContext.html#logUri" class="tsd-kind-icon">log<wbr>Uri</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.ExtensionContext.html#logPath" class="tsd-kind-icon">log<wbr>Path</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.ExtensionContext.html#extensionMode" class="tsd-kind-icon">extension<wbr>Mode</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.ExtensionContext.html#extension" class="tsd-kind-icon">extension</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>图例</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p><a href="https://liiked.github.io/VS-Code-Extension-Doc-ZH/" target="_blank">VS Code 插件开发中文文档</a> | <a href="https://jeasonstudio.gitbooks.io/vscode-cn-doc/content/" target="_blank">VS Code 中文文档</a> | <a href="https://code.visualstudio.com/docs" target="_blank">VS Code 官网文档</a> | <a href="https://marketplace.visualstudio.com/" target="_blank">VS Code 扩展市场</a></p>
+	<p>Generated by <a href="https://typedoc.org/" target="_blank">TypeDoc</a> | <a href="https://www.cnzz.com/stat/website.php?web_id=1280241129" target="_blank" title="VS Code 官网文档站长统计">站长统计</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1280241129'%3E%3C/span%3E%3Cscript src='https://s9.cnzz.com/z_stat.php%3Fid%3D1280241129' type='text/javascript'%3E%3C/script%3E"));</script>
+<a href="https://github.com/youngjuning/vscode-api-cn" target="_blank" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: fixed; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+</body>
+</html>

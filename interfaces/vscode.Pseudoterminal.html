@@ -1,0 +1,521 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Pseudoterminal | VS Code API 中文文档</title>
+	<meta name="description" content="Documentation for VS Code API 中文文档">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="https://code.visualstudio.com/favicon.ico" sizes="128x128">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+	<style>
+        a[title="站长统计"] {
+            display: none;
+        }
+        .github-corner svg {
+            z-index: 1;
+        }
+        .github-corner:hover .octo-arm {
+            animation:octocat-wave 560ms ease-in-out
+        }
+        @keyframes octocat-wave {
+            0%,100%{transform:rotate(0)}
+            20%,60%{transform:rotate(-25deg)}
+            40%,80%{transform:rotate(10deg)}
+        }
+        @media (max-width:500px) {
+            .github-corner:hover
+            .octo-arm{animation:none}
+            .github-corner .octo-arm{
+                animation:octocat-wave 560ms ease-in-out
+            }
+        }
+        .container-main {
+            padding-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">VS Code API 中文文档</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">VS Code API 中文文档</a>
+				</li>
+				<li>
+					<a href="../modules/vscode.html">vscode</a>
+				</li>
+				<li>
+					<a href="vscode.Pseudoterminal.html">Pseudoterminal</a>
+				</li>
+			</ul>
+			<h1>Interface Pseudoterminal</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Defines the interface of a terminal pty, enabling extensions to control a terminal.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>层级</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">Pseudoterminal</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>索引</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Properties（4）</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.Pseudoterminal.html#onDidWrite" class="tsd-kind-icon">on<wbr>Did<wbr>Write</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.Pseudoterminal.html#onDidOverrideDimensions" class="tsd-kind-icon">on<wbr>Did<wbr>Override<wbr>Dimensions</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.Pseudoterminal.html#onDidClose" class="tsd-kind-icon">on<wbr>Did<wbr>Close</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vscode.Pseudoterminal.html#onDidChangeName" class="tsd-kind-icon">on<wbr>Did<wbr>Change<wbr>Name</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods（4）</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="vscode.Pseudoterminal.html#open" class="tsd-kind-icon">open</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="vscode.Pseudoterminal.html#close" class="tsd-kind-icon">close</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="vscode.Pseudoterminal.html#handleInput" class="tsd-kind-icon">handle<wbr>Input</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="vscode.Pseudoterminal.html#setDimensions" class="tsd-kind-icon">set<wbr>Dimensions</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties（4）</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="onDidWrite" class="tsd-anchor"></a>
+					<h3>on<wbr>Did<wbr>Write</h3>
+					<div class="tsd-signature tsd-kind-icon">on<wbr>Did<wbr>Write<span class="tsd-signature-symbol">:</span> <a href="vscode.Event.html" class="tsd-signature-type" data-tsd-kind="Interface">Event</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L9549">vscode.d.ts:9549</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An event that when fired will write data to the terminal. Unlike
+								<a href="vscode.Terminal.html#sendText">Terminal.sendText</a> which sends text to the underlying child
+								pseudo-device (the child), this will write the text to parent pseudo-device (the
+							<em>terminal</em> itself).</p>
+						</div>
+						<p>Note writing <code>\n</code> will just move the cursor down 1 row, you need to write <code>\r</code> as well
+						to move the cursor to the left-most cell.</p>
+						<p><strong>Example:</strong> Write red text to the terminal</p>
+						<pre><code class="language-typescript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">writeEmitter</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #001080">vscode</span><span style="color: #000000">.</span><span style="color: #795E26">EventEmitter</span><span style="color: #000000">&lt;</span><span style="color: #267F99">string</span><span style="color: #000000">&gt;();</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">pty</span><span style="color: #000000">: </span><span style="color: #267F99">vscode</span><span style="color: #000000">.</span><span style="color: #267F99">Pseudoterminal</span><span style="color: #000000"> = {</span>
+<span style="color: #000000">  </span><span style="color: #001080">onDidWrite:</span><span style="color: #000000"> </span><span style="color: #001080">writeEmitter</span><span style="color: #000000">.</span><span style="color: #001080">event</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #795E26">open</span><span style="color: #001080">:</span><span style="color: #000000"> () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #001080">writeEmitter</span><span style="color: #000000">.</span><span style="color: #795E26">fire</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;</span><span style="color: #EE0000">\x1b</span><span style="color: #A31515">[31mHello world</span><span style="color: #EE0000">\x1b</span><span style="color: #A31515">[0m&#039;</span><span style="color: #000000">),</span>
+<span style="color: #000000">  </span><span style="color: #795E26">close</span><span style="color: #001080">:</span><span style="color: #000000"> () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {}</span>
+<span style="color: #000000">};</span>
+<span style="color: #001080">vscode</span><span style="color: #000000">.</span><span style="color: #001080">window</span><span style="color: #000000">.</span><span style="color: #795E26">createTerminal</span><span style="color: #000000">({ </span><span style="color: #001080">name:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;My terminal&#039;</span><span style="color: #000000">, </span><span style="color: #001080">pty</span><span style="color: #000000"> });</span>
+</code></pre>
+						<p><strong>Example:</strong> Move the cursor to the 10th row and 20th column and write an asterisk</p>
+						<pre><code class="language-typescript"><span style="color: #001080">writeEmitter</span><span style="color: #000000">.</span><span style="color: #795E26">fire</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;</span><span style="color: #EE0000">\x1b</span><span style="color: #A31515">[10;20H*&#039;</span><span style="color: #000000">);</span>
+</code></pre>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="onDidOverrideDimensions" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> on<wbr>Did<wbr>Override<wbr>Dimensions</h3>
+					<div class="tsd-signature tsd-kind-icon">on<wbr>Did<wbr>Override<wbr>Dimensions<span class="tsd-signature-symbol">:</span> <a href="vscode.Event.html" class="tsd-signature-type" data-tsd-kind="Interface">Event</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="vscode.TerminalDimensions.html" class="tsd-signature-type" data-tsd-kind="Interface">TerminalDimensions</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L9575">vscode.d.ts:9575</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An event that when fired allows overriding the <a href="vscode.Pseudoterminal.html#setDimensions">dimensions</a> of the
+								terminal. Note that when set, the overridden dimensions will only take effect when they
+								are lower than the actual dimensions of the terminal (ie. there will never be a scroll
+								bar). Set to <code>undefined</code> for the terminal to go back to the regular dimensions (fit to
+							the size of the panel).</p>
+						</div>
+						<p><strong>Example:</strong> Override the dimensions of a terminal to 20 columns and 10 rows</p>
+						<pre><code class="language-typescript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">dimensionsEmitter</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #001080">vscode</span><span style="color: #000000">.</span><span style="color: #795E26">EventEmitter</span><span style="color: #000000">&lt;</span><span style="color: #267F99">vscode</span><span style="color: #000000">.</span><span style="color: #267F99">TerminalDimensions</span><span style="color: #000000">&gt;();</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">pty</span><span style="color: #000000">: </span><span style="color: #267F99">vscode</span><span style="color: #000000">.</span><span style="color: #267F99">Pseudoterminal</span><span style="color: #000000"> = {</span>
+<span style="color: #000000">  </span><span style="color: #001080">onDidWrite:</span><span style="color: #000000"> </span><span style="color: #001080">writeEmitter</span><span style="color: #000000">.</span><span style="color: #001080">event</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #001080">onDidOverrideDimensions:</span><span style="color: #000000"> </span><span style="color: #001080">dimensionsEmitter</span><span style="color: #000000">.</span><span style="color: #001080">event</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #795E26">open</span><span style="color: #001080">:</span><span style="color: #000000"> () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #001080">dimensionsEmitter</span><span style="color: #000000">.</span><span style="color: #795E26">fire</span><span style="color: #000000">({</span>
+<span style="color: #000000">      </span><span style="color: #001080">columns:</span><span style="color: #000000"> </span><span style="color: #098658">20</span><span style="color: #000000">,</span>
+<span style="color: #000000">      </span><span style="color: #001080">rows:</span><span style="color: #000000"> </span><span style="color: #098658">10</span>
+<span style="color: #000000">    });</span>
+<span style="color: #000000">  },</span>
+<span style="color: #000000">  </span><span style="color: #795E26">close</span><span style="color: #001080">:</span><span style="color: #000000"> () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {}</span>
+<span style="color: #000000">};</span>
+<span style="color: #001080">vscode</span><span style="color: #000000">.</span><span style="color: #001080">window</span><span style="color: #000000">.</span><span style="color: #795E26">createTerminal</span><span style="color: #000000">({ </span><span style="color: #001080">name:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;My terminal&#039;</span><span style="color: #000000">, </span><span style="color: #001080">pty</span><span style="color: #000000"> });</span>
+</code></pre>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="onDidClose" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> on<wbr>Did<wbr>Close</h3>
+					<div class="tsd-signature tsd-kind-icon">on<wbr>Did<wbr>Close<span class="tsd-signature-symbol">:</span> <a href="vscode.Event.html" class="tsd-signature-type" data-tsd-kind="Interface">Event</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L9604">vscode.d.ts:9604</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An event that when fired will signal that the pty is closed and dispose of the terminal.</p>
+						</div>
+						<p>A number can be used to provide an exit code for the terminal. Exit codes must be
+							positive and a non-zero exit codes signals failure which shows a notification for a
+							regular terminal and allows dependent tasks to proceed when used with the
+						<code>CustomExecution</code> API.</p>
+						<p><strong>Example:</strong> Exit the terminal when &quot;y&quot; is pressed, otherwise show a notification.</p>
+						<pre><code class="language-typescript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">writeEmitter</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #001080">vscode</span><span style="color: #000000">.</span><span style="color: #795E26">EventEmitter</span><span style="color: #000000">&lt;</span><span style="color: #267F99">string</span><span style="color: #000000">&gt;();</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">closeEmitter</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #001080">vscode</span><span style="color: #000000">.</span><span style="color: #795E26">EventEmitter</span><span style="color: #000000">&lt;</span><span style="color: #267F99">vscode</span><span style="color: #000000">.</span><span style="color: #267F99">TerminalDimensions</span><span style="color: #000000">&gt;();</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">pty</span><span style="color: #000000">: </span><span style="color: #267F99">vscode</span><span style="color: #000000">.</span><span style="color: #267F99">Pseudoterminal</span><span style="color: #000000"> = {</span>
+<span style="color: #000000">  </span><span style="color: #001080">onDidWrite:</span><span style="color: #000000"> </span><span style="color: #001080">writeEmitter</span><span style="color: #000000">.</span><span style="color: #001080">event</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #001080">onDidClose:</span><span style="color: #000000"> </span><span style="color: #001080">closeEmitter</span><span style="color: #000000">.</span><span style="color: #001080">event</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #795E26">open</span><span style="color: #001080">:</span><span style="color: #000000"> () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #001080">writeEmitter</span><span style="color: #000000">.</span><span style="color: #795E26">fire</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;Press y to exit successfully&#039;</span><span style="color: #000000">),</span>
+<span style="color: #000000">  </span><span style="color: #795E26">close</span><span style="color: #001080">:</span><span style="color: #000000"> () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {},</span>
+<span style="color: #000000">  </span><span style="color: #795E26">handleInput</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #001080">data</span><span style="color: #000000"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #AF00DB">if</span><span style="color: #000000"> (</span><span style="color: #001080">data</span><span style="color: #000000"> !== </span><span style="color: #A31515">&#039;y&#039;</span><span style="color: #000000">) {</span>
+<span style="color: #000000">      </span><span style="color: #001080">vscode</span><span style="color: #000000">.</span><span style="color: #001080">window</span><span style="color: #000000">.</span><span style="color: #795E26">showInformationMessage</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;Something went wrong&#039;</span><span style="color: #000000">);</span>
+<span style="color: #000000">    }</span>
+<span style="color: #000000">    </span><span style="color: #001080">closeEmitter</span><span style="color: #000000">.</span><span style="color: #795E26">fire</span><span style="color: #000000">();</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">};</span>
+<span style="color: #001080">vscode</span><span style="color: #000000">.</span><span style="color: #001080">window</span><span style="color: #000000">.</span><span style="color: #795E26">createTerminal</span><span style="color: #000000">({ </span><span style="color: #001080">name:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Exit example&#039;</span><span style="color: #000000">, </span><span style="color: #001080">pty</span><span style="color: #000000"> });</span>
+</code></pre>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="onDidChangeName" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> on<wbr>Did<wbr>Change<wbr>Name</h3>
+					<div class="tsd-signature tsd-kind-icon">on<wbr>Did<wbr>Change<wbr>Name<span class="tsd-signature-symbol">:</span> <a href="vscode.Event.html" class="tsd-signature-type" data-tsd-kind="Interface">Event</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L9622">vscode.d.ts:9622</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An event that when fired allows changing the name of the terminal.</p>
+						</div>
+						<p><strong>Example:</strong> Change the terminal name to &quot;My new terminal&quot;.</p>
+						<pre><code class="language-typescript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">writeEmitter</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #001080">vscode</span><span style="color: #000000">.</span><span style="color: #795E26">EventEmitter</span><span style="color: #000000">&lt;</span><span style="color: #267F99">string</span><span style="color: #000000">&gt;();</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">changeNameEmitter</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #001080">vscode</span><span style="color: #000000">.</span><span style="color: #795E26">EventEmitter</span><span style="color: #000000">&lt;</span><span style="color: #267F99">string</span><span style="color: #000000">&gt;();</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">pty</span><span style="color: #000000">: </span><span style="color: #267F99">vscode</span><span style="color: #000000">.</span><span style="color: #267F99">Pseudoterminal</span><span style="color: #000000"> = {</span>
+<span style="color: #000000">  </span><span style="color: #001080">onDidWrite:</span><span style="color: #000000"> </span><span style="color: #001080">writeEmitter</span><span style="color: #000000">.</span><span style="color: #001080">event</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #001080">onDidChangeName:</span><span style="color: #000000"> </span><span style="color: #001080">changeNameEmitter</span><span style="color: #000000">.</span><span style="color: #001080">event</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #795E26">open</span><span style="color: #001080">:</span><span style="color: #000000"> () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #001080">changeNameEmitter</span><span style="color: #000000">.</span><span style="color: #795E26">fire</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;My new terminal&#039;</span><span style="color: #000000">),</span>
+<span style="color: #000000">  </span><span style="color: #795E26">close</span><span style="color: #001080">:</span><span style="color: #000000"> () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {}</span>
+<span style="color: #000000">};</span>
+<span style="color: #001080">vscode</span><span style="color: #000000">.</span><span style="color: #001080">window</span><span style="color: #000000">.</span><span style="color: #795E26">createTerminal</span><span style="color: #000000">({ </span><span style="color: #001080">name:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;My terminal&#039;</span><span style="color: #000000">, </span><span style="color: #001080">pty</span><span style="color: #000000"> });</span>
+</code></pre>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods（4）</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="open" class="tsd-anchor"></a>
+					<h3>open</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">open<span class="tsd-signature-symbol">(</span>initialDimensions<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="vscode.TerminalDimensions.html" class="tsd-signature-type" data-tsd-kind="Interface">TerminalDimensions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L9630">vscode.d.ts:9630</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Implement to handle when the pty is open and ready to start firing events.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>initialDimensions: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="vscode.TerminalDimensions.html" class="tsd-signature-type" data-tsd-kind="Interface">TerminalDimensions</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The dimensions of the terminal, this will be undefined if the
+										terminal panel has not been opened before this is called.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="close" class="tsd-anchor"></a>
+					<h3>close</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">close<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L9635">vscode.d.ts:9635</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Implement to handle when the terminal is closed by an act of the user.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="handleInput" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> handle<wbr>Input</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">handle<wbr>Input<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L9657">vscode.d.ts:9657</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Implement to handle incoming keystrokes in the terminal or when an extension calls
+										<a href="vscode.Terminal.html#sendText">Terminal.sendText</a>. <code>data</code> contains the keystrokes/text serialized into
+									their corresponding VT sequence representation.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>data: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The incoming data.</p>
+										<p><strong>Example:</strong> Echo input in the terminal. The sequence for enter (<code>\r</code>) is translated to
+										CRLF to go to a new line and move the cursor to the start of the line.</p>
+										<pre><code class="language-typescript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">writeEmitter</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #001080">vscode</span><span style="color: #000000">.</span><span style="color: #795E26">EventEmitter</span><span style="color: #000000">&lt;</span><span style="color: #267F99">string</span><span style="color: #000000">&gt;();</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">pty</span><span style="color: #000000">: </span><span style="color: #267F99">vscode</span><span style="color: #000000">.</span><span style="color: #267F99">Pseudoterminal</span><span style="color: #000000"> = {</span>
+<span style="color: #000000">  </span><span style="color: #001080">onDidWrite:</span><span style="color: #000000"> </span><span style="color: #001080">writeEmitter</span><span style="color: #000000">.</span><span style="color: #001080">event</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #795E26">open</span><span style="color: #001080">:</span><span style="color: #000000"> () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {},</span>
+<span style="color: #000000">  </span><span style="color: #795E26">close</span><span style="color: #001080">:</span><span style="color: #000000"> () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {},</span>
+<span style="color: #000000">  </span><span style="color: #795E26">handleInput</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #001080">data</span><span style="color: #000000"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #001080">writeEmitter</span><span style="color: #000000">.</span><span style="color: #795E26">fire</span><span style="color: #000000">(</span><span style="color: #001080">data</span><span style="color: #000000"> === </span><span style="color: #A31515">&#039;</span><span style="color: #EE0000">\r</span><span style="color: #A31515">&#039;</span><span style="color: #000000"> ? </span><span style="color: #A31515">&#039;</span><span style="color: #EE0000">\r\n</span><span style="color: #A31515">&#039;</span><span style="color: #000000"> : </span><span style="color: #001080">data</span><span style="color: #000000">)</span>
+<span style="color: #000000">};</span>
+<span style="color: #001080">vscode</span><span style="color: #000000">.</span><span style="color: #001080">window</span><span style="color: #000000">.</span><span style="color: #795E26">createTerminal</span><span style="color: #000000">({ </span><span style="color: #001080">name:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Local echo&#039;</span><span style="color: #000000">, </span><span style="color: #001080">pty</span><span style="color: #000000"> });</span>
+</code></pre>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="setDimensions" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> set<wbr>Dimensions</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Dimensions<span class="tsd-signature-symbol">(</span>dimensions<span class="tsd-signature-symbol">: </span><a href="vscode.TerminalDimensions.html" class="tsd-signature-type" data-tsd-kind="Interface">TerminalDimensions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L9672">vscode.d.ts:9672</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Implement to handle when the number of rows and columns that fit into the terminal panel
+										changes, for example when font size changes or when the panel is resized. The initial
+										state of a terminal&#39;s dimensions should be treated as <code>undefined</code> until this is triggered
+									as the size of a terminal isn&#39;t known until it shows up in the user interface.</p>
+								</div>
+								<p>When dimensions are overridden by
+									<a href="vscode.Pseudoterminal.html#onDidOverrideDimensions">onDidOverrideDimensions</a>, <code>setDimensions</code> will
+									continue to be called with the regular panel dimensions, allowing the extension continue
+								to react dimension changes.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>dimensions: <a href="vscode.TerminalDimensions.html" class="tsd-signature-type" data-tsd-kind="Interface">TerminalDimensions</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The new dimensions.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Exports</a>
+					</li>
+					<li class="current tsd-kind-namespace">
+						<a href="../modules/vscode.html">vscode</a>
+						<ul>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.authentication.html">authentication</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.commands.html">commands</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.comments.html">comments</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.debug.html">debug</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.env.html">env</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.extensions.html">extensions</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.languages.html">languages</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.notebooks.html">notebooks</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.scm.html">scm</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.tasks.html">tasks</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.tests.html">tests</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.window.html">window</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/vscode.workspace.html">workspace</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="vscode.Pseudoterminal.html" class="tsd-kind-icon">Pseudoterminal</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.Pseudoterminal.html#onDidWrite" class="tsd-kind-icon">on<wbr>Did<wbr>Write</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.Pseudoterminal.html#onDidOverrideDimensions" class="tsd-kind-icon">on<wbr>Did<wbr>Override<wbr>Dimensions</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.Pseudoterminal.html#onDidClose" class="tsd-kind-icon">on<wbr>Did<wbr>Close</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vscode.Pseudoterminal.html#onDidChangeName" class="tsd-kind-icon">on<wbr>Did<wbr>Change<wbr>Name</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="vscode.Pseudoterminal.html#open" class="tsd-kind-icon">open</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="vscode.Pseudoterminal.html#close" class="tsd-kind-icon">close</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="vscode.Pseudoterminal.html#handleInput" class="tsd-kind-icon">handle<wbr>Input</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="vscode.Pseudoterminal.html#setDimensions" class="tsd-kind-icon">set<wbr>Dimensions</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>图例</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p><a href="https://liiked.github.io/VS-Code-Extension-Doc-ZH/" target="_blank">VS Code 插件开发中文文档</a> | <a href="https://jeasonstudio.gitbooks.io/vscode-cn-doc/content/" target="_blank">VS Code 中文文档</a> | <a href="https://code.visualstudio.com/docs" target="_blank">VS Code 官网文档</a> | <a href="https://marketplace.visualstudio.com/" target="_blank">VS Code 扩展市场</a></p>
+	<p>Generated by <a href="https://typedoc.org/" target="_blank">TypeDoc</a> | <a href="https://www.cnzz.com/stat/website.php?web_id=1280241129" target="_blank" title="VS Code 官网文档站长统计">站长统计</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1280241129'%3E%3C/span%3E%3Cscript src='https://s9.cnzz.com/z_stat.php%3Fid%3D1280241129' type='text/javascript'%3E%3C/script%3E"));</script>
+<a href="https://github.com/youngjuning/vscode-api-cn" target="_blank" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: fixed; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+</body>
+</html>

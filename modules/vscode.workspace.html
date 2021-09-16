@@ -1,0 +1,2155 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>workspace | VS Code API 中文文档</title>
+	<meta name="description" content="Documentation for VS Code API 中文文档">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="https://code.visualstudio.com/favicon.ico" sizes="128x128">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+	<style>
+        a[title="站长统计"] {
+            display: none;
+        }
+        .github-corner svg {
+            z-index: 1;
+        }
+        .github-corner:hover .octo-arm {
+            animation:octocat-wave 560ms ease-in-out
+        }
+        @keyframes octocat-wave {
+            0%,100%{transform:rotate(0)}
+            20%,60%{transform:rotate(-25deg)}
+            40%,80%{transform:rotate(10deg)}
+        }
+        @media (max-width:500px) {
+            .github-corner:hover
+            .octo-arm{animation:none}
+            .github-corner .octo-arm{
+                animation:octocat-wave 560ms ease-in-out
+            }
+        }
+        .container-main {
+            padding-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">VS Code API 中文文档</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">VS Code API 中文文档</a>
+				</li>
+				<li>
+					<a href="vscode.html">vscode</a>
+				</li>
+				<li>
+					<a href="vscode.workspace.html">workspace</a>
+				</li>
+			</ul>
+			<h1>Namespace workspace</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Namespace for dealing with the current workspace. A workspace is the collection of one
+						or more folders that are opened in an editor window (instance).</p>
+					</div>
+					<p>It is also possible to open an editor without a workspace. For example, when you open a
+						new editor window by selecting a file from your platform&#39;s File menu, you will not be
+						inside a workspace. In this mode, some of the editor&#39;s capabilities are reduced but you can
+					still open text files and edit them.</p>
+					<p>Refer to <a href="https://code.visualstudio.com/docs/editor/workspaces">https://code.visualstudio.com/docs/editor/workspaces</a> for more information on
+					the concept of workspaces.</p>
+					<p>The workspace offers support for <a href="vscode.workspace.html#createFileSystemWatcher">listening</a> to fs
+						events and for <a href="vscode.workspace.html#findFiles">finding</a> files. Both perform well and run <em>outside</em>
+					the editor-process so that they should be always used instead of nodejs-equivalents.</p>
+					<dl class="tsd-comment-tags">
+						<dt>maintainer</dt>
+						<dd><p><a href="https://github.com/gepingli" class="external">@gepingli</a></p>
+						</dd>
+					</dl>
+				</div>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>索引</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Variables（8）</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable tsd-parent-kind-namespace"><a href="vscode.workspace.html#fs" class="tsd-kind-icon">fs</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-namespace"><a href="vscode.workspace.html#rootPath" class="tsd-kind-icon">root<wbr>Path</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-namespace"><a href="vscode.workspace.html#workspaceFolders" class="tsd-kind-icon">workspace<wbr>Folders</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-namespace"><a href="vscode.workspace.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-namespace"><a href="vscode.workspace.html#workspaceFile" class="tsd-kind-icon">workspace<wbr>File</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-namespace"><a href="vscode.workspace.html#textDocuments" class="tsd-kind-icon">text<wbr>Documents</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-namespace"><a href="vscode.workspace.html#notebookDocuments" class="tsd-kind-icon">notebook<wbr>Documents</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-namespace"><a href="vscode.workspace.html#isTrusted" class="tsd-kind-icon">is<wbr>Trusted</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions（30）</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="vscode.workspace.html#onDidChangeWorkspaceFolders" class="tsd-kind-icon">on<wbr>Did<wbr>Change<wbr>Workspace<wbr>Folders</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="vscode.workspace.html#getWorkspaceFolder" class="tsd-kind-icon">get<wbr>Workspace<wbr>Folder</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="vscode.workspace.html#asRelativePath" class="tsd-kind-icon">as<wbr>Relative<wbr>Path</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="vscode.workspace.html#updateWorkspaceFolders" class="tsd-kind-icon">update<wbr>Workspace<wbr>Folders</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="vscode.workspace.html#createFileSystemWatcher" class="tsd-kind-icon">create<wbr>File<wbr>System<wbr>Watcher</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="vscode.workspace.html#findFiles" class="tsd-kind-icon">find<wbr>Files</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="vscode.workspace.html#saveAll" class="tsd-kind-icon">save<wbr>All</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="vscode.workspace.html#applyEdit" class="tsd-kind-icon">apply<wbr>Edit</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="vscode.workspace.html#openTextDocument" class="tsd-kind-icon">open<wbr>Text<wbr>Document</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="vscode.workspace.html#registerTextDocumentContentProvider" class="tsd-kind-icon">register<wbr>Text<wbr>Document<wbr>Content<wbr>Provider</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="vscode.workspace.html#onDidOpenTextDocument" class="tsd-kind-icon">on<wbr>Did<wbr>Open<wbr>Text<wbr>Document</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="vscode.workspace.html#onDidCloseTextDocument" class="tsd-kind-icon">on<wbr>Did<wbr>Close<wbr>Text<wbr>Document</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="vscode.workspace.html#onDidChangeTextDocument" class="tsd-kind-icon">on<wbr>Did<wbr>Change<wbr>Text<wbr>Document</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="vscode.workspace.html#onWillSaveTextDocument" class="tsd-kind-icon">on<wbr>Will<wbr>Save<wbr>Text<wbr>Document</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="vscode.workspace.html#onDidSaveTextDocument" class="tsd-kind-icon">on<wbr>Did<wbr>Save<wbr>Text<wbr>Document</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="vscode.workspace.html#openNotebookDocument" class="tsd-kind-icon">open<wbr>Notebook<wbr>Document</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="vscode.workspace.html#registerNotebookSerializer" class="tsd-kind-icon">register<wbr>Notebook<wbr>Serializer</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="vscode.workspace.html#onDidOpenNotebookDocument" class="tsd-kind-icon">on<wbr>Did<wbr>Open<wbr>Notebook<wbr>Document</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="vscode.workspace.html#onDidCloseNotebookDocument" class="tsd-kind-icon">on<wbr>Did<wbr>Close<wbr>Notebook<wbr>Document</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="vscode.workspace.html#onWillCreateFiles" class="tsd-kind-icon">on<wbr>Will<wbr>Create<wbr>Files</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="vscode.workspace.html#onDidCreateFiles" class="tsd-kind-icon">on<wbr>Did<wbr>Create<wbr>Files</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="vscode.workspace.html#onWillDeleteFiles" class="tsd-kind-icon">on<wbr>Will<wbr>Delete<wbr>Files</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="vscode.workspace.html#onDidDeleteFiles" class="tsd-kind-icon">on<wbr>Did<wbr>Delete<wbr>Files</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="vscode.workspace.html#onWillRenameFiles" class="tsd-kind-icon">on<wbr>Will<wbr>Rename<wbr>Files</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="vscode.workspace.html#onDidRenameFiles" class="tsd-kind-icon">on<wbr>Did<wbr>Rename<wbr>Files</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="vscode.workspace.html#getConfiguration" class="tsd-kind-icon">get<wbr>Configuration</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="vscode.workspace.html#onDidChangeConfiguration" class="tsd-kind-icon">on<wbr>Did<wbr>Change<wbr>Configuration</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="vscode.workspace.html#registerTaskProvider" class="tsd-kind-icon">register<wbr>Task<wbr>Provider</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="vscode.workspace.html#registerFileSystemProvider" class="tsd-kind-icon">register<wbr>File<wbr>System<wbr>Provider</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="vscode.workspace.html#onDidGrantWorkspaceTrust" class="tsd-kind-icon">on<wbr>Did<wbr>Grant<wbr>Workspace<wbr>Trust</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Variables（8）</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-namespace">
+					<a name="fs" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> fs</h3>
+					<div class="tsd-signature tsd-kind-icon">fs<span class="tsd-signature-symbol">:</span> <a href="../interfaces/vscode.FileSystem.html" class="tsd-signature-type" data-tsd-kind="Interface">FileSystem</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10479">vscode.d.ts:10479</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A <a href="../interfaces/vscode.FileSystem.html">file system</a> instance that allows to interact with local and remote
+								files, e.g. <code>vscode.workspace.fs.readDirectory(someUri)</code> allows to retrieve all entries
+								of a directory or <code>vscode.workspace.fs.stat(anotherUri)</code> returns the meta data for a
+							file.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-namespace">
+					<a name="rootPath" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> root<wbr>Path</h3>
+					<div class="tsd-signature tsd-kind-icon">root<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10490">vscode.d.ts:10490</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The uri of the first entry of <a href="vscode.workspace.html#workspaceFolders"><code>workspaceFolders</code></a>
+							as <code>string</code>. <code>undefined</code> if there is no first entry.</p>
+						</div>
+						<p>Refer to <a href="https://code.visualstudio.com/docs/editor/workspaces">https://code.visualstudio.com/docs/editor/workspaces</a> for more information
+						on workspaces.</p>
+						<dl class="tsd-comment-tags">
+							<dt>deprecated</dt>
+							<dd><p>Use <a href="vscode.workspace.html#workspaceFolders"><code>workspaceFolders</code></a> instead.</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-namespace">
+					<a name="workspaceFolders" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> workspace<wbr>Folders</h3>
+					<div class="tsd-signature tsd-kind-icon">workspace<wbr>Folders<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">readonly </span><a href="../interfaces/vscode.WorkspaceFolder.html" class="tsd-signature-type" data-tsd-kind="Interface">WorkspaceFolder</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10499">vscode.d.ts:10499</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>List of workspace folders (0-N) that are open in the editor. <code>undefined</code> when no workspace
+							has been opened.</p>
+						</div>
+						<p>Refer to <a href="https://code.visualstudio.com/docs/editor/workspaces">https://code.visualstudio.com/docs/editor/workspaces</a> for more information
+						on workspaces.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-namespace">
+					<a name="name" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> name</h3>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10508">vscode.d.ts:10508</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of the workspace. <code>undefined</code> when no workspace
+							has been opened.</p>
+						</div>
+						<p>Refer to <a href="https://code.visualstudio.com/docs/editor/workspaces">https://code.visualstudio.com/docs/editor/workspaces</a> for more information on
+						the concept of workspaces.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-namespace">
+					<a name="workspaceFile" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> workspace<wbr>File</h3>
+					<div class="tsd-signature tsd-kind-icon">workspace<wbr>File<span class="tsd-signature-symbol">:</span> <a href="../classes/vscode.Uri.html" class="tsd-signature-type" data-tsd-kind="Class">Uri</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10542">vscode.d.ts:10542</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The location of the workspace file, for example:</p>
+						</div>
+						<p><code>file:///Users/name/Development/myProject.code-workspace</code></p>
+						<p>or</p>
+						<p><code>untitled:1555503116870</code></p>
+						<p>for a workspace that is untitled and not yet saved.</p>
+						<p>Depending on the workspace that is opened, the value will be:</p>
+						<ul>
+							<li><code>undefined</code> when no workspace is opened</li>
+							<li>the path of the workspace file as <code>Uri</code> otherwise. if the workspace
+							is untitled, the returned URI will use the <code>untitled:</code> scheme</li>
+						</ul>
+						<p>The location can e.g. be used with the <code>vscode.openFolder</code> command to
+						open the workspace again after it has been closed.</p>
+						<p><strong>Example:</strong></p>
+						<pre><code class="language-typescript"><span style="color: #001080">vscode</span><span style="color: #000000">.</span><span style="color: #001080">commands</span><span style="color: #000000">.</span><span style="color: #795E26">executeCommand</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;vscode.openFolder&#039;</span><span style="color: #000000">, </span><span style="color: #001080">uriOfWorkspace</span><span style="color: #000000">);</span>
+</code></pre>
+						<p>Refer to <a href="https://code.visualstudio.com/docs/editor/workspaces">https://code.visualstudio.com/docs/editor/workspaces</a> for more information on
+						the concept of workspaces.</p>
+						<p><strong>Note:</strong> it is not advised to use <code>workspace.workspaceFile</code> to write
+							configuration data into the file. You can use <code>workspace.getConfiguration().update()</code>
+							for that purpose which will work both when a single folder is opened as
+						well as an untitled or saved workspace.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-namespace">
+					<a name="textDocuments" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> text<wbr>Documents</h3>
+					<div class="tsd-signature tsd-kind-icon">text<wbr>Documents<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">readonly </span><a href="../interfaces/vscode.TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10683">vscode.d.ts:10683</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>All text documents currently known to the editor.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-namespace">
+					<a name="notebookDocuments" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> notebook<wbr>Documents</h3>
+					<div class="tsd-signature tsd-kind-icon">notebook<wbr>Documents<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">readonly </span><a href="../interfaces/vscode.NotebookDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookDocument</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10792">vscode.d.ts:10792</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>All notebook documents currently known to the editor.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-namespace">
+					<a name="isTrusted" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> is<wbr>Trusted</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Trusted<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10965">vscode.d.ts:10965</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>When true, the user has explicitly trusted the contents of the workspace.</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions（30）</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="onDidChangeWorkspaceFolders" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> on<wbr>Did<wbr>Change<wbr>Workspace<wbr>Folders</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Did<wbr>Change<wbr>Workspace<wbr>Folders<span class="tsd-signature-symbol">(</span>listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.WorkspaceFoldersChangeEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">WorkspaceFoldersChangeEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span>, thisArgs<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, disposables<span class="tsd-signature-symbol">?: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10547">vscode.d.ts:10547</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>An event that is emitted when a workspace folder is added or removed.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>listener: <span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.WorkspaceFoldersChangeEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">WorkspaceFoldersChangeEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.WorkspaceFoldersChangeEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">WorkspaceFoldersChangeEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>e: <a href="../interfaces/vscode.WorkspaceFoldersChangeEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">WorkspaceFoldersChangeEvent</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> thisArgs: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> disposables: <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="getWorkspaceFolder" class="tsd-anchor"></a>
+					<h3>get<wbr>Workspace<wbr>Folder</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Workspace<wbr>Folder<span class="tsd-signature-symbol">(</span>uri<span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Uri.html" class="tsd-signature-type" data-tsd-kind="Class">Uri</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.WorkspaceFolder.html" class="tsd-signature-type" data-tsd-kind="Interface">WorkspaceFolder</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10557">vscode.d.ts:10557</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the <a href="../interfaces/vscode.WorkspaceFolder.html">workspace folder</a> that contains a given uri.</p>
+									<ul>
+										<li>returns <code>undefined</code> when the given uri doesn&#39;t match any workspace folder</li>
+										<li>returns the <em>input</em> when the given uri is a workspace folder itself</li>
+									</ul>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>uri: <a href="../classes/vscode.Uri.html" class="tsd-signature-type" data-tsd-kind="Class">Uri</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>An uri.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/vscode.WorkspaceFolder.html" class="tsd-signature-type" data-tsd-kind="Interface">WorkspaceFolder</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+							<p>A workspace folder or <code>undefined</code></p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="asRelativePath" class="tsd-anchor"></a>
+					<h3>as<wbr>Relative<wbr>Path</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">as<wbr>Relative<wbr>Path<span class="tsd-signature-symbol">(</span>pathOrUri<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../classes/vscode.Uri.html" class="tsd-signature-type" data-tsd-kind="Class">Uri</a>, includeWorkspaceFolder<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10571">vscode.d.ts:10571</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a path that is relative to the workspace folder or folders.</p>
+								</div>
+								<p>When there are no <a href="vscode.workspace.html#workspaceFolders">workspace folders</a> or when the path
+								is not contained in them, the input is returned.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>pathOrUri: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../classes/vscode.Uri.html" class="tsd-signature-type" data-tsd-kind="Class">Uri</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A path or uri. When a uri is given its <a href="../classes/vscode.Uri.html#fsPath">fsPath</a> is used.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> includeWorkspaceFolder: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>When <code>true</code> and when the given path is contained inside a
+											workspace folder the name of the workspace is prepended. Defaults to <code>true</code> when there are
+										multiple workspace folders and <code>false</code> otherwise.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<p>A path relative to the root or the input.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="updateWorkspaceFolders" class="tsd-anchor"></a>
+					<h3>update<wbr>Workspace<wbr>Folders</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">update<wbr>Workspace<wbr>Folders<span class="tsd-signature-symbol">(</span>start<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, deleteCount<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span>, <span class="tsd-signature-symbol">...</span>workspaceFoldersToAdd<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>uri<span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Uri.html" class="tsd-signature-type" data-tsd-kind="Class">Uri</a><span class="tsd-signature-symbol">; </span>name<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10614">vscode.d.ts:10614</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>This method replaces <code>deleteCount</code> <a href="vscode.workspace.html#workspaceFolders">workspace folders</a> starting at index <code>start</code>
+										by an optional set of <code>workspaceFoldersToAdd</code> on the <code>vscode.workspace.workspaceFolders</code> array. This &quot;splice&quot;
+									behavior can be used to add, remove and change workspace folders in a single operation.</p>
+								</div>
+								<p>If the first workspace folder is added, removed or changed, the currently executing extensions (including the
+									one that called this method) will be terminated and restarted so that the (deprecated) <code>rootPath</code> property is
+								updated to point to the first workspace folder.</p>
+								<p>Use the <a href="vscode.workspace.html#onDidChangeWorkspaceFolders"><code>onDidChangeWorkspaceFolders()</code></a> event to get notified when the
+								workspace folders have been updated.</p>
+								<p><strong>Example:</strong> adding a new workspace folder at the end of workspace folders</p>
+								<pre><code class="language-typescript"><span style="color: #001080">workspace</span><span style="color: #000000">.</span><span style="color: #795E26">updateWorkspaceFolders</span><span style="color: #000000">(</span><span style="color: #001080">workspace</span><span style="color: #000000">.</span><span style="color: #001080">workspaceFolders</span><span style="color: #000000"> ? </span><span style="color: #001080">workspace</span><span style="color: #000000">.</span><span style="color: #001080">workspaceFolders</span><span style="color: #000000">.</span><span style="color: #001080">length</span><span style="color: #000000"> : </span><span style="color: #098658">0</span><span style="color: #000000">, </span><span style="color: #0000FF">null</span><span style="color: #000000">, { </span><span style="color: #001080">uri:</span><span style="color: #000000"> ...});</span>
+</code></pre>
+								<p><strong>Example:</strong> removing the first workspace folder</p>
+								<pre><code class="language-typescript"><span style="color: #001080">workspace</span><span style="color: #000000">.</span><span style="color: #795E26">updateWorkspaceFolders</span><span style="color: #000000">(</span><span style="color: #098658">0</span><span style="color: #000000">, </span><span style="color: #098658">1</span><span style="color: #000000">);</span>
+</code></pre>
+								<p><strong>Example:</strong> replacing an existing workspace folder with a new one</p>
+								<pre><code class="language-typescript"><span style="color: #001080">workspace</span><span style="color: #000000">.</span><span style="color: #795E26">updateWorkspaceFolders</span><span style="color: #000000">(</span><span style="color: #098658">0</span><span style="color: #000000">, </span><span style="color: #098658">1</span><span style="color: #000000">, { </span><span style="color: #001080">uri:</span><span style="color: #000000"> ...});</span>
+</code></pre>
+								<p>It is valid to remove an existing workspace folder and add it again with a different name
+								to rename that folder.</p>
+								<p><strong>Note:</strong> it is not valid to call <a href="vscode.workspace.html#updateWorkspaceFolders">updateWorkspaceFolders()</a> multiple times
+								without waiting for the <a href="vscode.workspace.html#onDidChangeWorkspaceFolders"><code>onDidChangeWorkspaceFolders()</code></a> to fire.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>start: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the zero-based location in the list of currently opened <a href="../interfaces/vscode.WorkspaceFolder.html">workspace folders</a>
+										from which to start deleting workspace folders.</p>
+									</div>
+								</li>
+								<li>
+									<h5>deleteCount: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the optional number of workspace folders to remove.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>workspaceFoldersToAdd: <span class="tsd-signature-symbol">{ </span>uri<span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Uri.html" class="tsd-signature-type" data-tsd-kind="Class">Uri</a><span class="tsd-signature-symbol">; </span>name<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the optional variable set of workspace folders to add in place of the deleted ones.
+										Each workspace is identified with a mandatory URI and an optional name.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>true if the operation was successfully started and false otherwise if arguments were used that would result
+							in invalid workspace folder state (e.g. 2 folders with the same URI).</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="createFileSystemWatcher" class="tsd-anchor"></a>
+					<h3>create<wbr>File<wbr>System<wbr>Watcher</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>File<wbr>System<wbr>Watcher<span class="tsd-signature-symbol">(</span>globPattern<span class="tsd-signature-symbol">: </span><a href="vscode.html#GlobPattern" class="tsd-signature-type" data-tsd-kind="Type alias">GlobPattern</a>, ignoreCreateEvents<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, ignoreChangeEvents<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, ignoreDeleteEvents<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.FileSystemWatcher.html" class="tsd-signature-type" data-tsd-kind="Interface">FileSystemWatcher</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10633">vscode.d.ts:10633</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a file system watcher.</p>
+								</div>
+								<p>A glob pattern that filters the file events on their absolute path must be provided. Optionally,
+								flags to ignore certain kinds of events can be provided. To stop listening to events the watcher must be disposed.</p>
+								<p><em>Note</em> that only files within the current <a href="vscode.workspace.html#workspaceFolders">workspace folders</a> can be watched.
+									<em>Note</em> that when watching for file changes such as &#39;*<em>​/</em>.js&#39;, notifications will not be sent when a parent folder is
+								moved or deleted (this is a known limitation of the current implementation and may change in the future).</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>globPattern: <a href="vscode.html#GlobPattern" class="tsd-signature-type" data-tsd-kind="Type alias">GlobPattern</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A <a href="vscode.html#GlobPattern">glob pattern</a> that is applied to the absolute paths of created, changed,
+										and deleted files. Use a <a href="../classes/vscode.RelativePattern.html">relative pattern</a> to limit events to a certain <a href="../interfaces/vscode.WorkspaceFolder.html">workspace folder</a>.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ignoreCreateEvents: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Ignore when files have been created.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ignoreChangeEvents: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Ignore when files have been changed.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ignoreDeleteEvents: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Ignore when files have been deleted.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/vscode.FileSystemWatcher.html" class="tsd-signature-type" data-tsd-kind="Interface">FileSystemWatcher</a></h4>
+							<p>A new file system watcher instance.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="findFiles" class="tsd-anchor"></a>
+					<h3>find<wbr>Files</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">find<wbr>Files<span class="tsd-signature-symbol">(</span>include<span class="tsd-signature-symbol">: </span><a href="vscode.html#GlobPattern" class="tsd-signature-type" data-tsd-kind="Type alias">GlobPattern</a>, exclude<span class="tsd-signature-symbol">?: </span><a href="vscode.html#GlobPattern" class="tsd-signature-type" data-tsd-kind="Type alias">GlobPattern</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span>, maxResults<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, token<span class="tsd-signature-symbol">?: </span><a href="../interfaces/vscode.CancellationToken.html" class="tsd-signature-type" data-tsd-kind="Interface">CancellationToken</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><a href="../classes/vscode.Uri.html" class="tsd-signature-type" data-tsd-kind="Class">Uri</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10652">vscode.d.ts:10652</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Find files across all <a href="vscode.workspace.html#workspaceFolders">workspace folders</a> in the workspace.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><p>findFiles(&#39;*<em>​/</em>.js&#39;, &#39;<strong>​/node_modules/</strong>&#39;, 10)</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>include: <a href="vscode.html#GlobPattern" class="tsd-signature-type" data-tsd-kind="Type alias">GlobPattern</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A <a href="vscode.html#GlobPattern">glob pattern</a> that defines the files to search for. The glob pattern
+											will be matched against the file paths of resulting matches relative to their workspace. Use a <a href="../classes/vscode.RelativePattern.html">relative pattern</a>
+										to restrict the search results to a <a href="../interfaces/vscode.WorkspaceFolder.html">workspace folder</a>.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> exclude: <a href="vscode.html#GlobPattern" class="tsd-signature-type" data-tsd-kind="Type alias">GlobPattern</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A <a href="vscode.html#GlobPattern">glob pattern</a> that defines files and folders to exclude. The glob pattern
+											will be matched against the file paths of resulting matches relative to their workspace. When <code>undefined</code>, default excludes and the user&#39;s
+										configured excludes will apply. When <code>null</code>, no excludes will apply.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> maxResults: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>An upper-bound for the result.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> token: <a href="../interfaces/vscode.CancellationToken.html" class="tsd-signature-type" data-tsd-kind="Interface">CancellationToken</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A token that can be used to signal cancellation to the underlying search engine.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><a href="../classes/vscode.Uri.html" class="tsd-signature-type" data-tsd-kind="Class">Uri</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>A thenable that resolves to an array of resource identifiers. Will return no results if no
+							<a href="vscode.workspace.html#workspaceFolders">workspace folders</a> are opened.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="saveAll" class="tsd-anchor"></a>
+					<h3>save<wbr>All</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">save<wbr>All<span class="tsd-signature-symbol">(</span>includeUntitled<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10660">vscode.d.ts:10660</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Save all dirty files.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> includeUntitled: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Also save files that have been created during this session.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>A thenable that resolves when the files have been saved.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="applyEdit" class="tsd-anchor"></a>
+					<h3>apply<wbr>Edit</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">apply<wbr>Edit<span class="tsd-signature-symbol">(</span>edit<span class="tsd-signature-symbol">: </span><a href="../classes/vscode.WorkspaceEdit.html" class="tsd-signature-type" data-tsd-kind="Class">WorkspaceEdit</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10678">vscode.d.ts:10678</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Make changes to one or many resources or create, delete, and rename resources as defined by the given
+									<a href="../classes/vscode.WorkspaceEdit.html">workspace edit</a>.</p>
+								</div>
+								<p>All changes of a workspace edit are applied in the same order in which they have been added. If
+									multiple textual inserts are made at the same position, these strings appear in the resulting text
+									in the order the &#39;inserts&#39; were made, unless that are interleaved with resource edits. Invalid sequences
+								like &#39;delete file a&#39; -&gt; &#39;insert text in file a&#39; cause failure of the operation.</p>
+								<p>When applying a workspace edit that consists only of text edits an &#39;all-or-nothing&#39;-strategy is used.
+									A workspace edit with resource creations or deletions aborts the operation, e.g. consecutive edits will
+								not be attempted, when a single edit fails.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>edit: <a href="../classes/vscode.WorkspaceEdit.html" class="tsd-signature-type" data-tsd-kind="Class">WorkspaceEdit</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A workspace edit.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>A thenable that resolves when the edit could be applied.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="openTextDocument" class="tsd-anchor"></a>
+					<h3>open<wbr>Text<wbr>Document</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">open<wbr>Text<wbr>Document<span class="tsd-signature-symbol">(</span>uri<span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Uri.html" class="tsd-signature-type" data-tsd-kind="Class">Uri</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/vscode.TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">open<wbr>Text<wbr>Document<span class="tsd-signature-symbol">(</span>fileName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/vscode.TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">open<wbr>Text<wbr>Document<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{ </span>language<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>content<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/vscode.TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10704">vscode.d.ts:10704</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Opens a document. Will return early if this document is already open. Otherwise
+									the document is loaded and the <a href="vscode.workspace.html#onDidOpenTextDocument">didOpen</a>-event fires.</p>
+								</div>
+								<p>The document is denoted by an <a href="../classes/vscode.Uri.html">Uri</a>. Depending on the <a href="../classes/vscode.Uri.html#scheme">scheme</a> the
+								following rules apply:</p>
+								<ul>
+									<li><code>file</code>-scheme: Open a file on disk (<code>openTextDocument(Uri.file(path))</code>). Will be rejected if the file
+									does not exist or cannot be loaded.</li>
+									<li><code>untitled</code>-scheme: Open a blank untitled file with associated path (<code>openTextDocument(Uri.file(path).with({ scheme: &#39;untitled&#39; }))</code>).
+									The language will be derived from the file name.</li>
+									<li>For all other schemes contributed <a href="../interfaces/vscode.TextDocumentContentProvider.html">text document content providers</a> and
+									<a href="../interfaces/vscode.FileSystemProvider.html">file system providers</a> are consulted.</li>
+								</ul>
+								<p><em>Note</em> that the lifecycle of the returned document is owned by the editor and not by the extension. That means an
+								<a href="vscode.workspace.html#onDidCloseTextDocument"><code>onDidClose</code></a>-event can occur at any time after opening it.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>uri: <a href="../classes/vscode.Uri.html" class="tsd-signature-type" data-tsd-kind="Class">Uri</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Identifies the resource to open.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/vscode.TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>A promise that resolves to a <a href="../interfaces/vscode.TextDocument.html">document</a>.</p>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10713">vscode.d.ts:10713</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>A short-hand for <code>openTextDocument(Uri.file(fileName))</code>.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p><a href="vscode.workspace.html#openTextDocument">openTextDocument</a></p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>fileName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A name of a file on disk.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/vscode.TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>A promise that resolves to a <a href="../interfaces/vscode.TextDocument.html">document</a>.</p>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10723">vscode.d.ts:10723</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Opens an untitled text document. The editor will prompt the user for a file
+										path when the document is to be saved. The <code>options</code> parameter allows to
+									specify the <em>language</em> and/or the <em>content</em> of the document.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-symbol">{ </span>language<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>content<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Options to control how the document will be created.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> language<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> content<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/vscode.TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>A promise that resolves to a <a href="../interfaces/vscode.TextDocument.html">document</a>.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerTextDocumentContentProvider" class="tsd-anchor"></a>
+					<h3>register<wbr>Text<wbr>Document<wbr>Content<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Text<wbr>Document<wbr>Content<wbr>Provider<span class="tsd-signature-symbol">(</span>scheme<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.TextDocumentContentProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocumentContentProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10734">vscode.d.ts:10734</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register a text document content provider.</p>
+								</div>
+								<p>Only one provider can be registered per scheme.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>scheme: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The uri-scheme to register for.</p>
+									</div>
+								</li>
+								<li>
+									<h5>provider: <a href="../interfaces/vscode.TextDocumentContentProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocumentContentProvider</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A content provider.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/vscode.Disposable.html">Disposable</a> that unregisters this provider when being disposed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="onDidOpenTextDocument" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> on<wbr>Did<wbr>Open<wbr>Text<wbr>Document</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Did<wbr>Open<wbr>Text<wbr>Document<span class="tsd-signature-symbol">(</span>listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span>, thisArgs<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, disposables<span class="tsd-signature-symbol">?: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10748">vscode.d.ts:10748</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>An event that is emitted when a <a href="../interfaces/vscode.TextDocument.html">text document</a> is opened or when the language id
+									of a text document <a href="vscode.languages.html#setTextDocumentLanguage">has been changed</a>.</p>
+								</div>
+								<p>To add an event listener when a visible text document is opened, use the <a href="../interfaces/vscode.TextEditor.html">TextEditor</a> events in the
+								<a href="vscode.window.html">window</a> namespace. Note that:</p>
+								<ul>
+									<li>The event is emitted before the <a href="../interfaces/vscode.TextDocument.html">document</a> is updated in the
+									<a href="vscode.window.html#activeTextEditor">active text editor</a></li>
+									<li>When a <a href="../interfaces/vscode.TextDocument.html">text document</a> is already open (e.g.: open in another <a href="vscode.window.html#visibleTextEditors">visible text editor</a>) this event is not emitted</li>
+								</ul>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>listener: <span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>e: <a href="../interfaces/vscode.TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> thisArgs: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> disposables: <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="onDidCloseTextDocument" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> on<wbr>Did<wbr>Close<wbr>Text<wbr>Document</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Did<wbr>Close<wbr>Text<wbr>Document<span class="tsd-signature-symbol">(</span>listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span>, thisArgs<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, disposables<span class="tsd-signature-symbol">?: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10760">vscode.d.ts:10760</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>An event that is emitted when a <a href="../interfaces/vscode.TextDocument.html">text document</a> is disposed or when the language id
+									of a text document <a href="vscode.languages.html#setTextDocumentLanguage">has been changed</a>.</p>
+								</div>
+								<p><em>Note 1:</em> There is no guarantee that this event fires when an editor tab is closed, use the
+								<a href="vscode.window.html#onDidChangeVisibleTextEditors"><code>onDidChangeVisibleTextEditors</code></a>-event to know when editors change.</p>
+								<p><em>Note 2:</em> A document can be open but not shown in an editor which means this event can fire
+								for a document that has not been shown in an editor.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>listener: <span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>e: <a href="../interfaces/vscode.TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> thisArgs: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> disposables: <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="onDidChangeTextDocument" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> on<wbr>Did<wbr>Change<wbr>Text<wbr>Document</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Did<wbr>Change<wbr>Text<wbr>Document<span class="tsd-signature-symbol">(</span>listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.TextDocumentChangeEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocumentChangeEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span>, thisArgs<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, disposables<span class="tsd-signature-symbol">?: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10767">vscode.d.ts:10767</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>An event that is emitted when a <a href="../interfaces/vscode.TextDocument.html">text document</a> is changed. This usually happens
+										when the <a href="../interfaces/vscode.TextDocument.html#getText">contents</a> changes but also when other things like the
+									<a href="../interfaces/vscode.TextDocument.html#isDirty">dirty</a>-state changes.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>listener: <span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.TextDocumentChangeEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocumentChangeEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.TextDocumentChangeEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocumentChangeEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>e: <a href="../interfaces/vscode.TextDocumentChangeEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocumentChangeEvent</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> thisArgs: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> disposables: <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="onWillSaveTextDocument" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> on<wbr>Will<wbr>Save<wbr>Text<wbr>Document</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Will<wbr>Save<wbr>Text<wbr>Document<span class="tsd-signature-symbol">(</span>listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.TextDocumentWillSaveEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocumentWillSaveEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span>, thisArgs<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, disposables<span class="tsd-signature-symbol">?: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10782">vscode.d.ts:10782</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>An event that is emitted when a <a href="../interfaces/vscode.TextDocument.html">text document</a> will be saved to disk.</p>
+								</div>
+								<p><em>Note 1:</em> Subscribers can delay saving by registering asynchronous work. For the sake of data integrity the editor
+								might save without firing this event. For instance when shutting down with dirty files.</p>
+								<p><em>Note 2:</em> Subscribers are called sequentially and they can <a href="../interfaces/vscode.TextDocumentWillSaveEvent.html#waitUntil">delay</a> saving
+								by registering asynchronous work. Protection against misbehaving listeners is implemented as such:</p>
+								<ul>
+									<li>there is an overall time budget that all listeners share and if that is exhausted no further listener is called</li>
+									<li>listeners that take a long time or produce errors frequently will not be called anymore</li>
+								</ul>
+								<p>The current thresholds are 1.5 seconds as overall time budget and a listener can misbehave 3 times before being ignored.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>listener: <span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.TextDocumentWillSaveEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocumentWillSaveEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.TextDocumentWillSaveEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocumentWillSaveEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>e: <a href="../interfaces/vscode.TextDocumentWillSaveEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocumentWillSaveEvent</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> thisArgs: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> disposables: <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="onDidSaveTextDocument" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> on<wbr>Did<wbr>Save<wbr>Text<wbr>Document</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Did<wbr>Save<wbr>Text<wbr>Document<span class="tsd-signature-symbol">(</span>listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span>, thisArgs<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, disposables<span class="tsd-signature-symbol">?: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10787">vscode.d.ts:10787</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>An event that is emitted when a <a href="../interfaces/vscode.TextDocument.html">text document</a> is saved to disk.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>listener: <span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>e: <a href="../interfaces/vscode.TextDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> thisArgs: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> disposables: <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="openNotebookDocument" class="tsd-anchor"></a>
+					<h3>open<wbr>Notebook<wbr>Document</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">open<wbr>Notebook<wbr>Document<span class="tsd-signature-symbol">(</span>uri<span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Uri.html" class="tsd-signature-type" data-tsd-kind="Class">Uri</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/vscode.NotebookDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookDocument</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">open<wbr>Notebook<wbr>Document<span class="tsd-signature-symbol">(</span>notebookType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, content<span class="tsd-signature-symbol">?: </span><a href="../classes/vscode.NotebookData.html" class="tsd-signature-type" data-tsd-kind="Class">NotebookData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/vscode.NotebookDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookDocument</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10807">vscode.d.ts:10807</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Open a notebook. Will return early if this notebook is already {@link notebook.notebookDocuments loaded}. Otherwise
+									the notebook is loaded and the {@linkcode notebook.onDidOpenNotebookDocument onDidOpenNotebookDocument}-event fires.</p>
+								</div>
+								<p><em>Note</em> that the lifecycle of the returned notebook is owned by the editor and not by the extension. That means an
+								{@linkcode notebook.onDidCloseNotebookDocument onDidCloseNotebookDocument}-event can occur at any time after.</p>
+								<p><em>Note</em> that opening a notebook does not show a notebook editor. This function only returns a notebook document which
+								can be showns in a notebook editor but it can also be used for other things.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>uri: <a href="../classes/vscode.Uri.html" class="tsd-signature-type" data-tsd-kind="Class">Uri</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The resource to open.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/vscode.NotebookDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookDocument</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>A promise that resolves to a <a href="../interfaces/vscode.NotebookDocument.html">notebook</a></p>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10818">vscode.d.ts:10818</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Open an untitled notebook. The editor will prompt the user for a file
+									path when the document is to be saved.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p><a href="vscode.workspace.html#openNotebookDocument">openNotebookDocument</a></p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>notebookType: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The notebook type that should be used.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> content: <a href="../classes/vscode.NotebookData.html" class="tsd-signature-type" data-tsd-kind="Class">NotebookData</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The initial contents of the notebook.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/vscode.NotebookDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookDocument</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>A promise that resolves to a <a href="../interfaces/vscode.NotebookDocument.html">notebook</a>.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerNotebookSerializer" class="tsd-anchor"></a>
+					<h3>register<wbr>Notebook<wbr>Serializer</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Notebook<wbr>Serializer<span class="tsd-signature-symbol">(</span>notebookType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, serializer<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.NotebookSerializer.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookSerializer</a>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/vscode.NotebookDocumentContentOptions.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookDocumentContentOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10831">vscode.d.ts:10831</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register a <a href="../interfaces/vscode.NotebookSerializer.html">notebook serializer</a>.</p>
+								</div>
+								<p>A notebook serializer must be contributed through the <code>notebooks</code> extension point. When opening a notebook file, the editor will send
+								the <code>onNotebook:&lt;notebookType&gt;</code> activation event, and extensions must register their serializer in return.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>notebookType: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A notebook.</p>
+									</div>
+								</li>
+								<li>
+									<h5>serializer: <a href="../interfaces/vscode.NotebookSerializer.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookSerializer</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A notebook serialzier.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/vscode.NotebookDocumentContentOptions.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookDocumentContentOptions</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional context options that define what parts of a notebook should be persisted</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/vscode.Disposable.html">Disposable</a> that unregisters this serializer when being disposed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="onDidOpenNotebookDocument" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> on<wbr>Did<wbr>Open<wbr>Notebook<wbr>Document</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Did<wbr>Open<wbr>Notebook<wbr>Document<span class="tsd-signature-symbol">(</span>listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.NotebookDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookDocument</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span>, thisArgs<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, disposables<span class="tsd-signature-symbol">?: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10836">vscode.d.ts:10836</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>An event that is emitted when a <a href="../interfaces/vscode.NotebookDocument.html">notebook</a> is opened.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>listener: <span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.NotebookDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookDocument</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.NotebookDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookDocument</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>e: <a href="../interfaces/vscode.NotebookDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookDocument</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> thisArgs: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> disposables: <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="onDidCloseNotebookDocument" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> on<wbr>Did<wbr>Close<wbr>Notebook<wbr>Document</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Did<wbr>Close<wbr>Notebook<wbr>Document<span class="tsd-signature-symbol">(</span>listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.NotebookDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookDocument</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span>, thisArgs<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, disposables<span class="tsd-signature-symbol">?: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10846">vscode.d.ts:10846</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>An event that is emitted when a <a href="../interfaces/vscode.NotebookDocument.html">notebook</a> is disposed.</p>
+								</div>
+								<p><em>Note 1:</em> There is no guarantee that this event fires when an editor tab is closed.</p>
+								<p><em>Note 2:</em> A notebook can be open but not shown in an editor which means this event can fire
+								for a notebook that has not been shown in an editor.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>listener: <span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.NotebookDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookDocument</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.NotebookDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookDocument</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>e: <a href="../interfaces/vscode.NotebookDocument.html" class="tsd-signature-type" data-tsd-kind="Interface">NotebookDocument</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> thisArgs: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> disposables: <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="onWillCreateFiles" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> on<wbr>Will<wbr>Create<wbr>Files</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Will<wbr>Create<wbr>Files<span class="tsd-signature-symbol">(</span>listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.FileWillCreateEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">FileWillCreateEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span>, thisArgs<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, disposables<span class="tsd-signature-symbol">?: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10858">vscode.d.ts:10858</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>An event that is emitted when files are being created.</p>
+								</div>
+								<p><em>Note 1:</em> This event is triggered by user gestures, like creating a file from the
+									explorer, or from the <a href="vscode.workspace.html#applyEdit"><code>workspace.applyEdit</code></a>-api. This event is <em>not</em> fired when
+									files change on disk, e.g triggered by another application, or when using the
+								<a href="../interfaces/vscode.FileSystem.html"><code>workspace.fs</code></a>-api.</p>
+								<p><em>Note 2:</em> When this event is fired, edits to files that are are being created cannot be applied.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>listener: <span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.FileWillCreateEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">FileWillCreateEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.FileWillCreateEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">FileWillCreateEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>e: <a href="../interfaces/vscode.FileWillCreateEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">FileWillCreateEvent</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> thisArgs: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> disposables: <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="onDidCreateFiles" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> on<wbr>Did<wbr>Create<wbr>Files</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Did<wbr>Create<wbr>Files<span class="tsd-signature-symbol">(</span>listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.FileCreateEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">FileCreateEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span>, thisArgs<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, disposables<span class="tsd-signature-symbol">?: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10868">vscode.d.ts:10868</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>An event that is emitted when files have been created.</p>
+								</div>
+								<p><em>Note:</em> This event is triggered by user gestures, like creating a file from the
+									explorer, or from the <a href="vscode.workspace.html#applyEdit"><code>workspace.applyEdit</code></a>-api, but this event is <em>not</em> fired when
+									files change on disk, e.g triggered by another application, or when using the
+								<a href="../interfaces/vscode.FileSystem.html"><code>workspace.fs</code></a>-api.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>listener: <span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.FileCreateEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">FileCreateEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.FileCreateEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">FileCreateEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>e: <a href="../interfaces/vscode.FileCreateEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">FileCreateEvent</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> thisArgs: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> disposables: <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="onWillDeleteFiles" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> on<wbr>Will<wbr>Delete<wbr>Files</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Will<wbr>Delete<wbr>Files<span class="tsd-signature-symbol">(</span>listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.FileWillDeleteEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">FileWillDeleteEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span>, thisArgs<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, disposables<span class="tsd-signature-symbol">?: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10880">vscode.d.ts:10880</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>An event that is emitted when files are being deleted.</p>
+								</div>
+								<p><em>Note 1:</em> This event is triggered by user gestures, like deleting a file from the
+									explorer, or from the <a href="vscode.workspace.html#applyEdit"><code>workspace.applyEdit</code></a>-api, but this event is <em>not</em> fired when
+									files change on disk, e.g triggered by another application, or when using the
+								<a href="../interfaces/vscode.FileSystem.html"><code>workspace.fs</code></a>-api.</p>
+								<p><em>Note 2:</em> When deleting a folder with children only one event is fired.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>listener: <span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.FileWillDeleteEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">FileWillDeleteEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.FileWillDeleteEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">FileWillDeleteEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>e: <a href="../interfaces/vscode.FileWillDeleteEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">FileWillDeleteEvent</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> thisArgs: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> disposables: <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="onDidDeleteFiles" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> on<wbr>Did<wbr>Delete<wbr>Files</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Did<wbr>Delete<wbr>Files<span class="tsd-signature-symbol">(</span>listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.FileDeleteEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">FileDeleteEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span>, thisArgs<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, disposables<span class="tsd-signature-symbol">?: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10892">vscode.d.ts:10892</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>An event that is emitted when files have been deleted.</p>
+								</div>
+								<p><em>Note 1:</em> This event is triggered by user gestures, like deleting a file from the
+									explorer, or from the <a href="vscode.workspace.html#applyEdit"><code>workspace.applyEdit</code></a>-api, but this event is <em>not</em> fired when
+									files change on disk, e.g triggered by another application, or when using the
+								<a href="../interfaces/vscode.FileSystem.html"><code>workspace.fs</code></a>-api.</p>
+								<p><em>Note 2:</em> When deleting a folder with children only one event is fired.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>listener: <span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.FileDeleteEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">FileDeleteEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.FileDeleteEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">FileDeleteEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>e: <a href="../interfaces/vscode.FileDeleteEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">FileDeleteEvent</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> thisArgs: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> disposables: <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="onWillRenameFiles" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> on<wbr>Will<wbr>Rename<wbr>Files</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Will<wbr>Rename<wbr>Files<span class="tsd-signature-symbol">(</span>listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.FileWillRenameEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">FileWillRenameEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span>, thisArgs<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, disposables<span class="tsd-signature-symbol">?: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10904">vscode.d.ts:10904</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>An event that is emitted when files are being renamed.</p>
+								</div>
+								<p><em>Note 1:</em> This event is triggered by user gestures, like renaming a file from the
+									explorer, and from the <a href="vscode.workspace.html#applyEdit"><code>workspace.applyEdit</code></a>-api, but this event is <em>not</em> fired when
+									files change on disk, e.g triggered by another application, or when using the
+								<a href="../interfaces/vscode.FileSystem.html"><code>workspace.fs</code></a>-api.</p>
+								<p><em>Note 2:</em> When renaming a folder with children only one event is fired.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>listener: <span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.FileWillRenameEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">FileWillRenameEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.FileWillRenameEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">FileWillRenameEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>e: <a href="../interfaces/vscode.FileWillRenameEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">FileWillRenameEvent</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> thisArgs: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> disposables: <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="onDidRenameFiles" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> on<wbr>Did<wbr>Rename<wbr>Files</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Did<wbr>Rename<wbr>Files<span class="tsd-signature-symbol">(</span>listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.FileRenameEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">FileRenameEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span>, thisArgs<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, disposables<span class="tsd-signature-symbol">?: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10916">vscode.d.ts:10916</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>An event that is emitted when files have been renamed.</p>
+								</div>
+								<p><em>Note 1:</em> This event is triggered by user gestures, like renaming a file from the
+									explorer, and from the <a href="vscode.workspace.html#applyEdit"><code>workspace.applyEdit</code></a>-api, but this event is <em>not</em> fired when
+									files change on disk, e.g triggered by another application, or when using the
+								<a href="../interfaces/vscode.FileSystem.html"><code>workspace.fs</code></a>-api.</p>
+								<p><em>Note 2:</em> When renaming a folder with children only one event is fired.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>listener: <span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.FileRenameEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">FileRenameEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.FileRenameEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">FileRenameEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>e: <a href="../interfaces/vscode.FileRenameEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">FileRenameEvent</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> thisArgs: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> disposables: <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="getConfiguration" class="tsd-anchor"></a>
+					<h3>get<wbr>Configuration</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Configuration<span class="tsd-signature-symbol">(</span>section<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, scope<span class="tsd-signature-symbol">?: </span><a href="vscode.html#ConfigurationScope" class="tsd-signature-type" data-tsd-kind="Type alias">ConfigurationScope</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.WorkspaceConfiguration.html" class="tsd-signature-type" data-tsd-kind="Interface">WorkspaceConfiguration</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10931">vscode.d.ts:10931</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get a workspace configuration object.</p>
+								</div>
+								<p>When a section-identifier is provided only that part of the configuration
+									is returned. Dots in the section-identifier are interpreted as child-access,
+								like <code>{ myExt: { setting: { doIt: true }}}</code> and <code>getConfiguration(&#39;myExt.setting&#39;).get(&#39;doIt&#39;) === true</code>.</p>
+								<p>When a scope is provided configuration confined to that scope is returned. Scope can be a resource or a language identifier or both.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> section: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A dot-separated identifier.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> scope: <a href="vscode.html#ConfigurationScope" class="tsd-signature-type" data-tsd-kind="Type alias">ConfigurationScope</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A scope for which the configuration is asked for.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/vscode.WorkspaceConfiguration.html" class="tsd-signature-type" data-tsd-kind="Interface">WorkspaceConfiguration</a></h4>
+							<p>The full configuration or a subset.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="onDidChangeConfiguration" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> on<wbr>Did<wbr>Change<wbr>Configuration</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Did<wbr>Change<wbr>Configuration<span class="tsd-signature-symbol">(</span>listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.ConfigurationChangeEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">ConfigurationChangeEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span>, thisArgs<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, disposables<span class="tsd-signature-symbol">?: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10936">vscode.d.ts:10936</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>An event that is emitted when the <a href="../interfaces/vscode.WorkspaceConfiguration.html">configuration</a> changed.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>listener: <span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.ConfigurationChangeEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">ConfigurationChangeEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.ConfigurationChangeEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">ConfigurationChangeEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>e: <a href="../interfaces/vscode.ConfigurationChangeEvent.html" class="tsd-signature-type" data-tsd-kind="Interface">ConfigurationChangeEvent</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> thisArgs: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> disposables: <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerTaskProvider" class="tsd-anchor"></a>
+					<h3>register<wbr>Task<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Task<wbr>Provider<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.TaskProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">TaskProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10947">vscode.d.ts:10947</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register a task provider.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>Use the corresponding function on the <code>tasks</code> namespace instead</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>type: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The task kind type this provider is registered for.</p>
+									</div>
+								</li>
+								<li>
+									<h5>provider: <a href="../interfaces/vscode.TaskProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">TaskProvider</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A task provider.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/vscode.Disposable.html">Disposable</a> that unregisters this provider when being disposed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerFileSystemProvider" class="tsd-anchor"></a>
+					<h3>register<wbr>File<wbr>System<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>File<wbr>System<wbr>Provider<span class="tsd-signature-symbol">(</span>scheme<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, provider<span class="tsd-signature-symbol">: </span><a href="../interfaces/vscode.FileSystemProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">FileSystemProvider</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{ </span>isCaseSensitive<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>isReadonly<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10960">vscode.d.ts:10960</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register a filesystem provider for a given scheme, e.g. <code>ftp</code>.</p>
+								</div>
+								<p>There can only be one provider per scheme and an error is being thrown when a scheme
+								has been claimed by another provider or when it is reserved.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>scheme: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The uri-<a href="../classes/vscode.Uri.html#scheme">scheme</a> the provider registers for.</p>
+									</div>
+								</li>
+								<li>
+									<h5>provider: <a href="../interfaces/vscode.FileSystemProvider.html" class="tsd-signature-type" data-tsd-kind="Interface">FileSystemProvider</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The filesystem provider.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-symbol">{ </span>isCaseSensitive<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>isReadonly<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Immutable metadata about the provider.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> is<wbr>Case<wbr>Sensitive<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> is<wbr>Readonly<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+							<p>A <a href="../classes/vscode.Disposable.html">Disposable</a> that unregisters this provider when being disposed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="onDidGrantWorkspaceTrust" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> on<wbr>Did<wbr>Grant<wbr>Workspace<wbr>Trust</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Did<wbr>Grant<wbr>Workspace<wbr>Trust<span class="tsd-signature-symbol">(</span>listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span>, thisArgs<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, disposables<span class="tsd-signature-symbol">?: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/vscode-cn/vscode-api-cn/blob/df4d2e0/vscode.d.ts#L10970">vscode.d.ts:10970</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Event that fires when the current workspace has been trusted.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>listener: <span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>e: <span class="tsd-signature-type">void</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> thisArgs: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> disposables: <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/vscode.Disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Exports</a>
+					</li>
+					<li class="current tsd-kind-namespace">
+						<a href="vscode.html">vscode</a>
+						<ul>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="vscode.authentication.html">authentication</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="vscode.commands.html">commands</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="vscode.comments.html">comments</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="vscode.debug.html">debug</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="vscode.env.html">env</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="vscode.extensions.html">extensions</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="vscode.languages.html">languages</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="vscode.notebooks.html">notebooks</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="vscode.scm.html">scm</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="vscode.tasks.html">tasks</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="vscode.tests.html">tests</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="vscode.window.html">window</a>
+							</li>
+							<li class="current tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="vscode.workspace.html">workspace</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-variable tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#fs" class="tsd-kind-icon">fs</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#rootPath" class="tsd-kind-icon">root<wbr>Path</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#workspaceFolders" class="tsd-kind-icon">workspace<wbr>Folders</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#name" class="tsd-kind-icon">name</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#workspaceFile" class="tsd-kind-icon">workspace<wbr>File</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#onDidChangeWorkspaceFolders" class="tsd-kind-icon">on<wbr>Did<wbr>Change<wbr>Workspace<wbr>Folders</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#getWorkspaceFolder" class="tsd-kind-icon">get<wbr>Workspace<wbr>Folder</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#asRelativePath" class="tsd-kind-icon">as<wbr>Relative<wbr>Path</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#updateWorkspaceFolders" class="tsd-kind-icon">update<wbr>Workspace<wbr>Folders</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#createFileSystemWatcher" class="tsd-kind-icon">create<wbr>File<wbr>System<wbr>Watcher</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#findFiles" class="tsd-kind-icon">find<wbr>Files</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#saveAll" class="tsd-kind-icon">save<wbr>All</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#applyEdit" class="tsd-kind-icon">apply<wbr>Edit</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#textDocuments" class="tsd-kind-icon">text<wbr>Documents</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#openTextDocument" class="tsd-kind-icon">open<wbr>Text<wbr>Document</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#registerTextDocumentContentProvider" class="tsd-kind-icon">register<wbr>Text<wbr>Document<wbr>Content<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#onDidOpenTextDocument" class="tsd-kind-icon">on<wbr>Did<wbr>Open<wbr>Text<wbr>Document</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#onDidCloseTextDocument" class="tsd-kind-icon">on<wbr>Did<wbr>Close<wbr>Text<wbr>Document</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#onDidChangeTextDocument" class="tsd-kind-icon">on<wbr>Did<wbr>Change<wbr>Text<wbr>Document</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#onWillSaveTextDocument" class="tsd-kind-icon">on<wbr>Will<wbr>Save<wbr>Text<wbr>Document</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#onDidSaveTextDocument" class="tsd-kind-icon">on<wbr>Did<wbr>Save<wbr>Text<wbr>Document</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#notebookDocuments" class="tsd-kind-icon">notebook<wbr>Documents</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#openNotebookDocument" class="tsd-kind-icon">open<wbr>Notebook<wbr>Document</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#registerNotebookSerializer" class="tsd-kind-icon">register<wbr>Notebook<wbr>Serializer</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#onDidOpenNotebookDocument" class="tsd-kind-icon">on<wbr>Did<wbr>Open<wbr>Notebook<wbr>Document</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#onDidCloseNotebookDocument" class="tsd-kind-icon">on<wbr>Did<wbr>Close<wbr>Notebook<wbr>Document</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#onWillCreateFiles" class="tsd-kind-icon">on<wbr>Will<wbr>Create<wbr>Files</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#onDidCreateFiles" class="tsd-kind-icon">on<wbr>Did<wbr>Create<wbr>Files</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#onWillDeleteFiles" class="tsd-kind-icon">on<wbr>Will<wbr>Delete<wbr>Files</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#onDidDeleteFiles" class="tsd-kind-icon">on<wbr>Did<wbr>Delete<wbr>Files</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#onWillRenameFiles" class="tsd-kind-icon">on<wbr>Will<wbr>Rename<wbr>Files</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#onDidRenameFiles" class="tsd-kind-icon">on<wbr>Did<wbr>Rename<wbr>Files</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#getConfiguration" class="tsd-kind-icon">get<wbr>Configuration</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#onDidChangeConfiguration" class="tsd-kind-icon">on<wbr>Did<wbr>Change<wbr>Configuration</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#registerTaskProvider" class="tsd-kind-icon">register<wbr>Task<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#registerFileSystemProvider" class="tsd-kind-icon">register<wbr>File<wbr>System<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#isTrusted" class="tsd-kind-icon">is<wbr>Trusted</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="vscode.workspace.html#onDidGrantWorkspaceTrust" class="tsd-kind-icon">on<wbr>Did<wbr>Grant<wbr>Workspace<wbr>Trust</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>图例</h2>
+		<div class="tsd-legend-group">
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p><a href="https://liiked.github.io/VS-Code-Extension-Doc-ZH/" target="_blank">VS Code 插件开发中文文档</a> | <a href="https://jeasonstudio.gitbooks.io/vscode-cn-doc/content/" target="_blank">VS Code 中文文档</a> | <a href="https://code.visualstudio.com/docs" target="_blank">VS Code 官网文档</a> | <a href="https://marketplace.visualstudio.com/" target="_blank">VS Code 扩展市场</a></p>
+	<p>Generated by <a href="https://typedoc.org/" target="_blank">TypeDoc</a> | <a href="https://www.cnzz.com/stat/website.php?web_id=1280241129" target="_blank" title="VS Code 官网文档站长统计">站长统计</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1280241129'%3E%3C/span%3E%3Cscript src='https://s9.cnzz.com/z_stat.php%3Fid%3D1280241129' type='text/javascript'%3E%3C/script%3E"));</script>
+<a href="https://github.com/youngjuning/vscode-api-cn" target="_blank" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: fixed; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+</body>
+</html>
