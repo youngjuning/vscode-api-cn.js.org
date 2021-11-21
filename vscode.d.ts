@@ -13594,15 +13594,18 @@ declare module vscode {
    * @maintainer {@link https://github.com/yangyang825 @yangyang825}
    */
   namespace comments {
-    /**
-     * Creates a new {@link CommentController comment controller} instance.
-     *
-     * @param id An `id` for the comment controller.
-     * @param label A human-readable string for the comment controller.
-     * @return An instance of {@link CommentController comment controller}.
-     */
-    export function createCommentController(id: string, label: string): CommentController;
-  }
+		/**
+		 * 举个例子：创建一个新的注释控制器{@link CommentController comment controller}。
+		 *
+		 * @param id 注释控制器得‘id’。
+		 * @param label 注释控制器的可读性标签。
+		 * @return 注释控制器{@link CommentController comment controller}的实例。
+		 */
+		export function createCommentController(
+			id: string,
+			label: string
+		): CommentController;
+	}
 
   //#endregion
 
