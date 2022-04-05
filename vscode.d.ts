@@ -13597,7 +13597,7 @@ declare module vscode {
 		/**
 		 * 举个例子：创建一个新的注释控制器{@link CommentController comment controller}。
 		 *
-		 * @param id 注释控制器得‘id’。
+		 * @param id 注释控制器的‘id’。
 		 * @param label 注释控制器的可读性标签。
 		 * @return 注释控制器{@link CommentController comment controller}的实例。
 		 */
