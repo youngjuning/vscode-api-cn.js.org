@@ -5,7 +5,10 @@
   "scripts": {
     "build": "typedoc",
     "dev": "onchange -i 'vscode.d.ts' 'typedoc.json' 'README.md' 'theme/**/*' -- yarn build",
-    "start": "serve docs/"
+    "start": "serve docs/",
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate",
+    "contributors:check": "all-contributors check"
   },
   "devDependencies": {
     "onchange": "^7.1.0",
