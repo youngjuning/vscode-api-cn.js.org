@@ -70,16 +70,6 @@
       ]
     },
     {
-      "login": "Tecvan-fe",
-      "name": "tecvan",
-      "avatar_url": "https://avatars.githubusercontent.com/u/84165678?v=4",
-      "profile": "https://www.zhihu.com/people/tec-van",
-      "contributions": [
-        "translation"
-      ]
-<<<<<<< HEAD
-    },
-    {
       "login": "sherry-zxy",
       "name": "Xiyuan Zheng",
       "avatar_url": "https://avatars.githubusercontent.com/u/36014195?v=4",
@@ -117,8 +107,6 @@
       "contributions": [
         "translation"
       ]
-=======
->>>>>>> 81b4e085 (docs: add Tecvan-fe as a contributor for translation (#15))
     }
   ],
   "contributorsPerLine": 6,
