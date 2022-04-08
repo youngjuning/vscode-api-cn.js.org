@@ -1,9 +1,5 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<<<<<<< HEAD
 [![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
-=======
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
->>>>>>> 81b4e085 (docs: add Tecvan-fe as a contributor for translation (#15))
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 VS Code API 是一系列你可以在 Visual Studio Code 扩展中调用的 JavaScript API。这个站点列出了扩展开发者可以使用的所有 VS Code API。原网站没有中文翻译且不方便阅读，所以有了该网站。
@@ -35,7 +31,6 @@ API 列表使用 Typedoc 从 [vscode.d.ts](https://github.com/youngjuning/vscode
 <!-- markdownlint-disable -->
 <table>
   <tr>
-<<<<<<< HEAD
     <td align="center"><a href="https://github.com/youngjuning"><img src="https://avatars.githubusercontent.com/u/13204332?v=4?s=100" width="100px;" alt=""/><br /><sub><b>youngjuning</b></sub></a><br /><a href="https://github.com/vscode-cn/vscode-api-cn/commits?author=youngjuning" title="Code">💻</a> <a href="#maintenance-youngjuning" title="Maintenance">🚧</a> <a href="#translation-youngjuning" title="Translation">🌍</a> <a href="https://github.com/vscode-cn/vscode-api-cn/commits?author=youngjuning" title="Documentation">📖</a> <a href="#ideas-youngjuning" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/gepingli"><img src="https://avatars.githubusercontent.com/u/29964332?v=4?s=100" width="100px;" alt=""/><br /><sub><b>gepingli</b></sub></a><br /><a href="#translation-gepingli" title="Translation">🌍</a> <a href="#ideas-gepingli" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/vscode-cn/vscode-api-cn/commits?author=gepingli" title="Code">💻</a></td>
     <td align="center"><a href="http://saber2pr.top"><img src="https://avatars.githubusercontent.com/u/40260564?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Konpaku Youmu</b></sub></a><br /><a href="#translation-Saber2pr" title="Translation">🌍</a> <a href="#ideas-Saber2pr" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-Saber2pr" title="Maintenance">🚧</a> <a href="https://github.com/vscode-cn/vscode-api-cn/commits?author=Saber2pr" title="Code">💻</a></td>
@@ -48,14 +43,6 @@ API 列表使用 Typedoc 从 [vscode.d.ts](https://github.com/youngjuning/vscode
     <td align="center"><a href="https://juejin.cn/user/3993025017037309/posts"><img src="https://avatars.githubusercontent.com/u/43341115?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Liuqh233</b></sub></a><br /><a href="#translation-liuqh0609" title="Translation">🌍</a> <a href="https://github.com/vscode-cn/vscode-api-cn/commits?author=liuqh0609" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/cxk0831"><img src="https://avatars.githubusercontent.com/u/34495411?v=4?s=100" width="100px;" alt=""/><br /><sub><b>竹雨</b></sub></a><br /><a href="#translation-cxk0831" title="Translation">🌍</a> <a href="https://github.com/vscode-cn/vscode-api-cn/commits?author=cxk0831" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/yangyang825"><img src="https://avatars.githubusercontent.com/u/84166052?v=4?s=100" width="100px;" alt=""/><br /><sub><b>yangyang825</b></sub></a><br /><a href="#translation-yangyang825" title="Translation">🌍</a></td>
-=======
-    <td align="center"><a href="https://github.com/youngjuning"><img src="https://avatars.githubusercontent.com/u/13204332?v=4?s=100" width="100px;" alt=""/><br /><sub><b>youngjuning</b></sub></a><br /><a href="https://github.com/youngjuning/vscode-api-cn/commits?author=youngjuning" title="Code">💻</a> <a href="#maintenance-youngjuning" title="Maintenance">🚧</a> <a href="#translation-youngjuning" title="Translation">🌍</a> <a href="https://github.com/youngjuning/vscode-api-cn/commits?author=youngjuning" title="Documentation">📖</a> <a href="#ideas-youngjuning" title="Ideas, Planning, & Feedback">🤔</a></td>
-    <td align="center"><a href="https://github.com/gepingli"><img src="https://avatars.githubusercontent.com/u/29964332?v=4?s=100" width="100px;" alt=""/><br /><sub><b>gepingli</b></sub></a><br /><a href="#translation-gepingli" title="Translation">🌍</a> <a href="#ideas-gepingli" title="Ideas, Planning, & Feedback">🤔</a></td>
-    <td align="center"><a href="http://saber2pr.top"><img src="https://avatars.githubusercontent.com/u/40260564?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Konpaku Youmu</b></sub></a><br /><a href="#translation-Saber2pr" title="Translation">🌍</a> <a href="#ideas-Saber2pr" title="Ideas, Planning, & Feedback">🤔</a></td>
-    <td align="center"><a href="https://github.com/Imchenlong"><img src="https://avatars.githubusercontent.com/u/13520451?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lance Chen</b></sub></a><br /><a href="#translation-Imchenlong" title="Translation">🌍</a> <a href="#maintenance-Imchenlong" title="Maintenance">🚧</a> <a href="https://github.com/youngjuning/vscode-api-cn/commits?author=Imchenlong" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/pan463859"><img src="https://avatars.githubusercontent.com/u/32640880?v=4?s=100" width="100px;" alt=""/><br /><sub><b>潘小安</b></sub></a><br /><a href="#translation-pan463859" title="Translation">🌍</a> <a href="#maintenance-pan463859" title="Maintenance">🚧</a> <a href="#ideas-pan463859" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/youngjuning/vscode-api-cn/commits?author=pan463859" title="Code">💻</a></td>
-    <td align="center"><a href="https://www.zhihu.com/people/tec-van"><img src="https://avatars.githubusercontent.com/u/84165678?v=4?s=100" width="100px;" alt=""/><br /><sub><b>tecvan</b></sub></a><br /><a href="#translation-Tecvan-fe" title="Translation">🌍</a></td>
->>>>>>> 81b4e085 (docs: add Tecvan-fe as a contributor for translation (#15))
   </tr>
 </table>
 
