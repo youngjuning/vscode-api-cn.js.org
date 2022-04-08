@@ -10,29 +10,43 @@ declare module vscode {
   export const version: string;
 
   /**
+	 * 表示对一个命令的引用。提供一个标题，该标题用于该命令在 UI 中显示。
+	 * 可选的，还可以提供一个参数数组，该数组将在命令处理函数被调用时作为参数传入。
+	 *
    * Represents a reference to a command. Provides a title which
    * will be used to represent a command in the UI and, optionally,
    * an array of arguments which will be passed to the command handler
    * function when invoked.
+	 *
+	 * @maintainer {@link https://github.com/youngjuning @youngjuning}
    */
   export interface Command {
     /**
+		 * 命令的标题，比如 `save`。
+		 *
      * Title of the command, like `save`.
      */
     title: string;
 
     /**
-     * The identifier of the actual command handler.
+		 * 实际命令处理程序的标识符。
+		 *
+		 * The identifier of the actual command handler.
+		 *
      * @see {@link commands.registerCommand}
      */
     command: string;
 
     /**
-     * A tooltip for the command, when represented in the UI.
+		 * 命令的提示信息，当命令显示在 UI 中时，会显示在提示信息中。
+     *
+		 * A tooltip for the command, when represented in the UI.
      */
     tooltip?: string;
 
     /**
+		 * 命令处理程序被调用时，会把这些参数传入。
+		 *
      * Arguments that the command handler should be
      * invoked with.
      */
@@ -6925,7 +6939,8 @@ declare module vscode {
   }
 
   /**
-   * Namespace for tasks functionality.
+	 * task 能力的命名空间。
+	 *
    * @maintainer {@link https://github.com/liuqh0609 @liuqh0609}
    */
   export namespace tasks {
