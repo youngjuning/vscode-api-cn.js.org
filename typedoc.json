@@ -4,5 +4,6 @@
   "theme": "./theme",
   "out": "docs",
   "readme": "./README.md",
-  "sort": ["source-order"]
+  "sort": ["source-order"],
+	"gaID": "G-T4TRRS1LB1"
 }
