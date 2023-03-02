@@ -12,6 +12,7 @@ jobs:
       - run: yarn install
       - run: yarn build
       - run: mv googled29fba422c357ff8.html docs/
+      - run: node sitemap.js
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
