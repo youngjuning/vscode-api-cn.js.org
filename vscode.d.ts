@@ -8177,42 +8177,66 @@ declare module vscode {
     Web = 2
   }
 
+	/**
+	 * Namespace describing the environment the editor runs in.
+	 */
   /**
    * 描述编辑器运行环境的命名空间。
-   * @maintainer {@link https://github.com/Saber2pr @Saber2pr}
+	 *
+   * @maintainer {@link https://github.com/youngjuning @youngjuning}
    */
   export namespace env {
-
-    /**
-     * The application name of the editor, like 'VS Code'.
-     */
+		/**
+		 * The application name of the editor, like 'VS Code'.
+		 */
+		/**
+		 * 编辑器的应用程序名称，例如 'VS Code'。
+		 */
     export const appName: string;
 
-    /**
+		/**
      * The application root folder from which the editor is running.
-     *
-     * *Note* that the value is the empty string when running in an
+		 *
+		 * *Note* that the value is the empty string when running in an
      * environment that has no representation of an application root folder.
+		 */
+    /**
+		 * 编辑器运行的应用程序根目录。
+		 *
+		 * *注意* 当运行在没有应用程序根目录的环境中时，值为空字符串。
      */
     export const appRoot: string;
 
+		/**
+		 * The custom uri scheme the editor registers to in the operating system.
+		 */
     /**
-     * The custom uri scheme the editor registers to in the operating system.
+		 * 编辑器在操作系统中注册的自定义 URI 方案。
+		 *
      */
     export const uriScheme: string;
 
+		/**
+		 * Represents the preferred user-language, like `de-CH`, `fr`, or `en-US`.
+		 */
     /**
-     * Represents the preferred user-language, like `de-CH`, `fr`, or `en-US`.
+		 * 表示用户首选的语言，例如 `de-CH`、`fr` 或 `en-US`。
+		 *
      */
     export const language: string;
 
-    /**
-     * The system clipboard.
-     */
+		/**
+		 * The system clipboard.
+		 */
+		/**
+		 * 系统剪贴板。
+		 */
     export const clipboard: Clipboard;
-
+		/**
+		 * A unique identifier for the computer.
+		 */
     /**
-     * A unique identifier for the computer.
+		 * 用于标识计算机的唯一标识符。
      */
     export const machineId: string;
 
@@ -8220,24 +8244,44 @@ declare module vscode {
      * A unique identifier for the current session.
      * Changes each time the editor is started.
      */
+		/**
+		 * 用于标识当前会话的唯一标识符。
+		 *
+		 * 每次启动编辑器时都会更改。
+		 */
     export const sessionId: string;
 
     /**
      * Indicates that this is a fresh install of the application.
      * `true` if within the first day of installation otherwise `false`.
      */
+		/**
+		 * 表示这是应用程序的首次安装。
+		 *
+		 * 如果在安装的第一天内为 `true`，否则为 `false`。
+		 */
     export const isNewAppInstall: boolean;
 
     /**
      * Indicates whether the users has telemetry enabled.
      * Can be observed to determine if the extension should send telemetry.
      */
+		/**
+		 * 表示用户是否启用了遥测。
+		 *
+		 * 可以观察以确定扩展是否应发送遥测。
+		 */
     export const isTelemetryEnabled: boolean;
 
     /**
      * An {@link Event} which fires when the user enabled or disables telemetry.
      * `true` if the user has enabled telemetry or `false` if the user has disabled telemetry.
      */
+		/**
+		 * 当用户启用或禁用遥测时触发的 {@link Event}。
+		 *
+		 * 如果用户启用了遥测，则为 `true`；如果用户禁用了遥测，则为 `false`。
+		 */
     export const onDidChangeTelemetryEnabled: Event<boolean>;
 
     /**
@@ -8249,6 +8293,12 @@ declare module vscode {
      * exists. Use {@link Extension.extensionKind} to know if
      * a specific extension runs remote or not.
      */
+		/**
+		 * 远程的名称。由扩展定义，常见的示例是 `wsl` 用于 Windows 子系统 Linux 或 `ssh-remote` 用于使用安全 shell 的远程。
+		 *
+		 * *注意* 当没有远程扩展主机时，值为 `undefined`，但是当存在远程扩展主机时，值在所有扩展主机（本地和远程）中都已定义。
+		 * 使用 {@link Extension.extensionKind} 来确定特定扩展是否在远程运行。
+		 */
     export const remoteName: string | undefined;
 
     /**
@@ -8256,6 +8306,10 @@ declare module vscode {
      * `terminal.integrated.shell` setting for the extension host's platform. Note that in
      * environments that do not support a shell the value is the empty string.
      */
+		/**
+		 * 检测到的扩展主机的默认 shell，该值由扩展主机平台的 `terminal.integrated.shell` 设置覆盖。
+		 * 请注意，在不支持 shell 的环境中，值为空字符串。
+		 */
     export const shell: string;
 
     /**
@@ -8263,6 +8317,9 @@ declare module vscode {
      * are accessed from. For example, extensions could be accessed
      * from a desktop application or a web browser.
      */
+		/**
+		 * UI kind 属性表示从哪个 UI 访问扩展。例如，扩展可以从桌面应用程序或 Web 浏览器访问。
+		 */
     export const uiKind: UIKind;
 
     /**
@@ -8278,6 +8335,17 @@ declare module vscode {
      * @param target The uri that should be opened.
      * @returns A promise indicating if open was successful.
      */
+		/**
+		 * 使用默认应用程序在外部打开链接。根据使用的方案，可以是：
+		 * * 浏览器（`http:`、`https:`）
+		 * * 邮件客户端（`mailto:`）
+		 * * VSCode 本身（`vscode:` 来自 `vscode.env.uriScheme`）
+		 *
+		 * *注意* {@linkcode window.showTextDocument showTextDocument} 是在编辑器内打开文本文档的正确方法，而不是此函数。
+		 *
+		 * @param target 应该打开的 uri。
+		 * @returns 一个指示是否打开成功的 promise。
+		 */
     export function openExternal(target: Uri): Thenable<boolean>;
 
     /**
@@ -8333,6 +8401,50 @@ declare module vscode {
      *
      * @return A uri that can be used on the client machine.
      */
+		/**
+		 * 将 uri 解析为外部可访问的形式。
+		 *
+		 * #### `http:` 或 `https:` 方案
+		 *
+		 * 解析扩展正在运行的 *external* uri，例如 `http:` 或 `https:` 链接，从扩展运行的客户端机器上的同一资源的 uri。
+		 *
+		 * 如果扩展在客户端机器上运行，则此操作无效。
+		 *
+		 * 如果扩展在远程运行，则此函数会自动从本地机器到远程上的 `target` 建立端口转发隧道，并返回到隧道的本地 uri。端口转发隧道的生命周期由编辑器管理，用户可以关闭隧道。
+		 *
+		 * *注意* 通过 `openExternal` 传递的 uris 会自动解析，您不应该对它们调用 `asExternalUri`。
+		 *
+		 * #### `vscode.env.uriScheme`
+		 *
+		 * 创建一个 uri，如果在浏览器中打开（例如，通过 `openExternal`），则会导致注册的 {@link UriHandler} 触发。
+		 *
+		 * 扩展不应对结果 uri 进行任何假设，并且不应以任何方式更改它。相反，扩展可以使用此 uri 在身份验证流程中，例如将 uri 作为回调查询参数添加到要身份验证的服务器。
+		 *
+		 * *注意* 如果服务器决定将其他查询参数添加到 uri（例如，令牌或秘密），则它将出现在传递给 {@link UriHandler} 的 uri 中。
+		 *
+		 * **示例** 身份验证流程：
+		 *
+		 * ```typescript
+		 * vscode.window.registerUriHandler({
+		 *  handleUri(uri: vscode.Uri): vscode.ProviderResult<void> {
+		 * 		if (uri.path === '/did-authenticate') {
+		 * 			console.log(uri.toString());
+		 * 		}
+		 * 	}
+		 * });
+		 *
+		 * const callableUri = await vscode.env.asExternalUri(vscode.Uri.parse(`${vscode.env.uriScheme}://my.extension/did-authenticate`));
+		 * await vscode.env.openExternal(callableUri);
+		 * ```
+		 *
+		 * *注意* 扩展不应缓存 `asExternalUri` 的结果，因为解析的 uri 可能会因为系统或用户操作而变得无效 — 例如，在远程情况下，用户可能会关闭由 `asExternalUri` 打开的端口转发隧道。
+		 *
+		 * #### 其他任何方案
+		 *
+		 * 其他任何方案都将被处理为提供的 URI 是工作区 URI。在这种情况下，该方法将返回一个 URI，当处理时，将使编辑器打开工作区。
+		 *
+		 * @return 可在客户端机器上使用的 uri。
+		 */
     export function asExternalUri(target: Uri): Thenable<Uri>;
   }
 
