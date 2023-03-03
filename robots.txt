@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vscode-api-cn.js.org/sitemap.xml

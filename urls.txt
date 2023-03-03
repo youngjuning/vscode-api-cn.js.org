@@ -12,9 +12,9 @@ https://vscode-api-cn.js.org/classes/vscode.CodeActionKind.html
 https://vscode-api-cn.js.org/classes/vscode.CodeLens.html
 https://vscode-api-cn.js.org/classes/vscode.Color.html
 https://vscode-api-cn.js.org/classes/vscode.ColorInformation.html
-https://vscode-api-cn.js.org/classes/vscode.ColorPresentation.html
 https://vscode-api-cn.js.org/classes/vscode.CompletionItem.html
 https://vscode-api-cn.js.org/classes/vscode.CompletionList.html
+https://vscode-api-cn.js.org/classes/vscode.ColorPresentation.html
 https://vscode-api-cn.js.org/classes/vscode.CustomExecution.html
 https://vscode-api-cn.js.org/classes/vscode.DebugAdapterExecutable.html
 https://vscode-api-cn.js.org/classes/vscode.DebugAdapterInlineImplementation.html
@@ -330,13 +330,13 @@ https://vscode-api-cn.js.org/interfaces/vscode.WebviewPanelOnDidChangeViewStateE
 https://vscode-api-cn.js.org/interfaces/vscode.WebviewPanelOptions.html
 https://vscode-api-cn.js.org/interfaces/vscode.WebviewPanelSerializer.html
 https://vscode-api-cn.js.org/interfaces/vscode.WebviewPortMapping.html
+https://vscode-api-cn.js.org/interfaces/vscode.WebviewView.html
 https://vscode-api-cn.js.org/interfaces/vscode.WebviewViewProvider.html
 https://vscode-api-cn.js.org/interfaces/vscode.WebviewViewResolveContext.html
 https://vscode-api-cn.js.org/interfaces/vscode.WindowState.html
-https://vscode-api-cn.js.org/interfaces/vscode.WebviewView.html
 https://vscode-api-cn.js.org/interfaces/vscode.WorkspaceConfiguration.html
-https://vscode-api-cn.js.org/interfaces/vscode.WorkspaceFolder.html
 https://vscode-api-cn.js.org/interfaces/vscode.WorkspaceEditEntryMetadata.html
+https://vscode-api-cn.js.org/interfaces/vscode.WorkspaceFolder.html
 https://vscode-api-cn.js.org/interfaces/vscode.WorkspaceFolderPickOptions.html
 https://vscode-api-cn.js.org/interfaces/vscode.WorkspaceFoldersChangeEvent.html
 https://vscode-api-cn.js.org/interfaces/vscode.WorkspaceSymbolProvider.html
