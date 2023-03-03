@@ -4,7 +4,7 @@
 
 VS Code API 是一系列你可以在 Visual Studio Code 扩展中调用的 JavaScript API。这个站点列出了扩展开发者可以使用的所有 VS Code API。原网站没有中文翻译且不方便阅读，所以有了该网站。
 
-API 列表使用 Typedoc 从 [vscode.d.ts](https://github.com/youngjuning/vscode-api/blob/main/vscode.d.ts) 文件编译而来，如果 [vscode.d.ts 源文件](https://github.com/microsoft/vscode/blob/main/src/vs/vscode.d.ts) 有更新，我们会及时同步，当前对应 commit 为 [2974a01](https://github.com/microsoft/vscode/commit/2974a014fd33f4a109aad6ed0f3e46fe93bfc794#diff-f127724f8c5dbf0c8371ad0a100f8a9bc0a398b6b8ec29aa6cd7f265bd01a096)。
+API 列表使用 Typedoc 从 [vscode.d.ts](https://github.com/youngjuning/vscode-api/blob/main/vscode.d.ts) 文件编译而来，如果 [vscode.d.ts 源文件](https://github.com/microsoft/vscode/blob/main/src/vscode-dts/vscode.d.ts) 有更新，我们会及时同步，当前对应 commit 为 [2974a01](https://github.com/microsoft/vscode/commit/2974a014fd33f4a109aad6ed0f3e46fe93bfc794#diff-f127724f8c5dbf0c8371ad0a100f8a9bc0a398b6b8ec29aa6cd7f265bd01a096)。
 
 ## 贡献指南
 
@@ -13,8 +13,7 @@ API 列表使用 Typedoc 从 [vscode.d.ts](https://github.com/youngjuning/vscode
 
 ### 成为译者
 
-- **外部译者**：对 *vscode.d.ts* 文件的注释进行翻译，然后提交 PR 即可。
-- **内部译者**：需要负责某一具体模块，如果感兴趣可以添加管理员微信（`yang_jun_ning`）申请。
+对 *vscode.d.ts* 文件的注释进行翻译，然后提交 PR 即可。
 
 ### 本地预览
 
