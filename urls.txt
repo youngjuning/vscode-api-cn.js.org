@@ -12,9 +12,9 @@ https://vscode-api-cn.js.org/classes/vscode.CodeActionKind.html
 https://vscode-api-cn.js.org/classes/vscode.CodeLens.html
 https://vscode-api-cn.js.org/classes/vscode.Color.html
 https://vscode-api-cn.js.org/classes/vscode.ColorInformation.html
+https://vscode-api-cn.js.org/classes/vscode.ColorPresentation.html
 https://vscode-api-cn.js.org/classes/vscode.CompletionItem.html
 https://vscode-api-cn.js.org/classes/vscode.CompletionList.html
-https://vscode-api-cn.js.org/classes/vscode.ColorPresentation.html
 https://vscode-api-cn.js.org/classes/vscode.CustomExecution.html
 https://vscode-api-cn.js.org/classes/vscode.DebugAdapterExecutable.html
 https://vscode-api-cn.js.org/classes/vscode.DebugAdapterInlineImplementation.html
