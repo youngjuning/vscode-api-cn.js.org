@@ -15,12 +15,12 @@ https://vscode-api-cn.js.org/classes/vscode.ColorInformation.html
 https://vscode-api-cn.js.org/classes/vscode.ColorPresentation.html
 https://vscode-api-cn.js.org/classes/vscode.CompletionItem.html
 https://vscode-api-cn.js.org/classes/vscode.CompletionList.html
-https://vscode-api-cn.js.org/classes/vscode.CustomExecution.html
 https://vscode-api-cn.js.org/classes/vscode.DebugAdapterExecutable.html
 https://vscode-api-cn.js.org/classes/vscode.DebugAdapterInlineImplementation.html
 https://vscode-api-cn.js.org/classes/vscode.DebugAdapterNamedPipeServer.html
 https://vscode-api-cn.js.org/classes/vscode.DebugAdapterServer.html
 https://vscode-api-cn.js.org/classes/vscode.Diagnostic.html
+https://vscode-api-cn.js.org/classes/vscode.CustomExecution.html
 https://vscode-api-cn.js.org/classes/vscode.DiagnosticRelatedInformation.html
 https://vscode-api-cn.js.org/classes/vscode.Disposable.html
 https://vscode-api-cn.js.org/classes/vscode.DocumentHighlight.html
@@ -52,8 +52,8 @@ https://vscode-api-cn.js.org/classes/vscode.QuickInputButtons.html
 https://vscode-api-cn.js.org/classes/vscode.Range.html
 https://vscode-api-cn.js.org/classes/vscode.RelativePattern.html
 https://vscode-api-cn.js.org/classes/vscode.Selection.html
-https://vscode-api-cn.js.org/classes/vscode.SelectionRange.html
 https://vscode-api-cn.js.org/classes/vscode.SemanticTokens.html
+https://vscode-api-cn.js.org/classes/vscode.SelectionRange.html
 https://vscode-api-cn.js.org/classes/vscode.SemanticTokensBuilder.html
 https://vscode-api-cn.js.org/classes/vscode.SemanticTokensEdit.html
 https://vscode-api-cn.js.org/classes/vscode.SemanticTokensEdits.html
