@@ -10593,7 +10593,7 @@ declare module vscode {
    * The workspace offers support for {@link workspace.createFileSystemWatcher listening} to fs
    * events and for {@link workspace.findFiles finding} files. Both perform well and run _outside_
    * the editor-process so that they should be always used instead of nodejs-equivalents.
-   * @maintainer {@link https://github.com/gepingli @gepingli}
+   * @maintainer {@link https://github.com/youngjuning @youngjuning}
    */
   export namespace workspace {
 
