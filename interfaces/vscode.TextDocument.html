@@ -119,9 +119,13 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Represents a text document, such as a source file. Text documents have
-						<a href="vscode.TextLine.html">lines</a> and knowledge about an underlying resource like a file.</p>
+						<p>表示文本文档，例如源文件。文本文档有 <a href="vscode.TextLine.html">lines</a> 和关于底层资源（如文件）的知识。</p>
 					</div>
+					<dl class="tsd-comment-tags">
+						<dt>maintainer</dt>
+						<dd><p><a href="https://youngjuning.js.org" class="external">@youngjuning</a></p>
+						</dd>
+					</dl>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -174,15 +178,15 @@
 					<div class="tsd-signature tsd-kind-icon">uri<span class="tsd-signature-symbol">:</span> <a href="../classes/vscode.Uri.html" class="tsd-signature-type" data-tsd-kind="Class">Uri</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/8374d25/vscode.d.ts#L112">vscode.d.ts:112</a></li>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/5f7ad41/vscode.d.ts#L99">vscode.d.ts:99</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The associated uri for this document.</p>
+							<p>与此文档关联的 uri。</p>
 						</div>
-						<p><em>Note</em> that most documents use the <code>file</code>-scheme, which means they are files on disk. However, <strong>not</strong> all documents are
-						saved on disk and therefore the <code>scheme</code> must be checked before trying to access the underlying file or siblings on disk.</p>
+						<p><em>注意</em> 大多数文档使用 <code>file</code>-scheme，这意味着它们是磁盘上的文件。但是，<strong>并非</strong>所有文档都保存在磁盘上，
+						因此在尝试访问底层文件或磁盘上的兄弟文件之前，必须检查 <code>scheme</code>。</p>
 						<dl class="tsd-comment-tags">
 							<dt>see</dt>
 							<dd><p><a href="vscode.FileSystemProvider.html">FileSystemProvider</a></p>
@@ -199,13 +203,13 @@
 					<div class="tsd-signature tsd-kind-icon">file<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/8374d25/vscode.d.ts#L118">vscode.d.ts:118</a></li>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/5f7ad41/vscode.d.ts#L105">vscode.d.ts:105</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The file system path of the associated resource. Shorthand
-							notation for <a href="vscode.TextDocument.html#uri">TextDocument.uri.fsPath</a>. Independent of the uri scheme.</p>
+							<p>与此文档关联的资源的文件系统路径。<a href="vscode.TextDocument.html#uri">TextDocument.uri.fsPath</a> 的简写。
+							独立于 uri scheme。</p>
 						</div>
 					</div>
 				</section>
@@ -215,14 +219,13 @@
 					<div class="tsd-signature tsd-kind-icon">is<wbr>Untitled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/8374d25/vscode.d.ts#L125">vscode.d.ts:125</a></li>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/5f7ad41/vscode.d.ts#L111">vscode.d.ts:111</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Is this document representing an untitled file which has never been saved yet. <em>Note</em> that
-								this does not mean the document will be saved to disk, use <a href="../classes/vscode.Uri.html#scheme"><code>Uri.scheme</code></a>
-							to figure out where a document will be <a href="vscode.FileSystemProvider.html">saved</a>, e.g. <code>file</code>, <code>ftp</code> etc.</p>
+							<p>这个文档是否表示尚未保存的未命名文件。<em>注意</em>，这并不意味着文档将被保存到磁盘上，
+							使用 <a href="../classes/vscode.Uri.html#scheme"><code>Uri.scheme</code></a> 来找出文档将被 <a href="vscode.FileSystemProvider.html">saved</a> 的位置，例如 <code>file</code>、<code>ftp</code> 等。</p>
 						</div>
 					</div>
 				</section>
@@ -232,12 +235,12 @@
 					<div class="tsd-signature tsd-kind-icon">language<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/8374d25/vscode.d.ts#L130">vscode.d.ts:130</a></li>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/5f7ad41/vscode.d.ts#L116">vscode.d.ts:116</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The identifier of the language associated with this document.</p>
+							<p>与此文档关联的语言的标识符。</p>
 						</div>
 					</div>
 				</section>
@@ -247,13 +250,12 @@
 					<div class="tsd-signature tsd-kind-icon">version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/8374d25/vscode.d.ts#L136">vscode.d.ts:136</a></li>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/5f7ad41/vscode.d.ts#L121">vscode.d.ts:121</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The version number of this document (it will strictly increase after each
-							change, including undo/redo).</p>
+							<p>此文档的版本号（每次更改后都会严格增加，包括撤消/重做）。</p>
 						</div>
 					</div>
 				</section>
@@ -263,12 +265,12 @@
 					<div class="tsd-signature tsd-kind-icon">is<wbr>Dirty<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/8374d25/vscode.d.ts#L141">vscode.d.ts:141</a></li>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/5f7ad41/vscode.d.ts#L126">vscode.d.ts:126</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p><code>true</code> if there are unpersisted changes.</p>
+							<p>如果有未持久化的更改则为 <code>true</code>。</p>
 						</div>
 					</div>
 				</section>
@@ -278,13 +280,12 @@
 					<div class="tsd-signature tsd-kind-icon">is<wbr>Closed<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/8374d25/vscode.d.ts#L147">vscode.d.ts:147</a></li>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/5f7ad41/vscode.d.ts#L131">vscode.d.ts:131</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p><code>true</code> if the document has been closed. A closed document isn&#39;t synchronized anymore
-							and won&#39;t be re-used when the same resource is opened again.</p>
+							<p>如果文档已关闭，则为 <code>true</code>。已关闭的文档不再同步，并且当再次打开相同的资源时，不会复用它。</p>
 						</div>
 					</div>
 				</section>
@@ -294,13 +295,12 @@
 					<div class="tsd-signature tsd-kind-icon">eol<span class="tsd-signature-symbol">:</span> <a href="../enums/vscode.EndOfLine.html" class="tsd-signature-type" data-tsd-kind="Enumeration">EndOfLine</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/8374d25/vscode.d.ts#L162">vscode.d.ts:162</a></li>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/5f7ad41/vscode.d.ts#L143">vscode.d.ts:143</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The <a href="../enums/vscode.EndOfLine.html">end of line</a> sequence that is predominately
-							used in this document.</p>
+							<p>这个文档中主要使用的 <a href="../enums/vscode.EndOfLine.html">end of line</a> 序列。</p>
 						</div>
 					</div>
 				</section>
@@ -310,12 +310,12 @@
 					<div class="tsd-signature tsd-kind-icon">line<wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/8374d25/vscode.d.ts#L167">vscode.d.ts:167</a></li>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/5f7ad41/vscode.d.ts#L148">vscode.d.ts:148</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The number of lines in this document.</p>
+							<p>这个文档中的行数。</p>
 						</div>
 					</div>
 				</section>
@@ -332,18 +332,16 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/8374d25/vscode.d.ts#L156">vscode.d.ts:156</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/5f7ad41/vscode.d.ts#L138">vscode.d.ts:138</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Save the underlying file.</p>
+									<p>保存底层文件。</p>
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <a href="Thenable.html" class="tsd-signature-type" data-tsd-kind="Interface">Thenable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
-							<p>A promise that will resolve to true when the file
-								has been saved. If the file was not dirty or the save failed,
-							will return false.</p>
+							<p>一个 promise，当文件保存时会 resolve 为 <code>true</code>。如果文件没有被修改或保存失败，则会返回 <code>false</code>。</p>
 						</li>
 					</ul>
 				</section>
@@ -358,14 +356,12 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/8374d25/vscode.d.ts#L177">vscode.d.ts:177</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/5f7ad41/vscode.d.ts#L156">vscode.d.ts:156</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Returns a text line denoted by the line number. Note
-										that the returned object is <em>not</em> live and changes to the
-									document are not reflected.</p>
+									<p>返回由行号表示的文本行。请注意，返回的对象<em>不是</em>实时的，对文档的更改不会反映在其中。</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -373,26 +369,24 @@
 								<li>
 									<h5>line: <span class="tsd-signature-type">number</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>A line number in [0, lineCount).</p>
+										<p>行号 [0, lineCount)。</p>
 									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="vscode.TextLine.html" class="tsd-signature-type" data-tsd-kind="Interface">TextLine</a></h4>
-							<p>A <a href="vscode.TextLine.html">line</a>.</p>
+							<p>一个 <a href="vscode.TextLine.html">line</a>。</p>
 						</li>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/8374d25/vscode.d.ts#L191">vscode.d.ts:191</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/5f7ad41/vscode.d.ts#L168">vscode.d.ts:168</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Returns a text line denoted by the position. Note
-										that the returned object is <em>not</em> live and changes to the
-									document are not reflected.</p>
+									<p>返回由位置表示的文本行。请注意，返回的对象<em>不是</em>实时的，对文档的更改不会反映在其中。</p>
 								</div>
-								<p>The position will be <a href="vscode.TextDocument.html#validatePosition">adjusted</a>.</p>
+								<p>位置将被 <a href="vscode.TextDocument.html#validatePosition">adjusted</a>。</p>
 								<dl class="tsd-comment-tags">
 									<dt>see</dt>
 									<dd><p><a href="vscode.TextDocument.html#lineAt">TextDocument.lineAt</a></p>
@@ -404,12 +398,12 @@
 								<li>
 									<h5>position: <a href="../classes/vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>A position.</p>
+										<p>一个位置。</p>
 									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="vscode.TextLine.html" class="tsd-signature-type" data-tsd-kind="Interface">TextLine</a></h4>
-							<p>A <a href="vscode.TextLine.html">line</a>.</p>
+							<p>一个 <a href="vscode.TextLine.html">line</a>。</p>
 						</li>
 					</ul>
 				</section>
@@ -423,26 +417,26 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/8374d25/vscode.d.ts#L201">vscode.d.ts:201</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/5f7ad41/vscode.d.ts#L186">vscode.d.ts:186</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Converts the position to a zero-based offset.</p>
+									<p>将位置转换为基于 0 的偏移量。</p>
 								</div>
-								<p>The position will be <a href="vscode.TextDocument.html#validatePosition">adjusted</a>.</p>
+								<p>位置将被 <a href="vscode.TextDocument.html#validatePosition">adjusted</a>。</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>position: <a href="../classes/vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>A position.</p>
+										<p>一个位置。</p>
 									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
-							<p>A valid zero-based offset.</p>
+							<p>一个有效的基于 0 的偏移量。</p>
 						</li>
 					</ul>
 				</section>
@@ -456,12 +450,12 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/8374d25/vscode.d.ts#L209">vscode.d.ts:209</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/5f7ad41/vscode.d.ts#L194">vscode.d.ts:194</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Converts a zero-based offset to a position.</p>
+									<p>将基于 0 的偏移量转换为位置。</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -469,12 +463,12 @@
 								<li>
 									<h5>offset: <span class="tsd-signature-type">number</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>A zero-based offset.</p>
+										<p>一个基于 0 的偏移量。</p>
 									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="../classes/vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></h4>
-							<p>A valid <a href="../classes/vscode.Position.html">Position</a>.</p>
+							<p>一个有效的 <a href="../classes/vscode.Position.html">Position</a>。</p>
 						</li>
 					</ul>
 				</section>
@@ -488,26 +482,21 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/8374d25/vscode.d.ts#L218">vscode.d.ts:218</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/5f7ad41/vscode.d.ts#L199">vscode.d.ts:199</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Get the text of this document. A substring can be retrieved by providing
-									a range. The range will be <a href="vscode.TextDocument.html#validateRange">adjusted</a>.</p>
+									<p>获取此文档的文本。可以通过提供范围来检索子字符串。范围将被 <a href="vscode.TextDocument.html#validateRange">adjusted</a>。</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> range: <a href="../classes/vscode.Range.html" class="tsd-signature-type" data-tsd-kind="Class">Range</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Include only the text included by the range.</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
-							<p>The text inside the provided range or the entire text.</p>
 						</li>
 					</ul>
 				</section>
@@ -521,42 +510,39 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/8374d25/vscode.d.ts#L238">vscode.d.ts:238</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/5f7ad41/vscode.d.ts#L215">vscode.d.ts:215</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Get a word-range at the given position. By default words are defined by
-										common separators, like space, -, _, etc. In addition, per language custom
-										[word definitions} can be defined. It
-									is also possible to provide a custom regular expression.</p>
+									<p>获取给定位置的单词范围。默认情况下，单词由常见分隔符定义，例如空格、-、_ 等。
+									此外，可以定义每种语言的自定义 [单词定义]。还可以提供自定义正则表达式。</p>
 								</div>
 								<ul>
-									<li><em>Note 1:</em> A custom regular expression must not match the empty string and
-									if it does, it will be ignored.</li>
-									<li><em>Note 2:</em> A custom regular expression will fail to match multiline strings
-										and in the name of speed regular expressions should not match words with
-									spaces. Use <a href="vscode.TextLine.html#text"><code>TextLine.text</code></a> for more complex, non-wordy, scenarios.</li>
+									<li><p><em>注意 1:</em> 自定义正则表达式不得匹配空字符串，如果它这样做了，它将被忽略。</p>
+									</li>
+									<li><p><em>注意 2:</em> 自定义正则表达式将无法匹配多行字符串，为了速度，正则表达式不应该匹配带有空格的单词。使用 <a href="vscode.TextLine.html#text"><code>TextLine.text</code></a> 以获取更复杂、非单词的场景。</p>
+									</li>
 								</ul>
-								<p>The position will be <a href="vscode.TextDocument.html#validatePosition">adjusted</a>.</p>
+								<p>位置将被 <a href="vscode.TextDocument.html#validatePosition">adjusted</a>。</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>position: <a href="../classes/vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>A position.</p>
+										<p>一个位置。</p>
 									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> regex: <span class="tsd-signature-type">RegExp</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Optional regular expression that describes what a word is.</p>
+										<p>可选的正则表达式，描述了单词是什么。</p>
 									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../classes/vscode.Range.html" class="tsd-signature-type" data-tsd-kind="Class">Range</a></h4>
-							<p>A range spanning a word, or <code>undefined</code>.</p>
+							<p>一个范围，包含一个单词，或 <code>undefined</code>。</p>
 						</li>
 					</ul>
 				</section>
@@ -570,12 +556,12 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/8374d25/vscode.d.ts#L246">vscode.d.ts:246</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/5f7ad41/vscode.d.ts#L223">vscode.d.ts:223</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Ensure a range is completely contained in this document.</p>
+									<p>确保范围完全包含在此文档中。</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -583,12 +569,12 @@
 								<li>
 									<h5>range: <a href="../classes/vscode.Range.html" class="tsd-signature-type" data-tsd-kind="Class">Range</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>A range.</p>
+										<p>一个范围。</p>
 									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="../classes/vscode.Range.html" class="tsd-signature-type" data-tsd-kind="Class">Range</a></h4>
-							<p>The given range or a new, adjusted range.</p>
+							<p>给定的范围或一个新的、调整过的范围。</p>
 						</li>
 					</ul>
 				</section>
@@ -602,12 +588,12 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/8374d25/vscode.d.ts#L254">vscode.d.ts:254</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/5f7ad41/vscode.d.ts#L231">vscode.d.ts:231</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Ensure a position is contained in the range of this document.</p>
+									<p>确保位置包含在此文档的范围内。</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -615,12 +601,12 @@
 								<li>
 									<h5>position: <a href="../classes/vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>A position.</p>
+										<p>一个位置。</p>
 									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="../classes/vscode.Position.html" class="tsd-signature-type" data-tsd-kind="Class">Position</a></h4>
-							<p>The given position or a new, adjusted position.</p>
+							<p>给定的位置或一个新的、调整过的位置。</p>
 						</li>
 					</ul>
 				</section>

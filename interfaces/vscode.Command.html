@@ -119,16 +119,12 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>表示对一个命令的引用。提供一个标题，该标题用于该命令在 UI 中显示。
-						可选的，还可以提供一个参数数组，该数组将在命令处理函数被调用时作为参数传入。</p>
+						<p>表示对命令的引用。提供一个标题，该标题将用于在 UI 中表示命令，
+						并且可以选择性地提供一个数组，该数组将在调用命令处理程序函数时传递给该命令处理程序函数。</p>
 					</div>
-					<p>Represents a reference to a command. Provides a title which
-						will be used to represent a command in the UI and, optionally,
-						an array of arguments which will be passed to the command handler
-					function when invoked.</p>
 					<dl class="tsd-comment-tags">
 						<dt>maintainer</dt>
-						<dd><p><a href="https://github.com/youngjuning" class="external">@youngjuning</a></p>
+						<dd><p><a href="https://youngjuning.js.org" class="external">@youngjuning</a></p>
 						</dd>
 					</dl>
 				</div>
@@ -165,14 +161,13 @@
 					<div class="tsd-signature tsd-kind-icon">title<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/8374d25/vscode.d.ts#L29">vscode.d.ts:29</a></li>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/5f7ad41/vscode.d.ts#L22">vscode.d.ts:22</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>命令的标题，比如 <code>save</code>。</p>
+							<p>命令的标题，如 <code>save</code>。</p>
 						</div>
-						<p>Title of the command, like <code>save</code>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -181,14 +176,13 @@
 					<div class="tsd-signature tsd-kind-icon">command<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/8374d25/vscode.d.ts#L38">vscode.d.ts:38</a></li>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/5f7ad41/vscode.d.ts#L28">vscode.d.ts:28</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>实际命令处理程序的标识符。</p>
+							<p>命令的标识符</p>
 						</div>
-						<p>The identifier of the actual command handler.</p>
 						<dl class="tsd-comment-tags">
 							<dt>see</dt>
 							<dd><p><a href="../modules/vscode.commands.html#registerCommand">commands.registerCommand</a></p>
@@ -202,14 +196,13 @@
 					<div class="tsd-signature tsd-kind-icon">tooltip<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/8374d25/vscode.d.ts#L45">vscode.d.ts:45</a></li>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/5f7ad41/vscode.d.ts#L33">vscode.d.ts:33</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>命令的提示信息，当命令显示在 UI 中时，会显示在提示信息中。</p>
 						</div>
-						<p>A tooltip for the command, when represented in the UI.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -218,15 +211,13 @@
 					<div class="tsd-signature tsd-kind-icon">arguments<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/8374d25/vscode.d.ts#L53">vscode.d.ts:53</a></li>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/5f7ad41/vscode.d.ts#L38">vscode.d.ts:38</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>命令处理程序被调用时，会把这些参数传入。</p>
 						</div>
-						<p>Arguments that the command handler should be
-						invoked with.</p>
 					</div>
 				</section>
 			</section>

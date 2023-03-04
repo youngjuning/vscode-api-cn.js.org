@@ -119,10 +119,15 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Represents a line of text, such as a line of source code.</p>
+						<p>表示一行文本，例如源代码中的一行。</p>
 					</div>
-					<p>TextLine objects are <strong>immutable</strong>. When a <a href="vscode.TextDocument.html">document</a> changes,
-					previously retrieved lines will not represent the latest state.</p>
+					<p>TextLine 对象是 <strong>immutable</strong> 的。当 <a href="vscode.TextDocument.html">document</a> 改变时，
+					之前获取的行将不会表示最新的状态。</p>
+					<dl class="tsd-comment-tags">
+						<dt>maintainer</dt>
+						<dd><p><a href="https://youngjuning.js.org" class="external">@youngjuning</a></p>
+						</dd>
+					</dl>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -159,12 +164,12 @@
 					<div class="tsd-signature tsd-kind-icon">line<wbr>Number<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/8374d25/vscode.d.ts#L67">vscode.d.ts:67</a></li>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/5f7ad41/vscode.d.ts#L54">vscode.d.ts:54</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The zero-based line number.</p>
+							<p>行号，从 0 开始。</p>
 						</div>
 					</div>
 				</section>
@@ -174,12 +179,12 @@
 					<div class="tsd-signature tsd-kind-icon">text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/8374d25/vscode.d.ts#L72">vscode.d.ts:72</a></li>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/5f7ad41/vscode.d.ts#L59">vscode.d.ts:59</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The text of this line without the line separator characters.</p>
+							<p>这一行的文本，不包含行分隔符。</p>
 						</div>
 					</div>
 				</section>
@@ -189,12 +194,12 @@
 					<div class="tsd-signature tsd-kind-icon">range<span class="tsd-signature-symbol">:</span> <a href="../classes/vscode.Range.html" class="tsd-signature-type" data-tsd-kind="Class">Range</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/8374d25/vscode.d.ts#L77">vscode.d.ts:77</a></li>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/5f7ad41/vscode.d.ts#L64">vscode.d.ts:64</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The range this line covers without the line separator characters.</p>
+							<p>这一行的范围，不包含行分隔符。</p>
 						</div>
 					</div>
 				</section>
@@ -204,12 +209,12 @@
 					<div class="tsd-signature tsd-kind-icon">range<wbr>Including<wbr>Line<wbr>Break<span class="tsd-signature-symbol">:</span> <a href="../classes/vscode.Range.html" class="tsd-signature-type" data-tsd-kind="Class">Range</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/8374d25/vscode.d.ts#L82">vscode.d.ts:82</a></li>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/5f7ad41/vscode.d.ts#L69">vscode.d.ts:69</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The range this line covers with the line separator characters.</p>
+							<p>这一行的范围，包含行分隔符。</p>
 						</div>
 					</div>
 				</section>
@@ -219,13 +224,12 @@
 					<div class="tsd-signature tsd-kind-icon">first<wbr>Non<wbr>Whitespace<wbr>Character<wbr>Index<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/8374d25/vscode.d.ts#L88">vscode.d.ts:88</a></li>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/5f7ad41/vscode.d.ts#L74">vscode.d.ts:74</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The offset of the first character which is not a whitespace character as defined
-							by <code>/\s/</code>. <strong>Note</strong> that if a line is all whitespace the length of the line is returned.</p>
+							<p>第一个非空白字符的偏移量，如果这一行是空白的（<code>/\s/</code>），那么返回这一行的长度。</p>
 						</div>
 					</div>
 				</section>
@@ -235,13 +239,13 @@
 					<div class="tsd-signature tsd-kind-icon">is<wbr>Empty<wbr>OrWhitespace<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/8374d25/vscode.d.ts#L94">vscode.d.ts:94</a></li>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn/blob/5f7ad41/vscode.d.ts#L80">vscode.d.ts:80</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Whether this line is whitespace only, shorthand
-							for <a href="vscode.TextLine.html#firstNonWhitespaceCharacterIndex">TextLine.firstNonWhitespaceCharacterIndex</a> === <a href="vscode.TextLine.html#text">TextLine.text.length</a>.</p>
+							<p>这一行是否是空白的，即 <code>/\s/</code>。
+							<a href="vscode.TextLine.html#firstNonWhitespaceCharacterIndex">TextLine.firstNonWhitespaceCharacterIndex</a> === <a href="vscode.TextLine.html#text">TextLine.text.length</a>。</p>
 						</div>
 					</div>
 				</section>
