@@ -8,10 +8,6 @@ API 列表使用 Typedoc 从 [vscode.d.ts](https://github.com/youngjuning/vscode
 
 ## 贡献指南
 
-- [专业术语](https://github.com/vscode-cn/vscode-api-cn/issues/27)
-
-### 成为译者
-
 对 *vscode.d.ts* 文件的注释进行翻译，然后提交 PR 即可。
 
 ### 本地预览

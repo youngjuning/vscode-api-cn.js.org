@@ -1,6 +1,6 @@
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See LICENCE in the project root for license information.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
 declare module vscode {
@@ -9,185 +9,162 @@ declare module vscode {
    */
   export const version: string;
 
-  /**
-	 * 表示对一个命令的引用。提供一个标题，该标题用于该命令在 UI 中显示。
-	 * 可选的，还可以提供一个参数数组，该数组将在命令处理函数被调用时作为参数传入。
+	/**
+	 * 表示对命令的引用。提供一个标题，该标题将用于在 UI 中表示命令，
+	 * 并且可以选择性地提供一个数组，该数组将在调用命令处理程序函数时传递给该命令处理程序函数。
 	 *
-   * Represents a reference to a command. Provides a title which
-   * will be used to represent a command in the UI and, optionally,
-   * an array of arguments which will be passed to the command handler
-   * function when invoked.
-	 *
-	 * @maintainer {@link https://github.com/youngjuning @youngjuning}
-   */
+	 * @maintainer {@link https://youngjuning.js.org @youngjuning}
+	 */
   export interface Command {
-    /**
-		 * 命令的标题，比如 `save`。
-		 *
-     * Title of the command, like `save`.
-     */
+		/**
+		 * 命令的标题，如 `save`。
+		 */
     title: string;
 
-    /**
-		 * 实际命令处理程序的标识符。
-		 *
-		 * The identifier of the actual command handler.
-		 *
-     * @see {@link commands.registerCommand}
-     */
+		/**
+		 * 命令的标识符
+		 * @see {@link commands.registerCommand}
+		 */
     command: string;
 
     /**
 		 * 命令的提示信息，当命令显示在 UI 中时，会显示在提示信息中。
-     *
-		 * A tooltip for the command, when represented in the UI.
      */
     tooltip?: string;
 
     /**
 		 * 命令处理程序被调用时，会把这些参数传入。
-		 *
-     * Arguments that the command handler should be
-     * invoked with.
      */
     arguments?: any[];
   }
 
-  /**
-   * Represents a line of text, such as a line of source code.
-   *
-   * TextLine objects are __immutable__. When a {@link TextDocument document} changes,
-   * previously retrieved lines will not represent the latest state.
-   */
+	/**
+	 * 表示一行文本，例如源代码中的一行。
+	 *
+	 * TextLine 对象是 __immutable__ 的。当 {@link TextDocument document} 改变时，
+	 * 之前获取的行将不会表示最新的状态。
+	 *
+	 * @maintainer {@link https://youngjuning.js.org @youngjuning}
+	 */
   export interface TextLine {
 
-    /**
-     * The zero-based line number.
-     */
+		/**
+		 * 行号，从 0 开始。
+		 */
     readonly lineNumber: number;
 
-    /**
-     * The text of this line without the line separator characters.
-     */
+		/**
+		 * 这一行的文本，不包含行分隔符。
+		 */
     readonly text: string;
 
-    /**
-     * The range this line covers without the line separator characters.
-     */
+		/**
+		 * 这一行的范围，不包含行分隔符。
+		 */
     readonly range: Range;
 
-    /**
-     * The range this line covers with the line separator characters.
-     */
+		/**
+		 * 这一行的范围，包含行分隔符。
+		 */
     readonly rangeIncludingLineBreak: Range;
 
-    /**
-     * The offset of the first character which is not a whitespace character as defined
-     * by `/\s/`. **Note** that if a line is all whitespace the length of the line is returned.
-     */
+		/**
+		 * 第一个非空白字符的偏移量，如果这一行是空白的（`/\s/`），那么返回这一行的长度。
+		 */
     readonly firstNonWhitespaceCharacterIndex: number;
 
-    /**
-     * Whether this line is whitespace only, shorthand
-     * for {@link TextLine.firstNonWhitespaceCharacterIndex} === {@link TextLine.text TextLine.text.length}.
-     */
+		/**
+		 * 这一行是否是空白的，即 `/\s/`。
+		 * {@link TextLine.firstNonWhitespaceCharacterIndex} === {@link TextLine.text TextLine.text.length}。
+		 */
     readonly isEmptyOrWhitespace: boolean;
   }
 
-  /**
-   * Represents a text document, such as a source file. Text documents have
-   * {@link TextLine lines} and knowledge about an underlying resource like a file.
-   */
+	/**
+	 * 表示文本文档，例如源文件。文本文档有 {@link TextLine lines} 和关于底层资源（如文件）的知识。
+	 *
+	 * @maintainer {@link https://youngjuning.js.org @youngjuning}
+	 */
   export interface TextDocument {
 
-    /**
-     * The associated uri for this document.
-     *
-     * *Note* that most documents use the `file`-scheme, which means they are files on disk. However, **not** all documents are
-     * saved on disk and therefore the `scheme` must be checked before trying to access the underlying file or siblings on disk.
-     *
-     * @see {@link FileSystemProvider}
-     * @see {@link TextDocumentContentProvider}
-     */
+		/**
+		 * 与此文档关联的 uri。
+		 *
+		 * *注意* 大多数文档使用 `file`-scheme，这意味着它们是磁盘上的文件。但是，**并非**所有文档都保存在磁盘上，
+		 * 因此在尝试访问底层文件或磁盘上的兄弟文件之前，必须检查 `scheme`。
+		 *
+		 * @see {@link FileSystemProvider}
+		 * @see {@link TextDocumentContentProvider}
+		 */
     readonly uri: Uri;
 
-    /**
-     * The file system path of the associated resource. Shorthand
-     * notation for {@link TextDocument.uri TextDocument.uri.fsPath}. Independent of the uri scheme.
-     */
+		/**
+		 * 与此文档关联的资源的文件系统路径。{@link TextDocument.uri TextDocument.uri.fsPath} 的简写。
+		 * 独立于 uri scheme。
+		 */
     readonly fileName: string;
 
-    /**
-     * Is this document representing an untitled file which has never been saved yet. *Note* that
-     * this does not mean the document will be saved to disk, use {@linkcode Uri.scheme}
-     * to figure out where a document will be {@link FileSystemProvider saved}, e.g. `file`, `ftp` etc.
-     */
+		/**
+		 * 这个文档是否表示尚未保存的未命名文件。*注意*，这并不意味着文档将被保存到磁盘上，
+		 * 使用 {@linkcode Uri.scheme} 来找出文档将被 {@link FileSystemProvider saved} 的位置，例如 `file`、`ftp` 等。
+		 */
     readonly isUntitled: boolean;
 
-    /**
-     * The identifier of the language associated with this document.
-     */
+		/**
+		 * 与此文档关联的语言的标识符。
+		 */
     readonly languageId: string;
 
-    /**
-     * The version number of this document (it will strictly increase after each
-     * change, including undo/redo).
-     */
+		/**
+		 * 此文档的版本号（每次更改后都会严格增加，包括撤消/重做）。
+		 */
     readonly version: number;
 
-    /**
-     * `true` if there are unpersisted changes.
-     */
+		/**
+		 * 如果有未持久化的更改则为 `true`。
+		 */
     readonly isDirty: boolean;
 
-    /**
-     * `true` if the document has been closed. A closed document isn't synchronized anymore
-     * and won't be re-used when the same resource is opened again.
-     */
+		/**
+		 * 如果文档已关闭，则为 `true`。已关闭的文档不再同步，并且当再次打开相同的资源时，不会复用它。
+		 */
     readonly isClosed: boolean;
 
-    /**
-     * Save the underlying file.
-     *
-     * @return A promise that will resolve to true when the file
-     * has been saved. If the file was not dirty or the save failed,
-     * will return false.
-     */
+		/**
+		 * 保存底层文件。
+		 *
+		 * @return 一个 promise，当文件保存时会 resolve 为 `true`。如果文件没有被修改或保存失败，则会返回 `false`。
+		 */
     save(): Thenable<boolean>;
 
-    /**
-     * The {@link EndOfLine end of line} sequence that is predominately
-     * used in this document.
-     */
+		/**
+		 * 这个文档中主要使用的 {@link EndOfLine end of line} 序列。
+		 */
     readonly eol: EndOfLine;
 
-    /**
-     * The number of lines in this document.
-     */
+		/**
+		 * 这个文档中的行数。
+		 */
     readonly lineCount: number;
 
-    /**
-     * Returns a text line denoted by the line number. Note
-     * that the returned object is *not* live and changes to the
-     * document are not reflected.
-     *
-     * @param line A line number in [0, lineCount).
-     * @return A {@link TextLine line}.
-     */
+		/**
+		 * 返回由行号表示的文本行。请注意，返回的对象*不是*实时的，对文档的更改不会反映在其中。
+		 *
+		 * @param line 行号 [0, lineCount)。
+		 * @return 一个 {@link TextLine line}。
+		 */
     lineAt(line: number): TextLine;
 
-    /**
-     * Returns a text line denoted by the position. Note
-     * that the returned object is *not* live and changes to the
-     * document are not reflected.
-     *
-     * The position will be {@link TextDocument.validatePosition adjusted}.
-     *
-     * @see {@link TextDocument.lineAt}
-     *
-     * @param position A position.
-     * @return A {@link TextLine line}.
-     */
+		/**
+		 * 返回由位置表示的文本行。请注意，返回的对象*不是*实时的，对文档的更改不会反映在其中。
+		 *
+		 * 位置将被 {@link TextDocument.validatePosition adjusted}。
+		 *
+		 * @see {@link TextDocument.lineAt}
+		 *
+		 * @param position 一个位置。
+		 * @return 一个 {@link TextLine line}。
+		 */
     lineAt(position: Position): TextLine;
 
     /**
@@ -198,70 +175,69 @@ declare module vscode {
      * @param position A position.
      * @return A valid zero-based offset.
      */
+		/**
+		 * 将位置转换为基于 0 的偏移量。
+		 *
+		 * 位置将被 {@link TextDocument.validatePosition adjusted}。
+		 *
+		 * @param position 一个位置。
+		 * @return 一个有效的基于 0 的偏移量。
+		 */
     offsetAt(position: Position): number;
 
-    /**
-     * Converts a zero-based offset to a position.
-     *
-     * @param offset A zero-based offset.
-     * @return A valid {@link Position}.
-     */
+		/**
+		 * 将基于 0 的偏移量转换为位置。
+		 *
+		 * @param offset 一个基于 0 的偏移量。
+		 * @return 一个有效的 {@link Position}。
+		 */
     positionAt(offset: number): Position;
 
-    /**
-     * Get the text of this document. A substring can be retrieved by providing
-     * a range. The range will be {@link TextDocument.validateRange adjusted}.
-     *
-     * @param range Include only the text included by the range.
-     * @return The text inside the provided range or the entire text.
-     */
+		/**
+		 * 获取此文档的文本。可以通过提供范围来检索子字符串。范围将被 {@link TextDocument.validateRange adjusted}。
+		 */
     getText(range?: Range): string;
 
-    /**
-     * Get a word-range at the given position. By default words are defined by
-     * common separators, like space, -, _, etc. In addition, per language custom
-     * [word definitions} can be defined. It
-     * is also possible to provide a custom regular expression.
-     *
-     * * *Note 1:* A custom regular expression must not match the empty string and
-     * if it does, it will be ignored.
-     * * *Note 2:* A custom regular expression will fail to match multiline strings
-     * and in the name of speed regular expressions should not match words with
-     * spaces. Use {@linkcode TextLine.text} for more complex, non-wordy, scenarios.
-     *
-     * The position will be {@link TextDocument.validatePosition adjusted}.
-     *
-     * @param position A position.
-     * @param regex Optional regular expression that describes what a word is.
-     * @return A range spanning a word, or `undefined`.
-     */
+		/**
+		 * 获取给定位置的单词范围。默认情况下，单词由常见分隔符定义，例如空格、-、_ 等。
+		 * 此外，可以定义每种语言的自定义 [单词定义]。还可以提供自定义正则表达式。
+		 *
+		 * * *注意 1:* 自定义正则表达式不得匹配空字符串，如果它这样做了，它将被忽略。
+		 *
+		 * * *注意 2:* 自定义正则表达式将无法匹配多行字符串，为了速度，正则表达式不应该匹配带有空格的单词。使用 {@linkcode TextLine.text} 以获取更复杂、非单词的场景。
+		 *
+		 * 位置将被 {@link TextDocument.validatePosition adjusted}。
+		 *
+		 * @param position 一个位置。
+		 * @param regex 可选的正则表达式，描述了单词是什么。
+		 * @return 一个范围，包含一个单词，或 `undefined`。
+		 */
     getWordRangeAtPosition(position: Position, regex?: RegExp): Range | undefined;
 
-    /**
-     * Ensure a range is completely contained in this document.
-     *
-     * @param range A range.
-     * @return The given range or a new, adjusted range.
-     */
+		/**
+		 * 确保范围完全包含在此文档中。
+		 *
+		 * @param range 一个范围。
+		 * @return 给定的范围或一个新的、调整过的范围。
+		 */
     validateRange(range: Range): Range;
 
-    /**
-     * Ensure a position is contained in the range of this document.
-     *
-     * @param position A position.
-     * @return The given position or a new, adjusted position.
-     */
+		/**
+		 * 确保位置包含在此文档的范围内。
+		 *
+		 * @param position 一个位置。
+		 * @return 给定的位置或一个新的、调整过的位置。
+		 */
     validatePosition(position: Position): Position;
   }
 
-  /**
-   * Represents a line and character position, such as
-   * the position of the cursor.
-   *
-   * Position objects are __immutable__. Use the {@link Position.with with} or
-   * {@link Position.translate translate} methods to derive new positions
-   * from an existing position.
-   */
+	/**
+	 * 表示行和字符位置，例如光标的位置。
+	 *
+	 * Position 对象是不可变的。使用 {@link Position.with with} 或 {@link Position.translate translate} 方法从现有位置派生新位置。
+	 *
+	 * @maintainer {@link https://youngjuning.js.org @youngjuning}
+	 */
   export class Position {
 
     /**
@@ -381,6 +357,11 @@ declare module vscode {
    * {@link Range.intersection intersection}, or {@link Range.union union} methods
    * to derive new ranges from an existing range.
    */
+	/**
+	 * 表示两个位置之间的文本范围。
+	 *
+	 * 请注意，范围是不可变的。使用 {@link Range.with with} 或 {@link Range.intersection intersection}、{@link Range.union union} 方法从现有范围派生新范围。
+	 */
   export class Range {
 
     /**
