@@ -9,7 +9,6 @@ API 列表使用 Typedoc 从 [vscode.d.ts](https://github.com/youngjuning/vscode
 ## 贡献指南
 
 - [专业术语](https://github.com/vscode-cn/vscode-api-cn/issues/27)
-- [翻译认领](https://github.com/vscode-cn/vscode-api-cn/issues/25)
 
 ### 成为译者
 
