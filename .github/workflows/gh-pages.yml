@@ -14,6 +14,7 @@ jobs:
       - run: mv googled29fba422c357ff8.html docs/
       - run: mv robots.txt docs/
       - run: mv ads.txt docs/
+      - run: mv sw.js docs/
       - run: node sitemap.js
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
