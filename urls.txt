@@ -239,6 +239,7 @@ https://vscode-api-cn.js.org/interfaces/vscode.NotebookDocument.html
 https://vscode-api-cn.js.org/interfaces/vscode.NotebookDocumentContentOptions.html
 https://vscode-api-cn.js.org/interfaces/vscode.NotebookEditor.html
 https://vscode-api-cn.js.org/interfaces/vscode.NotebookRendererMessaging.html
+https://vscode-api-cn.js.org/interfaces/vscode.NotebookSerializer.html
 https://vscode-api-cn.js.org/interfaces/vscode.OnEnterRule.html
 https://vscode-api-cn.js.org/interfaces/vscode.OnTypeFormattingEditProvider.html
 https://vscode-api-cn.js.org/interfaces/vscode.OpenDialogOptions.html
@@ -261,7 +262,6 @@ https://vscode-api-cn.js.org/interfaces/vscode.SaveDialogOptions.html
 https://vscode-api-cn.js.org/interfaces/vscode.SecretStorage.html
 https://vscode-api-cn.js.org/interfaces/vscode.SecretStorageChangeEvent.html
 https://vscode-api-cn.js.org/interfaces/vscode.SelectionRangeProvider.html
-https://vscode-api-cn.js.org/interfaces/vscode.NotebookSerializer.html
 https://vscode-api-cn.js.org/interfaces/vscode.ShellExecutionOptions.html
 https://vscode-api-cn.js.org/interfaces/vscode.ShellQuotedString.html
 https://vscode-api-cn.js.org/interfaces/vscode.ShellQuotingOptions.html
