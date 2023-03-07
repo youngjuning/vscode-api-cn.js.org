@@ -244,10 +244,10 @@ https://vscode-api-cn.js.org/interfaces/vscode.OnEnterRule.html
 https://vscode-api-cn.js.org/interfaces/vscode.OnTypeFormattingEditProvider.html
 https://vscode-api-cn.js.org/interfaces/vscode.OpenDialogOptions.html
 https://vscode-api-cn.js.org/interfaces/vscode.OutputChannel.html
+https://vscode-api-cn.js.org/interfaces/vscode.ProcessExecutionOptions.html
 https://vscode-api-cn.js.org/interfaces/vscode.Progress.html
 https://vscode-api-cn.js.org/interfaces/vscode.ProgressOptions.html
 https://vscode-api-cn.js.org/interfaces/vscode.Pseudoterminal.html
-https://vscode-api-cn.js.org/interfaces/vscode.ProcessExecutionOptions.html
 https://vscode-api-cn.js.org/interfaces/vscode.QuickDiffProvider.html
 https://vscode-api-cn.js.org/interfaces/vscode.QuickInput.html
 https://vscode-api-cn.js.org/interfaces/vscode.QuickInputButton.html
