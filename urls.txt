@@ -318,12 +318,12 @@ https://vscode-api-cn.js.org/interfaces/vscode.TreeDataProvider.html
 https://vscode-api-cn.js.org/interfaces/vscode.TreeItemLabel.html
 https://vscode-api-cn.js.org/interfaces/vscode.TreeView.html
 https://vscode-api-cn.js.org/interfaces/vscode.TreeViewExpansionEvent.html
+https://vscode-api-cn.js.org/interfaces/vscode.TreeViewOptions.html
 https://vscode-api-cn.js.org/interfaces/vscode.TreeViewSelectionChangeEvent.html
 https://vscode-api-cn.js.org/interfaces/vscode.TreeViewVisibilityChangeEvent.html
 https://vscode-api-cn.js.org/interfaces/vscode.TypeDefinitionProvider.html
 https://vscode-api-cn.js.org/interfaces/vscode.UriHandler.html
 https://vscode-api-cn.js.org/interfaces/vscode.Webview.html
-https://vscode-api-cn.js.org/interfaces/vscode.TreeViewOptions.html
 https://vscode-api-cn.js.org/interfaces/vscode.WebviewOptions.html
 https://vscode-api-cn.js.org/interfaces/vscode.WebviewPanel.html
 https://vscode-api-cn.js.org/interfaces/vscode.WebviewPanelOnDidChangeViewStateEvent.html
@@ -345,9 +345,9 @@ https://vscode-api-cn.js.org/modules/vscode.commands.html
 https://vscode-api-cn.js.org/modules/vscode.comments.html
 https://vscode-api-cn.js.org/modules/vscode.debug.html
 https://vscode-api-cn.js.org/modules/vscode.env.html
+https://vscode-api-cn.js.org/modules/vscode.extensions.html
 https://vscode-api-cn.js.org/modules/vscode.html
 https://vscode-api-cn.js.org/modules/vscode.languages.html
-https://vscode-api-cn.js.org/modules/vscode.extensions.html
 https://vscode-api-cn.js.org/modules/vscode.notebooks.html
 https://vscode-api-cn.js.org/modules/vscode.scm.html
 https://vscode-api-cn.js.org/modules/vscode.tasks.html
