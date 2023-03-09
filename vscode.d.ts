@@ -8164,7 +8164,7 @@ declare module vscode {
   /**
    * 描述编辑器运行环境的命名空间。
 	 *
-   * @maintainer {@link https://github.com/youngjuning @youngjuning}
+   * @maintainer {@link https://youngjuning.js.org @youngjuning}
    */
   export namespace env {
 		/**
@@ -8553,7 +8553,7 @@ declare module vscode {
 
   /**
    * 用于处理编辑器当前窗口（window）的命名空间。就是可见和活动的编辑器以及显示信息、选择和要求用户输入的 UI 元素。
-   * @maintainer {@link https://github.com/youngjuning @youngjuning}
+   * @maintainer {@link https://youngjuning.js.org @youngjuning}
    */
   export namespace window {
 
@@ -10574,7 +10574,7 @@ declare module vscode {
    * The workspace offers support for {@link workspace.createFileSystemWatcher listening} to fs
    * events and for {@link workspace.findFiles finding} files. Both perform well and run _outside_
    * the editor-process so that they should be always used instead of nodejs-equivalents.
-   * @maintainer {@link https://github.com/youngjuning @youngjuning}
+   * @maintainer {@link https://youngjuning.js.org @youngjuning}
    */
   export namespace workspace {
 
@@ -11129,7 +11129,7 @@ declare module vscode {
    * scores are equal the provider that came last wins. For features that allow full arity, like {@link languages.registerHoverProvider hover},
    * the score is only checked to be `>0`, for other features, like {@link languages.registerCompletionItemProvider IntelliSense} the
    * score is used for determining the order in which providers are asked to participate.
-   * @maintainer {@link https://github.com/youngjuning @youngjuning}
+   * @maintainer {@link https://youngjuning.js.org @youngjuning}
    */
   export namespace languages {
 
