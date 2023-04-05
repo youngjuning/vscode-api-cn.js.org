@@ -95,13 +95,13 @@ https://vscode-api-cn.js.org/enums/vscode.EnvironmentVariableMutatorType.html
 https://vscode-api-cn.js.org/enums/vscode.ExtensionKind.html
 https://vscode-api-cn.js.org/enums/vscode.ExtensionMode.html
 https://vscode-api-cn.js.org/enums/vscode.FileChangeType.html
+https://vscode-api-cn.js.org/enums/vscode.FileType.html
 https://vscode-api-cn.js.org/enums/vscode.FoldingRangeKind.html
 https://vscode-api-cn.js.org/enums/vscode.IndentAction.html
 https://vscode-api-cn.js.org/enums/vscode.NotebookCellKind.html
-https://vscode-api-cn.js.org/enums/vscode.FileType.html
 https://vscode-api-cn.js.org/enums/vscode.NotebookCellStatusBarAlignment.html
-https://vscode-api-cn.js.org/enums/vscode.OverviewRulerLane.html
 https://vscode-api-cn.js.org/enums/vscode.NotebookControllerAffinity.html
+https://vscode-api-cn.js.org/enums/vscode.OverviewRulerLane.html
 https://vscode-api-cn.js.org/enums/vscode.ProgressLocation.html
 https://vscode-api-cn.js.org/enums/vscode.ShellQuoting.html
 https://vscode-api-cn.js.org/enums/vscode.SignatureHelpTriggerKind.html
@@ -206,8 +206,8 @@ https://vscode-api-cn.js.org/interfaces/vscode.FileChangeEvent.html
 https://vscode-api-cn.js.org/interfaces/vscode.FileCreateEvent.html
 https://vscode-api-cn.js.org/interfaces/vscode.FileDecorationProvider.html
 https://vscode-api-cn.js.org/interfaces/vscode.FileDeleteEvent.html
-https://vscode-api-cn.js.org/interfaces/vscode.FileStat.html
 https://vscode-api-cn.js.org/interfaces/vscode.FileRenameEvent.html
+https://vscode-api-cn.js.org/interfaces/vscode.FileStat.html
 https://vscode-api-cn.js.org/interfaces/vscode.FileSystem.html
 https://vscode-api-cn.js.org/interfaces/vscode.FileSystemProvider.html
 https://vscode-api-cn.js.org/interfaces/vscode.FileSystemWatcher.html
@@ -246,8 +246,8 @@ https://vscode-api-cn.js.org/interfaces/vscode.OpenDialogOptions.html
 https://vscode-api-cn.js.org/interfaces/vscode.OutputChannel.html
 https://vscode-api-cn.js.org/interfaces/vscode.ProcessExecutionOptions.html
 https://vscode-api-cn.js.org/interfaces/vscode.Progress.html
-https://vscode-api-cn.js.org/interfaces/vscode.Pseudoterminal.html
 https://vscode-api-cn.js.org/interfaces/vscode.ProgressOptions.html
+https://vscode-api-cn.js.org/interfaces/vscode.Pseudoterminal.html
 https://vscode-api-cn.js.org/interfaces/vscode.QuickDiffProvider.html
 https://vscode-api-cn.js.org/interfaces/vscode.QuickInput.html
 https://vscode-api-cn.js.org/interfaces/vscode.QuickInputButton.html
@@ -258,8 +258,8 @@ https://vscode-api-cn.js.org/interfaces/vscode.ReferenceContext.html
 https://vscode-api-cn.js.org/interfaces/vscode.ReferenceProvider.html
 https://vscode-api-cn.js.org/interfaces/vscode.RenameProvider.html
 https://vscode-api-cn.js.org/interfaces/vscode.RunOptions.html
-https://vscode-api-cn.js.org/interfaces/vscode.SecretStorage.html
 https://vscode-api-cn.js.org/interfaces/vscode.SaveDialogOptions.html
+https://vscode-api-cn.js.org/interfaces/vscode.SecretStorage.html
 https://vscode-api-cn.js.org/interfaces/vscode.SecretStorageChangeEvent.html
 https://vscode-api-cn.js.org/interfaces/vscode.SelectionRangeProvider.html
 https://vscode-api-cn.js.org/interfaces/vscode.ShellExecutionOptions.html
