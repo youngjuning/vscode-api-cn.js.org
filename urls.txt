@@ -349,8 +349,8 @@ https://vscode-api-cn.js.org/interfaces/vscode.WebviewViewProvider.html
 https://vscode-api-cn.js.org/interfaces/vscode.WebviewViewResolveContext.html
 https://vscode-api-cn.js.org/interfaces/vscode.WindowState.html
 https://vscode-api-cn.js.org/interfaces/vscode.WorkspaceConfiguration.html
-https://vscode-api-cn.js.org/interfaces/vscode.WorkspaceEditEntryMetadata.html
 https://vscode-api-cn.js.org/interfaces/vscode.WorkspaceFolder.html
-https://vscode-api-cn.js.org/interfaces/vscode.WorkspaceFolderPickOptions.html
+https://vscode-api-cn.js.org/interfaces/vscode.WorkspaceEditEntryMetadata.html
 https://vscode-api-cn.js.org/interfaces/vscode.WorkspaceFoldersChangeEvent.html
+https://vscode-api-cn.js.org/interfaces/vscode.WorkspaceFolderPickOptions.html
 https://vscode-api-cn.js.org/interfaces/vscode.WorkspaceSymbolProvider.html
