@@ -167,14 +167,6 @@ declare module vscode {
 		 */
     lineAt(position: Position): TextLine;
 
-    /**
-     * Converts the position to a zero-based offset.
-     *
-     * The position will be {@link TextDocument.validatePosition adjusted}.
-     *
-     * @param position A position.
-     * @return A valid zero-based offset.
-     */
 		/**
 		 * 将位置转换为基于 0 的偏移量。
 		 *
@@ -241,126 +233,109 @@ declare module vscode {
   export class Position {
 
     /**
-     * The zero-based line value.
+     * 基于零的行值。
      */
     readonly line: number;
 
     /**
-     * The zero-based character value.
+     * 基于零的字符值。
      */
     readonly character: number;
 
     /**
-     * @param line A zero-based line value.
-     * @param character A zero-based character value.
+     * @param line 基于零的行值。
+     * @param character 基于零的字符值。
      */
     constructor(line: number, character: number);
 
     /**
-     * Check if this position is before `other`.
+     * 检查此位置是否在 `other` 之前。
      *
-     * @param other A position.
-     * @return `true` if position is on a smaller line
-     * or on the same line on a smaller character.
+     * @param other 一个位置。
+     * @return 如果此位置在较小的行或在相同行但较小的字符上，则为 `true`。
      */
     isBefore(other: Position): boolean;
 
     /**
-     * Check if this position is before or equal to `other`.
+     * 检查此位置是否在 `other` 之前或与其相等。
      *
-     * @param other A position.
-     * @return `true` if position is on a smaller line
-     * or on the same line on a smaller or equal character.
+     * @param other 一个位置。
+     * @return 如果位置在较小的行上，或者在相同的行上但在较小或相等的字符上，则返回 `true`。
      */
     isBeforeOrEqual(other: Position): boolean;
 
-    /**
-     * Check if this position is after `other`.
-     *
-     * @param other A position.
-     * @return `true` if position is on a greater line
-     * or on the same line on a greater character.
-     */
+		/**
+		 * 检查此位置是否在 other 之后。
+		 *
+		 * @param other 表示另一个位置。
+		 * @return 如果该位置在更大的行上，或者在相同的行上但在更大的字符上，则返回 `true` 。
+		 */
     isAfter(other: Position): boolean;
 
-    /**
-     * Check if this position is after or equal to `other`.
-     *
-     * @param other A position.
-     * @return `true` if position is on a greater line
-     * or on the same line on a greater or equal character.
-     */
+		/**
+		 * 检查此位置是否在 other 之后或相等。
+		 *
+		 * @param other 表示另一个位置。
+		 * @return 如果该位置在更大的行上，或者在相同的行上但在更大或相等的字符上，则返回 true 。
+		 */
     isAfterOrEqual(other: Position): boolean;
 
-    /**
-     * Check if this position is equal to `other`.
-     *
-     * @param other A position.
-     * @return `true` if the line and character of the given position are equal to
-     * the line and character of this position.
-     */
+		/**
+		 * 检查此位置是否等于 other。
+		 * @param other 表示另一个位置。
+		 * @return 如果给定位置的行号和字符数与该位置的行号和字符数相等，则返回 true。
+		 */
     isEqual(other: Position): boolean;
 
     /**
-     * Compare this to `other`.
+     * 将此位置与 `other` 比较。
      *
-     * @param other A position.
-     * @return A number smaller than zero if this position is before the given position,
-     * a number greater than zero if this position is after the given position, or zero when
-     * this and the given position are equal.
+     * @param other 表示另一个位置。
+     * @return 如果此位置在给定位置之前，则返回一个小于零的数；如果此位置在给定位置之后，则返回一个大于零的数；如果此位置和给定位置相同，则返回零。
      */
     compareTo(other: Position): number;
 
     /**
-     * Create a new position relative to this position.
+     * 创建一个相对于当前位置的新位置。
      *
-     * @param lineDelta Delta value for the line value, default is `0`.
-     * @param characterDelta Delta value for the character value, default is `0`.
-     * @return A position which line and character is the sum of the current line and
-     * character and the corresponding deltas.
+     * @param lineDelta 表示行值（line value）的增量，缺省值是 `0`。
+     * @param characterDelta 表示列值（character value）的增量，缺省值是 `0`。
+     * @return 返回值为一个新的位置对象，该对象的行号和列号分别是当前位置的行号和列号加上相应的增量。
      */
     translate(lineDelta?: number, characterDelta?: number): Position;
 
     /**
-     * Derived a new position relative to this position.
+     * 这是一个关于位置操作的函数。
      *
-     * @param change An object that describes a delta to this position.
-     * @return A position that reflects the given delta. Will return `this` position if the change
-     * is not changing anything.
+     * @param change 是一个描述相对于当前位置的变化量的对象。
+     * @return 一个位置对象，它代表给定变化量所反映出的新位置。如果没有任何变化，则返回 `this` 位置对象。
      */
     translate(change: { lineDelta?: number; characterDelta?: number; }): Position;
 
     /**
-     * Create a new position derived from this position.
+     * 这是一个用于创建新位置的函数。
      *
-     * @param line Value that should be used as line value, default is the {@link Position.line existing value}
-     * @param character Value that should be used as character value, default is the {@link Position.character existing value}
-     * @return A position where line and character are replaced by the given values.
+     * @param line 是一个可选参数，用于指定新位置的行数。如果未提供，则使用 {@link Position.line existing value}
+     * @param character 是另一个可选参数，用于指定新位置的列数。如果未提供则使用 {@link Position.character existing value}
+     * @return 一个新的位置对象，其中给定的行和列数替代了当前位置的对应属性值。
      */
     with(line?: number, character?: number): Position;
 
     /**
-     * Derived a new position from this position.
+     * 这是一个用于从当前位置创建新位置的函数。
      *
-     * @param change An object that describes a change to this position.
-     * @return A position that reflects the given change. Will return `this` position if the change
-     * is not changing anything.
+     * @param change 是一个对象，用于描述应用到当前位置的更改。
+     * @return 一个新的位置对象，其中反映了给定更改所造成的位置变化。如果更改不会改变任何位置，则返回 `this` 位置对象本身。
      */
     with(change: { line?: number; character?: number; }): Position;
   }
 
-  /**
-   * A range represents an ordered pair of two positions.
-   * It is guaranteed that {@link Range.start start}.isBeforeOrEqual({@link Range.end end})
-   *
-   * Range objects are __immutable__. Use the {@link Range.with with},
-   * {@link Range.intersection intersection}, or {@link Range.union union} methods
-   * to derive new ranges from an existing range.
-   */
 	/**
 	 * 表示两个位置之间的文本范围。
 	 *
 	 * 请注意，范围是不可变的。使用 {@link Range.with with} 或 {@link Range.intersection intersection}、{@link Range.union union} 方法从现有范围派生新范围。
+	 *
+	 * @maintainer {@link https://youngjuning.js.org @youngjuning}
 	 */
   export class Range {
 
@@ -14429,17 +14404,16 @@ declare module vscode {
 }
 
 /**
- * Thenable is a common denominator between ES6 promises, Q, jquery.Deferred, WinJS.Promise,
- * and others. This API makes no assumption about what promise library is being used which
- * enables reusing existing code without migrating to a specific promise implementation. Still,
- * we recommend the use of native promises which are available in this editor.
+ * Thenable 是 ES6 promises、Q、jquery.Deferred、WinJS.Promise 等之间的共同接口。
+ * 该 API 不假设使用哪个 promise 库，因此可以重用现有代码而无需迁移到特定的 promise 实现。
+ * 但是，我们建议在此编辑器中使用原生 promises。
  */
 interface Thenable<T> {
 	/**
-	* Attaches callbacks for the resolution and/or rejection of the Promise.
-	* @param onfulfilled The callback to execute when the Promise is resolved.
-	* @param onrejected The callback to execute when the Promise is rejected.
-	* @returns A Promise for the completion of which ever callback is executed.
+	* 为 Promise 的完成和/或拒绝附加回调函数。
+	* @param onfulfilled Promise 被 reslove 时要执行的回调。
+	* @param onrejected Promise 被 reject 时要执行的回调。
+	* @returns 一个 Promise 用于完成任何被执行的回调函数。
 	*/
 	then<TResult>(onfulfilled?: (value: T) => TResult | Thenable<TResult>, onrejected?: (reason: any) => TResult | Thenable<TResult>): Thenable<TResult>;
 	then<TResult>(onfulfilled?: (value: T) => TResult | Thenable<TResult>, onrejected?: (reason: any) => void): Thenable<TResult>;
