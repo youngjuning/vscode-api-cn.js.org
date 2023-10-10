@@ -351,6 +351,6 @@ https://vscode-api-cn.js.org/modules/vscode.languages.html
 https://vscode-api-cn.js.org/modules/vscode.notebooks.html
 https://vscode-api-cn.js.org/modules/vscode.scm.html
 https://vscode-api-cn.js.org/modules/vscode.tasks.html
-https://vscode-api-cn.js.org/modules/vscode.window.html
 https://vscode-api-cn.js.org/modules/vscode.tests.html
+https://vscode-api-cn.js.org/modules/vscode.window.html
 https://vscode-api-cn.js.org/modules/vscode.workspace.html
