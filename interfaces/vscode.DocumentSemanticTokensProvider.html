@@ -20,7 +20,6 @@
 	<meta property="article:tag" content="vscode VS Code API 中文文档">
 	<meta property="article:tag" content="vscode DocumentSemanticTokensProvider">
 	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-	<meta name="monetag" content="99735243bed78e7a2714c739b424af83">
 	<link rel="shortcut icon" href="https://code.visualstudio.com/favicon.ico" sizes="128x128">
 	<link rel='canonical' href='https://vscode-api-cn.js.org/interfaces/vscode.DocumentSemanticTokensProvider.html' />
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -145,7 +144,7 @@
 					<div class="tsd-signature tsd-kind-icon">on<wbr>Did<wbr>Change<wbr>Semantic<wbr>Tokens<span class="tsd-signature-symbol">:</span> <a href="vscode.Event.html" class="tsd-signature-type" data-tsd-kind="Interface">Event</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn.js.org/blob/93767e9/vscode.d.ts#L3569">vscode.d.ts:3569</a></li>
+							<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn.js.org/blob/aae2b2c/vscode.d.ts#L3569">vscode.d.ts:3569</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -167,7 +166,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn.js.org/blob/93767e9/vscode.d.ts#L3630">vscode.d.ts:3630</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn.js.org/blob/aae2b2c/vscode.d.ts#L3630">vscode.d.ts:3630</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -194,36 +193,38 @@
 <span style="color: #000000">   { line: </span><span style="color: #098658">5</span><span style="color: #000000">, startChar:  </span><span style="color: #098658">2</span><span style="color: #000000">, length: </span><span style="color: #098658">7</span><span style="color: #000000">, tokenType: </span><span style="color: #A31515">&quot;class&quot;</span><span style="color: #000000">,     tokenModifiers: [] }</span>
 </code></pre>
 								<ol>
-									<li><p>First of all, a legend must be devised. This legend must be provided up-front and capture all possible token types.
-										For this example, we will choose the following legend which must be passed in when registering the provider:</p>
-										<pre><code><span style="color: #000000">tokenTypes: [</span><span style="color: #A31515">&#039;property&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;type&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;class&#039;</span><span style="color: #000000">],</span>
-<span style="color: #000000">tokenModifiers: [</span><span style="color: #A31515">&#039;private&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;static&#039;</span><span style="color: #000000">]</span>
-</code></pre>
-									</li>
-									<li><p>The first transformation step is to encode <code>tokenType</code> and <code>tokenModifiers</code> as integers using the legend. Token types are looked
-											up by index, so a <code>tokenType</code> value of <code>1</code> means <code>tokenTypes[1]</code>. Multiple token modifiers can be set by using bit flags,
-											so a <code>tokenModifier</code> value of <code>3</code> is first viewed as binary <code>0b00000011</code>, which means <code>[tokenModifiers[0], tokenModifiers[1]]</code> because
-										bits 0 and 1 are set. Using this legend, the tokens now are:</p>
-										<pre><code><span style="color: #000000">{ line: </span><span style="color: #098658">2</span><span style="color: #000000">, startChar:  </span><span style="color: #098658">5</span><span style="color: #000000">, length: </span><span style="color: #098658">3</span><span style="color: #000000">, tokenType: </span><span style="color: #098658">0</span><span style="color: #000000">, tokenModifiers: </span><span style="color: #098658">3</span><span style="color: #000000"> },</span>
-<span style="color: #000000">{ line: </span><span style="color: #098658">2</span><span style="color: #000000">, startChar: </span><span style="color: #098658">10</span><span style="color: #000000">, length: </span><span style="color: #098658">4</span><span style="color: #000000">, tokenType: </span><span style="color: #098658">1</span><span style="color: #000000">, tokenModifiers: </span><span style="color: #098658">0</span><span style="color: #000000"> },</span>
-<span style="color: #000000">{ line: </span><span style="color: #098658">5</span><span style="color: #000000">, startChar:  </span><span style="color: #098658">2</span><span style="color: #000000">, length: </span><span style="color: #098658">7</span><span style="color: #000000">, tokenType: </span><span style="color: #098658">2</span><span style="color: #000000">, tokenModifiers: </span><span style="color: #098658">0</span><span style="color: #000000"> }</span>
-</code></pre>
-									</li>
-									<li><p>The next step is to represent each token relative to the previous token in the file. In this case, the second token
-											is on the same line as the first token, so the <code>startChar</code> of the second token is made relative to the <code>startChar</code>
-											of the first token, so it will be <code>10 - 5</code>. The third token is on a different line than the second token, so the
-										<code>startChar</code> of the third token will not be altered:</p>
-										<pre><code><span style="color: #000000">{ deltaLine: </span><span style="color: #098658">2</span><span style="color: #000000">, deltaStartChar: </span><span style="color: #098658">5</span><span style="color: #000000">, length: </span><span style="color: #098658">3</span><span style="color: #000000">, tokenType: </span><span style="color: #098658">0</span><span style="color: #000000">, tokenModifiers: </span><span style="color: #098658">3</span><span style="color: #000000"> },</span>
-<span style="color: #000000">{ deltaLine: </span><span style="color: #098658">0</span><span style="color: #000000">, deltaStartChar: </span><span style="color: #098658">5</span><span style="color: #000000">, length: </span><span style="color: #098658">4</span><span style="color: #000000">, tokenType: </span><span style="color: #098658">1</span><span style="color: #000000">, tokenModifiers: </span><span style="color: #098658">0</span><span style="color: #000000"> },</span>
-<span style="color: #000000">{ deltaLine: </span><span style="color: #098658">3</span><span style="color: #000000">, deltaStartChar: </span><span style="color: #098658">2</span><span style="color: #000000">, length: </span><span style="color: #098658">7</span><span style="color: #000000">, tokenType: </span><span style="color: #098658">2</span><span style="color: #000000">, tokenModifiers: </span><span style="color: #098658">0</span><span style="color: #000000"> }</span>
-</code></pre>
-									</li>
-									<li><p>Finally, the last step is to inline each of the 5 fields for a token in a single array, which is a memory friendly representation:</p>
-										<pre><code><span style="color: #008000">// 1st token,  2nd token,  3rd token</span>
-<span style="color: #000000">[  </span><span style="color: #098658">2</span><span style="color: #000000">,</span><span style="color: #098658">5</span><span style="color: #000000">,</span><span style="color: #098658">3</span><span style="color: #000000">,</span><span style="color: #098658">0</span><span style="color: #000000">,</span><span style="color: #098658">3</span><span style="color: #000000">,  </span><span style="color: #098658">0</span><span style="color: #000000">,</span><span style="color: #098658">5</span><span style="color: #000000">,</span><span style="color: #098658">4</span><span style="color: #000000">,</span><span style="color: #098658">1</span><span style="color: #000000">,</span><span style="color: #098658">0</span><span style="color: #000000">,  </span><span style="color: #098658">3</span><span style="color: #000000">,</span><span style="color: #098658">2</span><span style="color: #000000">,</span><span style="color: #098658">7</span><span style="color: #000000">,</span><span style="color: #098658">2</span><span style="color: #000000">,</span><span style="color: #098658">0</span><span style="color: #000000"> ]</span>
-</code></pre>
-									</li>
+									<li>First of all, a legend must be devised. This legend must be provided up-front and capture all possible token types.
+									For this example, we will choose the following legend which must be passed in when registering the provider:</li>
 								</ol>
+								<pre><code><span style="color: #000000">   tokenTypes: [</span><span style="color: #A31515">&#039;property&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;type&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;class&#039;</span><span style="color: #000000">],</span>
+<span style="color: #000000">   tokenModifiers: [</span><span style="color: #A31515">&#039;private&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;static&#039;</span><span style="color: #000000">]</span>
+</code></pre>
+								<ol start="2">
+									<li>The first transformation step is to encode <code>tokenType</code> and <code>tokenModifiers</code> as integers using the legend. Token types are looked
+										up by index, so a <code>tokenType</code> value of <code>1</code> means <code>tokenTypes[1]</code>. Multiple token modifiers can be set by using bit flags,
+										so a <code>tokenModifier</code> value of <code>3</code> is first viewed as binary <code>0b00000011</code>, which means <code>[tokenModifiers[0], tokenModifiers[1]]</code> because
+									bits 0 and 1 are set. Using this legend, the tokens now are:</li>
+								</ol>
+								<pre><code><span style="color: #000000">   { line: </span><span style="color: #098658">2</span><span style="color: #000000">, startChar:  </span><span style="color: #098658">5</span><span style="color: #000000">, length: </span><span style="color: #098658">3</span><span style="color: #000000">, tokenType: </span><span style="color: #098658">0</span><span style="color: #000000">, tokenModifiers: </span><span style="color: #098658">3</span><span style="color: #000000"> },</span>
+<span style="color: #000000">   { line: </span><span style="color: #098658">2</span><span style="color: #000000">, startChar: </span><span style="color: #098658">10</span><span style="color: #000000">, length: </span><span style="color: #098658">4</span><span style="color: #000000">, tokenType: </span><span style="color: #098658">1</span><span style="color: #000000">, tokenModifiers: </span><span style="color: #098658">0</span><span style="color: #000000"> },</span>
+<span style="color: #000000">   { line: </span><span style="color: #098658">5</span><span style="color: #000000">, startChar:  </span><span style="color: #098658">2</span><span style="color: #000000">, length: </span><span style="color: #098658">7</span><span style="color: #000000">, tokenType: </span><span style="color: #098658">2</span><span style="color: #000000">, tokenModifiers: </span><span style="color: #098658">0</span><span style="color: #000000"> }</span>
+</code></pre>
+								<ol start="3">
+									<li>The next step is to represent each token relative to the previous token in the file. In this case, the second token
+										is on the same line as the first token, so the <code>startChar</code> of the second token is made relative to the <code>startChar</code>
+										of the first token, so it will be <code>10 - 5</code>. The third token is on a different line than the second token, so the
+									<code>startChar</code> of the third token will not be altered:</li>
+								</ol>
+								<pre><code><span style="color: #000000">   { deltaLine: </span><span style="color: #098658">2</span><span style="color: #000000">, deltaStartChar: </span><span style="color: #098658">5</span><span style="color: #000000">, length: </span><span style="color: #098658">3</span><span style="color: #000000">, tokenType: </span><span style="color: #098658">0</span><span style="color: #000000">, tokenModifiers: </span><span style="color: #098658">3</span><span style="color: #000000"> },</span>
+<span style="color: #000000">   { deltaLine: </span><span style="color: #098658">0</span><span style="color: #000000">, deltaStartChar: </span><span style="color: #098658">5</span><span style="color: #000000">, length: </span><span style="color: #098658">4</span><span style="color: #000000">, tokenType: </span><span style="color: #098658">1</span><span style="color: #000000">, tokenModifiers: </span><span style="color: #098658">0</span><span style="color: #000000"> },</span>
+<span style="color: #000000">   { deltaLine: </span><span style="color: #098658">3</span><span style="color: #000000">, deltaStartChar: </span><span style="color: #098658">2</span><span style="color: #000000">, length: </span><span style="color: #098658">7</span><span style="color: #000000">, tokenType: </span><span style="color: #098658">2</span><span style="color: #000000">, tokenModifiers: </span><span style="color: #098658">0</span><span style="color: #000000"> }</span>
+</code></pre>
+								<ol start="4">
+									<li>Finally, the last step is to inline each of the 5 fields for a token in a single array, which is a memory friendly representation:</li>
+								</ol>
+								<pre><code><span style="color: #000000">   </span><span style="color: #008000">// 1st token,  2nd token,  3rd token</span>
+<span style="color: #000000">   [  </span><span style="color: #098658">2</span><span style="color: #000000">,</span><span style="color: #098658">5</span><span style="color: #000000">,</span><span style="color: #098658">3</span><span style="color: #000000">,</span><span style="color: #098658">0</span><span style="color: #000000">,</span><span style="color: #098658">3</span><span style="color: #000000">,  </span><span style="color: #098658">0</span><span style="color: #000000">,</span><span style="color: #098658">5</span><span style="color: #000000">,</span><span style="color: #098658">4</span><span style="color: #000000">,</span><span style="color: #098658">1</span><span style="color: #000000">,</span><span style="color: #098658">0</span><span style="color: #000000">,  </span><span style="color: #098658">3</span><span style="color: #000000">,</span><span style="color: #098658">2</span><span style="color: #000000">,</span><span style="color: #098658">7</span><span style="color: #000000">,</span><span style="color: #098658">2</span><span style="color: #000000">,</span><span style="color: #098658">0</span><span style="color: #000000"> ]</span>
+</code></pre>
 								<dl class="tsd-comment-tags">
 									<dt>see</dt>
 									<dd><p><a href="../classes/vscode.SemanticTokensBuilder.html">SemanticTokensBuilder</a> for a helper to encode tokens as integers.
@@ -255,7 +256,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn.js.org/blob/93767e9/vscode.d.ts#L3661">vscode.d.ts:3661</a></li>
+									<li>Defined in <a href="https://github.com/youngjuning/vscode-api-cn.js.org/blob/aae2b2c/vscode.d.ts#L3661">vscode.d.ts:3661</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -302,7 +303,7 @@
 				</section>
 			</section>
 			<div class="tsd-panel tsd-typography">
-				<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7962287588031867" data-ad-slot="2140558196" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+				<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7962287588031867" data-ad-slot="9253022493" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
