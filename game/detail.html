@@ -162,9 +162,16 @@
     </div>
     <div style="height: 60px;"></div>
     <center>
-      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7962287588031867" data-ad-slot="7216948334"
-        data-ad-format="auto" data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      <!-- game_detail_top -->
+			<ins class="adsbygoogle"
+			style="display:block"
+			data-ad-client="ca-pub-7962287588031867"
+			data-ad-slot="7216948334"
+			data-ad-format="auto"
+			data-full-width-responsive="true"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
     </center>
     <main>
       <section class="game">
@@ -175,14 +182,6 @@
           </div>
           <div class="game-right">
             <div class="game-name">{{detail.gameName}}</div>
-            <!-- <div class="tag">{{type}}</div>
-              <div class="game-score">
-                  <div class="game-rate">
-                      <span class="score-icon"></span>
-                      <span class="score_span">4.5</span>
-                  </div>
-                  <div class="game-playnum">{{(detail.gamePlayNumber / 1000).toFixed(2)}}k played</div>
-              </div> -->
             <p class="game-desc">{{detail.gameDesc}}</p>
             <a class="game-button disabled" href="javascript:;" v-if="disabled">PLAY NOW</a>
             <a class="game-button" :href="handleToPlay()" v-else>PLAY NOW</a>
