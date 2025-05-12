@@ -16,6 +16,8 @@ jobs:
       - run: mv game/ docs/
       - run: mv puzzle/ docs/
       - run: mv sports/ docs/
+      - run: mv best/ docs/
+      - run: mv beauty/ docs/
       - run: mv new/ docs/
       - run: mv action/ docs/
       - run: node sitemap.js
