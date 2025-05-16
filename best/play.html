@@ -34,7 +34,7 @@
 				(adsbygoogle = window.adsbygoogle || []).push({});
 				</script>
 			</center>
-      <iframe class="game" :src="`https://www.datinginfo.top/game/index.html?gameFileName=${gameFileName}/`"
+      <iframe class="game" :src="'https://www.datinginfo.top/game/index.html?gameFileName=${gameFileName}/'"
         frameborder="0" scrolling="no" allowfullscreen></iframe>
       <div class="posterBanner" ref='topAd' v-html='poster4'></div>
     </div>
@@ -199,12 +199,12 @@
 
       mask: true,
       show: true,
-      poster: "",
-      poster2: "",
-      poster3: "",
-      poster4: "",
-      poster5: "",
-      poster6: "",
+      poster: '<ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-7962287588031867" data-ad-slot="2077443937" data-ad-format="auto" data-full-width-responsive="true"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>',
+      poster2: '<ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-7962287588031867" data-ad-slot="2077443937" data-ad-format="auto" data-full-width-responsive="true"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>',
+      poster3: '<ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-7962287588031867" data-ad-slot="2077443937" data-ad-format="auto" data-full-width-responsive="true"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>',
+      poster4: '<ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-7962287588031867" data-ad-slot="2077443937" data-ad-format="auto" data-full-width-responsive="true"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>',
+      poster5: '<ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-7962287588031867" data-ad-slot="2077443937" data-ad-format="auto" data-full-width-responsive="true"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>',
+      poster6: '<ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-7962287588031867" data-ad-slot="2077443937" data-ad-format="auto" data-full-width-responsive="true"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>',
       count: "",
       totalTime: 5,
     },
@@ -320,8 +320,8 @@
     mounted() {
       this.getQueryVariable("gameFileName") !== false ? this.gameFileName = this.getQueryVariable("gameFileName") :
         ""
-      // this.countDown()
-      // this.getPoster()
+      this.countDown()
+      this.getPoster()
     }
   })
 </script>
