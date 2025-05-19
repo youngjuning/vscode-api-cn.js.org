@@ -1,0 +1,12 @@
+@charset "UTF-8";body,html{background:#000;height:100%;margin:0;padding:0;width:100%}
+@keyframes rotate{from{transform:rotate(0deg)}
+to{transform:rotate(360deg)}
+}#circularLoad{background-color:beige;background:linear-gradient(-45deg,#ee7752,#e73c7e,#23a6d5,#23d5ab) 0 0/300% 300%;position:absolute;top:0;left:0;width:100%;height:100%;z-index:99;display:flex;justify-content:center;align-items:center;z-index:101}
+#icon{width:10rem;height:10rem;border-radius:50%;position:absolute;margin-top:-50px}
+#loader{margin-top:-50px;border-width:0.35rem;border-style:solid;border-color:#026dfa #00ffda #d300ff #00ff05;border-radius:50%;display:block;width:10rem;height:10rem;animation:rotate 1.2s linear infinite}
+#tips{position:absolute;margin-top:240px;font-size:20px;font-weight:bold;color:white;letter-spacing:10px}
+#game_iframe{display:block;overflow:hidden;background-color:#000;height:100%;width:100%}
+#game_banner{display:flex;position:fixed;bottom:0px;background:black;ustify-content:center;text-align:center;width:100%}
+#banner{justify-content:center;text-align:center;margin:0px auto;width:100%;display:flex !important}
+#tip{width:100%;height:100%;top:0px;position:absolute;z-index:5;display:none;background-color:rgba(0,0,0,0.7)}
+#tip-txt{font-weight:bold;position:absolute;z-index:15;//background-color:#000000aa;//box-shadow:0 0 0 2px gray;background-color:rgba(255,255,255,0.67);box-shadow:0 0 0 2px #4b8a2e;border-radius:10px;-moz-border-right:10px;padding:5px 10px;left:50%;top:50%;color:#000000;//color:white;font-size:14px;width:75%;transform:translateY(-50%);transform:translateX(-50%);text-align:center}
