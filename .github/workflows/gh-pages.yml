@@ -14,6 +14,9 @@ jobs:
       - run: mv robots.txt docs/
       - run: mv ads.txt docs/
       - run: mv game/ docs/
+      - run: mv game001/ docs/
+      - run: mv game002/ docs/
+      - run: mv game003/ docs/
       - run: mv puzzle/ docs/
       - run: mv sports/ docs/
       - run: mv best/ docs/
